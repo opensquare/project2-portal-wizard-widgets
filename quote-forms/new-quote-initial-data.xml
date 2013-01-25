@@ -1,0 +1,11 @@
+<quote>
+	<estAnnualMileage>6000</estAnnualMileage>
+	<businessMileage></businessMileage>
+	<ncbProtected>F</ncbProtected>
+	<protectNoClaims>F</protectNoClaims>
+	<classOfUseCode>1</classOfUseCode>
+	<paymentType>single</paymentType>
+	<vehicle>
+		<drivingPosition>2</drivingPosition>
+	</vehicle>
+</quote>

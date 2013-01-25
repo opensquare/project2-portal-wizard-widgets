@@ -1,0 +1,19 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>cp-login.html</url>
+		<secure>false</secure>
+		
+		<!-- forgotten password MailMerger email params -->
+		<jobDescription>Forgotten Login Details</jobDescription>
+		<destination>email</destination>
+		<subject>Password Reset Instructions</subject>
+		<attachmentType>html</attachmentType>
+		<template>forgotten-details.doc</template>
+		
+	</parameters>
+	<attributes>
+		<css>cp-login.css</css>
+		<js>login.js</js>
+	</attributes>
+</widget>

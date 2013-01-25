@@ -1,0 +1,19 @@
+<h4>Drivers</h4>
+<form rhinoforms="true">
+	<div class="drivers">
+		<rf.forEach select="additionalDrivers/driver" as="d">
+			<div class="driver">
+				<span>
+					{{d.firstName}} {{d.surname}}
+					<a href="#" rf.action="editAdditionalDriver?index={{d.index}}">Edit</a> 
+					<a href="#" rf.action="deleteAdditionalDriver?index={{d.index}}">Delete</a>
+				</span>
+			</div>
+		</rf.forEach>
+	</div>
+	<input type="button" rf.action="addAdditionalDriver" value="Add Driver"/>
+	
+	<br/>
+	<input type="button" rf.action="back" value="Back"/>
+	<input type="submit" rf.action="next" value="Next"/>
+</form>		

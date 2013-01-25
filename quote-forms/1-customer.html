@@ -1,0 +1,26 @@
+<h4>Customer Details</h4>
+<form rhinoforms="true">
+
+	<div class="field">
+		<label>Do you agree to all of the above?</label>
+		<input id="input_terms_agree" type="radio" name="terms" value="agree" rf.validation="required equals({value: 'agree', errorMessage: 'You must agree to the terms in order to get a quote.'})"/>
+		<label for="input_terms_agree" class="forRadio">I agree</label>
+		<input id="input_terms_disagree" type="radio" name="terms" value="disagree"/>
+		<label for="input_terms_disagree">I don't agree</label>
+	</div>
+	
+	<rf.include src="common-personal-details.html" ></rf.include>
+	
+	<div class="field">
+		<label for="input_coverStartDate">When do you want your insurance to start? (dd/mm/yyyy)</label>
+		<input id="input_coverStartDate" type="text" name="coverStartDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" rf.initialvalue="{ if (!fields.coverStartDate.value) { moment().format('DD/MM/YYYY') } }"/>
+	</div>
+	
+	<div class="field">
+		<label for="input_referrer">How did you hear about us?</label>
+		<select id="input_referrer" name="referrer" rf.validation="required" rf.source="resources/referrer.txt" rf.preselectFirstOption="false"></select>
+	</div>
+	
+	<input type="button" rf.action="back" value="Back"/>
+	<input type="submit" value="Next" rf.action="next"/>
+</form>

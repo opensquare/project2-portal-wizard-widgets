@@ -1,0 +1,7 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>quote.html</url>
+		<secure>false</secure>
+	</parameters>
+</widget>

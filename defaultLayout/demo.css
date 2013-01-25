@@ -1,0 +1,144 @@
+body{
+	min-width: 275px;
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #F0F0F0;
+	color: #333;
+}
+
+#backgroundText text{
+	fill: none;
+	stroke: rgba(0, 0, 0, 0.05);
+}
+
+header{
+	width: 80%;
+	margin: 1em auto;
+	padding-bottom: 1em;
+}
+header h2{
+	float: left;
+	margin: 0;
+	font-size: 1em;
+	color: #0DB4F2; /* Blue */
+}
+header h2 span{
+	color: #92CE56; /* Green */
+}
+@media screen and (max-width: 1000px) {
+	header{
+		width:98%;
+	}
+}
+
+#home-banner{
+	height: 500px;
+	background: url('banner.jpg') no-repeat center;
+	background-size: cover;
+}
+z#home-banner h1{
+	display: inline-block;
+	margin-left: 1em;
+	padding: 0.5em 0.5em 0.5em 2em;
+	background: #92CE56 url('quindell.png') no-repeat left top; /* CC image (c) Desert Bug @ flickr.com */
+	color: #fff;
+	transform:rotate(-5deg);
+		-ms-transform:rotate(-5deg);
+		-moz-transform:rotate(-5deg);
+		-webkit-transform:rotate(-5deg);
+		-o-transform:rotate(-5deg);
+	border-radius: 0.1em;
+	font-size: 2em;
+}
+#home-banner>h1{
+	width: 400px;
+	height: 125px;
+	margin: 0 0 0 1%;
+	background: url('model-insurance.png') no-repeat left bottom;
+}
+#home-banner h2{
+	display: inline-block;
+	margin: 0;
+	padding: 0 0.5em 0 4em;
+	background: rgba(0,0,0,0.35);
+	color: rgba(255,255,255,0.9);
+	font-weight: normal;
+	font-size: 2em;
+	border-radius: 0.15em;
+}
+#home-content{
+	width: 80%;
+	margin: -2em auto 0 auto;
+	text-align: center;
+}
+#home-content article{
+	display: inline-block;
+	width: 270px;
+	height: 14em;
+	overflow: hidden;
+	margin: 1em 3em 0 0;
+	vertical-align: top;
+	background: #FFF no-repeat left top;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+	border: medium solid transparent;
+	border-radius: 0.25em;
+	text-align: left;
+	cursor: pointer;
+}
+#home-content article:nth-child(1){
+	background-image: url('news.jpg'); /* CC image (c) NS Newsflash @ flickr.com */
+}
+#home-content article:nth-child(2){
+	background-image: url('quote.jpg'); 
+}
+#home-content article:nth-child(3){
+	background-image: url('cp.jpg');
+}
+#home-content article:hover{
+	border: medium solid rgba(13,180,242,0.9);
+	zborder: medium solid rgba(146,206,86,0.9);
+}
+#home-content article>h2{
+	display: inline-block;
+	margin: 0;
+	padding: 0 1em 0 0.25em;
+	background: #0DB4F2;
+	background-color: rgba(13,180,242,0.9);
+	color: #fff;
+	font-weight: normal;
+}
+#home-content article>p{
+	margin-top: 135px;
+	padding: 0 1em;
+	font-size: 0.8em;
+	line-height: 1.25em;
+}
+@media screen and (max-width: 1000px) {
+	#home-content{
+		width:98%;
+	}
+}
+
+
+
+footer{
+	width: 80%;
+	margin: 3em auto 1em auto;
+	background-color: #777;
+	color: #FFF;
+	font-size: small;
+	border-radius: 0.25em;
+}
+footer p{
+	padding: 0 1em 1em 1em;
+	margin: 0;
+}
+footer p:first-child{
+	padding-top: 1em;
+	font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+	footer{
+		width:98%;
+	}
+}

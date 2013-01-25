@@ -1,0 +1,97 @@
+<script>
+	rf.onFormLoad(function() {
+		var regInput = $('#input_reg');
+		var cdlUrl = regInput.attr('rf.source');
+		var abiUrl = $('#abiLookupProxy').attr('rf.source');
+		var flowId = $('[name=\'rf.flowId\']').val();
+		
+		var vehicleLookup = new VehicleLookup(cdlUrl, abiUrl, flowId, regInput);
+		vehicleLookup.init();
+		
+		$(".findCar [type='button']").click(function() {
+			vehicleLookup.lookupVehicle(regInput.val());
+		})
+	})
+</script>
+
+<h4>Car</h4>
+<form rhinoforms="true">
+
+	<div class="field findCar">
+		<label for="input_reg">Registration number</label>
+		<input id="abiLookupProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbVehicleLists-kk-simple-grouped-makeCode[value].xml?xslt=%2Fitb-resources-test2%2Flists%2FabiLookupTransformSimpleJSONP.xsl&contentType=text%2Fplain" />
+		<input id="input_reg" type="text" name="reg" rf.validation="required" rf.source="http://integration.osldev.net/itb-quotes/cdl"/>
+		<input type="hidden" name="vehKey" rf.validation="required"/>
+		<input type="button" value="Find"/>
+		<input type="hidden" name="vehDesc" />
+		<input type="hidden" name="make" />
+		<input type="hidden" name="model" />
+		<input type="hidden" name="fuel" />
+		<input type="hidden" name="yom" />
+		<input type="hidden" name="vehicleAge" rf.calculated="{ if (fields.yom.value) { new Date().getFullYear() - fields.yom.value } }"/>
+		<input type="hidden" name="engineCapacity" />
+		<input type="hidden" name="transmission" />
+		<input type="hidden" name="multiple" />
+	</div>
+	
+	<div class="field carFound" style="display: none;">
+		<label>Registration number</label>
+		<span name="reg">{{reg}}</span><br/>
+		<label>Your vehicle</label>
+		<span name="vehDesc">{{vehDesc}}</span>
+		<input type="button" class="changeVehicleButton" onclick="return false;" value="Change vehicle"/>
+	</div>
+	
+	<div class="field">
+		<label for="input_purchaseDate">When did you buy the car? (mm/yyyy)</label>
+		<input id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
+		<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDate.value) { utils.monthsBetween(moment('01/' + fields.purchaseDate.value, 'DD/MM/YYYY'), new Date()); }}" />
+	</div>
+
+	<div class="field">
+		<label for="input_securityDevices">What security devices does this vehicle have?</label>
+		<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="false"></select>
+	</div>
+	
+	<div class="field">
+		<label>Does this vehicle have an active security tracker?</label>
+		<input id="input_activeTracker_yes" type="radio" name="activeTracker" value="yes" rf.validation="required"/>
+		<label for="input_activeTracker_yes" class="forRadio">Yes</label>
+		<input id="input_activeTracker_no" type="radio" name="activeTracker" value="no"/>
+		<label for="input_activeTracker_no">No</label>
+	</div>
+	
+	<div class="field">
+		<label for="input_marketValue">What is the current market value of your car? (£)</label>
+		<input id="input_marketValue" type="text" name="marketValue" rf.validation="required"/>
+	</div>
+	
+	<div class="field">
+		<label>Has your vehicle been modified or altered in any way (other than by the manufacturer)?</label>
+		<input id="input_modified_yes" type="radio" name="modified" value="yes" rf.validation="required"/>
+		<label for="input_modified_yes" class="forRadio">Yes</label>
+		<input id="input_modified_no" type="radio" name="modified" value="no"/>
+		<label for="input_modified_no">No</label>
+	</div>
+	
+	<div class="field">
+		<label for="input_dayParking">Day time parking</label>
+		<select id="input_dayParking" name="dayParkingCode" rf.validation="required" rf.source="resources/dayParking.csv" rf.preselectFirstOption="false"></select>
+	</div>
+	
+	<div class="field">
+		<label for="input_nightParking">Night time parking</label>
+		<select id="input_nightParking" name="nightParkingCode" rf.validation="required" rf.source="resources/nightParking.csv" rf.preselectFirstOption="false"></select>
+	</div>
+	
+	<div class="field">
+		<label for="input_noClaimsYears">How many years No Claims Discount can you prove?</label>
+		<select id="input_noClaimsYears" name="noClaimsYears" rf.validation="required" rf.source="resources/noClaimsYears.csv" rf.preselectFirstOption="true"></select>
+		<div rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }">
+			<label for="input_protectNoClaims">Do you want to protect your No Claims Discount?</label>
+			<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></select>
+		</div>
+	</div>
+	
+	<input type="submit" rf.action="next" value="Next"/>
+</form>

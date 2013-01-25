@@ -1,0 +1,21 @@
+<h4>Calculating Premium</h4>
+
+<script>
+	rf.onFormLoad(function() {
+		$("[rf\\.action]").click();
+		var $h4 = $("h4");
+		setInterval(function() {
+			var text = $h4.text();
+			if (text.length < 22) {
+				text += ".";
+			} else {
+				text = text.substring(0, 19);
+			}
+			$h4.text(text);
+		}, 200);
+	});
+</script>
+
+<form rhinoforms="true">
+	<input type="submit" rf.action="next" value="Next" style="display: none;"/>
+</form>		

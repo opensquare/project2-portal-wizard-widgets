@@ -1,0 +1,20 @@
+<h4>Quote - static</h4>
+<form rhinoforms="true">
+
+	<div class="field">
+		<label>Choose how to pay</label>
+		<input id="input_paymentType_single" type="radio" name="paymentType" value="single" rf.validation="required"/>
+		<label for="input_paymentType_single" class="forRadio">One Payment: {{//calcResult/calcElement/annualPremium}}</label>
+		<input id="input_paymentType_instalments" type="radio" name="paymentType" value="instalments" rf.validation="required"/>
+		<label for="input_paymentType_instalments" class="forRadio">Monthly Instalments: {{//calcResult/calcElement/instalmentPremium}} x {{//calcResult/calcElement/numOfInstalments}}</label>
+	</div>
+
+	<p>This quote is valid for 30 days and includes Insurance Premium Tax.</p>
+	
+	<div class="field">
+		<label id="input_voluntaryExcess">Voluntary Excess</label>
+		<select id="input_voluntaryExcess" name="voluntaryExcess" rf.rangeStart="0" rf.rangeEnd="1000" rf.rangeInterval="50" rf.labelPrefix="&pound;"></select>
+	</div>
+
+	<input type="button" rf.action="back" value="Back"/>
+</form>		
