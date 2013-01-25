@@ -119,14 +119,12 @@ z#home-banner h1{
 	}
 }
 
-
-
 footer{
 	width: 80%;
 	margin: 3em auto 1em auto;
 	background-color: #777;
 	color: #FFF;
-	font-size: small;
+	font-size: 0.75em;
 	border-radius: 0.25em;
 }
 footer p{
