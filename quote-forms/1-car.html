@@ -1,3 +1,4 @@
+<script type='text/javascript' src='widgets/quote-forms/js/vehicle-lookup.js' ></script>
 <script>
 	rf.onFormLoad(function() {
 		var regInput = $('#input_reg');
@@ -19,8 +20,8 @@
 
 	<div class="field findCar">
 		<label for="input_reg">Registration number</label>
-		<input id="abiLookupProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbVehicleLists-kk-simple-grouped-makeCode[value].xml?xslt=%2Fitb-resources-test2%2Flists%2FabiLookupTransformSimpleJSONP.xsl&contentType=text%2Fplain" />
-		<input id="input_reg" type="text" name="reg" rf.validation="required" rf.source="http://integration.osldev.net/itb-quotes/cdl"/>
+		<input id="abiLookupProxy" type="proxy" style="display:none" rf.source="{{$vehicle-model-lookup}}" />
+		<input id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}"/>
 		<input type="hidden" name="vehKey" rf.validation="required"/>
 		<input type="button" value="Find"/>
 		<input type="hidden" name="vehDesc" />
@@ -62,7 +63,7 @@
 	</div>
 	
 	<div class="field">
-		<label for="input_marketValue">What is the current market value of your car? (£)</label>
+		<label for="input_marketValue">What is the current market value of your car?</label>
 		<input id="input_marketValue" type="text" name="marketValue" rf.validation="required"/>
 	</div>
 	

@@ -1,14 +1,6 @@
 <h4>Customer Details</h4>
 <form rhinoforms="true">
 
-	<div class="field">
-		<label>Do you agree to all of the above?</label>
-		<input id="input_terms_agree" type="radio" name="terms" value="agree" rf.validation="required equals({value: 'agree', errorMessage: 'You must agree to the terms in order to get a quote.'})"/>
-		<label for="input_terms_agree" class="forRadio">I agree</label>
-		<input id="input_terms_disagree" type="radio" name="terms" value="disagree"/>
-		<label for="input_terms_disagree">I don't agree</label>
-	</div>
-	
 	<rf.include src="common-personal-details.html" ></rf.include>
 	
 	<div class="field">
