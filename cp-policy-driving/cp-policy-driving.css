@@ -1,0 +1,58 @@
+#cp-policy-driving ul{
+	padding: 0;
+}
+#cp-policy-driving li{
+	display: inline-block;
+	min-width: 3em;
+	padding: 0.1em 1em;
+	border: medium solid #555;
+	border-radius: 0.25em;
+	text-align: center;
+	cursor: pointer;
+}
+#cp-policy-driving li:nth-child(odd){
+	background-color: #555;
+	color: #FFF;
+}
+#cp-policy-driving li.on{
+	background-color: #92CE56;
+	color: #FFF;
+	border-color: #72AE36;
+}
+#cp-policy-driving p.dial{
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+}
+#cp-policy-driving-speeding{
+	background: url('driving1.png') no-repeat;
+}
+#cp-policy-driving-braking{
+	background: url('driving2.png') no-repeat;
+}
+#cp-policy-driving-acceleration{
+	background: url('driving3.png') no-repeat;
+}
+#cp-policy-driving-cornering{
+	background: url('driving4.png') no-repeat;
+}
+#cp-policy-driving-journies{
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+}
+#cp-policy-driving-journies .title{
+	display: block;
+	margin-bottom: 0.25em;
+	padding: 0 1em;
+	background-color: #555;
+	color: #fff;
+}
+#cp-policy-driving-journies .journies{
+	display: block;
+	font-size: 2em;
+}

@@ -3,12 +3,15 @@
 		<div class="widget" name="cp-header-menu"></div>
 	</header>
 
-	<section id="login-banner">
+	<section id="cp-banner">
+		<h1 onclick="location.href='/'"></h1>
+		<h2>customer portal</h2>
 	</section>
 
-	<section id="login-content">
+	<section id="cp-content">
+		<div class="widget" name="help"></div>
 		<div id="login-form">
-			<form id="login-form-enter" action="#" onsubmit="login_loginEnter('cp_page');return false;">
+			<form id="login-form-enter" action="#" onsubmit="login_loginEnter('cp-page');return false;">
 				<h2>Registered customers</h2>
 				<label for="username">Username: <input type="text" name="username" id="username" autofocus required /></label>
 				<label for="password">Password: <input type="password" name="password" id="password" required /></label>

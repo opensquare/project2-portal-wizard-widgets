@@ -1,0 +1,231 @@
+body{
+	min-width: 275px;
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #F0F0F0;
+	color: #333;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+#backgroundText text{
+	fill: none;
+	stroke: rgba(0, 0, 0, 0.05);
+}
+
+header{
+	width: 80%;
+	margin: 1em auto;
+	padding-bottom: 1em;
+}
+header h2{
+	float: left;
+	margin: 0;
+	font-size: 1em;
+	color: #0DB4F2; /* Blue */
+}
+header h2 span{
+	color: #92CE56; /* Green */
+}
+@media screen and (max-width: 1000px) {
+	header{
+		width:98%;
+	}
+}
+
+#cp-banner{
+	height: 300px;
+	background: url('cp-banner.jpg') no-repeat center;
+	background-size: cover;
+}
+#cp-banner>h1{
+	width: 400px;
+	height: 125px;
+	margin: 0 0 0 1%;
+	background: url('model-insurance.png') no-repeat left bottom;
+	cursor: pointer;
+}
+#cp-banner h2{
+	display: inline-block;
+	margin: 0;
+	padding: 0 0.5em 0 4em;
+	background: rgba(0,0,0,0.35);
+	color: rgba(255,255,255,0.9);
+	font-weight: normal;
+	font-size: 2em;
+	border-radius: 0 0.15em 0.15em 0;
+}
+
+#cp-content{
+	width: 78%;
+	min-height: 400px;
+	margin: -6em auto 0 auto;
+	padding: 0.25% 1%;
+	background-color: rgba(255,255,255,0.85);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border-radius: 0.25em;
+	text-align: right;
+}
+@media screen and (max-width: 1000px) {
+	#cp-content{
+		width:96%;
+	}
+}
+@media screen and (max-width: 600px) {
+	#cp-banner{
+		zheight: 100px;
+	}
+}
+
+div.widget>.widget-head{
+	display: none;
+}
+div.widget>.widget-messages{
+	overflow: hidden;
+	background-color: #A0F0F0;
+	color: #333;
+	border-radius: 0.25em;
+}
+div.widget>.widget-messages>div{
+	padding: 0.25em 0.5em;
+}
+div.widget>.widget-messages>div>a{
+	float: right;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('symbol-close.png') no-repeat;
+	cursor: pointer;
+}
+div.widget>.widget-messages>div.error{
+	background-color: #F0A0A0;
+}
+#cp-content>div{
+	display: inline-block;
+}
+
+#cp-policy-title{
+	margin-top: 0;
+	font-size: 1.8em;
+}
+#cp-policy-switcher{
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: url('symbol-refresh-dark.png') no-repeat right top;
+	cursor: pointer;
+}
+#cp-policy-menu{
+	position: fixed;
+	width: 15%;
+	padding-right: 1px; /* fixes scroll bug */
+	text-align: left;
+}
+#cp-policy-menu a{
+	display: block;
+	margin: 0.25em 0;
+	padding: 0.75em 1em;
+	background: #0090c0;
+	color: #FFF;
+	font-size: 1.1em;
+	border-radius: 0.25em;
+	cursor: pointer;
+}
+#cp-policy-menu a.on{
+	background-color: #92CE56;
+}
+#cp-policy-menu a.on:after{
+	position: absolute;
+	right: 10px;
+	content: '►';
+	background-color: #92CE56;
+}
+#cp-content article{
+	display: inline-block;
+	width: 78%;
+	margin-bottom: 2em;
+	text-align: left;
+}
+#cp-content article h2{
+	border-bottom: thin solid;
+}
+
+#cp-content p.pane{
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+}
+#cp-content p.pane .title{
+	display: block;
+	margin-bottom: 0.25em;
+	padding: 0 1em;
+	background-color: #555;
+	color: #fff;
+}
+#cp-policy-summary-cover{
+	min-width: 30em;
+	text-align: left!important;
+}
+#cp-policy-summary .cover{
+	display: inline-block;
+	height: 50px;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-summary .cover.comp{
+	background-image: url('shape-shield-dark.png');
+}
+#cp-policy-summary .cover.breakdown{
+	background-image: url('traffic-cone-dark.png');
+}
+#cp-policy-summary .renewal-day{
+	display: block;
+	font-size: 2em;
+}
+#cp-policy-summary .renewal-year{
+	display: none;
+}
+#cp-policy-summary .miles{
+	display: block;
+	font-size: 2em;
+}
+#cp-policy-docs .pdf{
+	display: inline-block;
+	margin: 1em 0;
+	padding: 12px 50px;
+	white-space: nowrap;
+	background: url('file-pdf.png') no-repeat left;
+	color: inherit;
+}
+
+
+footer{
+	width: 80%;
+	margin: 3em auto 1em auto;
+	background-color: #777;
+	color: #FFF;
+	font-size: small;
+	border-radius: 0.25em;
+}
+footer p{
+	padding: 0 1em 1em 1em;
+	margin: 0;
+}
+footer p:first-child{
+	padding-top: 1em;
+	font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+	footer{
+		width:98%;
+	}
+}

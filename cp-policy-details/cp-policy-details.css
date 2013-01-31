@@ -1,0 +1,19 @@
+#cp-policy-details .pholder,#cp-policy-details .driver,#cp-policy-details .vehicle,#cp-policy-details .add{
+	display: inline-block;
+	height: 50px;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-details .man{
+	background-image: url('person-man-dark.png');
+}
+#cp-policy-details .woman{
+	background-image: url('person-woman-dark.png');
+}
+#cp-policy-details .vehicle{
+	background-image: url('transport-car-dark.png');
+}
+#cp-policy-details .add{
+	background: url('symbol-add-dark-small.png') no-repeat center 20%;
+}
