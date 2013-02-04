@@ -4,4 +4,7 @@
 		<url>quote.html</url>
 		<secure>false</secure>
 	</parameters>
+	<attributes>
+		<css>quote.css</css>
+	</attributes>
 </widget>

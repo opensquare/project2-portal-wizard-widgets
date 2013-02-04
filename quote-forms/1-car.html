@@ -13,6 +13,14 @@
 			vehicleLookup.lookupVehicle(regInput.val());
 		})
 	})
+
+	$("div.field").first().addClass("on");
+
+	$('form input, form select').focus(function() {
+	  $("div.field").removeClass("on");
+	   $(this).closest("div.field").addClass("on")
+	});
+	
 </script>
 
 <h4>Car</h4>
@@ -33,6 +41,7 @@
 		<input type="hidden" name="engineCapacity" />
 		<input type="hidden" name="transmission" />
 		<input type="hidden" name="multiple" />
+		<div class="hint"><h3>Find your car</h3><p>Why do you need to know this?  We need your registration so we can find your exact car and help you get a more accurate quote.</p></div>
 	</div>
 	
 	<div class="field carFound" style="display: none;">
@@ -47,11 +56,13 @@
 		<label for="input_purchaseDate">When did you buy the car? (mm/yyyy)</label>
 		<input id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
 		<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDate.value) { utils.monthsBetween(moment('01/' + fields.purchaseDate.value, 'DD/MM/YYYY'), new Date()); }}" />
+		<div class="hint">Why do you need to know this?  We need your registration so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
 
 	<div class="field">
 		<label for="input_securityDevices">What security devices does this vehicle have?</label>
 		<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="false"></select>
+		<div class="hint">We are happy to help....</div>
 	</div>
 	
 	<div class="field">
@@ -59,7 +70,7 @@
 		<input id="input_activeTracker_yes" type="radio" name="activeTracker" value="yes" rf.validation="required"/>
 		<label for="input_activeTracker_yes" class="forRadio">Yes</label>
 		<input id="input_activeTracker_no" type="radio" name="activeTracker" value="no"/>
-		<label for="input_activeTracker_no">No</label>
+		<label for="input_activeTracker_no" class="forRadio">No</label>
 	</div>
 	
 	<div class="field">
@@ -72,7 +83,7 @@
 		<input id="input_modified_yes" type="radio" name="modified" value="yes" rf.validation="required"/>
 		<label for="input_modified_yes" class="forRadio">Yes</label>
 		<input id="input_modified_no" type="radio" name="modified" value="no"/>
-		<label for="input_modified_no">No</label>
+		<label for="input_modified_no" class="forRadio">No</label>
 	</div>
 	
 	<div class="field">
