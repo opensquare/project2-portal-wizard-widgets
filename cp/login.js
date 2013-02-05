@@ -13,7 +13,7 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 	var $loginForm = $("#login-form-enter");
 	var loginFormData = $loginForm.serialize();
 
-	$loginForm.pwrUtils('disableForm').pwrWidget('clearMessages');
+	// $loginForm.pwrUtils('disableForm').pwrWidget('clearMessages');
 	
 	$.ajax({
 		type: "POST",
