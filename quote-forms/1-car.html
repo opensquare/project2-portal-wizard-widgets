@@ -20,11 +20,28 @@
 	  $("div.field").removeClass("on");
 	   $(this).closest("div.field").addClass("on")
 	});
-	
+
+	$('form input[type="radio"]').change(function() {
+	  $("div.field").removeClass("on");
+	   $(this).closest("div.field").addClass("on")
+	});
+
 </script>
 
-<h4>Car</h4>
-<form rhinoforms="true">
+
+
+<form rhinoforms="true">	
+
+<h1>2. Find Vehicle</h1>
+
+	<div class="field knowReg">
+		<label>Do you know the vehicle registration number?</label>
+		<input id="input_knowReg_yes" type="radio" name="knowReg" value="yes" rf.validation="required"/>
+		<label for="input_knowReg_yes" class="forRadio">Yes</label>
+		<input id="input_knowReg_no" type="radio" name="knowReg" value="no"/>
+		<label for="input_knowReg_no" class="forRadio">No</label>
+		<div class="hint">Don't worry if you don't know the vehicle registration number. We can help!</div>
+	</div>
 
 	<div class="field findCar">
 		<label for="input_reg">Registration number</label>
@@ -49,20 +66,31 @@
 		<span name="reg">{{reg}}</span><br/>
 		<label>Your vehicle</label>
 		<span name="vehDesc">{{vehDesc}}</span>
-		<input type="button" class="changeVehicleButton" onclick="return false;" value="Change vehicle"/>
+		<input type="button" class="changeVehicleButton" onclick="" value="Change vehicle"/>
 	</div>
-	
+
+	<h1>3. Vehicle Details</h1>
+
 	<div class="field">
-		<label for="input_purchaseDate">When did you buy the car? (mm/yyyy)</label>
-		<input id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
+		<label for="input_purchaseDate">When did you buy the car?</label>
+		<!--
+		<select id="input_purchaseMonth" type="text" name="purchaseMonth" rf.validation="required date({ format: 'MM' })">
+			<option value="1">-- Month --
+			<option value="2">January
+		</select>
+		<select id="input_purchaseYear" type="text" name="purchaseYear" rf.validation="required date({ format: 'YY' })">
+			<option value="1">-- Year --
+			<option value="2">2013
+		</select>-->
+		<select id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
 		<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDate.value) { utils.monthsBetween(moment('01/' + fields.purchaseDate.value, 'DD/MM/YYYY'), new Date()); }}" />
-		<div class="hint">Why do you need to know this?  We need your registration so we can find your exact car and help you get a more accurate quote.</div>
+		<div class="hint">We need your purchase date so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
 
 	<div class="field">
 		<label for="input_securityDevices">What security devices does this vehicle have?</label>
 		<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="false"></select>
-		<div class="hint">We are happy to help....</div>
+		<div class="hint">Alarms, immobilisers and tracking devices could reduce your premium!</div>
 	</div>
 	
 	<div class="field">
@@ -71,11 +99,13 @@
 		<label for="input_activeTracker_yes" class="forRadio">Yes</label>
 		<input id="input_activeTracker_no" type="radio" name="activeTracker" value="no"/>
 		<label for="input_activeTracker_no" class="forRadio">No</label>
+		<div class="hint">Alarms, immobilisers and tracking devices could reduce your premium!</div>
 	</div>
 	
 	<div class="field">
 		<label for="input_marketValue">What is the current market value of your car?</label>
 		<input id="input_marketValue" type="text" name="marketValue" rf.validation="required"/>
+		<div class="hint">Alarms, immobilisers and tracking devices could reduce your premium!</div>
 	</div>
 	
 	<div class="field">
@@ -104,6 +134,7 @@
 			<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></select>
 		</div>
 	</div>
-	
+
 	<input type="submit" rf.action="next" value="Next"/>
+	
 </form>

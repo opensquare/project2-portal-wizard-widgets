@@ -1,43 +1,116 @@
 form {
-	padding: 2em;
+	padding: 0.2em 2em 0 2em;
 }
+
+h1 {
+	color: #333;
+	font-size: 250%;
+	font-weight: normal;
+}
+
 label {
 	display: inline-block;
-	width: 40em;
-	padding-left: 1em;
+	font-size: 1.3em;
+	padding: 0 1em 0 1em;
+	width: 45%;
 }
 label.forRadio {
-	width: auto;
+	position: relative;
+	right: 0.8em;
+	width: 2em;
 }
 
+
+input:focus {
+	outline: medium solid #0090C0;
+}
+input[type="radio"] {
+    background-color: #FFF;
+    border: thin solid #0090C0;
+    padding: 0.45em;
+    -webkit-appearance: none;
+}
+input[type="radio"]:checked {
+	background-color: #0090C0; 
+    padding: 0.2em 0.4em 0.2em 0.4em;
+}
+input[type="radio"]:checked:after {
+	background-color: #0090C0;
+	color: #FFF;
+	content: '\2714';
+    font-size: 1.5em;   
+}
+
+input[type="button"] {
+	background-color: #92CE56;
+	border: none;
+	border-radius: 0.25em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1.3em;	
+	margin-left: 0.3em;
+	padding: 0.2em 1em;
+}
+
+input[type="text"] {
+	border: thin solid #0090C0;
+	font-size: 1.5em;
+	width: 20%;
+}
+
+input[type="submit"] {
+	background-color: #92CE56;
+	border: none;
+	border-radius: 0.25em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 2em;	
+	margin:	1em 0 1em 35em;
+	padding: 0.2em 1em;
+	right: 14em;
+}
+
+select {
+	border: thin solid #0090C0;
+	font-size: 1.5em;
+	width: 20%;
+}
 
 div.field {
+	border-bottom: thin solid rgba(0, 0, 0, 0.1);
+	min-height: 2.1em;
 	padding: 1em 0;
-	border-bottom: thin solid rgba(0, 0, 0, 0.25);
 }
-div.field.on, div.field:hover {
-	background-color: rgba(0,0,0,0.1);
+div.field:hover {
+ 	background-color: rgba(0,0,0,0.1);
+ }
+div.field.on, div.field.on:hover {
+	background-color: rgba(0,0,0,0.2);
 }
+ div.field:hover {
+ 	background-color: rgba(0,0,0,0.1);
+ }
 div.field.on .hint{
 	display: inline-block;
 }
+
 .hint{
-	display: none;
 	background-color: #92CE56;
-	position: absolute;
-	padding: 0.35em;
-	margin: 0 0 0 2em;
-	width: 15em;
 	border-radius: 0.25em;
 	color: #FFF;
+	display: none;
+	padding: 0.35em;
+	position: absolute;
+	right: 14em;
+	width: 15em;
 }
 .hint h3 {
 	margin: 0;
 }
 .hint::before {
+	color: #92CE56;
 	content: '◄';
+	font-size: 2em;
 	position: absolute;
 	margin: -0.3em 0 0 -1em;
-	color: #92CE56;
-	font-size: 2em;
 }
