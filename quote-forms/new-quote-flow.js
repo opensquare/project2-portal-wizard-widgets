@@ -41,7 +41,7 @@
 							url: "{{napier-loadbalancer-url}}/REST/calcs",
 							data: {
 								source: "rhinoforms",
-								calcType: "/Products/MotorPremiumDev/Precalculation,/Products/MotorPremiumDev/Additional Driver Demerits,/Products/MotorPremiumDev/All Convictions,/Products/MotorPremiumDev/Motor Premium Basis,/Products/MotorPremiumDev/Mapped Profit,/Products/MotorPremiumDev/Motor Excess Points Basis,/Products/MotorPremiumDev/Excesses and Endorsements,/Products/MotorPremiumDev/Gross Premium",
+								calcType: "/Products/Motor/Lookups,/Products/Motor/Precalculation,/Products/Motor/Risk Premium,/Products/Motor/Excess,/Products/Motor/Underwriting,/Products/Motor/Gross Premium",
 								calcData: "[dataDocument]"
 							},
 							method: "post",
