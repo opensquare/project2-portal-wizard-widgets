@@ -1,0 +1,10 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>cp-policy-payments.html</url>
+	</parameters>
+	<attributes>
+		<displayheader>false</displayheader>
+		<css>cp-policy-payments.css</css>
+	</attributes>
+</widget>

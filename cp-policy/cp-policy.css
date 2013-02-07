@@ -46,8 +46,12 @@ header h2 span{
 	width: 400px;
 	height: 125px;
 	margin: 0 0 0 1%;
+}
+#cp-banner>h1>a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 	background: url('model-insurance.png') no-repeat left bottom;
-	cursor: pointer;
 }
 #cp-banner h2{
 	display: inline-block;
@@ -60,7 +64,7 @@ header h2 span{
 	border-radius: 0 0.15em 0.15em 0;
 }
 
-#cp-content{
+#cp-policy{
 	width: 78%;
 	min-height: 400px;
 	margin: -6em auto 0 auto;
@@ -71,7 +75,7 @@ header h2 span{
 	text-align: right;
 }
 @media screen and (max-width: 1000px) {
-	#cp-content{
+	#cp-policy{
 		width:96%;
 	}
 }
@@ -104,7 +108,7 @@ div.widget>.widget-messages>div>a{
 div.widget>.widget-messages>div.error{
 	background-color: #F0A0A0;
 }
-#cp-content>div{
+#cp-policy>div{
 	display: inline-block;
 }
 
@@ -144,17 +148,21 @@ div.widget>.widget-messages>div.error{
 	content: '►';
 	background-color: #92CE56;
 }
-#cp-content article{
+#cp-policy details{
 	display: inline-block;
 	width: 78%;
 	margin-bottom: 2em;
 	text-align: left;
 }
-#cp-content article h2{
+#cp-policy details summary{
+	margin: 1em 0;
 	border-bottom: thin solid;
+	font-size: 1.5em;
+	font-weight: bold;
+	cursor: pointer;
 }
 
-#cp-content p.pane{
+#cp-policy .pane{
 	display: inline-block;
 	height: 6em;
 	overflow: hidden;
@@ -163,12 +171,61 @@ div.widget>.widget-messages>div.error{
 	border: medium solid #555;
 	border-radius: 0.5em;
 }
-#cp-content p.pane .title{
+#cp-policy .pane.warn{
+	border-color: #FD0;
+}
+#cp-policy .pane.alert{
+	border-color: #D44;
+}
+#cp-policy .pane .title{
 	display: block;
 	margin-bottom: 0.25em;
 	padding: 0 1em;
 	background-color: #555;
-	color: #fff;
+	color: #FFF;
+}
+#cp-policy .pane.warn .title{
+	background-color: #FD0;
+	color: #333;
+}
+#cp-policy .pane.alert .title{
+	background-color: #D44;
+}
+#cp-policy .pane .hint:before{
+	content: '▲';
+	position: absolute;
+	margin: -1.2em 1em 0 0;
+	color: #555;
+	right: 0;
+	font-size: 1.5em;
+	text-shadow: 0 -6px 0 #FFF;
+}
+#cp-policy .pane.warn .hint:before{
+	color: #FD0;
+}
+#cp-policy .pane.alert .hint:before{
+	color: #D44;
+}
+#cp-policy .pane .hint{
+	position: absolute;
+	margin: 3em 0em 0 -14em;
+	width: 14em;
+	background: #555;
+	color: #FFF;
+	padding: 0.5em;
+	border-radius: 0.25em;
+}
+#cp-policy .pane.warn .hint{
+	background: #FD0;
+	color: #333;
+}
+#cp-policy .pane.alert .hint{
+	background: #D44;
+}
+#cp-policy .pane .hint a{
+	color: inherit;
+	font-weight: bold;
+	text-decoration: underline;
 }
 #cp-policy-summary-cover{
 	min-width: 30em;
@@ -206,7 +263,6 @@ div.widget>.widget-messages>div.error{
 	background: url('file-pdf.png') no-repeat left;
 	color: inherit;
 }
-
 
 footer{
 	width: 80%;

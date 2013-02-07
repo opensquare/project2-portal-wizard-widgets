@@ -4,65 +4,73 @@
 	</header>
 
 	<section id="cp-banner">
-		<h1 onclick="location.href='/'"></h1>
+		<h1><a href="/logout" title="Logout and return"></a></h1>
 		<h2><b>Joe Smith's</b> customer portal</h2>
 	</section>
 
-	<section id="cp-content">
+	<section id="cp-policy">
 		<div class="widget" name="help"></div>
 		<h1 id="cp-policy-title">Motor Insurance Policy: BMW 320i petrol 4dr 2005<span id="cp-policy-switcher" title="Select another policy"></span></h1>
 		<aside id="cp-policy-menu">
 			<a id="menu-summary" class="on" href="#cp-policy-summary">Summary</a>
 			<a id="menu-driving" href="#cp-policy-driving">Driving</a>
 			<a id="menu-details" href="#cp-policy-details">Details/Changes</a>
-			<a id="menu-claims" href="#cp-policy-clams">Claims</a>
+			<a id="menu-claims" href="#cp-policy-claims">Claims</a>
 			<a id="menu-docs" href="#cp-policy-docs">Documents</a>
 			<a id="menu-payments" href="#cp-policy-payments">Payments</a>
 		</aside>
-		<article id="cp-policy-summary">
+		<details id="cp-policy-summary" open>
 			<a name="cp-policy-summary"></a>
-			<h2>Summary</h2>
-			<p id="cp-policy-summary-cover" class="pane">
+			<summary>Summary</summary>
+			<div id="cp-policy-summary-cover" class="pane">
 				<span class="title">Cover</span>
 				<span class="cover comp">Comprehensive</span>
 				<span class="cover breakdown">Breakdown</span>
-			</p>
-			<p id="cp-policy-summary-renewal" class="pane">
+			</div>
+			<div id="cp-policy-summary-renewal" class="pane">
 				<span class="title">Renewal</span>
 				<span class="renewal-day">02</span>
 				<span class="renewal-month">August</span>
 				<span class="renewal-year">2013</span>
-			</p>
-			<p id="cp-policy-summary-premium" class="pane">
+			</div>
+			<div id="cp-policy-summary-premium" class="pane">
 				<span class="title">Premium</span>
 				<span class="premium-due">Fully paid up</span>
-			</p>
-			<p id="cp-policy-summary-miles" class="pane">
+			</div>
+			<div id="cp-policy-summary-miles" class="pane alert">
 				<span class="title">Miles</span>
-				<span class="miles">3,456</span>
+				<span class="miles">356</span>
 				<span class="action">Top up...</span>
-			</p>
-		</article>
-		<article id="cp-policy-driving">
+				<span class="hint">
+					You are running low on insured miles.  Do you want to <a href="#">Top Up</a>?
+				</span>
+			</div>
+		</details>
+		<details id="cp-policy-driving">
 			<a name="cp-policy-driving"></a>
+			<summary>Driving</summary>
 			<div class="widget on" name="cp-policy-driving"></div>
-		</article>
-		<article id="cp-policy-details">
+		</details>
+		<details id="cp-policy-details">
 			<a name="cp-policy-details"></a>
+			<summary>Details</summary>
 			<div class="widget" name="cp-policy-details"></div>
-		</article>
-		<article id="cp-policy-claims">
+		</details>
+		<details id="cp-policy-claims">
 			<a name="cp-policy-claims"></a>
+			<summary>Claims</summary>
 			<div class="widget" name="cp-policy-claims"></div>
-		</article>
-		<article id="cp-policy-docs">
+		</details>
+		<details id="cp-policy-docs">
 			<a name="cp-policy-docs"></a>
+			<summary>Documents</summary>
 			<div class="widget" name="cp-policy-docs"></div>
-		</article>
-		<article id="cp-policy-payments">
+		</details>
+		<details id="cp-policy-payments">
 			<a name="cp-policy-payments"></a>
+			<summary>Payments</summary>
 			<div class="widget" name="cp-policy-payments"></div>
-		</article>
+		</details>
 	</section>
 
 	<footer>
@@ -72,10 +80,29 @@
 	<script type="text/javascript">
 		$(window).scroll(function(){
    			$('#cp-policy-menu').css('top',Math.max(0,350-$(this).scrollTop()));
+   			// open <details> as the user scrolls down
+   			var scrollPosition = $(window).scrollTop() + $(window).height();
+   			$('#cp-policy details[open!="open"]').each(function(){
+				if($(this).position().top < scrollPosition){$(this).attr('open','')};
+   			});
+   			// Highlight relevant menu items as the user scrolls down
+   			scrollPosition = $(window).scrollTop();
+   			var menu = $('#cp-policy-menu a');
+   			var href = "";
+   			$('#cp-policy details').each(function(){
+				if(href == "" && $(this).position().top > scrollPosition-30){
+					href = $(this).attr('id');
+					menu.removeClass('on');
+					menu.filter('[href="#'+href+'"]').addClass('on');
+				};
+   			});
 		});
+
+		// Enhance menu click behaviour
 		$('#cp-policy-menu a').click(function(){
 			$('#cp-policy-menu a').removeClass('on');
-			$(this).addClass('on');
+			var place = $(this).addClass('on').attr('href');
+			$(place).attr('open','');
 		});
 	</script>
 <!--
