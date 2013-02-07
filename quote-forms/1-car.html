@@ -82,7 +82,7 @@
 			<option value="1">-- Year --
 			<option value="2">2013
 		</select>-->
-		<select id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
+		<input id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
 		<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDate.value) { utils.monthsBetween(moment('01/' + fields.purchaseDate.value, 'DD/MM/YYYY'), new Date()); }}" />
 		<div class="hint">We need your purchase date so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
