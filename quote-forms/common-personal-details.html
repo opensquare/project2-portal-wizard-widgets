@@ -1,8 +1,11 @@
 	<script type='text/javascript' src='widgets/quote-forms/js/address-lookup.js' ></script>
+	
 
 	<div class="field">
 		<label for="input_title">Title</label>
-		<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="false"></select>
+		<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
 	<div class="field">
@@ -16,8 +19,8 @@
 	</div>
 
 	<div class="field">
-		<label for="input_dateOfBirth">Date of birth (dd/mm/yyyy)</label>
-		<input id="input_dateOfBirth" type="text" name="dateOfBirth" rf.validation="required date({ format: 'DD/MM/YYYY' })"/>
+		<label for="input_dateOfBirth">Date of birth</label>
+		<input id="input_dateOfBirth" type="text" name="dateOfBirth" >
 		<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirth.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
 	</div>
 	
@@ -26,18 +29,21 @@
 		<input id="input_gender_male" type="radio" name="gender" value="Male" rf.validation="required"/>
 		<label for="input_gender_male" class="forRadio">Male</label>
 		<input id="input_gender_female" type="radio" name="gender" value="Female"/>
-		<label for="input_gender_female">Female</label>
+		<label for="input_gender_female" class="forRadio">Female</label>
 	</div>
 	
 	<div class="field">
 		<label for="input_occupation">Primary occupation</label>
 		<input type="hidden" name="occupationCode" />
 		<input id="input_occupation" type="text" name="occupation" rf.validation="required fromSource" rf.customType="auto-complete-select({ codeFieldName: 'occupationCode' })" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbLists-occupationSheet.xml?transformer=xslt&xslt=/itb-resources-test2/lists/occupationLookupTransformJSONmin.xsl&contentType=application%2Fjson&occupation=[value]" />
+		<div class="hint">We need your occupation so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
 
 	<div class="field">
 		<label for="input_maritalStatusCode">Marital status</label>
-		<select id="input_maritalStatusCode" name="maritalStatusCode" rf.validation="required" rf.source="resources/maritalStatus.csv" rf.preselectFirstOption="false"></select>
+		<select id="input_maritalStatusCode" name="maritalStatusCode" rf.validation="required" rf.source="resources/maritalStatus.csv" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
 	<div class="field">
@@ -47,8 +53,12 @@
 		
 		<div rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }">
 			<label for="input_ukResidentSinceMonthCode">Or since</label>
-			<select id="input_ukResidentSinceMonthCode" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="false"></select>
-			<select id="input_ukResidentSinceYear" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="false"></select>
+			<select id="input_ukResidentSinceMonthCode" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+				<option disabled selected/>
+			</select>
+			<select id="input_ukResidentSinceYear" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true">
+				<option disabled selected/>
+			</select>
 		</div>
 		
 		<input type="hidden" name="ukResidentYears" rf.calculated="{ if (fields.ukResidentMoreThan5Years.value == true) { 10; } else if (fields.ukResidentSinceMonthCode.value && fields.ukResidentSinceYear.value) { new Date(new Date() - moment('01/' + fields.ukResidentSinceMonthCode.value + '/' + fields.ukResidentSinceYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 } }"/>
@@ -87,9 +97,9 @@
 	<div class="field">
 		<label>Do you own your own home</label>
 		<input id="input_ownHome_yes" type="radio" name="ownHome" value="yes" rf.validation="required"/>
-		<label for="input_ownHome_yes">Yes</label>
+		<label for="input_ownHome_yes" class="forRadio">Yes</label>
 		<input id="input_ownHome_no" type="radio" name="ownHome" value="no"/>
-		<label for="input_ownHome_no">No</label>
+		<label for="input_ownHome_no" class="forRadio">No</label>
 	</div>
 	
 	<script>

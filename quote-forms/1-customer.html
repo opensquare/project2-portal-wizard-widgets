@@ -1,5 +1,8 @@
-<h4>Customer Details</h4>
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+
 <form rhinoforms="true">
+
+	<h1>3. Customer Details</h1>
 
 	<rf.include src="common-personal-details.html" ></rf.include>
 	
@@ -10,9 +13,13 @@
 	
 	<div class="field">
 		<label for="input_referrer">How did you hear about us?</label>
-		<select id="input_referrer" name="referrer" rf.validation="required" rf.source="resources/referrer.txt" rf.preselectFirstOption="false"></select>
+		<select id="input_referrer" name="referrer" rf.validation="required" rf.source="resources/referrer.txt" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
-	<input type="button" rf.action="back" value="Back"/>
-	<input type="submit" value="Next" rf.action="next"/>
+	<div class="navigation">
+		<input type="button" rf.action="back" value="Back"/>
+		<input type="submit" value="Next" rf.action="next"/>
+	</div>
 </form>

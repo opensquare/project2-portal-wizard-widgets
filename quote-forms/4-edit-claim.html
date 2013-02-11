@@ -1,5 +1,7 @@
-<h4>Claim Details</h4>
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+
 <form rhinoforms="true">
+	<h1>Claim Details</h1>
 
 	<div class="field">
 		<label for="input_date">When did it happen?(dd/mm/yyyy)</label>
@@ -8,9 +10,13 @@
 	
 	<div class="field">
 		<label for="input_whatHappened">What happened?</label>
-		<select id="input_whatHappened" name="claimType" rf.validation="required" rf.source="resources/claimWhatHappened.txt" rf.preselectFirstOption="false"></select>
+		<select id="input_whatHappened" name="claimType" rf.validation="required" rf.source="resources/claimWhatHappened.txt"rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
-	<input type="button" rf.action="cancel" value="Cancel"/>
-	<input type="submit" rf.action="next" value="Next"/>
+	<div class="navigation">
+		<input type="button" rf.action="cancel" value="Cancel"/>
+		<input type="submit" rf.action="next" value="Next"/>
+	</div>
 </form>		

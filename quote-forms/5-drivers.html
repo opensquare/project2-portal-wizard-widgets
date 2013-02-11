@@ -1,5 +1,6 @@
-<h4>Drivers</h4>
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
 <form rhinoforms="true">
+	<h1>5. Additional Drivers</h1>
 	<div class="drivers">
 		<rf.forEach select="additionalDrivers/driver" as="d">
 			<div class="driver">
@@ -11,9 +12,13 @@
 			</div>
 		</rf.forEach>
 	</div>
-	<input type="button" rf.action="addAdditionalDriver" value="Add Driver"/>
+	<div class="field">
+		<input type="button" rf.action="addAdditionalDriver" value="Add Driver"/>
+	</div>
 	
 	<br/>
-	<input type="button" rf.action="back" value="Back"/>
-	<input type="submit" rf.action="next" value="Next"/>
+	<div class="navigation">
+		<input type="button" rf.action="back" value="Back"/>
+		<input type="submit" rf.action="next" value="Next"/>
+	</div>
 </form>		

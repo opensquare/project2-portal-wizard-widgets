@@ -1,6 +1,6 @@
-<h4>Driver Details</h4>
-<form rhinoforms="true">
 
+<form rhinoforms="true">
+<h1>Driver Details</h1>
 	<rf.include src="common-personal-details.html" ></rf.include>
 
 	<div class="field">
@@ -10,7 +10,9 @@
 	
 	<rf.include src="common-driving-details.html" ></rf.include>
 	
-	<input type="button" rf.action="cancel" value="Cancel" rf.includeIf="{ ({{count(convictions/conviction)}} == 0 && {{count(claims/claim)}} == 0) }"/>
-	<input type="button" rf.action="back" value="Back" rf.includeIf="{ !({{count(convictions/conviction)}} == 0 && {{count(claims/claim)}} == 0) }"/>
-	<input type="submit" rf.action="next" value="Next"/>
+	<div class="navigation">
+		<input type="button" rf.action="cancel" value="Cancel" rf.includeIf="{ ({{count(convictions/conviction)}} == 0 && {{count(claims/claim)}} == 0) }"/>
+		<input type="button" rf.action="back" value="Back" rf.includeIf="{ !({{count(convictions/conviction)}} == 0 && {{count(claims/claim)}} == 0) }"/>
+		<input type="submit" rf.action="next" value="Next"/>
+	</div>
 </form>		

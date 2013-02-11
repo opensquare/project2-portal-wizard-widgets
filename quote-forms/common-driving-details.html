@@ -1,7 +1,9 @@
 
 	<div class="field">
 		<label for="input_licenceType">Driving licence type:</label>
-		<select id="input_licenceType" name="licenceTypeCode" rf.validation="required" rf.source="resources/licenceType.csv"></select>
+		<select id="input_licenceType" name="licenceTypeCode" rf.validation="required" rf.source="resources/licenceType.csv" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
 	<div class="field">
@@ -10,8 +12,12 @@
 		<label for="input_passedTestMoreThan10YearsAgo">More than 10 years ago</label>
 		<div rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }">
 			<label for="input_passedTestMonth">Or since</label>
-			<select id="input_passedTestMonth" name="passedTestMonth" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="false"></select>
-			<select id="input_passedTestYear" name="passedTestYear" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 10" rf.preselectFirstOption="false"></select>
+			<select id="input_passedTestMonth" name="passedTestMonth" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+				<option disabled selected/>
+			</select>
+			<select id="input_passedTestYear" name="passedTestYear" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 10"rf.preselectFirstOption="true">
+				<option disabled selected/>
+			</select>
 		</div>
 		<input type="hidden" name="licenceHeldSinceDate" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.calculated="{ if (fields.passedTestMoreThan10YearsAgo.value == false && fields.passedTestMonth.value && fields.passedTestYear.value) { '01/' + fields.passedTestMonth.value + '/' + fields.passedTestYear.value } }"/>
 		<input type="hidden" name="licenceHeldYears" rf.calculated="{ if (fields.passedTestMoreThan10YearsAgo.value == true) { '10' } else if (fields.licenceHeldSinceDate.value) { utils.yearsBetween(moment(fields.licenceHeldSinceDate.value, 'DD/MM/YYYY'), new Date()) } }"/>
@@ -27,12 +33,16 @@
 
 	<div class="field">
 		<label for="input_additionalDrivingQualifications">Additional driving qualifications</label>
-		<select id="input_additionalDrivingQualifications" name="additionalDrivingQualificationsCode" rf.validation="required" rf.source="resources/additionalDrivingQualifications.csv" rf.preselectFirstOption="true"></select>
+		<select id="input_additionalDrivingQualifications" name="additionalDrivingQualificationsCode" rf.validation="required" rf.source="resources/additionalDrivingQualifications.csv" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
 	<div class="field">
 		<label for="input_medicalConditions">Medical conditions affecting your driving</label>
-		<select id="input_medicalConditions" name="medicalConditions" rf.validation="required" rf.source="resources/medicalConditions.txt" rf.preselectFirstOption="false"></select>
+		<select id="input_medicalConditions" name="medicalConditions" rf.validation="required" rf.source="resources/medicalConditions.txt" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
 	</div>
 	
 	<div class="field">
@@ -52,7 +62,7 @@
 	</div>
 	
 	<div class="convictions" rf.includeIf="{ fields.anyConvictions.value == 'Yes' }" >
-		<h5>Convictions</h5>
+		<h3>Convictions</h3>
 		<p>Please enter details of any driving convictions this driver has received in the last 5 years.</p>
 		<div>
 			<rf.forEach select="convictions/conviction" as="con">
@@ -69,7 +79,7 @@
 	</div>
 	
 	<div class="claims" rf.includeIf="{ fields.anyClaims.value == 'Yes' }" >
-		<h5>Claims</h5>
+		<h3>Claims</h3>
 		<p>Please enter details of any claims, accidents or losses this driver has made in the last 5 years.</p>
 		<div>
 			<rf.forEach select="claims/claim" as="cl">

@@ -1,4 +1,6 @@
 <script type='text/javascript' src='widgets/quote-forms/js/vehicle-lookup.js' ></script>
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+
 <script>
 	rf.onFormLoad(function() {
 		var regInput = $('#input_reg');
@@ -14,32 +16,20 @@
 		})
 	})
 
-	$("div.field").first().addClass("on");
-
-	$('form input, form select').focus(function() {
-	  $("div.field").removeClass("on");
-	   $(this).closest("div.field").addClass("on")
-	});
-
-	$('form input[type="radio"]').change(function() {
-	  $("div.field").removeClass("on");
-	   $(this).closest("div.field").addClass("on")
-	});
-
 </script>
 
 
 
 <form rhinoforms="true">	
 
-<h1>2. Find Vehicle</h1>
+<h1>1. Find Vehicle</h1>
 
 	<div class="field knowReg">
 		<label>Do you know the vehicle registration number?</label>
-		<input id="input_knowReg_yes" type="radio" name="knowReg" value="yes" rf.validation="required"/>
-		<label for="input_knowReg_yes" class="forRadio">Yes</label>
-		<input id="input_knowReg_no" type="radio" name="knowReg" value="no"/>
-		<label for="input_knowReg_no" class="forRadio">No</label>
+			<input id="input_knowReg_yes" type="radio" name="knowReg" value="yes" rf.validation="required"/>
+			<label for="input_knowReg_yes" class="forRadio">Yes</label>
+			<input id="input_knowReg_no" type="radio" name="knowReg" value="no"/>
+			<label for="input_knowReg_no" class="forRadio">No</label>
 		<div class="hint">Don't worry if you don't know the vehicle registration number. We can help!</div>
 	</div>
 
@@ -69,27 +59,27 @@
 		<input type="button" class="changeVehicleButton" onclick="" value="Change vehicle"/>
 	</div>
 
-	<h1>3. Vehicle Details</h1>
+	<h1>2. Vehicle Details</h1>
 
-	<div class="field">
+	<div class="field">	
 		<label for="input_purchaseDate">When did you buy the car?</label>
-		<!--
-		<select id="input_purchaseMonth" type="text" name="purchaseMonth" rf.validation="required date({ format: 'MM' })">
-			<option value="1">-- Month --
-			<option value="2">January
+
+		<select id="input_purchaseDate" name="purchaseDate" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+			<option disabled selected></option>
 		</select>
-		<select id="input_purchaseYear" type="text" name="purchaseYear" rf.validation="required date({ format: 'YY' })">
-			<option value="1">-- Year --
-			<option value="2">2013
-		</select>-->
-		<input id="input_purchaseDate" type="text" name="purchaseDate" rf.validation="required date({ format: 'MM/YYYY' })"/>
+		<select id="input_purchaseDate" name="purchaseDate" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 15" rf.preselectFirstOption="true" value="">
+			<option disabled selected></option>
+		</select>
+
 		<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDate.value) { utils.monthsBetween(moment('01/' + fields.purchaseDate.value, 'DD/MM/YYYY'), new Date()); }}" />
 		<div class="hint">We need your purchase date so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
 
-	<div class="field">
+	<div class="field" rf.preselectFirstOption="false">
 		<label for="input_securityDevices">What security devices does this vehicle have?</label>
-		<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="false"></select>
+		<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="true">
+			<option disabled selected></option>
+		</select>
 		<div class="hint">Alarms, immobilisers and tracking devices could reduce your premium!</div>
 	</div>
 	
@@ -105,7 +95,7 @@
 	<div class="field">
 		<label for="input_marketValue">What is the current market value of your car?</label>
 		<input id="input_marketValue" type="text" name="marketValue" rf.validation="required"/>
-		<div class="hint">Alarms, immobilisers and tracking devices could reduce your premium!</div>
+		<div class="hint">We need this data to provide an accurate quote</div>
 	</div>
 	
 	<div class="field">
@@ -114,27 +104,39 @@
 		<label for="input_modified_yes" class="forRadio">Yes</label>
 		<input id="input_modified_no" type="radio" name="modified" value="no"/>
 		<label for="input_modified_no" class="forRadio">No</label>
+		<div class="hint">This is an example of a helpful hint</div>
 	</div>
 	
 	<div class="field">
 		<label for="input_dayParking">Day time parking</label>
-		<select id="input_dayParking" name="dayParkingCode" rf.validation="required" rf.source="resources/dayParking.csv" rf.preselectFirstOption="false"></select>
+		<select id="input_dayParking" name="dayParkingCode" rf.validation="required" rf.source="resources/dayParking.csv" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
+		<div class="hint">This is an example of a helpful hint</div>
 	</div>
 	
 	<div class="field">
 		<label for="input_nightParking">Night time parking</label>
-		<select id="input_nightParking" name="nightParkingCode" rf.validation="required" rf.source="resources/nightParking.csv" rf.preselectFirstOption="false"></select>
+		<select id="input_nightParking" name="nightParkingCode" rf.validation="required" rf.source="resources/nightParking.csv" rf.preselectFirstOption="true">
+			<option disabled selected/>
+		</select>
+		<div class="hint">This is an example of a helpful hint</div>
 	</div>
 	
 	<div class="field">
 		<label for="input_noClaimsYears">How many years No Claims Discount can you prove?</label>
 		<select id="input_noClaimsYears" name="noClaimsYears" rf.validation="required" rf.source="resources/noClaimsYears.csv" rf.preselectFirstOption="true"></select>
-		<div rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }">
-			<label for="input_protectNoClaims">Do you want to protect your No Claims Discount?</label>
-			<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></select>
-		</div>
+		<div class="hint">This is an example of a helpful hint</div>
+		
 	</div>
 
-	<input type="submit" rf.action="next" value="Next"/>
-	
+	<div class="field" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }">
+			<label for="input_protectNoClaims">Do you want to protect your No Claims Discount?</label>
+			<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></select>
+			<div class="hint">This is an example of a helpful hint</div>
+	</div>
+
+	<div class="navigation">
+		<input type="submit" rf.action="next" value="Next"/>
+	</div>
 </form>
