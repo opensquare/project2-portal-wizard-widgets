@@ -62,7 +62,7 @@
 		<input type="hidden" name="engineCapacity" />
 		<input type="hidden" name="transmission" />
 		<input type="hidden" name="multiple" />
-		<div class="hint"><h3>Find your car</h3><p>Why do you need to know this?  We need your registration so we can find your exact car and help you get a more accurate quote.</p></div>
+		<div class="hint">We need your registration so we can find your exact car and help you get a more accurate quote.</div>
 	</div>
 
 	<div class="field" rf.includeIf="{ fields.knowReg.value == 'no' }">
@@ -155,14 +155,14 @@
 	</div>
 	
 	<div class="field">
-		<label for="input_dayParking">Where do you park most during the day?</label>
+		<label for="input_dayParking">Where do you park most days?</label>
 		<select id="input_dayParking" name="dayParkingCode" rf.validation="required" rf.source="resources/dayParking.csv" rf.preselectFirstOption="true">
 			<option disabled selected/>
 		</select>
 	</div>
 	
 	<div class="field">
-		<label for="input_nightParking">Where do ypu park most at night?</label>
+		<label for="input_nightParking">Where do you park most nights?</label>
 		<select id="input_nightParking" name="nightParkingCode" rf.validation="required" rf.source="resources/nightParking.csv" rf.preselectFirstOption="true">
 			<option disabled selected/>
 		</select>
