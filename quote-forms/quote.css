@@ -279,11 +279,11 @@ div.field a{
 #crumbTrail li.on:after{
 	 content: '';
 	 float: left;
-	 width: 60px;
-	 height: 60px;
-	 margin: -20px 0 0 -84px;
+	 width: 75px;
+	 height: 75px;
+	 margin: -18px 0 0 -82px;
 	 border-radius: 10em;
-	 border: 10px solid #0DB4F2;
+	 background: #0DB4F2 no-repeat center center;
 }
 #crumbTrail li.car{
 	 background-image: url('transport-car-light-small.png');
@@ -297,16 +297,16 @@ div.field a{
 #crumbTrail li.quote{
 	 background-image: url('currency-sign-pound-light-small.png');
 }
-#crumbTrail li.on.car{
+#crumbTrail li.on.car:after{
 	 background-image: url('transport-car-light.png');
 }
-#crumbTrail li.on.drivers{
+#crumbTrail li.on.drivers:after{
 	 background-image: url('person-group-light.png');
 }
-#crumbTrail li.on.policy{
+#crumbTrail li.on.policy:after{
 	 background-image: url('document-contract2-light.png');
 }
-#crumbTrail li.on.quote{
+#crumbTrail li.on.quote:after{
  background-image: url('currency-sign-pound-light.png');
 }
 
