@@ -109,6 +109,9 @@ select {
 	font-size: 1.3em;
 	color: inherit;
 }
+select:disabled {
+	background-color: rgb(235, 235, 228);
+}
 
 div.field {
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
