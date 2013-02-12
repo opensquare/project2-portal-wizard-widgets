@@ -22,6 +22,11 @@
 	        $('#carDetails a').remove();
     }
 
+/* Restrict and default HTML date tag */
+	$('#input_coverStartDate').attr("value", moment().format("YYYY-MM-DD"));
+	$('#input_coverStartDate').attr("max", moment().add('days', 30).format("YYYY-MM-DD"));
+	$('#input_coverStartDate').attr("min", moment().subtract('days', 30).format("YYYY-MM-DD"));
+
 </script>
 
 
@@ -35,7 +40,17 @@
 
 <form rhinoforms="true">	
 
-<h1>1. Find Vehicle</h1>
+	<h1>Start Date</h1>
+
+	<div class="field">
+
+		<label for="input_coverStartDate">When do you want your insurance to start?</label>
+
+		<input id="input_coverStartDate" type="date" name="coverStartDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" />
+		
+	</div>
+
+<h1>Find Vehicle</h1>
 
 	<div class="field knowReg">
 		<label>Do you know the vehicle registration number?</label>
@@ -131,7 +146,7 @@
 		</div>
 	</div>
 
-	<h1>2. Vehicle Details</h1>
+	<h1>Vehicle Details</h1>
 
 	<div class="field">	
 
