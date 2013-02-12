@@ -161,6 +161,15 @@ div.field.on .hint{
 	}
 }
 
+.rf-dropdown ul{
+	display: inline-block;
+	min-width: 20%;
+	margin: 0.5em 0 0 48%;
+	padding: 0.25em 1em;
+	list-style: none;
+	background-color: rgba(13,180,242,0.3);
+}
+
 .navigation {
 	text-align: right;
 }
