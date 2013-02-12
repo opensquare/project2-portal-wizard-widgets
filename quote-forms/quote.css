@@ -2,7 +2,6 @@ form {
 	padding: 0.2em 2em 0 2em;
 	clear: both;
 }
-
 h1 {
 	color: #333;
 	font-size: 230%;
@@ -11,9 +10,71 @@ h1 {
 h3 {
 	padding: 0 1em 0 1em;
 }
-p {
+input:focus {
+	outline: medium solid #0090C0;
+}
+input[type="button"] {
+	background-color: #92CE56;
+	border: none;
+	border-radius: 0.25em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1.2em;	
+	padding: 0.2em 1em;
+	outline: none;
+}
+input[type="checkbox"] {
+    background-color: #FFF;
+    border: thin solid #0090C0;
+    padding: 0.45em;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+input[type="checkbox"]:checked {
+	background-color: #0090C0; 
+	padding: 0.2em 0.4em 0.2em 0.4em;
+}
+input[type="checkbox"]:checked:after {
+	background-color: #0090C0; /*blue*/
+	color: #FFF;
+	content: '\2714';
+	font-size: 1.3em;   
+}
+input[type="radio"] {
+    background-color: #FFF;
+    border: thin solid #0090C0;
+    padding: 0.45em;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+input[type="radio"]:checked {
+	background-color: #0090C0; 
+    padding: 0.2em 0.4em 0.2em 0.4em;
+}
+input[type="radio"]:checked:after {
+	background-color: #0090C0; /*blue*/
+	color: #FFF;
+	content: '\2714';
+    font-size: 1.3em;   
+}
+input[type="text"] {
+	width: 20%;
+	padding: 0.1em 0.25em 0 0.25em;
+	border: thin solid #0090C0;
 	font-size: 1.3em;
-	padding: 0 1em 0 0.5em;
+}
+input[type="submit"] {
+	background-color: #92CE56;
+	border: none;
+	border-radius: 0.25em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 2em;	
+	margin:	1em 1em 1em 0;
+	padding: 0.2em 1em;
+}
+input[type="submit"]:hover {
+	background-color: #82BE46;
 }
 label {
 	display: inline-block;
@@ -35,79 +96,18 @@ label.forPayment {
 	width: 2em;
 	display: inline;
 }
-
-
-input:focus {
-	outline: medium solid #0090C0;
+option:nth-child(even) {
+	background-color: rgba(0,0,0,0.15);
 }
-input[type="radio"] {
-    background-color: #FFF;
-    border: thin solid #0090C0;
-    padding: 0.45em;
-    vertical-align: middle;
-    -webkit-appearance: none;
-}
-input[type="radio"]:checked {
-	background-color: #0090C0; 
-    padding: 0.2em 0.4em 0.2em 0.4em;
-}
-input[type="radio"]:checked:after {
-	background-color: #0090C0; /*blue*/
-	color: #FFF;
-	content: '\2714';
-    font-size: 1.3em;   
-}
-input[type="checkbox"] {
-    background-color: #FFF;
-    border: thin solid #0090C0;
-    padding: 0.45em;
-    vertical-align: middle;
-    -webkit-appearance: none;
-}
-input[type="checkbox"]:checked {
-	background-color: #0090C0; 
-	padding: 0.2em 0.4em 0.2em 0.4em;
-}
-input[type="checkbox"]:checked:after {
-	background-color: #0090C0; /*blue*/
-	color: #FFF;
-	content: '\2714';
-	font-size: 1.3em;   
-}
-
-input[type="button"] {
-	background-color: #92CE56;
-	border: none;
-	border-radius: 0.25em;
-	color: #FFF;
-	cursor: pointer;
-	font-size: 1.2em;	
-	padding: 0.2em 1em;
-	outline: none;
-}
-input[type="text"] {
-	width: 20%;
-	padding: 0.1em 0.25em 0 0.25em;
-	border: thin solid #0090C0;
+p {
 	font-size: 1.3em;
+	padding: 0 1em 0 0.5em;
 }
-
-input[type="submit"] {
-	background-color: #92CE56;
-	border: none;
-	border-radius: 0.25em;
-	color: #FFF;
-	cursor: pointer;
-	font-size: 2em;	
-	margin:	1em 1em 1em 0;
-	padding: 0.2em 1em;
-}
-
-
 select {
+	width: 20%;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
-	width: 20%;
+	color: inherit;
 }
 
 div.field {
@@ -167,6 +167,7 @@ div.field a{
 }
 
 .rf-dropdown ul{
+	display: inline-block;
 	min-width: 21%;
 	max-height: 10em;
 	overflow: auto;
@@ -176,6 +177,7 @@ div.field a{
 	padding: 0;
 	list-style: none;
 	background-color: rgba(13,180,242,0.3);
+	cursor: pointer;
 }
 .rf-dropdown li{
 	padding: 0.1em 0.5em;
@@ -190,9 +192,11 @@ div.field a{
 .navigation {
 	text-align: right;
 }
-
 .navigation input[type="button"]{
 	font-size: 2em;	
+}
+.navigation input[type="button"]:first-child{
+	font-size: 1.5em;	
 }
 
 .invalid-message {
