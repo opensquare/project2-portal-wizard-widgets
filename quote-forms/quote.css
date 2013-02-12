@@ -15,7 +15,6 @@ p {
 	font-size: 1.3em;
 	padding: 0 1em 0 0.5em;
 }
-
 label {
 	display: inline-block;
 	font-size: 1.2em;
@@ -67,13 +66,13 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:checked {
 	background-color: #0090C0; 
-    padding: 0.2em 0.4em 0.2em 0.4em;
+	padding: 0.2em 0.4em 0.2em 0.4em;
 }
 input[type="checkbox"]:checked:after {
 	background-color: #0090C0; /*blue*/
 	color: #FFF;
 	content: '\2714';
-    font-size: 1.3em;   
+	font-size: 1.3em;   
 }
 
 input[type="button"] {
@@ -86,12 +85,11 @@ input[type="button"] {
 	padding: 0.2em 1em;
 	outline: none;
 }
-
-
 input[type="text"] {
+	width: 20%;
+	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
-	width: 20%;
 }
 
 input[type="submit"] {
@@ -129,6 +127,11 @@ div.field.on, div.field.on:hover {
 div.field.on .hint{
 	display: inline-block;
 }
+div.field a{
+	color: #92CE56;
+	font-weight: bold;
+	margin-left: 2em;
+}
 
 .hint{
 	background-color: #92CE56;
@@ -164,12 +167,24 @@ div.field.on .hint{
 }
 
 .rf-dropdown ul{
-	display: inline-block;
-	min-width: 20%;
-	margin: 0.5em 0 0 48%;
-	padding: 0.25em 1em;
+	min-width: 21%;
+	max-height: 10em;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0.5em 0 0 44%;
+	padding: 0;
 	list-style: none;
 	background-color: rgba(13,180,242,0.3);
+}
+.rf-dropdown li{
+	padding: 0.1em 0.5em;
+}
+.rf-dropdown li:nth-child(even) {
+	background-color: rgba(255,255,255,0.1);
+}
+.rf-dropdown li:hover{
+	text-decoration: underline;
 }
 
 .navigation {
@@ -225,68 +240,72 @@ div.field.on .hint{
 
 /* crumb trail */
 #crumbTrail li{
- float: left;
- width: 190px;
- height: 20px;
- margin: 1% 10px;
- padding: 10px 0 10px 30px;
- list-style: none;
- background: rgba(0,0,0,0.5) no-repeat 6px center;
- color: #FFF;
- border-radius: 10em 1em 2em 10em;
+	 float: left;
+	 width: 190px;
+	 height: 20px;
+	 margin: 1% 10px;
+	 padding: 10px 0 10px 30px;
+	 list-style: none;
+	 background: rgba(0,0,0,0.5) no-repeat 6px center;
+	 color: #FFF;
+	 border-radius: 10em 1em 2em 10em;
 }
 #crumbTrail li:before{
- content: '';
- position: absolute;
- height: 0px;
- width: 0;
- margin: -10px 0 0 190px;
- border-top: 19px dotted transparent;
- border-bottom: 19px dotted transparent;
- border-left: 16px dotted rgba(0,0,0,0.5);
+	 content: '';
+	 position: absolute;
+	 height: 0;
+	 width: 0;
+	 margin: -10px 0 0 190px;
+	 border-top: 19px dotted transparent;
+	 border-bottom: 19px dotted transparent;
+	 border-left: 16px dotted rgba(0,0,0,0.5);
 }
 #crumbTrail li.on{
- height: 40px;
- margin-left: 15px;
- padding-left: 75px;
- background-color: #0DB4F2;
- font-size: 1.5em;
- font-weight: bold;
+	 height: 40px;
+	 margin-left: 15px;
+	 padding-left: 75px;
+	 background-color: #0DB4F2;
+	 font-size: 1.5em;
+	 font-weight: bold;
 }
 #crumbTrail li.on:before{
- margin-left: 189px;
- border-left-color: #0DB4F2;
+	 margin-left: 189px;
+	 border-left-color: #0DB4F2;
 }
 #crumbTrail li.on:after{
- content: '';
- float: left;
- width: 60px;
- height: 60px;
- margin: -20px 0 0 -84px;
- border-radius: 10em;
- border: 10px solid #0DB4F2;
+	 content: '';
+	 float: left;
+	 width: 60px;
+	 height: 60px;
+	 margin: -20px 0 0 -84px;
+	 border-radius: 10em;
+	 border: 10px solid #0DB4F2;
 }
 #crumbTrail li.car{
- background-image: url('transport-car-light-small.png');
+	 background-image: url('transport-car-light-small.png');
 }
 #crumbTrail li.drivers{
- background-image: url('person-group-light-small.png');
+	 background-image: url('person-group-light-small.png');
 }
 #crumbTrail li.policy{
- background-image: url('document-contract2-light-small.png');
+	 background-image: url('document-contract2-light-small.png');
 }
 #crumbTrail li.quote{
- background-image: url('currency-sign-pound-light-small.png');
+	 background-image: url('currency-sign-pound-light-small.png');
 }
 #crumbTrail li.on.car{
- background-image: url('transport-car-light.png');
+	 background-image: url('transport-car-light.png');
 }
 #crumbTrail li.on.drivers{
- background-image: url('person-group-light.png');
+	 background-image: url('person-group-light.png');
 }
 #crumbTrail li.on.policy{
- background-image: url('document-contract2-light.png');
+	 background-image: url('document-contract2-light.png');
 }
 #crumbTrail li.on.quote{
  background-image: url('currency-sign-pound-light.png');
+}
+
+.rf-debugbar{
+	opacity: 0.15;
 }
