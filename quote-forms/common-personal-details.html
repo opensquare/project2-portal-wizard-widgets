@@ -2,26 +2,29 @@
 	
 
 	<div class="field">
-		<label for="input_title">Title</label>
+		<label for="input_title">Name</label>
 		<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
 			<option disabled selected/>
 		</select>
-	</div>
-	
-	<div class="field">
-		<label for="input_firstName">First name</label>
-		<input id="input_firstName" type="text" name="firstName" rf.validation="required"/>
-	</div>
-	
-	<div class="field">
-		<label for="input_surname">Surname</label>
-		<input id="input_surname" type="text" name="surname" rf.validation="required"/>
+		<input id="input_firstName" type="text" name="firstName" rf.validation="required" placeholder="First Name"/>
+		<input id="input_surname" type="text" name="surname" rf.validation="required" placeholder="Surname"/>
 	</div>
 
 	<div class="field">
 		<label for="input_dateOfBirth">Date of birth</label>
-		<input id="input_dateOfBirth" type="text" name="dateOfBirth" >
-		<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirth.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
+
+		<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
+				<option disabled selected></option>
+				<option>1</option>
+		</select>
+		<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+				<option disabled selected></option>
+		</select>
+		<select id="input_dateOfBirthYear" name="dateOfBirthYear" class="dateSel" rf.rangeStart="moment().subtract('years', 16).format('YYYY')" rf.rangeEnd="moment().subtract('years', 99).format('YYYY')" rf.preselectFirstOption="true" value="">
+				<option disabled selected></option>
+		</select>
+
+		<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirthDay.value + '/' + fields.dateOfBirthMonth.value + '/' + fields.dateOfBirthYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
 	</div>
 	
 	<div class="field">
@@ -47,16 +50,16 @@
 	</div>
 	
 	<div class="field">
-		<label for="input_ukResident">UK resident</label>
+		<label for="input_ukResident">UK residency</label>
 		<input id="input_ukResidentMoreThan5Years" type="checkbox" name="ukResidentMoreThan5Years"/>
 		<label for="input_ukResidentMoreThan5Years">More than 5 years</label>
 		
 		<div rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }">
 			<label for="input_ukResidentSinceMonthCode">Or since</label>
-			<select id="input_ukResidentSinceMonthCode" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+			<select id="input_ukResidentSinceMonthCode" class="dateSel" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 				<option disabled selected/>
 			</select>
-			<select id="input_ukResidentSinceYear" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true">
+			<select id="input_ukResidentSinceYear" class="dateSel" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true">
 				<option disabled selected/>
 			</select>
 		</div>
@@ -90,8 +93,8 @@
 		<span name="address.line3">{{address.line3}}</span>
 		<span name="address.line4">{{address.line4}}</span>
 		<span name="address.postcode">{{address.postcode}}</span>
-		
-		<input type="button" class="changeAddressButton" onclick="return false;" value="Change address"/>
+
+		<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
 	</div>
 	
 	<div class="field">

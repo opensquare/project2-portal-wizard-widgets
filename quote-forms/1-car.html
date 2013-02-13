@@ -156,10 +156,10 @@
 		<div>
 			<label for="input_purchaseDate">When did you buy the car?</label>
 
-			<select id="input_purchaseDateMonth" name="purchaseDateMonth" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+			<select id="input_purchaseDateMonth" name="purchaseDateMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 				<option disabled selected></option>
 			</select>
-			<select id="input_purchaseDateYear" name="purchaseDateYear" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 15" rf.preselectFirstOption="true" value="">
+			<select id="input_purchaseDateYear" name="purchaseDateYear" class="dateSel" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 15" rf.preselectFirstOption="true" value="">
 				<option disabled selected></option>
 			</select>
 			

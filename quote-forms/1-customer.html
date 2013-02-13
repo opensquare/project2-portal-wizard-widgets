@@ -7,23 +7,15 @@
   <li class="quote">Your quote</li>
  </ul>
 
-<form rhinoforms="true">
+<form rhinoforms="true" id="customerDetails">
 
 	<h1>3. Customer Details</h1>
 
 	<rf.include src="common-personal-details.html" ></rf.include>
 	
-	<div class="field">
-		<label for="input_coverStartDate">When do you want your insurance to start? (dd/mm/yyyy)</label>
-		<input id="input_coverStartDate" type="text" name="coverStartDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" rf.initialvalue="{ if (!fields.coverStartDate.value) { moment().format('DD/MM/YYYY') } }"/>
-	</div>
+	<!--TODO: Remove passing referrer as hidden field? -->
+ 	<input id="input_referrer" name="referrer" rf.validation="required" type="hidden" value="Recommendation" rf.source="resources/referrer.txt" rf.preselectFirstOption="true"/>
 	
-	<div class="field">
-		<label for="input_referrer">How did you hear about us?</label>
-		<select id="input_referrer" name="referrer" rf.validation="required" rf.source="resources/referrer.txt" rf.preselectFirstOption="true">
-			<option disabled selected/>
-		</select>
-	</div>
 	
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>

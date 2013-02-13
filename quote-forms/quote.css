@@ -241,11 +241,11 @@ div.field a{
 	font-size: 1.2em;
 }
 
-#input_purchaseDateMonth {
+#input_title {
 	width: auto;
 }
 
-#input_purchaseDateYear {
+.dateSel {
 	width: auto;
 }
 
@@ -319,4 +319,19 @@ div.field a{
 
 .rf-debugbar{
 	opacity: 0.15;
+}
+
+/* Customer Details page specific styling */
+#customerDetails label {
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 0 1em 0 1em;
+	width: 30%;
+}
+
+#customerDetails label.forRadio {
+	font-size: 1.3em;
+	position: relative;
+	right: 0.8em;
+	width: 2em;
 }
