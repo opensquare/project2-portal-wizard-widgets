@@ -25,7 +25,7 @@
 /* Restrict and default HTML date tag */
 	$('#input_coverStartDate').attr("value", moment().format("YYYY-MM-DD"));
 	$('#input_coverStartDate').attr("max", moment().add('days', 30).format("YYYY-MM-DD"));
-	$('#input_coverStartDate').attr("min", moment().subtract('days', 30).format("YYYY-MM-DD"));
+	$('#input_coverStartDate').attr("min", moment().format("YYYY-MM-DD"));
 
 </script>
 
@@ -116,9 +116,12 @@
 			<label>Your vehicle</label>
 			<span name="vehDesc" class="carDetails">{{vehDesc}}</span>
 			<a href="" onclick="return false" value="Change vehicle" class="changeVehicleButton">Change vehicle</a>
-	
 
-		<p>Based on the information provided, we believe your car:</p>
+	</div>
+	
+	<div class="field carFound" style="display: none;">
+
+		<h3>Based on the information provided, we believe your car:</h3>
 
 		<div id="carDetails">
 			<label for="input_securityDevices">Has the following security:</label>
@@ -190,7 +193,7 @@
 
 	<div class="field" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }">
 		<label for="input_protectNoClaims">Do you want to protect your No Claims Discount?</label>
-		<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></select>
+		<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></input>
 	</div>
 
 	<div class="navigation">

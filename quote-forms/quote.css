@@ -6,12 +6,17 @@ h1 {
 	color: #333;
 	font-size: 230%;
 	font-weight: normal;
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
 }
 h3 {
 	padding: 0 1em 0 1em;
+	margin-top: 0;
 }
-input:focus {
-	outline: medium solid #0090C0;
+input[type="date"] {
+	border: thin solid #0090C0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1.3em; 
 }
 input[type="button"] {
 	background-color: #92CE56;
@@ -58,7 +63,7 @@ input[type="radio"]:checked:after {
     font-size: 1.3em;   
 }
 input[type="text"] {
-	width: 20%;
+	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
@@ -81,7 +86,6 @@ label {
 	font-size: 1.2em;
 	padding: 0 1em 0 1em;
 	width: 40%;
-	vertical-align: middle;
 }
 label.forRadio {
 	font-size: 1.3em;
@@ -97,7 +101,7 @@ label.forPayment {
 	display: inline;
 }
 option:nth-child(even) {
-	background-color: rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.1);
 }
 p {
 	font-size: 1.3em;
@@ -115,7 +119,7 @@ select:disabled {
 
 div.field {
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
-	min-height: 2.1em;
+	min-height: 2.2em;
 	padding: 1em 0;
 }
 div.field:hover {
