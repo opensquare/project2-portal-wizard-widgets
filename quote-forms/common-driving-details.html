@@ -12,10 +12,10 @@
 		<label for="input_passedTestMoreThan10YearsAgo">More than 10 years ago</label>
 		<div rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }">
 			<label for="input_passedTestMonth">Or since</label>
-			<select id="input_passedTestMonth" name="passedTestMonth" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+			<select id="input_passedTestMonth" class="dateSel" name="passedTestMonth" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 				<option disabled selected/>
 			</select>
-			<select id="input_passedTestYear" name="passedTestYear" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 10"rf.preselectFirstOption="true">
+			<select id="input_passedTestYear" class="dateSel" name="passedTestYear" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 10"rf.preselectFirstOption="true">
 				<option disabled selected/>
 			</select>
 		</div>
@@ -50,7 +50,7 @@
 		<input id="input_anyConvictions_yes" type="radio" name="anyConvictions" value="Yes" rf.validation="required"/>
 		<label for="input_anyConvictions_yes" class="forRadio">Yes</label>
 		<input id="input_anyConvictions_no" type="radio" name="anyConvictions" value="No"/>
-		<label for="input_anyConvictions_no">No</label>
+		<label for="input_anyConvictions_no" class="forRadio">No</label>
 	</div>
 
 	<div class="field">
@@ -58,11 +58,11 @@
 		<input id="input_anyClaims_yes" type="radio" name="anyClaims" value="Yes" rf.validation="required"/>
 		<label for="input_anyClaims_yes" class="forRadio">Yes</label>
 		<input id="input_anyClaims_no" type="radio" name="anyClaims" value="No"/>
-		<label for="input_anyClaims_no">No</label>
+		<label for="input_anyClaims_no" class="forRadio">No</label>
 	</div>
 	
 	<div class="convictions" rf.includeIf="{ fields.anyConvictions.value == 'Yes' }" >
-		<h3>Convictions</h3>
+		<h2>Convictions</h2>
 		<p>Please enter details of any driving convictions this driver has received in the last 5 years.</p>
 		<div>
 			<rf.forEach select="convictions/conviction" as="con">
@@ -79,7 +79,7 @@
 	</div>
 	
 	<div class="claims" rf.includeIf="{ fields.anyClaims.value == 'Yes' }" >
-		<h3>Claims</h3>
+		<h2>Claims</h2>
 		<p>Please enter details of any claims, accidents or losses this driver has made in the last 5 years.</p>
 		<div>
 			<rf.forEach select="claims/claim" as="cl">
