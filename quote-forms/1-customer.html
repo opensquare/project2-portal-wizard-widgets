@@ -1,4 +1,29 @@
 <script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+<script>
+
+	function completeGender(title){
+	 titleGenderMap = new Object();
+	 var M = '#input_gender_male';
+	 var F = '#input_gender_female';
+
+	 titleGenderMap['Mr'] = M;
+	 titleGenderMap['Mrs'] = F;
+	 titleGenderMap['Miss'] = F;
+	 titleGenderMap['Ms'] = F;
+	 titleGenderMap['Sir'] = M;
+	 titleGenderMap['Lady'] = F;
+	 titleGenderMap['Lord'] = M;
+	 titleGenderMap['Dr'] = '';
+	 var genderCheckbox = titleGenderMap[title];
+
+	 $(genderCheckbox).attr('checked','checked'); 
+	}
+
+	 $("#input_title").change(function(){
+	   completeGender($("#input_title option:selected").val());
+	 });
+
+	</script>
 
  <ul id="crumbTrail">
   <li class="car">Your car</li>
