@@ -1,5 +1,27 @@
 	<script type='text/javascript' src='widgets/quote-forms/js/address-lookup.js' ></script>
-	
+	<script>
+		function completeGender(title){
+		 titleGenderMap = new Object();
+		 var M = '#input_gender_male';
+		 var F = '#input_gender_female';
+
+		 titleGenderMap['Mr'] = M;
+		 titleGenderMap['Mrs'] = F;
+		 titleGenderMap['Miss'] = F;
+		 titleGenderMap['Ms'] = F;
+		 titleGenderMap['Sir'] = M;
+		 titleGenderMap['Lady'] = F;
+		 titleGenderMap['Lord'] = M;
+		 titleGenderMap['Dr'] = '';
+		 var genderCheckbox = titleGenderMap[title];
+
+		 $(genderCheckbox).attr('checked','checked'); 
+		}
+
+		 $("#input_title").change(function(){
+		   completeGender($("#input_title option:selected").val());
+		 });
+	</script>
 
 	<div class="field">
 		<label for="input_title">Name</label>
@@ -15,7 +37,13 @@
 
 		<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
 				<option disabled selected></option>
-				<option>1</option>
+				<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+				<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+				<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+				<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+				<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+				<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+				<option>31</option>
 		</select>
 		<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 				<option disabled selected></option>
@@ -47,6 +75,7 @@
 		<select id="input_maritalStatusCode" name="maritalStatusCode" rf.validation="required" rf.source="resources/maritalStatus.csv" rf.preselectFirstOption="true">
 			<option disabled selected/>
 		</select>
+		<div class="hint">Factors such as marital status, occupation and driving record impact on your quotes.</div>
 	</div>
 	
 	<div class="field">

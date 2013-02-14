@@ -172,7 +172,7 @@ div.field a{
 	overflow: auto;
 	overflow-x: hidden;
 	overflow-y: auto;
-	margin: 0.5em 0 0 44%;
+	margin: 0.5em 0 0 33.5%;
 	padding: 0;
 	list-style: none;
 	background-color: rgba(13,180,242,0.3);
@@ -180,9 +180,6 @@ div.field a{
 }
 .rf-dropdown li{
 	padding: 0.1em 0.5em;
-}
-.rf-dropdown li:nth-child(even) {
-	background-color: rgba(255,255,255,0.1);
 }
 .rf-dropdown li:hover{
 	text-decoration: underline;
