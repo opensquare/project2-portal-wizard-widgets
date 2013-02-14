@@ -12,7 +12,7 @@
                 </xsl:choose>
             </volExcessDiscountBand>
             <coverStartDateTime>
-                <xsl:value-of select="concat(/quote/customer/coverStartDate, ' ', '00:00:00')"/>
+                <xsl:value-of select="concat(/quote/vehicle/coverStartDate, ' ', '00:00:00')"/>
             </coverStartDateTime>
             <cover>COMP</cover>
             <initialMiles>8000</initialMiles>
