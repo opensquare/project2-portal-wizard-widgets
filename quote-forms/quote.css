@@ -95,9 +95,6 @@ label.forPayment {
 	width: 2em;
 	display: inline;
 }
-option:nth-child(even) {
-	background-color: rgba(0,0,0,0.1);
-}
 p {
 	font-size: 1.3em;
 	padding: 0 1em 0 0.5em;
@@ -217,17 +214,22 @@ div.field a{
 	border-radius: 0.25em;
 	margin-left: 30%;
 	padding: 0.5em;
-	text-align: center;
 	width: 50%;
 }
-.vehicle_search div {
-	float: left;
+
+#makeModel label {
+	width: 20%;
 	text-align: left;
-	width: 45%;
 }
-.vehicle_search select {
-	text-align: right;
+
+#makeModel input {
+	width: 60%;
 }
+
+#modelDetail {
+	padding: 1em 0 1em 0;
+}
+
 .checkboxLabel {
 	display: inline;
 	padding: 0;
@@ -246,13 +248,20 @@ div.field a{
 }
 
 .disabled {
-	opacity: 0.4;
+	opacity: 0.5;
+}
+.disabled h1{
+	font-size: 180%
 }
 
-a {
+#sectionOne a {
+	float: right;
+	margin-right: 5%;
+}
+
+#disabledSectionOne a {
 	color: #92CE56;
 	font-weight: bold;
-	margin-left: 2em;
 	float: right;
 	margin-right: 5%;
 }
