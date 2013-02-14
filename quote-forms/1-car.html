@@ -162,12 +162,14 @@
 			<a href="" onclick="editDetails();return false">Change vehicle details</a>
 			
 		</div>
+
+		<div id="disabledNavigation" class="navigation">
+			<input type="button" onclick="editDetails();toggleSections();" value="Next"/>
+		</div>
 	</div>
 </div>
 
-<div id="disabledNavigation" class="navigation">
-		<input type="button" onclick="editDetails();toggleSections();" value="Next"/>
-</div>
+
 
 
 <div id="disabledSectionOne" class="disabled">
@@ -236,9 +238,9 @@
 
 </div>
 
-<div id="disabledSectionTwo" class="disabled">
-	<h1>3. Vehicle Details</h1>
-</div>
+	<div id="disabledSectionTwo" class="disabled">
+		<h1>3. Vehicle Details</h1>
+	</div>
 
 
 	<div class="navigation" id="navigation">
