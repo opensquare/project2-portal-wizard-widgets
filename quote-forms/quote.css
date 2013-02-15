@@ -350,6 +350,12 @@ option:first-child{
 	opacity: 0.15;
 }
 
+.loading{
+	width: 100%;
+	height: 20%;
+	background: url('loading.gif') no-repeat center center;
+}
+
 /* Customer Details page specific styling */
 #customerDetails label {
 	display: inline-block;
