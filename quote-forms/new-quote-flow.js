@@ -4,6 +4,23 @@
 	libraries: ["js/utils.js"],
 	formLists: {
 		main: [
+            { id: "initialisation", url: "initialisation.html",
+                actions: [
+                    "next",
+                    {
+                        name: "calc",
+                        type: "next",
+                        submission: {
+							url: "{{appPath}}/calcRetrieval?calcRef=3464",
+                            data: {
+								calcRef: "xpath://calcref"
+							},
+							method: "get",
+							postTransform: "xslt/retrieveCalc.xsl",
+							resultInsertPoint: "/"
+						}
+                    }
+                ]},
 	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "1-car.html", actions: [ "next"] },
 			{ id: "customer", docBase: "/quote/customer", url: "1-customer.html", actions: [ "back", "next" ] },
 			{ id: "driver", docBase: "/quote/customer", url: "2-driver.html",
