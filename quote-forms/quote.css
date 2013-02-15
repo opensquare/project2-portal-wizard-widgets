@@ -131,6 +131,9 @@ div.field a{
 	font-weight: bold;
 	margin-left: 2em;
 }
+option:first-child{
+	color: #999;
+}
 
 .hint{
 	background-color: #92CE56;
@@ -166,23 +169,25 @@ div.field a{
 }
 
 .rf-dropdown ul{
+	border: thin solid #0090C0;
 	display: inline-block;
-	min-width: 21%;
+	min-width: 20%;
 	max-height: 10em;
 	overflow: auto;
 	overflow-x: hidden;
 	overflow-y: auto;
-	margin: 0.5em 0 0 33.5%;
+	margin: 0 0 0 33.5%;
 	padding: 0;
 	list-style: none;
-	background-color: rgba(13,180,242,0.3);
+	background-color: #FFF;
 	cursor: pointer;
 }
 .rf-dropdown li{
 	padding: 0.1em 0.5em;
 }
 .rf-dropdown li:hover{
-	text-decoration: underline;
+	color: #FFF;
+	background-color: #0090C0;
 }
 
 .navigation {

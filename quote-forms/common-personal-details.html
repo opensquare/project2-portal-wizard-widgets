@@ -26,7 +26,7 @@
 	<div class="field">
 		<label for="input_title">Name</label>
 		<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
-			<option disabled selected/>
+			<option disabled selected>Title</option>
 		</select>
 		<input id="input_firstName" type="text" name="firstName" rf.validation="required" placeholder="First Name"/>
 		<input id="input_surname" type="text" name="surname" rf.validation="required" placeholder="Surname"/>
@@ -36,7 +36,7 @@
 		<label for="input_dateOfBirth">Date of birth</label>
 
 		<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
-				<option disabled selected></option>
+				<option disabled selected>Day</option>
 				<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
 				<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
 				<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
@@ -46,10 +46,10 @@
 				<option>31</option>
 		</select>
 		<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
-				<option disabled selected></option>
+				<option disabled selected>Month</option>
 		</select>
 		<select id="input_dateOfBirthYear" name="dateOfBirthYear" class="dateSel" rf.rangeStart="moment().subtract('years', 16).format('YYYY')" rf.rangeEnd="moment().subtract('years', 99).format('YYYY')" rf.preselectFirstOption="true" value="">
-				<option disabled selected></option>
+				<option disabled selected>Year</option>
 		</select>
 
 		<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirthDay.value + '/' + fields.dateOfBirthMonth.value + '/' + fields.dateOfBirthYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
