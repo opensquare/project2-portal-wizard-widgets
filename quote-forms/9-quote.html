@@ -6,19 +6,21 @@
   <li class="quote on">Your quote</li>
  </ul>
 
-<form id="landingpage" rhinoforms="true">
+<form id="landingPage" rhinoforms="true">
 	<h1>Your quote</h1>
 	<p id="calcRef">{{//calcResult/ref}}</p>
 
 	<div id="singlePayment" class="pane">
 		<h2>Single Payment</h2>
 		<p><span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
-		<p class="smallprint">We can accept payment online using a debit or credit card.</p>
+		<input type="button" rf.action="" value="Buy"/>
+		<p class="smallprint">This amount includes Insurance Premium Tax of.<span class="iptAmount">{{//calcResult/calcElement/totalTax}}</span>.  We can accept payment online using a debit or credit card.</p>
 	</div>
 	<div id="multiplePayment" class="pane">
 		<h2>Monthly Instalments</h2>
-		<p>Initial deposit: <span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
-		<p>Then <span class="instalmentCount">{{//calcResult/calcElement/instalmentCount}}</span> equal payments of <span class="instalmentPremium">{{//calcResult/calcElement/instalmentPremium}}</span>.  Total APR for the credit is: <span>{{//calcResult/calcElement/apr}}</span>.</p>
+		<p>Initial deposit: <span class="amount">{{//calcResult/calcElement/deposit}}</span></p>
+		<p>Then <span class="instalmentCount">{{//calcResult/calcElement/instalmentCount}}</span> equal payments of <span class="instalmentPremium">{{//calcResult/calcElement/instalmentPremium}}</span>.  Total APR for the credit is: <span class="apr">{{//calcResult/calcElement/apr}}%</span>.</p>
+		<input type="button" rf.action="" value="Buy"/>
 		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
 	</div>
 
@@ -26,10 +28,13 @@
 	<p>We have based this quotation on the following details that you have told us.  If any of these are incorrect, please go back and correct them.</p>
 
 	<h3>Duration</h3>
-	<p>This is an <span>annual</span> policy which would start on <span>{{//vehicle/coverStartDate}}</span>.</p>
+	<p class="duration">This is an <span>annual</span> policy which would start on <span>{{//vehicle/coverStartDate}}</span>.</p>
 
 	<h3>Your vehicle</h3>
-	<p>The insurance is for your vehicle reg</p>
+	<p class="vehicle">The insurance is for your vehicle reg.</p>
+
+	<h3>The drivers</h3>
+	<p class="drivers">.</p>
 
 	<div class="field">
 		<label>Choose how to pay</label>
@@ -39,19 +44,18 @@
 		<label for="input_paymentType_instalments" class="forPayment">Monthly Instalments: {{//calcResult/calcElement/instalmentPremium}} x {{//calcResult/calcElement/InstalmentCount}}</label>
 	</div>
 
-	<p>This quote is valid for 30 days and includes Insurance Premium Tax.</p>
+	<!--p>This quote is valid for 30 days and includes Insurance Premium Tax.</p-->
 	
-	<div class="field">
+	<!--div class="field">
 		<label id="input_voluntaryExcess">Voluntary Excess</label>
 		<select id="input_voluntaryExcess" name="voluntaryExcess" rf.rangeStart="0" rf.rangeEnd="1000" rf.rangeInterval="50" rf.labelPrefix="&pound;"rf.preselectFirstOption="true">
 			<option disabled selected/>
 		</select>
-	</div>
+	</div-->
 
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
 		<input type="button" rf.action="" value="Save"/>
-		<input type="button" rf.action="" value="Buy"/>
 	</div>
 
 	<div 
