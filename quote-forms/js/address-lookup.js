@@ -14,17 +14,52 @@ function AddressLookup() {
 		$findAddressPostcode = $(".findAddressPostcode");
 		$findAddressButton = $(".findAddress");
 
-		$(".findAddressButton").click(function() {
+		/*$(".findAddressButton").click(function() {
 			findAddressButtonClick($(this));
-		})
+		})*/
 		
 		$(".changeAddressButton").click(function() {
 			changeAddressButtonClick($(this));
 		})
-		
-		if ($("[name='address.line1']").val()) {
+		if ($(":input[name='address.line1']").val()) {
 			displayMode();
 		}
+	}
+	
+	// postcode anywhere callback
+	this.pcaCallback = function(uid, response) {
+		var addressId, company, addressLine1, addressLine2, city, county, postcode;
+		for (var i = 0; i <= response.length - 1; i++) {
+			switch(response[i].FieldName) {
+				case "Id": 
+					addressId = response[i].FormattedValue;
+					break;
+				case "Company":
+					if (response[i].FormattedValue != ""){
+						company = response[i].FormattedValue + ", ";
+					} else {
+						company = "";
+					}
+					break;
+				case "Line1":
+					addressLine1 = response[i].FormattedValue;
+					break;
+				case "Line2":
+					addressLine2 = response[i].FormattedValue;
+					break;
+				case "City":
+					city = response[i].FormattedValue;
+					break;
+				case "ProvinceName":
+					county = response[i].FormattedValue;
+					break;
+				case "PostalCode":
+					postcode = response[i].FormattedValue;
+					break;
+			}
+		}
+		setAddress(company + addressLine1, addressLine2, city, county, postcode);
+		displayMode();
 	}
 
 	function findAddressButtonClick($button) {
@@ -148,6 +183,7 @@ function AddressLookup() {
 	}
 	
 	function changeAddressButtonClick() {
+		$("#input_address").val("");
 		setAddress("", "", "", "", "");
 		lookupMode();
 	}
@@ -163,3 +199,6 @@ function AddressLookup() {
 	}
 	
 }
+// hook for pca into callback function
+CapturePlusCallback = new AddressLookup().pcaCallback;
+

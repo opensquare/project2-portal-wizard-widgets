@@ -1,4 +1,7 @@
 	<script type='text/javascript' src='widgets/quote-forms/js/address-lookup.js' ></script>
+	<link rel="stylesheet" type="text/css" href="http://services.postcodeanywhere.co.uk/css/captureplus-1.34.min.css?key=ut99-ca31-nt36-bt86" />
+	<script type="text/javascript" src="http://services.postcodeanywhere.co.uk/js/captureplus-1.34.min.js?key=ut99-ca31-nt36-bt86&app=6352"></script>
+	<div id="ut99ca31nt36bt866352"></div>
 	<script>
 		function completeGender(title){
 		 titleGenderMap = new Object();
@@ -99,31 +102,28 @@
 		</div>
 
 		<div class="field findAddress">
-			<input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" />
-			<label for="input_addressLine1">House number or name</label>
-			<input class="findAddressHouse" id="input_addressLine1" type="text" value="{{customer.address.line1}}"/><br/>
-			<label for="input_postcode">Postcode</label>
-			<input class="findAddressPostcode" id="input_postcode" type="text" value="{{customer.address.postcode}}"/>
-			<input type="button" class="findAddressButton" onclick="return false;" value="Find address"/>
-			<div class="addressList" style="display: none;">
-				Here are all the addresses we've found for your postcode:
-				<select class="addressListSelect">
-				</select>
+		<!--input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" /-->
+		<div class="labelWrapper">
+			<label for="input_address">Address</label>
 			</div>
+		<div class="tableWrapper">
+			<input class="addressLookup" id="input_address" type="text" placeholder="Start typing your address or postcode"/>
 		</div>
-		<div class="field addressFound" style="display: none;">
-			<input type="hidden" name="address.line1"/>
-			<input type="hidden" name="address.line2"/>
-			<input type="hidden" name="address.line3"/>
-			<input type="hidden" name="address.line4"/>
-			<input type="hidden" name="address.postcode"/>
-			
+	</div>
+	<div class="field addressFound" style="display:none">
 			<label>Your address</label>
+		<span id="addressLabel">
 			<span name="address.line1">{{address.line1}}</span>
 			<span name="address.line2">{{address.line2}}</span>
 			<span name="address.line3">{{address.line3}}</span>
 			<span name="address.line4">{{address.line4}}</span>
 			<span name="address.postcode">{{address.postcode}}</span>
+		</span>
+		<input type="hidden" name="address.line1"/>
+		<input type="hidden" name="address.line2"/>
+		<input type="hidden" name="address.line3"/>
+		<input type="hidden" name="address.line4"/>
+		<input type="hidden" name="address.postcode"/>
 
 			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
 		</div>
@@ -138,9 +138,12 @@
 	</div>
 		
 		<script>
+		rf.onFormLoad(function(){
 			var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
 			var inputErrorCallback = function() {
 				alert("Please provide a valid postcode");
 			}
 			new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
+		})
+		
 		</script>

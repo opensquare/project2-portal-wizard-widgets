@@ -371,6 +371,57 @@ option:first-child{
 	right: 0.8em;
 	width: 2em;
 }
+/*address lookup formatting*/
+#customerDetails .findAddress div.labelWrapper,
+#customerDetails .findAddress div.tableWrapper{
+	display:inline-block;
+	width:30%;
+	vertical-align: text-bottom;
+}
+#customerDetails .findAddress div.labelWrapper {
+	padding: 0 1em;
+}
+#customerDetails .findAddress label{
+	width:100%;
+	padding:0;
+}
+#customerDetails .findAddress input{
+	width:100%;
+}
+.addressFound label{
+	vertical-align: top;
+}
+#addressLabel{
+	display: inline-block;
+}
+#addressLabel span{
+	display: block;
+}
+.pcaCapturePlusTable td{
+	z-index: 1;
+}
+.pcaAutoCompleteSmall .item,
+.pcaAutoCompleteSmall .selectedItem{
+	width:100%;
+	display:inline-block;
+}
+.pcaAutoCompleteSmall .item{
+	background-color: #FFF;
+}
+.pcaAutoCompleteSmall .selectedItem{
+	background-color: #EEE;
+}
+.pcaCapturePlusTable .recentFavouritesSmall{
+	background-color: #FFF;
+}
+.pcaCapturePlusTable .recentFavouritesSmall a{
+	color:#000;
+	margin:0;
+	font-weight:normal;
+}
+.pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover{
+	background-color: rgba(0,0,0,0.2);
+}
 
 /* Landing Page styling */
 #landingPage #calcRef {
