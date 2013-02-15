@@ -419,3 +419,23 @@ option:first-child{
 #landingPage .drivers{
 	background: url('person-user-dark.png') no-repeat; 
 }
+
+/*Driver summary icons*/
+.Male {
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	font-size: 1.3em;
+	background: no-repeat center top;
+	background-image: url('person-man-dark.png');
+	padding: 12px 50px;
+}
+.Female {
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	font-size: 1.3em;
+	background: no-repeat center top;
+	background-image: url('person-woman-dark.png');
+	padding: 12px 50px;
+}

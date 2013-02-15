@@ -8,23 +8,27 @@
  </ul>
 
 <form rhinoforms="true">
-	<h1>6. Additional Drivers</h1>
-	<div class="drivers">
-		<rf.forEach select="additionalDrivers/driver" as="d">
-			<div class="driver">
-				<span>
-					{{d.firstName}} {{d.surname}}
-					<a href="#" rf.action="editAdditionalDriver?index={{d.index}}">Edit</a> 
-					<a href="#" rf.action="deleteAdditionalDriver?index={{d.index}}">Delete</a>
-				</span>
-			</div>
-		</rf.forEach>
-	</div>
+	
+	<h1>6. Main Driver</h1>
+
 	<div class="field">
-		<input type="button" rf.action="addAdditionalDriver" value="Add Driver"/>
+		<span class="{{customer.gender}}"></span>{{customer.firstName}} {{customer.surname}}
+	</div>
+
+	<h1>7. Additional Drivers</h1>
+	<rf.forEach select="additionalDrivers/driver" as="d">
+		<div class="field">
+			<span class="{{d.gender}}"></span>{{d.firstName}} {{d.surname}}
+			<a href="#" rf.action="editAdditionalDriver?index={{d.index}}">Edit</a>
+			<a href="#" rf.action="deleteAdditionalDriver?index={{d.index}}">Delete</a>
+		</div>
+	</rf.forEach>
+
+	<div class="field">
+		<input type="button" rf.action="addAdditionalDriver" value="Add Driver" style="margin:0.5em;"/>
 	</div>
 	
-	<br/>
+	
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
 		<input type="submit" rf.action="next" value="Next"/>
