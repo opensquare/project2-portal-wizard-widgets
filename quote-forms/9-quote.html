@@ -1,14 +1,37 @@
-<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+<!--script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script-->
 
 <form rhinoforms="true">
-	<h1>Quote - static</h1>
+	<h1>Your quote</h1>
+	<p id="calcRef">{{//calcResult/ref}}</p>
+
+
+	<div id="singlePayment">
+		<h2>Single Payment</h2>
+		<p><span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
+		<p class="smallprint">We can accept payment online using a debit or credit card.</p>
+	</div>
+	<div id="multiplePayment">
+		<h2>Monthly Instalments</h2>
+		<p>Initial deposit: <span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
+		<p>Then <span class="instalmentCount">{{//calcResult/calcElement/InstalmentCount}}</span> equal payments of <span class="instalmentPremium">{{//calcResult/calcElement/instalmentPremium}}</span>.  Total APR for the credit is: <span>{{//calcResult/calcElement/apr}}</span>.</p>
+		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
+	</div>
+
+	<h2>Your details</h2>
+	<p>We have based this quotation on the following details that you have told us.  If any of these are incorrect, please go back and correct them.</p>
+
+	<h3>Duration</h3>
+	<p>This is an <span>annual</span> policy which would start on <span>{{//vehicle/coverStartDate}}</span>.</p>
+
+	<h3>Your vehicle</h3>
+	<p>The insurance is for your vehicle reg</p>
 
 	<div class="field">
 		<label>Choose how to pay</label>
 		<input id="input_paymentType_single" type="radio" name="paymentType" value="single" rf.validation="required"/>
 		<label for="input_paymentType_single" class="forPayment">One Payment: {{//calcResult/calcElement/annualPremium}}</label>
 		<input id="input_paymentType_instalments" type="radio" name="paymentType" value="instalments" rf.validation="required"/>
-		<label for="input_paymentType_instalments" class="forPayment">Monthly Instalments: {{//calcResult/calcElement/instalmentPremium}} x {{//calcResult/calcElement/numOfInstalments}}</label>
+		<label for="input_paymentType_instalments" class="forPayment">Monthly Instalments: {{//calcResult/calcElement/instalmentPremium}} x {{//calcResult/calcElement/InstalmentCount}}</label>
 	</div>
 
 	<p>This quote is valid for 30 days and includes Insurance Premium Tax.</p>
@@ -22,5 +45,9 @@
 
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
+		<input type="button" rf.action="" value="Save"/>
+		<input type="button" rf.action="" value="Buy"/>
 	</div>
+
+	<div 
 </form>		
