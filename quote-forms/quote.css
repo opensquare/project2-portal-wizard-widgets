@@ -371,3 +371,30 @@ option:first-child{
 	right: 0.8em;
 	width: 2em;
 }
+
+/* Landing Page styling */
+#landingPage #calcRef {
+	float: right;
+	margin: 0;
+	opacity: 0.5;
+	font-size: small;
+}
+#landingPage .pane {
+	display: inline-block;
+	max-width: 50%;
+	border: thin solid #0DB4F2;
+	border-radius: 1em;
+}
+#landingPage .pane h2 {
+	margin: 0;
+	padding: 0.2em 0.5em;
+	background: #0DB4F2;
+	color: #FFF;
+	border-radius: .5em .5em 0 0;
+}
+#landingPage .amount {
+	font-size: 2em;
+}
+#landingPage .amount::before {
+	content: '£';
+}

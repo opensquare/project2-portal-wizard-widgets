@@ -1,19 +1,18 @@
 <!--script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script-->
 
-<form rhinoforms="true">
+<form id="landingpage" rhinoforms="true">
 	<h1>Your quote</h1>
 	<p id="calcRef">{{//calcResult/ref}}</p>
 
-
-	<div id="singlePayment">
+	<div id="singlePayment" class="pane">
 		<h2>Single Payment</h2>
 		<p><span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
 		<p class="smallprint">We can accept payment online using a debit or credit card.</p>
 	</div>
-	<div id="multiplePayment">
+	<div id="multiplePayment" class="pane">
 		<h2>Monthly Instalments</h2>
 		<p>Initial deposit: <span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
-		<p>Then <span class="instalmentCount">{{//calcResult/calcElement/InstalmentCount}}</span> equal payments of <span class="instalmentPremium">{{//calcResult/calcElement/instalmentPremium}}</span>.  Total APR for the credit is: <span>{{//calcResult/calcElement/apr}}</span>.</p>
+		<p>Then <span class="instalmentCount">{{//calcResult/calcElement/instalmentCount}}</span> equal payments of <span class="instalmentPremium">{{//calcResult/calcElement/instalmentPremium}}</span>.  Total APR for the credit is: <span>{{//calcResult/calcElement/apr}}</span>.</p>
 		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
 	</div>
 
