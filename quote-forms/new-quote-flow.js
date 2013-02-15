@@ -9,7 +9,7 @@
                     "next",
                     {
                         name: "calc",
-                        type: "next",
+                        target: "calculating",
                         submission: {
 							url: "{{appPath}}/calcRetrieval?calcRef=3464",
                             data: {
