@@ -23,121 +23,124 @@
 		 });
 	</script>
 
-	<div class="field">
-		<label for="input_title">Name</label>
-		<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
-			<option disabled selected>Title</option>
-		</select>
-		<input id="input_firstName" type="text" name="firstName" rf.validation="required" placeholder="First Name"/>
-		<input id="input_surname" type="text" name="surname" rf.validation="required" placeholder="Surname"/>
-	</div>
+	<div id="customerDetails">
 
-	<div class="field">
-		<label for="input_dateOfBirth">Date of birth</label>
-
-		<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
-				<option disabled selected>Day</option>
-				<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-				<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-				<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-				<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-				<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
-				<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
-				<option>31</option>
-		</select>
-		<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
-				<option disabled selected>Month</option>
-		</select>
-		<select id="input_dateOfBirthYear" name="dateOfBirthYear" class="dateSel" rf.rangeStart="moment().subtract('years', 16).format('YYYY')" rf.rangeEnd="moment().subtract('years', 99).format('YYYY')" rf.preselectFirstOption="true" value="">
-				<option disabled selected>Year</option>
-		</select>
-
-		<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirthDay.value + '/' + fields.dateOfBirthMonth.value + '/' + fields.dateOfBirthYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
-	</div>
-	
-	<div class="field">
-		<label>Gender</label>
-		<input id="input_gender_male" type="radio" name="gender" value="Male" rf.validation="required"/>
-		<label for="input_gender_male" class="forRadio">Male</label>
-		<input id="input_gender_female" type="radio" name="gender" value="Female"/>
-		<label for="input_gender_female" class="forRadio">Female</label>
-	</div>
-	
-	<div class="field">
-		<label for="input_occupation">Primary occupation</label>
-		<input type="hidden" name="occupationCode" />
-		<input id="input_occupation" type="text" name="occupation" rf.validation="required fromSource" rf.customType="auto-complete-select({ codeFieldName: 'occupationCode' })" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbLists-occupationSheet.xml?transformer=xslt&xslt=/itb-resources-test2/lists/occupationLookupTransformJSONmin.xsl&contentType=application%2Fjson&occupation=[value]" />
-		<div class="hint">We need your occupation so we can find your exact car and help you get a more accurate quote.</div>
-	</div>
-
-	<div class="field">
-		<label for="input_maritalStatusCode">Marital status</label>
-		<select id="input_maritalStatusCode" name="maritalStatusCode" rf.validation="required" rf.source="resources/maritalStatus.csv" rf.preselectFirstOption="true">
-			<option disabled selected/>
-		</select>
-		<div class="hint">Factors such as marital status, occupation and driving record impact on your quotes.</div>
-	</div>
-	
-	<div class="field">
-		<label for="input_ukResident">UK residency</label>
-		<input id="input_ukResidentMoreThan5Years" type="checkbox" name="ukResidentMoreThan5Years"/>
-		<label for="input_ukResidentMoreThan5Years">More than 5 years</label>
-		
-		<div rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }">
-			<label for="input_ukResidentSinceMonthCode">Or since</label>
-			<select id="input_ukResidentSinceMonthCode" class="dateSel" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
-				<option disabled selected/>
+		<div class="field">
+			<label for="input_title">Name</label>
+			<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
+				<option disabled selected>Title</option>
 			</select>
-			<select id="input_ukResidentSinceYear" class="dateSel" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true">
-				<option disabled selected/>
+			<input id="input_firstName" type="text" name="firstName" rf.validation="required" placeholder="First Name"/>
+			<input id="input_surname" type="text" name="surname" rf.validation="required" placeholder="Surname"/>
+		</div>
+
+		<div class="field">
+			<label for="input_dateOfBirth">Date of birth</label>
+
+			<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
+					<option disabled selected>Day</option>
+					<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+					<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+					<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+					<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+					<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+					<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+					<option>31</option>
 			</select>
+			<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+					<option disabled selected>Month</option>
+			</select>
+			<select id="input_dateOfBirthYear" name="dateOfBirthYear" class="dateSel" rf.rangeStart="moment().subtract('years', 16).format('YYYY')" rf.rangeEnd="moment().subtract('years', 99).format('YYYY')" rf.preselectFirstOption="true" value="">
+					<option disabled selected>Year</option>
+			</select>
+
+			<input type="hidden" name="age" rf.calculated="{ new Date(new Date() - moment(fields.dateOfBirthDay.value + '/' + fields.dateOfBirthMonth.value + '/' + fields.dateOfBirthYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 }"/>
 		</div>
 		
-		<input type="hidden" name="ukResidentYears" rf.calculated="{ if (fields.ukResidentMoreThan5Years.value == true) { 10; } else if (fields.ukResidentSinceMonthCode.value && fields.ukResidentSinceYear.value) { new Date(new Date() - moment('01/' + fields.ukResidentSinceMonthCode.value + '/' + fields.ukResidentSinceYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 } }"/>
-	</div>
+		<div class="field">
+			<label>Gender</label>
+			<input id="input_gender_male" type="radio" name="gender" value="Male" rf.validation="required"/>
+			<label for="input_gender_male" class="forRadio">Male</label>
+			<input id="input_gender_female" type="radio" name="gender" value="Female"/>
+			<label for="input_gender_female" class="forRadio">Female</label>
+		</div>
+		
+		<div class="field">
+			<label for="input_occupation">Primary occupation</label>
+			<input type="hidden" name="occupationCode" />
+			<input id="input_occupation" type="text" name="occupation" rf.validation="required fromSource" rf.customType="auto-complete-select({ codeFieldName: 'occupationCode' })" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbLists-occupationSheet.xml?transformer=xslt&xslt=/itb-resources-test2/lists/occupationLookupTransformJSONmin.xsl&contentType=application%2Fjson&occupation=[value]" />
+			<div class="hint">We need your occupation so we can find your exact car and help you get a more accurate quote.</div>
+		</div>
 
-	<div class="field findAddress">
-		<input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" />
-		<label for="input_addressLine1">House number or name</label>
-		<input class="findAddressHouse" id="input_addressLine1" type="text"/><br/>
-		<label for="input_postcode">Postcode</label>
-		<input class="findAddressPostcode" id="input_postcode" type="text"/>
-		<input type="button" class="findAddressButton" onclick="return false;" value="Find address"/>
-		<div class="addressList" style="display: none;">
-			Here are all the addresses we've found for your postcode:
-			<select class="addressListSelect">
+		<div class="field">
+			<label for="input_maritalStatusCode">Marital status</label>
+			<select id="input_maritalStatusCode" name="maritalStatusCode" rf.validation="required" rf.source="resources/maritalStatus.csv" rf.preselectFirstOption="true">
+				<option disabled selected/>
 			</select>
+			<div class="hint">Factors such as marital status, occupation and driving record impact on your quotes.</div>
+		</div>
+		
+		<div class="field">
+			<label for="input_ukResident">UK residency</label>
+			<input id="input_ukResidentMoreThan5Years" type="checkbox" name="ukResidentMoreThan5Years"/>
+			<label for="input_ukResidentMoreThan5Years">More than 5 years</label>
+			
+			<div rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }">
+				<label for="input_ukResidentSinceMonthCode">Or since</label>
+				<select id="input_ukResidentSinceMonthCode" class="dateSel" name="ukResidentSinceMonthCode" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
+					<option disabled selected/>
+				</select>
+				<select id="input_ukResidentSinceYear" class="dateSel" name="ukResidentSinceYear" rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true">
+					<option disabled selected/>
+				</select>
+			</div>
+			
+			<input type="hidden" name="ukResidentYears" rf.calculated="{ if (fields.ukResidentMoreThan5Years.value == true) { 10; } else if (fields.ukResidentSinceMonthCode.value && fields.ukResidentSinceYear.value) { new Date(new Date() - moment('01/' + fields.ukResidentSinceMonthCode.value + '/' + fields.ukResidentSinceYear.value, 'DD/MM/YYYY')).getFullYear() - 1970 } }"/>
+		</div>
+
+		<div class="field findAddress">
+			<input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" />
+			<label for="input_addressLine1">House number or name</label>
+			<input class="findAddressHouse" id="input_addressLine1" type="text"/><br/>
+			<label for="input_postcode">Postcode</label>
+			<input class="findAddressPostcode" id="input_postcode" type="text"/>
+			<input type="button" class="findAddressButton" onclick="return false;" value="Find address"/>
+			<div class="addressList" style="display: none;">
+				Here are all the addresses we've found for your postcode:
+				<select class="addressListSelect">
+				</select>
+			</div>
+		</div>
+		<div class="field addressFound" style="display: none;">
+			<input type="hidden" name="address.line1"/>
+			<input type="hidden" name="address.line2"/>
+			<input type="hidden" name="address.line3"/>
+			<input type="hidden" name="address.line4"/>
+			<input type="hidden" name="address.postcode"/>
+			
+			<label>Your address</label>
+			<span name="address.line1">{{address.line1}}</span>
+			<span name="address.line2">{{address.line2}}</span>
+			<span name="address.line3">{{address.line3}}</span>
+			<span name="address.line4">{{address.line4}}</span>
+			<span name="address.postcode">{{address.postcode}}</span>
+
+			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
+		</div>
+		
+		<div class="field">
+			<label>Do you own your own home</label>
+			<input id="input_ownHome_yes" type="radio" name="ownHome" value="yes" rf.validation="required"/>
+			<label for="input_ownHome_yes" class="forRadio">Yes</label>
+			<input id="input_ownHome_no" type="radio" name="ownHome" value="no"/>
+			<label for="input_ownHome_no" class="forRadio">No</label>
 		</div>
 	</div>
-	<div class="field addressFound" style="display: none;">
-		<input type="hidden" name="address.line1"/>
-		<input type="hidden" name="address.line2"/>
-		<input type="hidden" name="address.line3"/>
-		<input type="hidden" name="address.line4"/>
-		<input type="hidden" name="address.postcode"/>
 		
-		<label>Your address</label>
-		<span name="address.line1">{{address.line1}}</span>
-		<span name="address.line2">{{address.line2}}</span>
-		<span name="address.line3">{{address.line3}}</span>
-		<span name="address.line4">{{address.line4}}</span>
-		<span name="address.postcode">{{address.postcode}}</span>
-
-		<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
-	</div>
-	
-	<div class="field">
-		<label>Do you own your own home</label>
-		<input id="input_ownHome_yes" type="radio" name="ownHome" value="yes" rf.validation="required"/>
-		<label for="input_ownHome_yes" class="forRadio">Yes</label>
-		<input id="input_ownHome_no" type="radio" name="ownHome" value="no"/>
-		<label for="input_ownHome_no" class="forRadio">No</label>
-	</div>
-	
-	<script>
-		var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
-		var inputErrorCallback = function() {
-			alert("Please provide a valid postcode");
-		}
-		new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
-	</script>
+		<script>
+			var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
+			var inputErrorCallback = function() {
+				alert("Please provide a valid postcode");
+			}
+			new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
+		</script>

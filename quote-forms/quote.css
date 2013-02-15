@@ -265,18 +265,19 @@ option:first-child{
 .disabled h1{
 	font-size: 180%
 }
+.disabled a {
+	color: #92CE56;
+	font-weight: bold;
+	float: right;
+	margin-right: 5%;
+}
 
 #sectionOne a {
 	float: right;
 	margin-right: 5%;
 }
 
-#disabledSectionOne a {
-	color: #92CE56;
-	font-weight: bold;
-	float: right;
-	margin-right: 5%;
-}
+
 
 /* crumb trail */
 #crumbTrail li{
