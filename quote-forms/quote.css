@@ -232,8 +232,18 @@ div.field a{
 	padding: 0;
 }
 
-.carDetails {
+.disabledSummary {
 	font-size: 1.2em;
+}
+
+.carFound label {
+	margin: 0.5em 0 0.5em 0;
+}
+
+.currency:after {
+	content: '£';
+	float: right;
+	margin-right: -4%;
 }
 
 #input_title {
