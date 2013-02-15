@@ -101,9 +101,9 @@
 		<div class="field findAddress">
 			<input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" />
 			<label for="input_addressLine1">House number or name</label>
-			<input class="findAddressHouse" id="input_addressLine1" type="text"/><br/>
+			<input class="findAddressHouse" id="input_addressLine1" type="text" value="{{customer.address.line1}}"/><br/>
 			<label for="input_postcode">Postcode</label>
-			<input class="findAddressPostcode" id="input_postcode" type="text"/>
+			<input class="findAddressPostcode" id="input_postcode" type="text" value="{{customer.address.postcode}}"/>
 			<input type="button" class="findAddressButton" onclick="return false;" value="Find address"/>
 			<div class="addressList" style="display: none;">
 				Here are all the addresses we've found for your postcode:
