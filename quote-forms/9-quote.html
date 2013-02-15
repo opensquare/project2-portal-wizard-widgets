@@ -14,7 +14,7 @@
 		<h2>Single Payment</h2>
 		<p><span class="amount">{{//calcResult/calcElement/annualPremium}}</span></p>
 		<input type="button" rf.action="" value="Buy"/>
-		<p class="smallprint">This amount includes Insurance Premium Tax of.<span class="iptAmount">{{//calcResult/calcElement/totalTax}}</span>.  We can accept payment online using a debit or credit card.</p>
+		<p class="smallprint">This amount includes Insurance Premium Tax of <span class="iptAmount">{{//calcResult/calcElement/totalTax}}</span>.  We can accept payment online using a debit or credit card.</p>
 	</div>
 	<div id="multiplePayment" class="pane">
 		<h2>Monthly Instalments</h2>
@@ -25,24 +25,24 @@
 	</div>
 
 	<h2>Your details</h2>
-	<p>We have based this quotation on the following details that you have told us.  If any of these are incorrect, please go back and correct them.</p>
+	<p>We have based this quotation on the details that you have provided, a summary of which is shown below.  If any of details are incorrect, you must go back and correct them before proceeding.</p>
 
 	<h3>Duration</h3>
-	<p class="duration">This is an <span>annual</span> policy which would start on <span>{{//vehicle/coverStartDate}}</span>.</p>
+	<p class="details duration">This is an <span>annual</span> policy which would start on <span>{{//vehicle/coverStartDate}}</span>.</p>
 
 	<h3>Your vehicle</h3>
-	<p class="vehicle">The insurance is for your vehicle reg.</p>
+	<p class="details vehicle">The insurance is for your vehicle <span>{{//vehicle/vehDesc}}</span>, registration number <span>{{//vehicle/reg}}</span>.</p>
 
 	<h3>The drivers</h3>
-	<p class="drivers">.</p>
+	<p class="details drivers">.</p>
 
-	<div class="field">
+	<!--div class="field">
 		<label>Choose how to pay</label>
 		<input id="input_paymentType_single" type="radio" name="paymentType" value="single" rf.validation="required"/>
 		<label for="input_paymentType_single" class="forPayment">One Payment: {{//calcResult/calcElement/annualPremium}}</label>
 		<input id="input_paymentType_instalments" type="radio" name="paymentType" value="instalments" rf.validation="required"/>
 		<label for="input_paymentType_instalments" class="forPayment">Monthly Instalments: {{//calcResult/calcElement/instalmentPremium}} x {{//calcResult/calcElement/InstalmentCount}}</label>
-	</div>
+	</div-->
 
 	<!--p>This quote is valid for 30 days and includes Insurance Premium Tax.</p-->
 	
@@ -55,8 +55,15 @@
 
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
-		<input type="button" rf.action="" value="Save"/>
+		<input type="button" rf.action="" value="Save" onclick="$('#save').toggle();"/>
 	</div>
 
-	<div 
+	<div id="save" style="display:none">
+		<p>To save your quote for later retrieval you will need to visit this url <span>http://demo.osl-cloud.com/quote?ref={{//calcResult/ref}}</span>.  We can help you remember this by:</p>
+		<ul>
+			<li><span>Bookmarking</span> it in this browser <a href="#">Go</a></li>
+			<li><span>Emailing</span> it to this email address: <input required/> <a href="#">Go</a></li>
+			<li><span>Texting</span> it to this mobile number: <input required/> <a href="#">Go</a></li>
+		</ul>
+	</div>
 </form>		
