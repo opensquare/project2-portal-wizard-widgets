@@ -10,3 +10,8 @@
 		   $(this).closest("div.field").addClass("on")
 		});
 
+		$("input[type='radio'], input[type='text'], input[type='checkbox'], select").change( function() {
+  			$(this).siblings('.invalid-message').remove();
+  		});
+
+ 
