@@ -69,7 +69,7 @@
 		<div class="field findCar" rf.includeIf="{ fields.knowReg.value == 'yes' }">
 			<label for="input_reg">Registration number</label>
 			<input id="abiLookupProxy" type="hidden" style="display:none" rf.source="{{$vehicle-model-lookup}}" />
-			<input id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}" value="C595 HBO"/>
+			<input id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}"/>
 			<input type="hidden" name="vehKey" rf.validation="required"/>
 			<input type="button" value="Find"/>
 			<input type="hidden" name="vehDesc" />
@@ -125,6 +125,14 @@
 			<h3>Based on the information provided, we believe your car:</h3>
 
 			<div id="carDetails">
+
+				<label for="input_drivingPosition">Has the following driving position</label>
+				<select id="input_drivingPosition" name="drivingPosition" rf.validation="required" rf.preselectFirstOption="true" disabled>
+					<option disabled></option>
+					<option selected value="2">Right-hand drive</option>
+					<option value="1">Left-hand drive</option>
+				</select>
+
 				<label for="input_securityDevices">Has the following security</label>
 				<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="true" disabled>
 				</select>
