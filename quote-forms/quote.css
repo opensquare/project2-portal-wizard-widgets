@@ -163,14 +163,14 @@ option:first-child{
 }
 @media screen and (max-width: 1300px) {
 	.hint{
-		margin-top: 4em;
+		margin-top: 1.5em;
 	}
 	.hint::before {
 		color: #92CE56;
 		content: '▲';
 		font-size: 2em;
 		position: absolute;
-		margin: -1.1em 0 0 -0em;
+		margin: -1em 0 0 -0em;
 	}
 }
 
