@@ -1,3 +1,4 @@
+ <script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
  <script>
 	/* Default section context */
 	$("#disabledSectionOne").hide();	 
@@ -32,7 +33,9 @@
 
 		<div class="field">
 			<label for="input_relationshipToPolicyholder" style="width: 30%;">Relationship to the Policyholder?</label>
-			<select id="input_relationshipToPolicyholder" name="relationshipToPolicyholder" rf.validation="required" rf.source="resources/relationshipToPolicyholder.txt"></select>
+			<select id="input_relationshipToPolicyholder" name="relationshipToPolicyholder" rf.validation="required" rf.source="resources/relationshipToPolicyholder.txt"  rf.preselectFirstOption="true">
+				<option disabled selected></option>
+			</select>
 		</div>
 
 		<div id="disabledNavigation" class="navigation">
