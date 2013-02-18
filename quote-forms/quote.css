@@ -141,14 +141,15 @@ option:first-child{
 }
 
 .hint{
-	background-color: #92CE56;
-	border-radius: 0.25em;
-	color: #FFF;
 	display: none;
-	padding: 0.35em;
 	position: absolute;
 	right: 7em;
 	width: 15em;
+	padding: 0.35em;
+	background-color: #92CE56;
+	border-radius: 0.25em;
+	color: #FFF;
+	z-index: 999;
 }
 .hint h3 {
 	margin: 0;
@@ -287,38 +288,42 @@ option:first-child{
 
 /* crumb trail */
 #crumbTrail li {
+	position: relative;
 	float: left;
-	width: 16%;
+	min-width: 16%;
 	height: 20px;
-	margin: 1% 10px;
-	padding: 10px 0 10px 30px;
+	margin: 1% 2% 0 0;
+	padding: 10px 10px 10px 30px;
 	list-style: none;
 	background: rgba(0,0,0,0.5) no-repeat 6px center;
 	color: #FFF;
-	border-radius: 10em 1em 2em 10em;
+	border-radius: 10em 0 0 10em;
+	white-space: nowrap;
 }
 #crumbTrail li:after {
 	content: '';
-	float: right;
-	margin: -10px -16px 0 0;
+	position: absolute;
+	top: 1px;
+	right: -16px;
 	border-top: 19px dotted transparent;
 	border-bottom: 19px dotted transparent;
 	border-left: 16px dotted rgba(0,0,0,0.5);
 }
 #crumbTrail li.on {
 	height: 40px;
-	margin-left: 15px;
-	padding-left: 75px;
+	margin-left: 3%;
+	padding-left: 15px;
 	background-color: #0DB4F2;
 	font-size: 1.5em;
 	font-weight: bold;
+	border-radius: 10em 0 2em 10em;
 }
 #crumbTrail li.on:before {
 	content: '';
 	float: left;
 	width: 75px;
 	height: 75px;
-	margin: -18px 0 0 -82px;
+	margin: -18px 0 0 -50px;
 	border-radius: 10em;
 	background: #0DB4F2 no-repeat center center;
 }
