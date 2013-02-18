@@ -36,7 +36,11 @@
 		$('#sectionTwo, #disabledSectionTwo').delay(1200).slideToggle(800);
 		var startDate = document.getElementById('input_coverStartDate').value;
 		document.getElementById("startDate").innerHTML = moment(startDate, "YYYY-MM-DD").format("DD/MM/YYYY")
-	}	
+	}
+
+	$('form select').change( function(){
+		$(this).addClass('changed');
+	})
 </script>
 
  <ul id="crumbTrail">
@@ -127,14 +131,14 @@
 			<div id="carDetails">
 
 				<label for="input_drivingPosition">Has the following driving position</label>
-				<select id="input_drivingPosition" name="drivingPosition" rf.validation="required" rf.preselectFirstOption="true" disabled>
+				<select id="input_drivingPosition" class="changed" name="drivingPosition" rf.validation="required" rf.preselectFirstOption="true" disabled>
 					<option disabled></option>
 					<option selected value="2">Right-hand drive</option>
 					<option value="1">Left-hand drive</option>
 				</select>
 
 				<label for="input_securityDevices">Has the following security</label>
-				<select id="input_securityDevices" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="true" disabled>
+				<select id="input_securityDevices" class="changed" name="securityDevicesCode" rf.validation="required" rf.source="resources/securityDevices.csv" rf.preselectFirstOption="true" disabled>
 				</select>
 
 				<label>Has an active security tracker</label>

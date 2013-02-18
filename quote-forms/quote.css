@@ -87,10 +87,8 @@ label {
 	width: 40%;
 }
 label.forRadio {
-	font-size: 1.3em;
-	position: relative;
-	right: 0.8em;
-	width: 2em;
+	font-size: 1.2em;
+	width: auto;
 }
 label.forPayment {
 	font-size: 1.3em;
