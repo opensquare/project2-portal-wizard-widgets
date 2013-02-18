@@ -69,7 +69,7 @@
 				]
 			},
 			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry" ] },
-			{ id: "sorry", url: "sorry.html"}
+			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
 		],
 		conviction: [
 			{ id: "editConviction", docBase: "convictions/conviction[index]", url: "3-edit-conviction.html", actions: [ "cancel", "next" ] }
