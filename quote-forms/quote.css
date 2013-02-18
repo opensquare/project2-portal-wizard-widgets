@@ -23,6 +23,9 @@ input[type="button"] {
 	font-size: 1.2em;	
 	padding: 0.2em 1em;
 }
+input[type="button"]:hover {
+	background-color: #82BE46;
+}
 input[type="checkbox"] {
     background-color: #FFF;
     border: thin solid #0090C0;
@@ -130,6 +133,9 @@ div.field a{
 	color: #92CE56;
 	font-weight: bold;
 	margin-left: 2em;
+}
+div.field a:hover{
+	color: #82BE46;
 }
 option:first-child{
 	color: #999;
