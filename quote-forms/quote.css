@@ -198,6 +198,7 @@ option:first-child{
 
 .navigation {
 	text-align: right;
+	clear: both;
 }
 .navigation input[type="button"]{
 	font-size: 2em;	
@@ -434,7 +435,8 @@ option:first-child{
 	font-size: small;
 }
 #landingPage .pane {
-	display: inline-block;
+	float: right;
+	clear: both;
 	width: 40%;
 	margin: 0 2em 2em 0;
 	vertical-align: top;
