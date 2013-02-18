@@ -87,7 +87,7 @@
 		<div class="field">
 			<label for="input_ukResident">UK residency</label>
 			<input id="input_ukResidentMoreThan5Years" type="checkbox" name="ukResidentMoreThan5Years"/>
-			<label for="input_ukResidentMoreThan5Years">More than 5 years</label>
+			<label class="forRadio" for="input_ukResidentMoreThan5Years">More than 5 years</label>
 			
 			<div rf.includeIf="{ fields.ukResidentMoreThan5Years.value == false }">
 				<label for="input_ukResidentSinceMonthCode">Or since</label>
@@ -138,7 +138,7 @@
 		</div>
 	</div>
 		
-		<script>
+	<script>
 		rf.onFormLoad(function(){
 			var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
 			var inputErrorCallback = function() {
@@ -146,5 +146,8 @@
 			}
 			new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
 		})
-		
-		</script>
+	
+		$('form select').change( function(){
+			$(this).addClass('changed');
+		})
+	</script>

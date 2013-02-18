@@ -99,13 +99,20 @@ label.forPayment {
 	width: 2em;
 	display: inline;
 }
+option {
+	color: #333;
+}
 p {
 	font-size: 1.2em;
 }
 select {
 	width: 20%;
+	margin-left: 0;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
+	color: #AAA;
+}
+select.changed {
 	color: inherit;
 }
 select:disabled {
@@ -183,7 +190,7 @@ option:first-child{
 	overflow: auto;
 	overflow-x: hidden;
 	overflow-y: auto;
-	margin: 0 0 0 33.5%;
+	margin: 0 0 0 34%;
 	padding: 0;
 	list-style: none;
 	background-color: #FFF;
@@ -378,10 +385,8 @@ option:first-child{
 }
 
 #customerDetails label.forRadio {
-	font-size: 1.3em;
-	position: relative;
-	right: 0.8em;
-	width: 2em;
+	font-size: 1.2em;
+	width: auto;
 }
 /*address lookup formatting*/
 #customerDetails .findAddress div.labelWrapper{

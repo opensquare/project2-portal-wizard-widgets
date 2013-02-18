@@ -9,7 +9,7 @@
 	<div class="field">
 		<label for="input_passedTest">When did you pass your test?</label>
 		<input id="input_passedTestMoreThan10YearsAgo" type="checkbox" name="passedTestMoreThan10YearsAgo"/>
-		<label for="input_passedTestMoreThan10YearsAgo">More than 10 years ago</label>
+		<label class="forRadio" for="input_passedTestMoreThan10YearsAgo">More than 10 years ago</label>
 		<div rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }">
 			<label for="input_passedTestMonth">Or since</label>
 			<select id="input_passedTestMonth" class="dateSel" name="passedTestMonth" rf.includeIf="{ fields.passedTestMoreThan10YearsAgo.value == false }" rf.source="resources/months.csv" rf.preselectFirstOption="true">
