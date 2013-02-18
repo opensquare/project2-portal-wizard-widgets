@@ -484,6 +484,7 @@ table .pcaAutoCompleteSmall>div{
 	content: '£';
 }
 #landingPage .pane p {
+	margin: 0;
 	padding: 0.5em;
 }
 #landingPage p>span {
@@ -494,6 +495,12 @@ table .pcaAutoCompleteSmall>div{
 	padding: 0.25em;
 	font-size: 0.7em;
 	border-top: thin solid rgba(0,0,0,0.25);
+}
+#landingPage #details{
+	clear: both;
+}
+#landingPage h3 {
+	display: none;
 }
 #landingPage .details{
 	min-height: 50px;
@@ -533,6 +540,7 @@ table .pcaAutoCompleteSmall>div{
 }
 #save p {
 	margin: 0;
+	padding: 0.5em;
 }
 #save li {
 	padding-bottom: 1em;
