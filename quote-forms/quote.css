@@ -280,47 +280,44 @@ option:first-child{
 
 
 /* crumb trail */
-#crumbTrail li{
-	 float: left;
-	 width: 190px;
-	 height: 20px;
-	 margin: 1% 10px;
-	 padding: 10px 0 10px 30px;
-	 list-style: none;
-	 background: rgba(0,0,0,0.5) no-repeat 6px center;
-	 color: #FFF;
-	 border-radius: 10em 1em 2em 10em;
+#crumbTrail li {
+	float: left;
+	width: 16%;
+	height: 20px;
+	margin: 1% 10px;
+	padding: 10px 0 10px 30px;
+	list-style: none;
+	background: rgba(0,0,0,0.5) no-repeat 6px center;
+	color: #FFF;
+	border-radius: 10em 1em 2em 10em;
 }
-#crumbTrail li:before{
-	 content: '';
-	 position: absolute;
-	 height: 0;
-	 width: 0;
-	 margin: -10px 0 0 190px;
-	 border-top: 19px dotted transparent;
-	 border-bottom: 19px dotted transparent;
-	 border-left: 16px dotted rgba(0,0,0,0.5);
+#crumbTrail li:after {
+	content: '';
+	float: right;
+	margin: -10px -16px 0 0;
+	border-top: 19px dotted transparent;
+	border-bottom: 19px dotted transparent;
+	border-left: 16px dotted rgba(0,0,0,0.5);
 }
-#crumbTrail li.on{
-	 height: 40px;
-	 margin-left: 15px;
-	 padding-left: 75px;
-	 background-color: #0DB4F2;
-	 font-size: 1.5em;
-	 font-weight: bold;
+#crumbTrail li.on {
+	height: 40px;
+	margin-left: 15px;
+	padding-left: 75px;
+	background-color: #0DB4F2;
+	font-size: 1.5em;
+	font-weight: bold;
 }
-#crumbTrail li.on:before{
-	 margin-left: 189px;
-	 border-left-color: #0DB4F2;
+#crumbTrail li.on:before {
+	content: '';
+	float: left;
+	width: 75px;
+	height: 75px;
+	margin: -18px 0 0 -82px;
+	border-radius: 10em;
+	background: #0DB4F2 no-repeat center center;
 }
 #crumbTrail li.on:after{
-	 content: '';
-	 float: left;
-	 width: 75px;
-	 height: 75px;
-	 margin: -18px 0 0 -82px;
-	 border-radius: 10em;
-	 background: #0DB4F2 no-repeat center center;
+	 border-left-color: #0DB4F2;
 }
 #crumbTrail li.car{
 	 background-image: url('transport-car-light-small.png');
