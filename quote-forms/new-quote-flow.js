@@ -68,7 +68,8 @@
 					}
 				]
 			},
-			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish" ] }
+			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry" ] },
+			{ id: "sorry", url: "sorry.html"}
 		],
 		conviction: [
 			{ id: "editConviction", docBase: "convictions/conviction[index]", url: "3-edit-conviction.html", actions: [ "cancel", "next" ] }
