@@ -372,7 +372,7 @@ option:first-child{
 
 .loading{
 	width: 100%;
-	height: 20%;
+	height: 100px;
 	background: url('loading.gif') no-repeat center center;
 }
 
