@@ -19,6 +19,7 @@
 		 var genderCheckbox = titleGenderMap[title];
 
 		 $(genderCheckbox).attr('checked','checked'); 
+		 $(genderCheckbox).siblings('.invalid-message').remove();
 		}
 
 		 $("#input_title").change(function(){
@@ -30,10 +31,10 @@
 
 		<div class="field">
 			<label for="input_title">Name</label>
-			<select id="input_title" name="title" rf.validation="required" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
+			<select id="input_title" name="title" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
 				<option disabled selected>Title</option>
 			</select>
-			<input id="input_firstName" type="text" name="firstName" rf.validation="required" placeholder="First Name"/>
+			<input id="input_firstName" type="text" name="firstName" placeholder="First Name"/>
 			<input id="input_surname" type="text" name="surname" rf.validation="required" placeholder="Surname"/>
 		</div>
 
