@@ -481,6 +481,42 @@ option:first-child{
 #landingPage .drivers{
 	background: url('person-user-dark.png') no-repeat; 
 }
+#save {
+	margin-bottom: 1em;
+	border: thick solid #92CE56;
+	border-radius: 1em;
+}
+#save:before {
+	content: '';
+	height: 0px;
+	width: 0px;
+	float: right;
+	margin: -24px 40px 0 0;
+	border-left: 20px dotted transparent;
+	border-right: 20px dotted transparent;
+	border-bottom: 20px dotted #92CE56;
+}
+#save span {
+	padding: 0.1em 0.25em;
+	background: #92CE56;
+	color: #fff;
+	white-space: nowrap;
+	border-radius: 0.25em;
+	font-weight: bold;
+}
+#save p {
+	margin: 0;
+}
+#save li {
+	padding-bottom: 1em;
+}
+#save li a {
+	padding: 0.5em 0.4em;
+	border-radius: 10em;
+	background: #0DB4F2;
+	color: #fff;
+	font-weight: bold;
+}
 
 /*Driver summary icons*/
 .Male {
