@@ -376,14 +376,19 @@ option:first-child{
 	width: 2em;
 }
 /*address lookup formatting*/
+#customerDetails .findAddress div.labelWrapper{
+	vertical-align:top;
+}
 #customerDetails .findAddress div.labelWrapper,
 #customerDetails .findAddress div.tableWrapper{
 	display:inline-block;
-	width:30%;
-	vertical-align: text-bottom;
 }
 #customerDetails .findAddress div.labelWrapper {
 	padding: 0 1em;
+	width:30.5%;
+}
+#customerDetails .findAddress div.tableWrapper{
+	width:44%;
 }
 #customerDetails .findAddress label{
 	width:100%;
@@ -400,9 +405,19 @@ option:first-child{
 }
 #addressLabel span{
 	display: block;
+	font-size:1.2em;
 }
 .pcaCapturePlusTable td{
 	z-index: 1;
+	position:static!important;
+}
+table .pcaAutoCompleteSmall>div{
+	background-color:#FFF;
+	border: thin solid #0090C0;
+	overflow-x:hidden;
+	max-height:10em;
+	padding-right:0.6em!important;
+	width:100%!important;
 }
 .pcaAutoCompleteSmall .item,
 .pcaAutoCompleteSmall .selectedItem{
@@ -410,7 +425,15 @@ option:first-child{
 	display:inline-block;
 }
 .pcaAutoCompleteSmall .item{
-	background-color: #FFF;
+	border-width:0!important;
+}
+.pcaAutoCompleteSmall .item:hover,
+.pcaAutoCompleteSmall .selectedItem:hover{
+	background-color: #0090C0;
+}
+.pcaAutoCompleteSmall .item:hover span,
+.pcaAutoCompleteSmall .selectedItem:hover span{
+	color: #FFF!important;
 }
 .pcaAutoCompleteSmall .selectedItem{
 	background-color: #EEE;
