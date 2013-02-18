@@ -99,8 +99,7 @@ label.forPayment {
 	display: inline;
 }
 p {
-	font-size: 1.3em;
-	padding: 0 1em 0 0.5em;
+	font-size: 1.2em;
 }
 select {
 	width: 20%;
@@ -451,11 +450,8 @@ table .pcaAutoCompleteSmall>div{
 }
 
 /* Landing Page styling */
-#landingPage #calcRef {
-	float: right;
-	margin: 0;
-	opacity: 0.5;
-	font-size: small;
+#landingPage h1 {
+	margin-bottom: 0;
 }
 #landingPage .pane {
 	float: right;
@@ -487,7 +483,7 @@ table .pcaAutoCompleteSmall>div{
 #landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before{
 	content: '£';
 }
-#landingPage p {
+#landingPage .pane p {
 	padding: 0.5em;
 }
 #landingPage p>span {
