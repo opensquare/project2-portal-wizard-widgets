@@ -13,6 +13,7 @@
 
 	<div class="field">
 		<span class="{{customer.gender}}"></span>{{customer.firstName}} {{customer.surname}}
+		<a href="#" rf.action="back">Edit</a>
 	</div>
 
 	<h1>7. Additional Drivers</h1>
@@ -24,10 +25,7 @@
 		</div>
 	</rf.forEach>
 
-	<div class="field">
-		<input type="button" rf.action="addAdditionalDriver" value="Add Driver" style="margin:0.5em;"/>
-	</div>
-	
+	<input type="button" rf.action="addAdditionalDriver" value="Add Driver" style="margin:0.5em;"/>
 	
 	<div class="navigation">
 		<input type="button" rf.action="back" value="Back"/>
