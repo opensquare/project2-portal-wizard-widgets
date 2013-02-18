@@ -457,7 +457,7 @@ table .pcaAutoCompleteSmall>div{
 	float: right;
 	clear: both;
 	width: 40%;
-	margin: 0 2em 2em 0;
+	margin: 0 2em 2em 2em;
 	vertical-align: top;
 	border: thick solid #0DB4F2;
 	border-radius: 1em;
