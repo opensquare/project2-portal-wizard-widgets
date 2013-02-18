@@ -40,11 +40,10 @@
 	<p class="details vehicle">The insurance is for your vehicle <span>{{//vehicle/vehDesc}}</span>, registration number <span>{{//vehicle/reg}}</span>.</p>
 
 	<h3>The drivers</h3>
-	<p class="details drivers"><span>{{//customer/firstName}} {{//customer/surname}}, </span>
+	<p class="details drivers">The following drivers are insured to drive the vehicle under this policy: <span>{{//customer/firstName}} {{//customer/surname}}</span>
 		<rf.forEach select="additionalDrivers/driver" as="d">
-			<span class="{{d.gender}}">{{d.firstName}} {{d.surname}}, </span>
-		</rf.forEach>
-		are authorised to drive.
+			, <span class="{{d.gender}}">{{d.firstName}} {{d.surname}}</span>
+		</rf.forEach>.
 	</p>
 
 	<!--p>This quote is valid for 30 days and includes Insurance Premium Tax.</p-->

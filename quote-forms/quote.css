@@ -44,6 +44,7 @@ input[type="checkbox"]:checked:after {
 	font-size: 1.3em;   
 }
 input[type="radio"] {
+	margin: -0.25em 0 0 0;
     background-color: #FFF;
     border: thin solid #0090C0;
     padding: 0.45em;
@@ -251,6 +252,11 @@ option:first-child{
 .carFound label {
 	margin: 0.5em 0 0.5em 0;
 }
+.carFound span {
+	display: inline-block;
+	max-width: 23em;
+	font-size: 1.2em;
+}
 
 .currency:after {
 	content: '£';
@@ -281,10 +287,8 @@ option:first-child{
 
 #sectionOne a {
 	float: right;
-	margin-right: 5%;
+	margin: 0.5em 1em 0 0;
 }
-
-
 
 /* crumb trail */
 #crumbTrail li {
@@ -295,7 +299,7 @@ option:first-child{
 	margin: 1% 2% 0 0;
 	padding: 10px 10px 10px 30px;
 	list-style: none;
-	background: rgba(0,0,0,0.5) no-repeat 6px center;
+	background: #777 no-repeat 6px center;
 	color: #FFF;
 	border-radius: 10em 0 0 10em;
 	white-space: nowrap;
@@ -307,7 +311,7 @@ option:first-child{
 	right: -16px;
 	border-top: 19px dotted transparent;
 	border-bottom: 19px dotted transparent;
-	border-left: 16px dotted rgba(0,0,0,0.5);
+	border-left: 16px dotted #777;
 }
 #crumbTrail li.on {
 	height: 40px;
