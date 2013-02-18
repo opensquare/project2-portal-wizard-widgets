@@ -331,16 +331,16 @@ option:first-child{
 #crumbTrail li.quote{
 	 background-image: url('currency-sign-pound-light-small.png');
 }
-#crumbTrail li.on.car:after{
+#crumbTrail li.on.car:before{
 	 background-image: url('transport-car-light.png');
 }
-#crumbTrail li.on.drivers:after{
+#crumbTrail li.on.drivers:before{
 	 background-image: url('person-group-light.png');
 }
-#crumbTrail li.on.policy:after{
+#crumbTrail li.on.policy:before{
 	 background-image: url('document-contract2-light.png');
 }
-#crumbTrail li.on.quote:after{
+#crumbTrail li.on.quote:before{
  background-image: url('currency-sign-pound-light.png');
 }
 
