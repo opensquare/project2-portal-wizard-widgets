@@ -303,7 +303,7 @@ option:first-child{
 	list-style: none;
 	background: #777 no-repeat 6px center;
 	color: #FFF;
-	border-radius: 10em 0 0 10em;
+	border-radius: 10em 1em 1em 10em;
 	white-space: nowrap;
 }
 #crumbTrail li:after {
@@ -312,7 +312,7 @@ option:first-child{
 	top: -20px;
 	right: -17px;
 	color: #777;
-	font-size: 4em;
+	font-size: 64px;
 }
 #crumbTrail li.on {
 	height: 40px;
@@ -321,7 +321,6 @@ option:first-child{
 	background-color: #0DB4F2;
 	font-size: 1.5em;
 	font-weight: bold;
-	border-radius: 10em 0 2em 10em;
 }
 #crumbTrail li.on:before {
 	content: '';
@@ -333,10 +332,7 @@ option:first-child{
 	background: #0DB4F2 no-repeat center center;
 }
 #crumbTrail li.on:after {
-	top: -24px;
-	right: -19px;
 	color: #0DB4F2;
-	font-size: 3em;
 }
 #crumbTrail li.car{
 	 background-image: url('transport-car-light-small.png');
