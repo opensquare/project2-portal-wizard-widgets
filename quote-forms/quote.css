@@ -169,13 +169,10 @@ option:first-child{
 }
 @media screen and (max-width: 1300px) {
 	.hint{
-		margin-top: 1.5em;
+		margin-top: 3.5em;
 	}
 	.hint::before {
-		color: #92CE56;
 		content: '▲';
-		font-size: 2em;
-		position: absolute;
 		margin: -1em 0 0 -0em;
 	}
 }
@@ -381,10 +378,10 @@ option:first-child{
 	padding: 0 1em 0 1em;
 	width: 30%;
 }
-
 #customerDetails label.forRadio {
-	font-size: 1.2em;
 	width: auto;
+	padding-left: 0.25em;
+	font-size: 1.2em;
 }
 /*address lookup formatting*/
 #customerDetails .findAddress div.labelWrapper{
