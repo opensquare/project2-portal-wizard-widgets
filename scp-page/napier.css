@@ -1,0 +1,47 @@
+#content aside[type='napier']{
+	background-image: url('napier-light.png');
+	border-color: #9BBB59; 
+}
+#new-page a[type='napier'],#content aside[type='napier'].on{
+	background-color: #9BBB59; 
+	background-image: url('images/napier-light.png');
+}
+#content aside[type='napier'][subtype='quote']{
+	background-image: url('images/quote-dark.png');
+}
+#new-page a[type='napier'][subtype='quote'],#content aside[type='napier'][subtype='quote'].on{
+	background-image: url('images/quote-light.png');
+}
+#content aside[type='napier'][subtype='search']{
+	background-image: url('images/search-dark.png');
+}
+#new-page a[type='napier'][subtype='search'],#content aside[type='napier'][subtype='search'].on{
+	background-image: url('images/search-light.png');
+}
+
+#content article[type='napier'],#content article[type='napier'] .content-helper,#content article[type='napier'] .content-body{
+	border-color: #9BBB59;
+}
+#content article[type='napier'] .content-header,#content article[type='napier'] .content-helper{
+	background-color: #9BBB59;
+}
+
+/* Specific page styling */
+#content article[uid='napiersearch'] .content-body{
+	padding: 0;
+}
+#content div.scp-napier-search .content-header{
+	border-top: thin solid;
+	border-radius: 0;
+}
+#content .napier-search-input{
+	border-color: white;
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 0.2em;
+	font-size: 2em;
+	padding: 0 0.5em;
+	width: 70%;
+}
+#content .napier-search-button{
+	font-size: 1.8em;
+}

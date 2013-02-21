@@ -1,0 +1,74 @@
+		<!--
+		// SCP-style Page - (c) Open Square 2012
+		// =====================================
+		//
+		// (See comments in main index.html about special server-side commands available on these pages)
+		//
+		// Special features of this page include:
+		//		a) A header bar fixed to the top of the window with user display and actions.
+		//		b) A footer bar fixed to the bottom of the window.
+		//		c) A tab/page based approach using widgets (custom js keeps the tabs/pages in sync).
+		//		d) A hashtag driven approach to working with tabs/pages.
+		//
+		// This page uses html5 and a fluid layout suitable for tablets, it probably won't work in older browsers (without some tweaking).
+		//
+		-->
+		<header id="header">
+			<h2 id="header-title">
+				<a href="index.html">Service Centre Portal</a>
+			</h2>
+			<span id="header-user">
+				<span id="header-user-name"><a href="#" onclick="addPage('1234-5678-9012-3456', 'internal', 'profile', 'Personal Profile', 'Joe Smith', '1234-5678-9012-3456', '#content article.on .content-body')">Joe Smith</a></span>
+				<a id="header-logout" href="/logout">Logout</a>
+			</span>
+		</header>
+		<nav id="nav">&nbsp;</nav>
+		<section id="content">
+			<section id="content-asides">
+				<!-- Tabs go here as <asides> -->
+			</section>
+			<section id="content-newpage-aside">
+				<!-- Permanent New Page tab -->
+				<aside class="on" uid="internal-newpage" type="internal" subtype="newpage" hash="#internal?newpage">
+					<span class="title">New Page</span>
+				</aside>
+			</section>
+			<section id="content-articles">
+				<!-- Pages go here as <articles> -->
+			</section>
+			<section id="content-newpage-article">
+				<!-- Permanent New Page page -->
+				<article class="on" uid="internal-newpage" type="internal" subtype="newpage" hash="#internal?newpage">
+					<section class="content-header"><h2>Start a new page</h2></section>
+					<section id="new-page" class="content-body">
+						<details id="new-new" open>
+							<summary><h2>New Pages</h2></summary>
+							<div class="widget" name="scp-new-pages"></div>
+						</details>
+						<details id="new-closed">
+							<summary><h2>Recently Closed Pages</h2></summary>
+						</details>
+						<details id="new-management">
+							<summary><h2>Management Pages</h2></summary>
+							<a class="new-square profile" href="#internal?profile?1234-5678-9012-3456">Personal Profile</a>
+							<a class="new-square settings" href="#internal?settings">Settings</a>
+						</details>
+					</section>
+				</article>
+			</section>
+		</section>
+		<footer id="footer">
+			&copy; Open Square, 2013
+		</footer>
+
+		<script type="text/javascript">
+			// Bind click events to all current and future tabs, and get them to show the corresponding page when clicked
+			$('#content-asides,#content-newpage-aside').on('click','aside', function(event){
+				// trigger display of clicked tab/page
+				var hashtag = $(this).attr('hash');
+				window.location.hash = hashtag;
+			});
+
+			// Process hashtag, if any, on first load
+			if(window.location.hash.length>1){urlParse();};
+		</script>

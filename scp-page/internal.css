@@ -1,0 +1,39 @@
+article[type="internal"] summary h2 {
+	display: inline-block;
+}
+article[type="internal"] .new-square {
+	display: inline-block;
+	height: 2em;
+	width: 6em;
+	overflow: hidden;
+	margin: 0 1em 1em 0;
+	padding: 5em 1em 0.5em 1em;
+	background: #999 no-repeat center 1em;
+	color: #FFF;
+	border: medium solid rgba(0,0,0,0.3);
+	border-radius: 1em;
+	text-align: center;
+	vertical-align: top;
+}
+article[type="internal"] .new-square:hover {
+	text-decoration: underline;
+	border-color: rgba(0,0,0,0.6);
+}
+article[type="internal"] .new-square.napier {
+	background-image: url('images/napier-light.png');
+	background-color: #9BBB59;
+}
+article[type="internal"] .new-square.pact {
+	background-image: url('images/pact-light.png');
+	background-color: #C0504D;
+}
+article[type="internal"] .new-square.mailmerger {
+	background-image: url('images/mm-light.png');
+	background-color: #8064A2;
+}
+article[type="internal"] .new-square.profile {
+	background-image: url('images/person-light.png');
+}
+article[type="internal"] .new-square.settings {
+	background-image: url('images/gear-light.png');
+}
