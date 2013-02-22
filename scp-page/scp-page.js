@@ -52,7 +52,7 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		//importWidgets($('article[uid='+uid+']'));
+		//importWidgets('article[uid="'+uid+'"]');
 		pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
@@ -124,7 +124,22 @@ function napierSearch(terms) {
 				} else {
 					// Get a single calc
 		  			$('.napier-search-results ul').append('<li calcref="'+calc+'"><span class="loading"></span></li>');
-		  			$('li[calcref="'+calc+'"]').load(endpoint+calc+' calcSource,physicalTime,calcResponse');
+		  			$('li[calcref="'+calc+'"]').load(endpoint+calc, function(){
+		  				// Find some interesting data and display it
+		  				var xml = $.parseXML($(this).find('calcdata').text());
+		  				$(this).append('<span>');
+		  				$(this).append($(xml).find('title').text()+' ');
+		  				$(this).append($(xml).find('firstName').text()+' ');
+		  				$(this).append($(xml).find('surname').text());
+		  				$(this).append('</span>');
+		  				$(this).append('<span>'+$(xml).find('postcode').text()+'</span>');
+		  				$(this).append('<span>'+$(xml).find('vehDesc').text()+'</span>');
+		  				$(this).append('<span>'+$(xml).find('reg').text()+'</span>');
+		  				var xml = $.parseXML($(this).find('calcResponse').text());
+		  				$(this).append('<span class="currency">'+$(xml).find('annualPremium').text()+'</span>');
+
+		  				$(this).append('<a href="#">test</a>');}
+		  			);
 		  		};
 			};
 		};

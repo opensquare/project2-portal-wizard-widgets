@@ -53,7 +53,7 @@
 }
 #content .napier-search-results li{
 	background: url('images/calculator-buttons-small.png') no-repeat 6px center;
-	padding-left: 30px;
+	padding: 1em 0 1em 30px;
 }
 #content .napier-search-results li:before{
 	content: attr(calcref);
@@ -61,11 +61,26 @@
 #content .napier-search-results li:nth-child(odd){
 	background-color: rgba(155,187,89,0.3);
 }
-
+#content .napier-search-results li *{
+	padding: 0 1%;
+}
+#content .napier-search-results calc>*{
+	display: none;
+}
 #content .napier-search-results calcSource, #content .napier-search-results physicalTime{
 	display: inline-block;
-	padding: 1em;	
+	zpadding: 0 1em;	
 }
-#content .napier-search-results calcResponse{
-	display: none;
+z#content .napier-search-results calcType{
+	display: inline-block;
+	width: 50%;
+	height: 1em;
+	overflow: hidden;
+	padding: 0 1em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+span.currency:before{
+	content: '£';
 }
