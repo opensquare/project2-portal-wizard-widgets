@@ -347,6 +347,15 @@ option:first-child{
 #crumbTrail li.quote{
 	 background-image: url('currency-sign-pound-light-small.png');
 }
+#crumbTrail li.apply{
+	 background-image: url('email-light-small.png');
+}
+#crumbTrail li.pay{
+	 background-image: url('coins-light-small.png');
+}
+#crumbTrail li.welcome{
+	 background-image: url('handshake-light-small.png');
+}
 #crumbTrail li.on.car:before{
 	 background-image: url('transport-car-light.png');
 }
@@ -358,6 +367,15 @@ option:first-child{
 }
 #crumbTrail li.on.quote:before{
  background-image: url('currency-sign-pound-light.png');
+}
+#crumbTrail li.apply.on:before{
+	 background-image: url('email-light.png');
+}
+#crumbTrail li.pay.on:before{
+	 background-image: url('coins-light.png');
+}
+#crumbTrail li.welcome.on:before{
+	 background-image: url('handshake-light.png');
 }
 
 .rf-debugbar{
@@ -495,7 +513,7 @@ table .pcaAutoCompleteSmall>div{
 	font-weight: normal;
 }
 #landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before,
-#paymentPage .amount:before, #paymentPage .instalmentPremium:before{
+#paymentPage .amount:before, #paymentPage .instalmentPremium:before, #paymentPage .iptAmount:before{
 	content: '£';
 }
 #landingPage .pane p {
