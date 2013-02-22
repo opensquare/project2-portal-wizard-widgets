@@ -68,7 +68,7 @@
 					}
 				]
 			},
-			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry" ] },
+			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry", "single:buy.singlePayment", "multiple:buy.multiplePayment" ] },
 			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
 		],
 		conviction: [
@@ -94,6 +94,12 @@
 					"next"
 				]
 			},
+		],
+		buy: [
+			{ id: "singlePayment", url:"10-single-payment.html", actions:["next:payment", "back:main.quote"]},
+			{ id: "multiplePayment", url:"10-multiple-payment.html", actions:["next:payment", "back:main.quote"]},
+			{ id: "payment", docBase: "/quote/payment", url:"11-payment.html", actions:["next"]},
+			{ id: "complete", url:"complete.html"}
 		]
 	}
 }

@@ -61,7 +61,7 @@ input[type="radio"]:checked:after {
 	content: '\2714';
     font-size: 1.3em;   
 }
-input[type="text"] {
+input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
@@ -266,7 +266,8 @@ option:first-child{
 	margin-right: -4%;
 }
 
-#input_title {
+#input_title,
+.titleSelect{
 	width: auto;
 }
 
@@ -370,46 +371,60 @@ option:first-child{
 }
 
 /* Customer Details page specific styling */
-#customerDetails label {
+#customerDetails label,
+#paymentPage label{
 	display: inline-block;
 	font-size: 1.2em;
 	padding: 0 1em 0 1em;
 	width: 30%;
 }
+<<<<<<< HEAD
 #customerDetails label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 	font-size: 1.2em;
+=======
+
+#customerDetails label.forRadio{
+	font-size: 1.3em;
+	position: relative;
+	right: 0.8em;
+	width: 2em;
+>>>>>>> first pass at registration/payment pages
 }
 /*address lookup formatting*/
-#customerDetails .findAddress div.labelWrapper{
+.findAddress div.labelWrapper{
 	vertical-align:top;
 }
-#customerDetails .findAddress div.labelWrapper,
-#customerDetails .findAddress div.tableWrapper{
+.findAddress div.labelWrapper,
+.findAddress div.tableWrapper{
 	display:inline-block;
 }
-#customerDetails .findAddress div.labelWrapper {
+.findAddress div.labelWrapper {
 	padding: 0 1em;
 	width:30.5%;
 }
-#customerDetails .findAddress div.tableWrapper{
+.findAddress div.tableWrapper{
 	width:44%;
 }
-#customerDetails .findAddress label{
+#customerDetails .findAddress label,
+#paymentPage .findAddress label{
 	width:100%;
 	padding:0;
 }
-#customerDetails .findAddress input{
+.findAddress input{
 	width:100%;
 }
-.addressFound label{
+.addressFound label,
+.accountDetails label{
 	vertical-align: top;
 }
-#addressLabel{
+#addressLabel,
+.bankDetails{
 	display: inline-block;
 }
-#addressLabel span{
+#addressLabel span,
+.bankDetails>span{
 	display: block;
 	font-size:1.2em;
 }
@@ -487,7 +502,8 @@ table .pcaAutoCompleteSmall>div{
 	font-size: 2em;
 	font-weight: normal;
 }
-#landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before{
+#landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before,
+#paymentPage .amount:before, #paymentPage .instalmentPremium:before{
 	content: '£';
 }
 #landingPage .pane p {
@@ -578,4 +594,17 @@ table .pcaAutoCompleteSmall>div{
 	background: no-repeat center top;
 	background-image: url('person-woman-dark.png');
 	padding: 12px 50px;
+}
+/*Payment page*/
+#paymentPage label.forRadio{
+	font-size: 1.3em;
+	position: relative;
+	right: 0.8em;
+	width: 3em;
+}
+#input_sort_code{
+	width:10%;
+}
+#input_code{
+	width:5%;
 }

@@ -1,0 +1,6 @@
+Visa
+Visa Debit
+Mastercard
+Delta
+Solo
+Maestro
