@@ -1,5 +1,5 @@
 <section class="content-header">
-	<input class="napier-search-input" autofocus placeholder="search terms" type="search" onclick="if(this.value==''){alert('hellooos');};" onsearch="if(this.value!=''){$('.napier-search-button').click()};"/>
+	<input class="napier-search-input" autofocus placeholder="search terms" type="search" onclick="if(this.value==''){napierSearchClear()};" onsearch="if(this.value!=''){$('.napier-search-button').click()} else {napierSearchClear()};"/>
 	<button class="napier-search-button" onclick="napierSearch($('.napier-search-input').val());">Go</button>
 </section>
 <section class="napier-search-results" class="content-body">

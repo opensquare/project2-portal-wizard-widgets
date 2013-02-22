@@ -45,3 +45,27 @@
 #content .napier-search-button{
 	font-size: 1.8em;
 }
+
+#content .napier-search-results ul{
+	width: 97%;
+	list-style: none;
+	padding-left: 1em;
+}
+#content .napier-search-results li{
+	background: url('images/calculator-buttons-small.png') no-repeat 6px center;
+	padding-left: 30px;
+}
+#content .napier-search-results li:before{
+	content: attr(calcref);
+}
+#content .napier-search-results li:nth-child(odd){
+	background-color: rgba(155,187,89,0.3);
+}
+
+#content .napier-search-results calcSource, #content .napier-search-results physicalTime{
+	display: inline-block;
+	padding: 1em;	
+}
+#content .napier-search-results calcResponse{
+	display: none;
+}

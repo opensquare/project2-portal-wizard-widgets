@@ -52,7 +52,7 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		importWidgets('article[uid='+uid+']');
+		importWidgets($('article[uid='+uid+']'));
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
@@ -100,24 +100,39 @@ function napierHandler() {
 function napierSearch(terms) {
 	addPage('napiersearch', 'napier', 'search', 'Quotes search', '', 'scp-napier-search', '#content article.on');
 
-	if(terms!='' || terms!=undefined){
+	if(typeof(terms)!='undefined'){
 		// Lookup predefined search
 		var endpoint = '/proxy/napier/'
 
-		// check if just a calcref
-		var calcref = +terms;
+		// quick check if just calcrefs
+		var calcref = parseInt(terms,10);
+
 		if(isNaN(calcref)){
+			alert('general search')
 			// Do a general quicksearch
 			//importContent(endpoint+'search/quickSearch='+terms,'#content .napier-search-results','#napier?search?'+terms)
 		} else {
-			// Return a single calcref
-			alert(calcref);
-			$.get(endpoint+calcref, function(data) {
-  				$('.napier-search-results').html(data);
-				});
-			//importContent(endpoint+calcref,'#content .napier-search-results','#napier?search?'+terms)
+			var calcref = terms.split(',');
+  			$('.napier-search-results').html('<ul></ul>');
+
+			for (var i=0;i<calcref.length;i++){ 
+				// Iterate through numbers
+				var calc = +calcref[i];
+				if(isNaN(calc)){
+					alert('number range check')
+				} else {
+					// Get a single calc
+		  			$('.napier-search-results ul').append('<li calcref="'+calc+'"><span class="loading"></span></li>');
+		  			$('li[calcref="'+calc+'"]').load(endpoint+calc+' calcSource,physicalTime,calcResponse');
+		  		};
+			};
 		};
+	} else {
+		napierSearchClear();
 	};
+}
+function napierSearchClear() {
+	$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
 }
 
 //---------------------------------------------------------------------------------------------------------------------
