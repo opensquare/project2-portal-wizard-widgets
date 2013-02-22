@@ -378,19 +378,11 @@ option:first-child{
 	padding: 0 1em 0 1em;
 	width: 30%;
 }
-<<<<<<< HEAD
+
 #customerDetails label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 	font-size: 1.2em;
-=======
-
-#customerDetails label.forRadio{
-	font-size: 1.3em;
-	position: relative;
-	right: 0.8em;
-	width: 2em;
->>>>>>> first pass at registration/payment pages
 }
 /*address lookup formatting*/
 .findAddress div.labelWrapper{
