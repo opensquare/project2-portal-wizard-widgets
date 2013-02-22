@@ -53,7 +53,7 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                 </section> \
             </article>').appendTo('#content-articles');
 		//importWidgets($('article[uid='+uid+']'));
-		pw.mount('article[uid="'+uid+'"]')
+		pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
