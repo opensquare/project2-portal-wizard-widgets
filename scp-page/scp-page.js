@@ -52,8 +52,8 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		importWidgets('article[uid="'+uid+'"]');
-		//pw.mount('article[uid="'+uid+'"] div')
+		//importWidgets('article[uid="'+uid+'"]');
+		pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
