@@ -95,7 +95,7 @@ div.widget>.widget-messages>div.error{
 #login-forms h2{
 	margin: 0 0 0.5em 0;
 	background: none;
-	color: #0090D0;
+	color: #555;
 }
 #login-forms h3{
 	font-size: 1.1em;
@@ -108,15 +108,16 @@ div.widget>.widget-messages>div.error{
 }
 #login-forms input{
 	display: block;
-	width: 90%;
+	width: 97%;
 	font-size: 1.5em;
-	border: thin solid #aaa;
+	border: thin solid #AAA;
+	padding: 0.1em 0.25em;
 }
 #login-forms button{
 	float: right;
 	margin-top: 1em;
 	padding: 0.2em 2em;
-	background: #92CE56;
+	background: #F79646;
 	color: white;
 	border: none;
 	border-radius: 0.25em;
@@ -124,7 +125,7 @@ div.widget>.widget-messages>div.error{
 	cursor: pointer;
 }
 #login-forms button:hover{
-	background-color: #82BE46;
+	background-color: #E78636;
 }
 #login-forms a{
 	float: left;
@@ -134,7 +135,7 @@ div.widget>.widget-messages>div.error{
 	text-decoration: none;
 }
 #login-forms a:hover{
-	text-decoration: underline;
+	border-bottom: thin dashed;
 }
 #login-form-reset-text{
 	padding: 0.6em 0;

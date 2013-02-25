@@ -52,8 +52,8 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		//importWidgets('article[uid="'+uid+'"]');
-		pw.mount('article[uid="'+uid+'"] div')
+		importWidgets('article[uid="'+uid+'"]');
+		//pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
@@ -93,6 +93,10 @@ function napierHandler() {
 		napierSearch(splithash[2]);
 		return true;
 	};
+	if(splithash[1].toLowerCase() == 'show') {
+		napierShow(splithash[2]);
+		return true;
+	};
 
 	// Throw error if no operator handler for type supplied
 	throw new Error();
@@ -102,9 +106,6 @@ function napierSearch(terms) {
 	addPage('napiersearch', 'napier', 'search', 'Quotes search', '', 'scp-napier-search', '#content article.on');
 
 	if(typeof(terms)!='undefined'){
-		// Lookup predefined search
-		var endpoint = '/proxy/napier/'
-
 		// quick check if just calcrefs
 		var calcref = parseInt(terms,10);
 
@@ -120,26 +121,15 @@ function napierSearch(terms) {
 				// Iterate through numbers
 				var calc = +calcref[i];
 				if(isNaN(calc)){
-					alert('number range check')
+					var calc = calcref[i].split('-');
+					if(calc.length == 2){
+						for (var x=Math.min(calc[0],calc[1]);x<=Math.max(calc[0],calc[1]);x++){
+							napierSearchCalc(x);
+						}
+					};
 				} else {
 					// Get a single calc
-		  			$('.napier-search-results ul').append('<li calcref="'+calc+'"><span class="loading"></span></li>');
-		  			$('li[calcref="'+calc+'"]').load(endpoint+calc, function(){
-		  				// Find some interesting data and display it
-		  				var xml = $.parseXML($(this).find('calcdata').text());
-		  				$(this).append('<span>');
-		  				$(this).append($(xml).find('title').text()+' ');
-		  				$(this).append($(xml).find('firstName').text()+' ');
-		  				$(this).append($(xml).find('surname').text());
-		  				$(this).append('</span>');
-		  				$(this).append('<span>'+$(xml).find('postcode').text()+'</span>');
-		  				$(this).append('<span>'+$(xml).find('vehDesc').text()+'</span>');
-		  				$(this).append('<span>'+$(xml).find('reg').text()+'</span>');
-		  				var xml = $.parseXML($(this).find('calcResponse').text());
-		  				$(this).append('<span class="currency">'+$(xml).find('annualPremium').text()+'</span>');
-
-		  				$(this).append('<a href="#">test</a>');}
-		  			);
+					napierSearchCalc(calc);
 		  		};
 			};
 		};
@@ -147,8 +137,31 @@ function napierSearch(terms) {
 		napierSearchClear();
 	};
 }
+function napierSearchCalc(calc){
+	var endpoint = '/proxy/napier/'
+	$('.napier-search-results ul').append('<li calcref="'+calc+'"><span class="loading"></span></li>');
+	$('li[calcref="'+calc+'"]').load(endpoint+calc, function(){
+		// Find some interesting data and display it
+		var xml = $.parseXML($(this).find('calcdata').text());
+		$(this).append('<span>');
+		$(this).append($(xml).find('title').text()+' ');
+		$(this).append($(xml).find('firstName').text()+' ');
+		$(this).append($(xml).find('surname').text());
+		$(this).append('</span>');
+		$(this).append('<span>'+$(xml).find('postcode').text()+'</span>');
+		$(this).append('<span>'+$(xml).find('vehDesc').text()+'</span>');
+		$(this).append('<span>'+$(xml).find('reg').text()+'</span>');
+		var xml = $.parseXML($(this).find('calcResponse').text());
+		$(this).append('<span class="currency">'+$(xml).find('annualPremium').text()+'</span>');
+
+		$(this).append('<a class="button" href="#quotes?show?'+calc+'">show</a>');}
+	);
+}
 function napierSearchClear() {
 	$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
+}
+function napierShow(terms) {
+	addPage('napiershow', 'napier', 'show', 'Quotes show', '', 'scp-napier-show', '#content article.on');
 }
 
 //---------------------------------------------------------------------------------------------------------------------
