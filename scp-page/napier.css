@@ -52,8 +52,9 @@
 	padding-left: 1em;
 }
 #content .napier-search-results li{
+	position: relative;
+	padding: 1em 5.5em 1em 30px;
 	background: url('images/calculator-buttons-small.png') no-repeat 6px center;
-	padding: 1em 0 1em 30px;
 }
 #content .napier-search-results li:before{
 	content: attr(calcref);
@@ -61,24 +62,28 @@
 #content .napier-search-results li:nth-child(odd){
 	background-color: rgba(155,187,89,0.3);
 }
-#content .napier-search-results li *{
-	padding: 0 1%;
-}
 #content .napier-search-results calc>*{
 	display: none;
 }
-#content .napier-search-results calcSource, #content .napier-search-results physicalTime{
+#content .napier-search-results calcSource, #content .napier-search-results physicalTime,#content .napier-search-results li span{
 	display: inline-block;
-	zpadding: 0 1em;	
-}
-z#content .napier-search-results calcType{
-	display: inline-block;
-	width: 50%;
-	height: 1em;
+	max-width: 12.5%;
 	overflow: hidden;
-	padding: 0 1em;
+	border-left: 1em solid transparent;
 	white-space: nowrap;
-	text-overflow: ellipsis;
+}
+#content .napier-search-results li span{
+	max-width: 22%;
+}
+#content .napier-search-results .reg{
+	text-transform: uppercase;
+}
+#content .napier-search-results li a{
+	position: absolute;
+	right: 4px;
+	top: 11px;
+	background-color: #6B8B39;
+	border-radius: 1em;
 }
 
 span.currency:before{

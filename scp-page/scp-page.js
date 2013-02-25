@@ -123,8 +123,10 @@ function napierSearch(terms) {
 				if(isNaN(calc)){
 					var calc = calcref[i].split('-');
 					if(calc.length == 2){
-						for (var x=Math.min(calc[0],calc[1]);x<=Math.max(calc[0],calc[1]);x++){
-							napierSearchCalc(x);
+						if (Math.max(calc[0],calc[1]) - Math.min(calc[0],calc[1]) > 50) {alert(calcref[i] + ' number range is too large')} else {;
+							for (var x=Math.min(calc[0],calc[1]);x<=Math.max(calc[0],calc[1]);x++){
+								napierSearchCalc(x);
+							}
 						}
 					};
 				} else {
@@ -143,16 +145,12 @@ function napierSearchCalc(calc){
 	$('li[calcref="'+calc+'"]').load(endpoint+calc, function(){
 		// Find some interesting data and display it
 		var xml = $.parseXML($(this).find('calcdata').text());
-		$(this).append('<span>');
-		$(this).append($(xml).find('title').text()+' ');
-		$(this).append($(xml).find('firstName').text()+' ');
-		$(this).append($(xml).find('surname').text());
-		$(this).append('</span>');
-		$(this).append('<span>'+$(xml).find('postcode').text()+'</span>');
-		$(this).append('<span>'+$(xml).find('vehDesc').text()+'</span>');
-		$(this).append('<span>'+$(xml).find('reg').text()+'</span>');
+		$(this).append('<span>'+$(xml).find('title').first().text()+' '+$(xml).find('firstName').first().text()+' '+$(xml).find('surname').first().text()+'</span>');
+		$(this).append('<span>'+$(xml).find('postcode').first().text()+'</span>');
+		$(this).append('<span>'+$(xml).find('vehDesc').first().text()+'</span>');
+		$(this).append('<span class="reg">'+$(xml).find('reg').first().text()+'</span>');
 		var xml = $.parseXML($(this).find('calcResponse').text());
-		$(this).append('<span class="currency">'+$(xml).find('annualPremium').text()+'</span>');
+		$(this).append('<span class="currency">'+$(xml).find('annualPremium').first().text()+'</span>');
 
 		$(this).append('<a class="button" href="#quotes?show?'+calc+'">show</a>');}
 	);
