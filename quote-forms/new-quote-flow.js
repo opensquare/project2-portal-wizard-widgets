@@ -57,7 +57,11 @@
 							preTransform: "xslt/toNapier.xsl", 
 							url: "{{napier-loadbalancer-url}}/REST/calcs",
 							data: {
-								source: "rhinoforms",
+								source: "motor-new-business",
+                                quickSearch1: "xpath://customer/surname",
+                                quickSearch2: "xpath://customer/address/postcode",
+                                quickSearch3: "xpath://customer/email",
+                                quickSearch4: "xpath://vehicle/reg",
 								calcType: "xpath://product/calc",
 								calcData: "[dataDocument]"
 							},
