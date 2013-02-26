@@ -28,7 +28,7 @@
 "No": "Ei",
 "Don't worry if you don't know the vehicle registration number. We can help!": "Älä huolestu, jos et tiedä ajoneuvon rekisterinumero. Voimme auttaa!",
 "Registration number": "Rekisterinumero",
-"Find": "Löytää",
+"<input type=\"button\" value=\"Find\">": "<input type=\"button\" value=\"Löytää\">",
 "We need your registration so we can find your exact car and help you get a more accurate quote.": "Tarvitsemme rekisteröintiä, jotta voimme löytää tarkan auton ja auttaa sinua saamaan tarkemman tarjouksen.",
 "Your vehicle": "Autosi",
 "Change vehicle": "Muuta ajoneuvo",

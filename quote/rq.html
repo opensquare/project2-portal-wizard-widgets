@@ -12,6 +12,7 @@
 	<section id="rq-content">
 		<div class="widget" name="help"></div>
 		<div class="widget" name="quote-forms"></div>
+		<input type="button" value="Find"/>
 	</section>
 
 	<footer>
@@ -24,21 +25,11 @@
 				var body = $('body>div.widget>div.widget-content').html();
 				var pattern;
 				$.each(data, function(key, val) {
-					key = key.replace('[','\\[');
-//					key = key.replace('\','\\\');
-					key = key.replace('^','\\^');
-					key = key.replace('$','\\$');
-					key = key.replace('.','\\.');
-					key = key.replace('|','\\|');
-					key = key.replace('?','\\?');
-					key = key.replace('*','\\*');
-					key = key.replace('+','\\+');
-					key = key.replace('(','\\(');
-					key = key.replace(')','\\)');
-					key = key.replace('{','\\{');
-					key = key.replace('}','\\}');
-					pattern = new RegExp('>'+key+'<','g');
-					body = body.replace(pattern,'>'+val+'<');
+					if(key.substring(0,1)=="<"){
+						body = body.replace(key,val);
+					} else {
+						body = body.replace('>'+key+'<','>'+val+'<');
+					};
 				});
 				$('body>div.widget>div.widget-content').html(body);
 			});
