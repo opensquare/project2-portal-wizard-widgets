@@ -1,5 +1,6 @@
 	<header>
 		<h2>Speak to us today <span>0800 123 456</span></h2>
+		<a id="languageSwitcher" onclick="changeLanguage('finnish')" title="Click to change site to Finnish"></a>
 		<div class="widget" name="cp-header-menu"></div>
 	</header>
 
@@ -10,9 +11,36 @@
 
 	<section id="rq-content">
 		<div class="widget" name="help"></div>
-		<div class="widget" name="quote-forms" params="ref={ref}"></div>
+		<div class="widget" name="quote-forms"></div>
 	</section>
 
 	<footer>
 		<div class="widget" name="cp-footer"></div>
 	</footer>
+
+	<script type="text/javascript">
+		function changeLanguage(file){
+			$.getJSON('/widgets/quote/'+file+'.json', function(data) {
+				var body = $('body>div.widget>div.widget-content').html();
+				var pattern;
+				$.each(data, function(key, val) {
+					key = key.replace('[','\\[');
+//					key = key.replace('\','\\\');
+					key = key.replace('^','\\^');
+					key = key.replace('$','\\$');
+					key = key.replace('.','\\.');
+					key = key.replace('|','\\|');
+					key = key.replace('?','\\?');
+					key = key.replace('*','\\*');
+					key = key.replace('+','\\+');
+					key = key.replace('(','\\(');
+					key = key.replace(')','\\)');
+					key = key.replace('{','\\{');
+					key = key.replace('}','\\}');
+					pattern = new RegExp('>'+key+'<','g');
+					body = body.replace(pattern,'>'+val+'<');
+				});
+				$('body>div.widget>div.widget-content').html(body);
+			});
+		}
+	</script>

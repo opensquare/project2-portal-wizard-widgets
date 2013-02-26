@@ -37,6 +37,14 @@ header h2 span{
 	}
 }
 
+#languageSwitcher{
+	float: right;
+	width: 26px;
+	height: 26px;
+	margin-top: -5px;
+	background: url('finland.png') no-repeat;
+	cursor: pointer;
+}
 #rq-banner{
 	height: 300px;
 	background: url('rq-banner.jpg') no-repeat center;
@@ -78,7 +86,7 @@ header h2 span{
 }
 @media screen and (max-width: 600px) {
 	#rq-banner{
-		zoom: 0.7;
+		height: 100px;
 	}
 }
 
