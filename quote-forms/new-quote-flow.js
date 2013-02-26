@@ -11,7 +11,7 @@
                         name: "calc",
                         target: "calculating",
                         submission: {
-							url: "{{appPath}}/calcRetrieval?calcRef=3464",
+							url: "{{appPath}}/calcRetrieval",
                             data: {
 								calcRef: "xpath://calcref"
 							},
@@ -58,7 +58,7 @@
 							url: "{{napier-loadbalancer-url}}/REST/calcs",
 							data: {
 								source: "rhinoforms",
-								calcType: "/Products/Motor/Lookups,/Products/Motor/Precalculation,/Products/Motor/Risk Premium,/Products/Motor/Excess,/Products/Motor/Underwriting,/Products/Motor/Gross Premium",
+								calcType: "xpath://product/calc",
 								calcData: "[dataDocument]"
 							},
 							method: "post",
@@ -99,6 +99,20 @@
 			{ id: "singlePayment", url:"10-single-payment.html", actions:["next:payment", "back:main.quote"]},
 			{ id: "multiplePayment", url:"10-multiple-payment.html", actions:["next:payment", "back:main.quote"]},
 			{ id: "payment", docBase: "/quote/payment", url:"11-payment.html", actions:["next"]},
+            { id: "saving", url:"12-saving.html", actions: [
+					{
+						name: "next",
+						submission: {
+							url: "{{script-runner-url}}",
+							data: {
+								script: "NewBusiness/script/createApplicationFromFormData.py",
+								data: "[dataDocument]"
+							},
+							method: "post",
+							resultInsertPoint: "/quote/pact"
+						}
+					}
+				]},
 			{ id: "complete", url:"complete.html"}
 		]
 	}

@@ -1,4 +1,13 @@
 <quote>
+    <product>
+        <name>DriveExperience Product</name>
+        <calc>/Products/Motor/Lookups,/Products/Motor/Precalculation,/Products/Motor/Risk Premium,/Products/Motor/Excess,/Products/Motor/Underwriting,/Products/Motor/Gross Premium</calc>
+        <financeProvider></financeProvider>
+    </product>
+    <actorUid></actorUid>
+    <source>MO</source>
+    <saveSource>MO</saveSource>
+    <campaign>None</campaign>
     <estAnnualMileage>6000</estAnnualMileage>
     <businessMileage/>
     <ncbProtected>F</ncbProtected>
@@ -6,6 +15,7 @@
     <classOfUseCode>1</classOfUseCode>
     <paymentType>single</paymentType>
     <vehicle>
+        <coverStartTime>00:00:00</coverStartTime>
         <drivingPosition>2</drivingPosition>
     </vehicle>
     <customer>
