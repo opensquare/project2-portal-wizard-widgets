@@ -1,20 +1,62 @@
-		<h2>Driving</h2>
-		<ul>
-			<li>Aug 12</li>
-			<li>Sep 12</li>
-			<li>Oct 12</li>
-			<li>Nov 12</li>
-			<li>Dec 12</li>
-			<li>Jan 13</li>
-			<li class="on">Current month</li>
-		</ul>
-		<p id="cp-policy-driving-speeding" class="dial">Speeding</p>
-		<p id="cp-policy-driving-braking" class="dial">Braking</p>
-		<p id="cp-policy-driving-acceleration" class="dial">Acceleration</p>
-		<p id="cp-policy-driving-cornering" class="dial">Cornering</p>
-		<p id="cp-policy-driving-journies">
-			<span class="title">Journeys</span>
-			<span class="journies">16</span>
-			<span class="see-journeys">Details ►</span>
-		</p>
+	<script type='text/javascript' src='widgets/cp-policy/js/kendo.all.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy/js/kendo.aspnetmvc.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy/js/kendo.culture.en-GB.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy/js/kendo.dataviz.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy/js/modernizr-1.7.min.js'></script>
+	<script>
+		$(document).ready(function() {
+			$('#telematicsProxy').append("<div class='loading'/>");
+			$('#recentMonths').children().each(function(){
+			   		var monthOffset = $(this).val();
+			   		$(this).text(moment().subtract('months', monthOffset).format("MMM YY"));
+			   		var month = moment().subtract('months', monthOffset).format("MMM YY");
+			});
 
+			//Default to this month
+			 var sd = moment().startOf('month').format("DD/MM/YYYY");
+			 var ed = moment().format("DD/MM/YYYY");
+
+			telematicData(sd, ed);
+		});
+
+		function telematicData(sd, ed){			
+			var endpoint = '/proxy/telematics'
+			endpoint = 'http://localhost:8080/portal-wizard/proxy/telematics' //remove before checking in		
+			var dates = '?sVehicleRegNo=DY55%20NKC&sStartDate=' + sd + '&sEndDate=' + ed
+			
+			$('#telematicsProxy').load(endpoint+dates, function() {
+			   $(this).find(".chart-title").remove(); 
+			   $(this).find("#Quindell").remove(); 
+			   $(this).find("#logindisplay").remove();
+			   $(this).find("#banner").remove();
+			});
+		}
+
+		$('li').click(function() {
+			$('#telematicsProxy').empty();
+			$('#telematicsProxy').append("<div class='loading'/>");
+
+			$(this).addClass("on");
+		    $(this).siblings().removeClass("on");
+
+			var offset = $(this).val();
+
+			var sd = moment().subtract('months', offset).startOf('month').format("DD/MM/YYYY");
+			var ed = moment().subtract('months', offset).endOf('month').format("DD/MM/YYYY");
+
+			telematicData(sd, ed);
+		});
+	</script>
+
+	<h2>Telematics Driving</h2>
+	<ul id="recentMonths">
+		<li value="6"></li>
+		<li value="5"></li>
+		<li value="4"></li>
+		<li value="3"></li>
+		<li value="2"></li>
+		<li value="1"></li>
+		<li value="0" class="on"></li>
+	</ul>
+
+	<div id='telematicsProxy'/>
