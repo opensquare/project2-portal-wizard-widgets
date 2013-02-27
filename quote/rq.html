@@ -21,16 +21,24 @@
 	<script type="text/javascript">
 		function changeLanguage(file){
 			$.getJSON('/widgets/quote/'+file+'.json', function(data) {
-				var body = $('body>div.widget>div.widget-content').html();
-				var pattern;
 				$.each(data, function(key, val) {
-					if(key.substring(0,1)=="<"){
-						body = body.replace(key,val);
-					} else {
-						body = body.replace('>'+key+'<','>'+val+'<');
-					};
+					replaceString(document.body, key, val);
 				});
-				$('body>div.widget>div.widget-content').html(body);
 			});
+		// Improve - reach button text.
+			$('#disabledNavigation input[type="button"]').val('Seuraava');
+			$('#navigation input[type="submit"]').val('Seuraava');
+		}
+
+		function replaceString(node, replaceThis, replaceWith) {
+		    if (node.nodeType === 3) {
+		        node.nodeValue  = node.nodeValue.replace (replaceThis, replaceWith);
+		    }
+		    else if (node.nodeType === 1) {
+		    	var numNodes = node.childNodes.length;
+		        for (var n = 0;  n < numNodes;  n++) {
+		            replaceString(node.childNodes[n], replaceThis, replaceWith);
+		        }
+		    }
 		}
 	</script>
