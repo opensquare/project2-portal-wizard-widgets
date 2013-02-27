@@ -21,7 +21,6 @@
 
 		function telematicData(sd, ed){			
 			var endpoint = '/proxy/telematics'
-			endpoint = 'http://localhost:8080/portal-wizard/proxy/telematics' //remove before checking in		
 			var dates = '?sVehicleRegNo=DY55%20NKC&sStartDate=' + sd + '&sEndDate=' + ed
 			
 			$('#telematicsProxy').load(endpoint+dates, function() {
