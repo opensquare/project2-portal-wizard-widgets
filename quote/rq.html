@@ -20,7 +20,7 @@
 
 	<script type="text/javascript">
 		function changeLanguage(file){
-			$.getJSON('/widgets/quote/'+file+'.json', function(data) {
+			$.getJSON('widgets/quote/'+file+'.json', function(data) {
 				$.each(data, function(key, val) {
 					replaceString(document.body, key, val);
 				});
@@ -34,6 +34,11 @@
 		    if (node.nodeType === 3) {
 		        node.nodeValue  = node.nodeValue.replace (replaceThis, replaceWith);
 		    }
+		    else if(node.nodeName == 'INPUT'){
+		    	if(node.type == 'button'){
+		    		node.value = node.value.replace (replaceThis, replaceWith);
+		   		 }
+		    }		    	
 		    else if (node.nodeType === 1) {
 		    	var numNodes = node.childNodes.length;
 		        for (var n = 0;  n < numNodes;  n++) {
