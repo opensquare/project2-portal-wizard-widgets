@@ -271,7 +271,8 @@ option:first-child{
 	width: auto;
 }
 
-.dateSel {
+.dateSel,
+.dateSel select{
 	width: auto;
 }
 

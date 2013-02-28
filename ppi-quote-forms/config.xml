@@ -1,0 +1,10 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>ppi-quote.jsp</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>../quote-forms/quote.css</css>
+	</attributes>
+</widget>
