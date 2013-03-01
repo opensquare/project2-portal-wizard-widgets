@@ -17,7 +17,10 @@
 			//Default to this month
 			 var sd = moment().startOf('month').format("DD/MM/YYYY");
 			 var ed = moment().format("DD/MM/YYYY");
-
+			//Quindell: sd and ed cannot be equal!
+			if(sd == ed){
+				sd = moment().subtract('days', 1).format("DD/MM/YYYY");
+			}
 			//Get dashboard data
 			telematicData(sd, ed);
 			document.getElementById('telematicsWindow').src = 'http://81.144.178.203/Telematics/Journey/IsotrakJourney?sCarReg=DY55%20NKC&sTravelDate=05/02/2013';
@@ -50,10 +53,13 @@
 		    $(this).siblings().removeClass("on");
 
 			var offset = $(this).val();
-
 			var sd = moment().subtract('months', offset).startOf('month').format("DD/MM/YYYY");
 			var ed = moment().subtract('months', offset).endOf('month').format("DD/MM/YYYY");
 
+			if(offset == 0){
+				ed = moment().format("DD/MM/YYYY");
+				if(sd == ed){sd = moment().subtract('days', 1).format("DD/MM/YYYY");}
+			}
 			telematicData(sd, ed);
 		});
 	</script>
