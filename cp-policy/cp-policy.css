@@ -9,7 +9,7 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	text-decoration: underline;
+	text-decoration: underline;	
 }
 
 #backgroundText text{
@@ -72,7 +72,6 @@ header h2 span{
 	background-color: rgba(255,255,255,0.85);
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
-	text-align: right;
 }
 @media screen and (max-width: 1000px) {
 	#cp-policy{
@@ -84,184 +83,46 @@ header h2 span{
 		zheight: 100px;
 	}
 }
-
-div.widget>.widget-head{
-	display: none;
-}
-div.widget>.widget-messages{
-	overflow: hidden;
-	background-color: #A0F0F0;
-	color: #333;
-	border-radius: 0.25em;
-}
-div.widget>.widget-messages>div{
-	padding: 0.25em 0.5em;
-}
-div.widget>.widget-messages>div>a{
-	float: right;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url('symbol-close.png') no-repeat;
-	cursor: pointer;
-}
-div.widget>.widget-messages>div.error{
-	background-color: #F0A0A0;
-}
-#cp-policy>div{
-	display: inline-block;
-}
-
-#cp-policy-title{
-	margin-top: 0;
-	font-size: 1.8em;
-}
-#cp-policy-switcher{
-	display: inline-block;
-	width: 40px;
-	height: 20px;
-	background: url('symbol-refresh-dark.png') no-repeat right top;
-	cursor: pointer;
-}
-#cp-policy-menu{
-	position: fixed;
-	width: 15%;
-	padding-right: 1px; /* fixes scroll bug */
-	text-align: left;
-}
-#cp-policy-menu a{
-	display: block;
-	margin: 0.25em 0;
-	padding: 0.75em 1em;
-	background: #0090c0;
-	color: #FFF;
-	font-size: 1.1em;
-	border-radius: 0.25em;
-	cursor: pointer;
-}
-#cp-policy-menu a.on{
-	background-color: #92CE56;
-}
-#cp-policy-menu a.on:after{
-	position: absolute;
-	right: 10px;
-	content: '►';
-	background-color: #92CE56;
-}
-#cp-policy details{
-	display: inline-block;
-	width: 78%;
-	margin-bottom: 2em;
-	text-align: left;
-}
-#cp-policy details summary{
-	margin: 1em 0;
-	border-bottom: thin solid;
-	font-size: 1.5em;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-#cp-policy .pane{
-	display: inline-block;
-	height: 6em;
-	overflow: hidden;
-	vertical-align: top;
+#home-content{
+	margin: 5em auto 0 auto;
 	text-align: center;
-	border: medium solid #555;
-	border-radius: 0.5em;
 }
-#cp-policy .pane.warn{
-	border-color: #FD0;
-}
-#cp-policy .pane.alert{
-	border-color: #D44;
-}
-#cp-policy .pane .title{
-	display: block;
-	margin-bottom: 0.25em;
-	padding: 0 1em;
-	background-color: #555;
-	color: #FFF;
-}
-#cp-policy .pane.warn .title{
-	background-color: #FD0;
-	color: #333;
-}
-#cp-policy .pane.alert .title{
-	background-color: #D44;
-}
-#cp-policy .pane .hint:before{
-	content: '▲';
-	position: absolute;
-	margin: -1.2em 1em 0 0;
-	color: #555;
-	right: 0;
-	font-size: 1.5em;
-	text-shadow: 0 -6px 0 #FFF;
-}
-#cp-policy .pane.warn .hint:before{
-	color: #FD0;
-}
-#cp-policy .pane.alert .hint:before{
-	color: #D44;
-}
-#cp-policy .pane .hint{
-	position: absolute;
-	margin: 3em 0em 0 -14em;
-	width: 14em;
-	background: #555;
-	color: #FFF;
-	padding: 0.5em;
-	border-radius: 0.25em;
-}
-#cp-policy .pane.warn .hint{
-	background: #FD0;
-	color: #333;
-}
-#cp-policy .pane.alert .hint{
-	background: #D44;
-}
-#cp-policy .pane .hint a{
-	color: inherit;
-	font-weight: bold;
-	text-decoration: underline;
-}
-#cp-policy-summary-cover{
-	min-width: 30em;
-	text-align: left!important;
-}
-#cp-policy-summary .cover{
+#home-content article{
 	display: inline-block;
-	height: 50px;
-	padding: 50px 0.5em 0 0.5em;
+	width: 270px;
+	height: 182px;
+	overflow: hidden;
+	margin: 0em 3em 3em 0;
+	vertical-align: top;
+	background: #0DB4F2;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border: thick solid transparent;
+	border-radius: 1em;
+	text-align: center;
+	cursor: pointer;
+}
+#home-content article:hover{
+	background: #92CE56;
+}
+#home-content article>h2{
+	display: inline-block;
+	width: 100%;
+	height: 15%;
+	margin: 0;
+	padding: 2.5em 0 0.25em 0;
+	background: no-repeat center 5%;
+	color: #fff;
+	font-weight: normal;
+}
+#home-content article>p{
+	height: 100%;
+	margin: 0;
+	padding: 1em;
 	font-size: 0.8em;
-	background: no-repeat center top;
-}
-#cp-policy-summary .cover.comp{
-	background-image: url('shape-shield-dark.png');
-}
-#cp-policy-summary .cover.breakdown{
-	background-image: url('traffic-cone-dark.png');
-}
-#cp-policy-summary .renewal-day{
-	display: block;
-	font-size: 2em;
-}
-#cp-policy-summary .renewal-year{
-	display: none;
-}
-#cp-policy-summary .miles{
-	display: block;
-	font-size: 2em;
-}
-#cp-policy-docs .pdf{
-	display: inline-block;
-	margin: 1em 0;
-	padding: 12px 50px;
-	white-space: nowrap;
-	background: url('file-pdf.png') no-repeat left;
-	color: inherit;
+	line-height: 1.25em;
+	border-radius: 0.25em;
+	background: #FFF;
+	color: #000;
 }
 
 footer{
