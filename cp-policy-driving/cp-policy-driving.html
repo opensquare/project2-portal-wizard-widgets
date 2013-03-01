@@ -1,8 +1,8 @@
-	<script type='text/javascript' src='widgets/cp-policy/js/kendo.all.min.js'></script>
-	<script type='text/javascript' src='widgets/cp-policy/js/kendo.aspnetmvc.min.js'></script>
-	<script type='text/javascript' src='widgets/cp-policy/js/kendo.culture.en-GB.min.js'></script>
-	<script type='text/javascript' src='widgets/cp-policy/js/kendo.dataviz.min.js'></script>
-	<script type='text/javascript' src='widgets/cp-policy/js/modernizr-1.7.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.all.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.aspnetmvc.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.culture.en-GB.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.dataviz.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/modernizr-1.7.min.js'></script>
 	<script>
 		$(document).ready(function() {
 			$('#cp-policy-driving-journies').hide();
@@ -21,7 +21,6 @@
 			if(sd == ed){
 				sd = moment().subtract('days', 1).format("DD/MM/YYYY");
 			}
-			//Get dashboard data
 			telematicData(sd, ed);
 			document.getElementById('telematicsWindow').src = 'http://81.144.178.203/Telematics/Journey/IsotrakJourney?sCarReg=DY55%20NKC&sTravelDate=05/02/2013';
 		});
