@@ -1,0 +1,10 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>cp-policy-motoring.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>cp-policy-motoring.css</css>
+	</attributes>
+</widget>
