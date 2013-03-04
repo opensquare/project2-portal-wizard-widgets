@@ -4,7 +4,7 @@
 	libraries: ["js/utils.js"],
 	formLists: {
 		main: [
-            { id: "initialisation", url: "initialisation.html",
+            { id: "initialisation", url: "../quote-forms-common/initialisation.html",
                 actions: [
                     "next",
                     {
@@ -100,10 +100,10 @@
 			},
 		],
 		buy: [
-			{ id: "singlePayment", url:"10-single-payment.html", actions:["next:payment", "back:main.quote"]},
+			{ id: "singlePayment", url:"../quote-forms-common/10-single-payment.html", actions:["next:payment", "back:main.quote"]},
 			{ id: "multiplePayment", url:"10-multiple-payment.html", actions:["next:payment", "back:main.quote"]},
-			{ id: "payment", docBase: "/quote/payment", url:"11-payment.html", actions:["next"]},
-            { id: "saving", url:"12-saving.html", actions: [
+			{ id: "payment", docBase: "/quote/payment", url:"../quote-forms-common/11-payment.html", actions:["next"]},
+            { id: "saving", url:"../quote-forms-common/12-saving.html", actions: [
 					{
 						name: "next",
 						submission: {
@@ -117,7 +117,7 @@
 						}
 					}
 				]},
-			{ id: "complete", url:"complete.html"}
+			{ id: "complete", url:"../quote-forms-common/complete.html"}
 		]
 	}
 }

@@ -1,10 +1,10 @@
 {
 	docBase: "/quote",
 	defaultInitalData: "ppi-initial-data.xml",
-	libraries: ["js/utils.js","js/custom-types.js"],
+	libraries: ["../quote-forms-common/js/utils.js","js/custom-types.js"],
 	formLists: {
 		main: [
-			{ id: "initialisation", url: "initialisation.html",
+			{ id: "initialisation", url: "../quote-forms-common/initialisation.html",
 				actions: [
 					"next",
 					{
@@ -50,9 +50,9 @@
 			{ id: "sorry", url: "sorry.html" , actions: [ "restart:customer" ]}
 		],
 		buy: [
-			{ id: "singlePayment", url:"10-single-payment.html", actions:["next:payment", "back:main.quote"]},
-			{ id: "payment", docBase: "/quote/payment", url:"11-payment.html", actions:["next"]},
-			{ id: "complete", url:"complete.html"}
+			{ id: "singlePayment", url:"../quote-forms-common/10-single-payment.html", actions:["next:payment", "back:main.quote"]},
+			{ id: "payment", docBase: "/quote/payment", url:"../quote-forms-common/11-payment.html", actions:["next"]},
+			{ id: "complete", url:"../quote-forms-common/complete.html"}
 		]
 	}
 }

@@ -31,6 +31,6 @@
 		});
 	});
 </script>
-<script src="{widgetPath}/js/utils.js" ></script>
+<script src="{widgetPath}/../quote-forms-common/js/utils.js" ></script>
 <script src="{widgetPath}/js/custom-types.js"></script>
 <div class="rhinoforms-quote-formContainer"/>
