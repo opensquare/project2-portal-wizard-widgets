@@ -3,99 +3,68 @@
 //
 // This file should be minified for production use.
 //
-// By convention, all function names are prefixed by the page name to avoid clashes with other code.
-// You should therefore find any functions prefixed with the page name in this file somewhere.
-//
-// Code here can use the provided pwr jQuery plug-ins - .pwrWidget() and .pwrUtils().
 
-function login_loginEnter(nextWidget){  // Called on submission of login form
-	// Should be a built-in pw util function?
-	var $loginForm = $("#login-form-enter");
-	var loginFormData = $loginForm.serialize();
-
-	// $loginForm.pwrUtils('disableForm').pwrWidget('clearMessages');
+function Widget_cp() {
 	
-	$.ajax({
-		type: "POST",
-		url: "login",
-		data: loginFormData,
-		dataType: "json",
+	this.onReadyExtend = function() {
+		var widget = this;
+		this.setupLoginForm();
+		this.setupResetForm();
+	}
 		
-		success: function(data){
-			// Forward to next page by url
-			//location.pathname = '/' + data.nextWidget;
-			location.pathname = '/' + nextWidget;
-		},
-		
-		error: function(XMLHttpRequest, textStatus, errorThrown){
-			httpStatus = XMLHttpRequest.status;
-			switch (httpStatus) {
-				case 401:
-					$loginForm.pwrWidget('addMessage','Invalid username or password. Please try again.','info').pwrUtils('enableForm');
-					break;
-				default:
-					$loginForm.pwrWidget('addMessage','Problem while loading ('+httpStatus+')','error').pwrUtils('enableForm');
-			}
-			login_logFailedLogin(uid);
-		}
-	});
-	return false; // stops the form submitting in the normal way
+	this.setupLoginForm = function() {
+		var widget = this;
+		var $form = $('#login-form-enter');
+		var $messages = $($form, '.messages');
+		$form.submit(function() {
+			pw.disableForm($form);
+			var jqxhr = $.ajax({
+				url: 'login',
+				type: 'POST',
+				data: $form.serialize()
+			}).done(function() {
+				window.location = $form.attr('nextWidget');
+			}).fail(function() {
+				httpStatus = jqxhr.status;
+				pw.enableForm($form);
+				switch (httpStatus) {
+					case 401:
+						widget.addInfoMessage('Invalid username or password. Please try again.', $messages);
+						break;
+					default:
+						widget.addErrorMessage('Problem while loading (' + httpStatus + ')', $messages);
+				}
+			});
+			return false;
+		});
+	}
+	
+	this.setupResetForm = function() {
+		var widget = this;
+		var $form = $('#login-form-reset');
+		var $messages = $($form, '.messages');
+		$form.submit(function() {
+			pw.disableForm($form);
+			var jqxhr = $.ajax({
+				url: 'forgottenPassword',
+				type: 'POST',
+				data: $form.serialize()
+			}).done(function() {
+				widget.addInfoMessage('In a few moments you should receive an email with details of how to reset your password.', $messages);
+				$('#login-form form').toggle();
+			}).fail(function() {
+				httpStatus = jqxhr.status;
+				pw.enableForm($form);
+				switch (httpStatus) {
+					case 400:
+						widget.addInfoMessage('Invalid email address. Please check and try again.', $messages);
+						break;
+					default:
+						widget.addErrorMessage('Problem while loading (' + httpStatus + ')', $messages);
+				}
+			});
+			return false;
+		});
+	}
+	
 }
-
-function login_loginReset(){  // Called on submission of the password reset form
-	// Should be a built-in pw util function?
-	var $loginResetForm = $("#login-form-reset");
-	var loginResetFormData = $loginResetForm.serialize();
-
-	$loginResetForm.pwrUtils('disableForm').pwrWidget('clearMessages');
-
-	$.ajax({
-		type: "POST",
-		url: "forgottenPassword",  // TODO - Doesn't seem to exist!
-		data: loginResetFormData,
-		dataType: "json",
-		
-		success: function(data){
-			login_logForgotPassword();
-			$loginResetForm.pwrWidget('addMessage','In a few moments you should receive an email with details of how to reset your password.','info').pwrUtils('enableForm');
-			$('#login-form form').toggle();
-		},
-		
-		error: function(XMLHttpRequest, textStatus, errorThrown){
-			httpStatus = XMLHttpRequest.status;
-			switch (httpStatus) {
-				case 400:
-					$loginResetForm.pwrWidget('addMessage','Invalid email address. Please check and try again.','info').pwrUtils('enableForm');
-					break;
-				default:
-					$loginResetForm.pwrWidget('addMessage','Problem while loading ('+httpStatus+')','error').pwrUtils('enableForm');
-			}
-		}
-	});
-	return false; // stops the form submitting in the normal way
-}
-
-function login_logFailedLogin(){  // Log failed login attempts
-	// Consider using an analytics based approach instead
-	var uid = document.getElementById('username').value;
-	var task = 'logFailedLogin';
-	login_logSend(task, uid);
-}
-
-function login_logForgotPassword(){ // Log "forgot my password" requests
-	// Consider using an analytics based approach instead
-	var uid = document.getElementById('email').value;
-	var task ='logForgotPassword';
-	login_logSend(task, uid);
-}
-
-function login_logSend(url, task, uid){ // Send by GET to remote location
-	// Consider using an analytics based approach instead
-	var http = new XMLHttpRequest();
-	var url = '';  // Specify remote location
-	var params = "task="+task+"&language="+navigator.language+"&product="+navigator.product+"&appVersion="+navigator.appVersion+"&platform="+navigator.platform+"&vendor="+navigator.vendor+"&uid="+uid;
-
-	//http.open("GET", url+"?"+params, true);  // Uncomment these 2 lines to get working
-	//http.send(null);
-}
-
