@@ -52,8 +52,8 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		//importWidgets('article[uid="'+uid+'"]');
-		pw.mount('article[uid="'+uid+'"] div')
+		importWidgets('article[uid="'+uid+'"]');
+		//pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
@@ -110,9 +110,8 @@ function napierSearch(terms) {
 		var calcref = parseInt(terms,10);
 
 		if(isNaN(calcref)){
-			alert('general search')
 			// Do a general quicksearch
-			//importContent(endpoint+'search/quickSearch='+terms,'#content .napier-search-results','#napier?search?'+terms)
+			napierQuickSearch(terms);
 		} else {
 			var calcref = terms.split(',');
   			$('.napier-search-results').html('<ul></ul>');
@@ -138,6 +137,25 @@ function napierSearch(terms) {
 	} else {
 		napierSearchClear();
 	};
+}
+function napierQuickSearch(terms){
+	var endpoint = '/proxy/napier/';
+	$('.napier-search-results').html('<ul><span class="loading"></span></ul>');
+	$('.napier-search-results ul').load(endpoint+'search/quickSearch='+terms+' calc', function(){
+		// Turn xml into LIs
+		var data = $(this).html();
+		data = data.replace(/<calc><calcref>/g,'<li calcref="');
+		data = data.replace(/<\/calcref>/g,'">');
+		data = data.replace(/<source>/g,'<span>');
+		data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quotes?show?">show<\/a><\/li>');
+		$(this).html(data);
+		// Find some interesting data and display it
+		$(this).find('quickSearch').each(function(){
+			var qsTerms = $(this).text();
+			qsTerms = qsTerms.split(',');
+			$(this).before('<span>'+qsTerms[0]+'</span><span>'+qsTerms[1]+'</span><span>'+qsTerms[2]+'</span><span>'+qsTerms[3]+'</span>');
+		});
+	});
 }
 function napierSearchCalc(calc){
 	var endpoint = '/proxy/napier/'

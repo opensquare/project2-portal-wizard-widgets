@@ -62,7 +62,7 @@
 #content .napier-search-results li:nth-child(odd){
 	background-color: rgba(155,187,89,0.3);
 }
-#content .napier-search-results calc>*{
+#content .napier-search-results li>*{
 	display: none;
 }
 #content .napier-search-results calcSource, #content .napier-search-results physicalTime,#content .napier-search-results li span{
@@ -79,6 +79,7 @@
 	text-transform: uppercase;
 }
 #content .napier-search-results li a{
+	display: inline-block;
 	position: absolute;
 	right: 4px;
 	top: 11px;
