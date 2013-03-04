@@ -6,13 +6,14 @@ article[type="internal"] .new-square-group{
 	padding: 0 2em;
 }
 article[type="internal"] .new-square-group h3{
-    -webkit-transform-origin: 2em 4em;
-    -webkit-transform: rotate(-90deg);
-    text-align: right;
-    width: 6.2em;
-    position: absolute;
-    padding: 0.1em 0.5em;
-    font-size: 0.75em;
+	position: absolute;
+	width: 6.2em;
+	-webkit-transform-origin: 2em 4em;
+	-webkit-transform: rotate(-90deg);
+	overflow: hidden;
+	padding: 0.1em 0.5em;
+	text-align: right;
+	font-size: 0.75em;
 	font-weight: normal;
 	white-space: nowrap;
 }
@@ -34,23 +35,37 @@ article[type="internal"] .new-square:hover {
 	text-decoration: underline;
 	border-color: rgba(0,0,0,0.6);
 }
-article[type="internal"] .new-square.napier {
+/* Group colours and default icons */
+article[type="internal"] .napier .new-square {
 	background-image: url('images/napier-light.png');
 	background-color: #9BBB59;
 }
-article[type="internal"] .new-square.pact {
+article[type="internal"] .pact .new-square {
 	background-image: url('images/pact-light.png');
 	background-color: #C0504D;
 }
-article[type="internal"] .new-square.mailmerger {
+article[type="internal"] .claims .new-square {
+	background-image: url('images/iceclaims-light.png');
+	background-color: #4BACC6;
+}
+article[type="internal"] .mailmerger .new-square {
 	background-image: url('images/mm-light.png');
 	background-color: #8064A2;
 }
+article[type="internal"] .mis .new-square {
+	background-image: url('images/icetrack-light.png');
+	background-color: #4F81BD;
+}
+
+/* Individual icon assignments */
 article[type="internal"] .new-square.profile {
 	background-image: url('images/person-light.png');
 }
-article[type="internal"] .new-square.settings {
+article[type="internal"] .new-square.batch {
 	background-image: url('images/gear-light.png');
+}
+article[type="internal"] .new-square.users {
+	background-image: url('images/person-group-light.png');
 }
 article[type="internal"] .new-square.search {
 	background-image: url('images/search-light.png');
@@ -63,4 +78,13 @@ article[type="internal"] .new-square.stats {
 }
 article[type="internal"] .new-square.renewals {
 	background-image: url('images/symbol-refresh-light.png');
+}
+article[type="internal"] .new-square.products {
+	background-image: url('images/pact-light.png');
+}
+article[type="internal"] .new-square.accounts {
+	background-image: url('images/coins-light.png');
+}
+article[type="internal"] .new-square.reports {
+	background-image: url('images/reports-light.png');
 }
