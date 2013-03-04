@@ -1,8 +1,8 @@
 #content aside[type='napier']{
-	background-image: url('napier-light.png');
+	background-image: url('images/napier-dark.png');
 	border-color: #9BBB59; 
 }
-#new-page a[type='napier'],#content aside[type='napier'].on{
+#content aside[type='napier'].on{
 	background-color: #9BBB59; 
 	background-image: url('images/napier-light.png');
 }

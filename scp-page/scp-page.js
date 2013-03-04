@@ -84,6 +84,27 @@ function updatePage(uid, title, subtitle, subtype) {
 }
 
 //---------------------------------------------------------------------------------------------------------------------
+// Internal
+
+function internalHandler() {
+	var hash = window.location.hash;
+	var splithash = hash.split('?')
+
+	if(splithash[1].toLowerCase() == 'batch') {
+		internalBatch(splithash[2]);
+		return true;
+	};
+
+	// Throw error if no operator handler for type supplied
+	throw new Error();
+}
+function internalBatch(terms) {
+	addPage('internalBatch', 'internal', 'batch', 'Batch Jobs', '', 'scp-scheduler', '#content article.on');
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------
+// Quotes/Napier
 
 function napierHandler() {
 	var hash = window.location.hash;
@@ -181,7 +202,14 @@ function napierShow(terms) {
 }
 
 //---------------------------------------------------------------------------------------------------------------------
+// Accounts
 
+function accounts(terms) {
+	addPage('accounts', 'finance', 'accounts', 'Accounts', '', 'scp-accounts', '#content article.on');
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------
 
 // Setup handlers for registered page types (TODO:should read from config somewhere)
 var pageHandler = {
@@ -190,7 +218,7 @@ var pageHandler = {
 	newbusiness: function(obj) {pactHandler();},
 	servicing: function(obj) {pactHandler();},
 	renewals: function(obj) {pactHandler();},
-	accounts: function(obj) {pactHandler();},
+	accounts: function(obj) {accounts();},
 	//claims: function(obj) {reportsHandler();}
 	documents: function(obj) {mmHandler();}
 };

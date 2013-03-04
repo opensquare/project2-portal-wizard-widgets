@@ -1,3 +1,10 @@
+#content aside[type='internal'][subtype='batch']{
+	background-image: url('images/gear-dark.png');
+}
+#content aside[type='internal'][subtype='batch'].on{
+	background-image: url('images/gear-light.png');
+}
+
 article[type="internal"] summary h2 {
 	display: inline-block;
 }
