@@ -57,12 +57,15 @@ header h2 span{
 	margin: -2em auto 0 auto;
 	text-align: center;
 }
+#home-content div {
+	display: inline-block;
+}
 #home-content article{
 	display: inline-block;
 	width: 270px;
 	height: 182px;
 	overflow: hidden;
-	margin: 0em 3em 3em 0;
+	margin: 0 3em 3em 0;
 	vertical-align: top;
 	background: #0DB4F2;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -84,13 +87,13 @@ header h2 span{
 	color: #fff;
 	font-weight: normal;
 }
-#home-content article:nth-child(1)>h2{
+#home-content article.news>h2{
 	background-image: url('world-light.png');
 }
-#home-content article:nth-child(2)>h2{
-	background-image: url('transport-car-light.png'); 
+#home-content article.products>h2{
+	background-image: url('calculator-buttons-light.png'); 
 }
-#home-content article:nth-child(3)>h2{
+#home-content article.portal>h2{
 	background-image: url('terminal-light.png');
 }
 #home-content article>p{
@@ -103,6 +106,28 @@ header h2 span{
 	background: #FFF;
 	color: #000;
 }
+#home-content article.products ul{
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+	list-style: none;
+}
+#home-content article.products li{
+	padding: 0.5em 0;
+}
+#home-content article.products a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+}
+#home-content article.products:hover{
+	height: auto;
+}
+#home-content article.products li:hover {
+	background: #92CE56;
+	color: #FFF;
+}
+
 @media screen and (max-width: 1000px) {
 	#home-content{
 		width:98%;
