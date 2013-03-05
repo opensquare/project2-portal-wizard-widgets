@@ -17,6 +17,7 @@ function urlParse(){
 				if(error.name == 'Error'){alert('Unknown page operation');} else {alert(error.message);};
 				//window.history.back();
 				window.location.hash = '';
+                throw error;
 			};
 		};
 	};
@@ -228,12 +229,18 @@ function pactHandler() {
 	throw new Error();
 }
 function pactSearch(terms) {
-	addPage('policysearch', 'policy', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+	addPage('policysearch', 'policies', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+    if(typeof(terms)!='undefined'){
+		pw.notifyChannelOfEvent('pactSearch', {searchValue: terms});
+	}
 }
 function pactShow(terms) {
 	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
 }
 
+function trace(s){}
+
+function debug(s){}
 
 //---------------------------------------------------------------------------------------------------------------------
 // Accounts

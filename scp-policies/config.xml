@@ -1,0 +1,9 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-pact-search.html</url>
+	</parameters>
+	<attributes>
+		<displayheader>false</displayheader>
+	</attributes>
+</widget>
