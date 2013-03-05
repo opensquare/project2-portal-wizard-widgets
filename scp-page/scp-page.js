@@ -202,6 +202,33 @@ function napierShow(terms) {
 }
 
 //---------------------------------------------------------------------------------------------------------------------
+// Policies/Pact
+
+function pactHandler() {
+	var hash = window.location.hash;
+	var splithash = hash.split('?')
+
+	if(splithash[1].toLowerCase() == 'search') {
+		pactSearch(splithash[2]);
+		return true;
+	};
+	if(splithash[1].toLowerCase() == 'show') {
+		pactShow(splithash[2]);
+		return true;
+	};
+
+	// Throw error if no operator handler for type supplied
+	throw new Error();
+}
+function pactSearch(terms) {
+	addPage('policysearch', 'policies', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+}
+function pactShow(terms) {
+	addPage('policyshow', 'policies', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------
 // Accounts
 
 function accounts(terms) {
@@ -215,8 +242,7 @@ function accounts(terms) {
 var pageHandler = {
 	internal: function(obj) {internalHandler();},
 	quotes: function(obj) {napierHandler();},
-	newbusiness: function(obj) {pactHandler();},
-	servicing: function(obj) {pactHandler();},
+	policies: function(obj) {pactHandler();},
 	renewals: function(obj) {pactHandler();},
 	accounts: function(obj) {accounts();},
 	//claims: function(obj) {reportsHandler();}
