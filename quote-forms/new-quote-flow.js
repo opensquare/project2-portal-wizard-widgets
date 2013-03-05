@@ -109,7 +109,7 @@
 						submission: {
 							url: "{{script-runner-url}}",
 							data: {
-								script: "NewBusiness/script/createApplicationFromFormData.py",
+								script: "NewBusiness/script/createAndAcceptApplicationFromFormData.py",
 								data: "[dataDocument]"
 							},
 							method: "post",

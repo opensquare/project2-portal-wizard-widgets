@@ -1,6 +1,6 @@
 <quote>
     <product>
-        <name>DriveExperience Product</name>
+        <name>Motor Telematics Product</name>
         <calc>/Products/Motor/Lookups,/Products/Motor/Precalculation,/Products/Motor/Risk Premium,/Products/Motor/Excess,/Products/Motor/Underwriting,/Products/Motor/Gross Premium</calc>
         <financeProvider></financeProvider>
     </product>
