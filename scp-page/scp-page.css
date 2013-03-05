@@ -1,7 +1,11 @@
+@import url('quotes.css');
+@import url('policy.css');
+@import url('accounts.css');
+@import url('claims.css');
+@import url('documents.css');
+@import url('mis.css');
 @import url('internal.css');
-@import url('napier.css');
-@import url('pact.css');
-@import url('finance.css');
+@import url('external.css');
 
 /* HTML Tag Overrides */
 a{
@@ -96,7 +100,7 @@ summary>h2{
 	min-height: 3em;
 	padding: 1%;
 	background: #FFF url('images/plus-dark.png') no-repeat 95% 20%;
-	border: 1px solid #555;
+	border: medium solid #555;
 	border-top-right-radius: 2em;
 	cursor: pointer;
 	z-index: 10;
@@ -191,6 +195,51 @@ span.loading {
 	width: 30%;
 	height: 1em;
 	background: url('images/loading-small.gif') no-repeat center center;
+}
+
+/* New page styling */ 
+article[type="internal"] summary h2 {
+	display: inline-block;
+}
+article[type="internal"] .new-square-group{
+	display: inline-block;
+	padding: 0 2em;
+}
+article[type="internal"] .new-square-group h3{
+	position: absolute;
+	width: 6.2em;
+	-webkit-transform-origin: 2em 4em;
+	-webkit-transform: rotate(-90deg);
+	overflow: hidden;
+	padding: 0.1em 0.5em;
+	text-align: right;
+	font-size: 0.75em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+article[type="internal"] .new-square {
+	display: inline-block;
+	height: 2em;
+	width: 6em;
+	overflow: hidden;
+	margin: 0 1em 1em 0;
+	padding: 5em 1em 0.5em 1em;
+	background: #999 no-repeat center 1em;
+	color: #FFF;
+	border: medium solid rgba(0,0,0,0.3);
+	border-radius: 1em;
+	text-align: center;
+	vertical-align: top;
+}
+article[type="internal"] .new-square:hover {
+	text-decoration: underline;
+	border-color: rgba(0,0,0,0.6);
+}
+#new-closed{
+	margin-left: 2em;
+}
+#new-closed>summary{
+	margin-left: -2em;
 }
 
 #footer{

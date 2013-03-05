@@ -1,33 +1,47 @@
-#content aside[type='napier']{
-	background-image: url('images/napier-dark.png');
-	border-color: #9BBB59; 
+/* New page styling */
+article[type='internal'] .new-square[type='quotes'] {
+	background-image: url('images/napier-light.png');
+	background-color: #C0504D;
 }
-#content aside[type='napier'].on{
-	background-color: #9BBB59; 
+article[type='internal'] .new-square[type='quotes'][subtype='search'] {
+	background-image: url('images/search-light.png');
+}
+article[type='internal'] .new-square[type='quotes'][subtype='quote'] {
+	background-image: url('images/calculator-buttons-light.png');
+}
+
+/* Aside (tabs) styling */
+#content aside[type='quotes']{
+	background-image: url('images/napier-dark.png');
+	border-color: #C0504D; 
+}
+#content aside[type='quotes'].on{
+	background-color: #C0504D; 
 	background-image: url('images/napier-light.png');
 }
-#content aside[type='napier'][subtype='quote']{
+#content aside[type='quotes'][subtype='quote']{
 	background-image: url('images/quote-dark.png');
 }
-#new-page a[type='napier'][subtype='quote'],#content aside[type='napier'][subtype='quote'].on{
+#content aside[type='quotes'][subtype='quote'].on{
 	background-image: url('images/quote-light.png');
 }
-#content aside[type='napier'][subtype='search']{
+#content aside[type='quotes'][subtype='search']{
 	background-image: url('images/search-dark.png');
 }
-#new-page a[type='napier'][subtype='search'],#content aside[type='napier'][subtype='search'].on{
+#content aside[type='quotes'][subtype='search'].on{
 	background-image: url('images/search-light.png');
 }
 
-#content article[type='napier'],#content article[type='napier'] .content-helper,#content article[type='napier'] .content-body{
-	border-color: #9BBB59;
+/* Article (pages) styling */
+#content article[type='quotes'], #content article[type='quotes'] .content-helper, #content article[type='quotes'] .content-body{
+	border-color: #C0504D;
 }
-#content article[type='napier'] .content-header,#content article[type='napier'] .content-helper{
-	background-color: #9BBB59;
+#content article[type='quotes'] .content-header, #content article[type='quotes'] .content-helper{
+	background-color: #C0504D;
 }
 
 /* Specific page styling */
-#content article[uid='napiersearch'] .content-body{
+#content article[type='quotes'][subtype='search'] .content-body{
 	padding: 0;
 }
 #content div.scp-napier-search .content-header{

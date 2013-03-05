@@ -52,8 +52,8 @@ function addPage(uid, type, subtype, title, subtitle, payload, to) {
                     <div class="widget loading" name="'+payload+'" displayheader="false"></div> \
                 </section> \
             </article>').appendTo('#content-articles');
-		//importWidgets('article[uid="'+uid+'"]');
-		pw.mount('article[uid="'+uid+'"] div')
+		importWidgets('article[uid="'+uid+'"]');
+		//pw.mount('article[uid="'+uid+'"] div')
 		$('div.widget[name='+payload+']').removeClass('loading');
 	};
 }
@@ -124,7 +124,7 @@ function napierHandler() {
 }
 
 function napierSearch(terms) {
-	addPage('napiersearch', 'napier', 'search', 'Quotes search', '', 'scp-napier-search', '#content article.on');
+	addPage('napiersearch', 'quotes', 'search', 'Quotes search', '', 'scp-napier-search', '#content article.on');
 
 	if(typeof(terms)!='undefined'){
 		// quick check if just calcrefs
@@ -198,7 +198,7 @@ function napierSearchClear() {
 	$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
 }
 function napierShow(terms) {
-	addPage('napiershow', 'napier', 'show', 'Quotes show', '', 'scp-napier-show', '#content article.on');
+	addPage('napiershow', 'quotes', 'show', 'Quotes show', '', 'scp-napier-show', '#content article.on');
 }
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -221,10 +221,10 @@ function pactHandler() {
 	throw new Error();
 }
 function pactSearch(terms) {
-	addPage('policysearch', 'policies', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+	addPage('policysearch', 'policy', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
 }
 function pactShow(terms) {
-	addPage('policyshow', 'policies', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
+	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
 }
 
 

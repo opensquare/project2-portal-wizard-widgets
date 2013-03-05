@@ -1,0 +1,41 @@
+/* New page styling */
+article[type='internal'] .new-square[type='policy'] {
+	background-image: url('images/pact-light.png');
+	background-color: #9BBB59;
+}
+article[type='internal'] .new-square[type='policy'][subtype='search'] {
+	background-image: url('images/search-light.png');
+}
+article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
+	background-image: url('images/symbol-refresh-light.png');
+}
+
+/* Aside (tabs) styling */
+#content aside[type='policy']{
+	background-image: url('images/pact-dark.png');
+	border-color: #9BBB59; 
+}
+#content aside[type='policy'].on{
+	background-color: #9BBB59; 
+	background-image: url('images/pact-light.png');
+}
+#content aside[type='policy'][subtype='search']{
+	background-image: url('images/search-dark.png');
+}
+#content aside[type='policy'][subtype='search'].on{
+	background-image: url('images/search-light.png');
+}
+#content aside[type='policy'][subtype='renewals']{
+	background-image: url('images/symbol-refresh-dark.png');
+}
+#content aside[type='policy'][subtype='renewals'].on{
+	background-image: url('images/symbol-refresh-light.png');
+}
+
+/* Article (pages) styling */
+#content article[type='policy'], #content article[type='policy'] .content-helper, #content article[type='policy'] .content-body{
+	border-color: #9BBB59;
+}
+#content article[type='policy'] .content-header, #content article[type='policy'] .content-helper{
+	background-color: #9BBB59;
+}

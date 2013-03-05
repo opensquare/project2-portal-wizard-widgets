@@ -1,0 +1,32 @@
+/* New page styling */
+article[type='internal'] .new-square[type='documents'] {
+	background-image: url('images/mm-light.png');
+	background-color: #4F81BD;
+}
+article[type='internal'] .new-square[type='documents'][subtype='search'] {
+	background-image: url('images/search-light.png');
+}
+
+/* Aside (tabs) styling */
+#content aside[type='documents']{
+	background-image: url('images/mm-dark.png');
+	border-color: #4F81BD; 
+}
+#content aside[type='documents'].on{
+	background-color: #4F81BD; 
+	background-image: url('images/mm-light.png');
+}
+#content aside[type='documents'][subtype='search']{
+	background-image: url('images/search-dark.png');
+}
+#content aside[type='documents'][subtype='search'].on{
+	background-image: url('images/search-light.png');
+}
+
+/* Article (pages) styling */
+#content article[type='documents'], #content article[type='documents'] .content-helper, #content article[type='documents'] .content-body{
+	border-color: #4F81BD;
+}
+#content article[type='documents'] .content-header, #content article[type='documents'] .content-helper{
+	background-color: #4F81BD;
+}

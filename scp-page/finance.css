@@ -1,6 +1,0 @@
-#content aside[type='finance']{
-	background-image: url('images/coins-dark.png');
-}
-#content aside[type='finance'].on{
-	background-image: url('images/coins-light.png');
-}
