@@ -29,7 +29,7 @@
 			    <return>
 			        <name>asIdentifiedEntity</name>
                     <params>
-                        <descriptionPattern>[Forms.{newBusinessWidget}]</descriptionPattern>
+                        <descriptionPattern>[UI.{rqWidget}]</descriptionPattern>
                     </params>
 			    </return>
 			</pactrequest>
