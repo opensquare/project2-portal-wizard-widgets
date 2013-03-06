@@ -1,7 +1,7 @@
 	<header>
 		<h2>Speak to us today <span>0800 123 456</span></h2>
-		<a id="languageSwitcher" onclick="changeLanguage('finnish')" title="Click to change site to Finnish"></a>
-		<div class="widget" name="cp-header-menu"></div>
+		<div class="widget" name="common-language-switcher"></div>
+		<div class="widget" name="common-header-menu"></div>
 	</header>
 
 	<section id="rq-banner">
@@ -15,35 +15,5 @@
 	</section>
 
 	<footer>
-		<div class="widget" name="cp-footer"></div>
+		<div class="widget" name="common-footer"></div>
 	</footer>
-
-	<script type="text/javascript">
-		function changeLanguage(file){
-			$.getJSON('widgets/quote/'+file+'.json', function(data) {
-				$.each(data, function(key, val) {
-					replaceString(document.body, key, val);
-				});
-			});
-		// Improve - reach button text.
-			$('#disabledNavigation input[type="button"]').val('Seuraava');
-			$('#navigation input[type="submit"]').val('Seuraava');
-		}
-
-		function replaceString(node, replaceThis, replaceWith) {
-		    if (node.nodeType === 3) {
-		        node.nodeValue  = node.nodeValue.replace (replaceThis, replaceWith);
-		    }
-		    else if(node.nodeName == 'INPUT'){
-		    	if(node.type == 'button'){
-		    		node.value = node.value.replace (replaceThis, replaceWith);
-		   		 }
-		    }		    	
-		    else if (node.nodeType === 1) {
-		    	var numNodes = node.childNodes.length;
-		        for (var n = 0;  n < numNodes;  n++) {
-		            replaceString(node.childNodes[n], replaceThis, replaceWith);
-		        }
-		    }
-		}
-	</script>
