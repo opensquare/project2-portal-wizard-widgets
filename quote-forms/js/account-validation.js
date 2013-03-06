@@ -17,7 +17,7 @@ function BankAccountValidation(key) {
 	this.doValidation = function(accountNumber, sortCode) {
 		var bav = this;
 		$.getJSON(
-			"http://services.postcodeanywhere.co.uk/BankAccountValidation/Interactive/Validate/v2.00/json2.ws?callbackFunction=?",
+			"//services.postcodeanywhere.co.uk/BankAccountValidation/Interactive/Validate/v2.00/json2.ws?callbackFunction=?",
 			{
 				Key: lookupKey,
 				AccountNumber: accountNumber,
