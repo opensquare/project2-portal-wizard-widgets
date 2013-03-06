@@ -1,11 +1,11 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>ppi.html</url>
+		<url>ppi-quote.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>
-		<css>../quote/rq.css</css>
+		<css>rq.css</css>
 	</attributes>
 </widget>
