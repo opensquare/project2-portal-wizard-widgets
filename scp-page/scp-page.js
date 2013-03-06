@@ -118,6 +118,10 @@ function napierHandler() {
 		napierShow(splithash[2]);
 		return true;
 	};
+	if(splithash[1].toLowerCase() == 'quote') {
+		quoteNew(splithash[2]);
+		return true;
+	};
 
 	// Throw error if no operator handler for type supplied
 	throw new Error();
@@ -168,7 +172,7 @@ function napierQuickSearch(terms){
 		data = data.replace(/<calc><calcref>/g,'<li calcref="');
 		data = data.replace(/<\/calcref>/g,'">');
 		data = data.replace(/<source>/g,'<span>');
-		data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quotes?show?">show<\/a><\/li>');
+		data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quotes?show?" onclick="$(this).attr(\'href\',\'#quotes?show?\'+$(this).parent().attr(\'calcref\'))">show<\/a><\/li>');
 		$(this).html(data);
 		// Find some interesting data and display it
 		$(this).find('quickSearch').each(function(){
@@ -198,7 +202,10 @@ function napierSearchClear() {
 	$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
 }
 function napierShow(terms) {
-	addPage('napiershow', 'quotes', 'show', 'Quotes show', '', 'scp-napier-show', '#content article.on');
+	addPage('napiershow', 'quotes', 'show', 'Quote', 'Show', 'scp-napier-show', '#content article.on');
+}
+function quoteNew(terms) {
+	addPage('napiershow', 'quotes', 'quote', 'Quote', 'New', 'scp-napier-show', '#content article.on');
 }
 
 //---------------------------------------------------------------------------------------------------------------------
