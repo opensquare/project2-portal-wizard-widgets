@@ -1,6 +1,6 @@
 function changeLanguage(element, language){
 	if($(element).attr('class')==language){;
-		$.getJSON('widgets/language_switcher/'+language+'.json', function(data) {
+		$.getJSON('widgets/common-language-switcher/'+language+'.json', function(data) {
 			$.each(data, function(key, val) {
 				replaceString(document.body, key, val);
 			});
@@ -12,7 +12,7 @@ function changeLanguage(element, language){
 
 		$(element).removeClass(language).addClass('english');
 	} else {
-		$.getJSON('widgets/language_switcher/'+language+'.json', function(data) {
+		$.getJSON('widgets/common-language-switcher/'+language+'.json', function(data) {
 			$.each(data, function(key, val) {
 				replaceString(document.body, val, key);
 			});

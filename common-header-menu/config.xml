@@ -27,11 +27,11 @@ v1.0 (c) Open Square, 2013
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>common_header_menu.html</url>
+		<url>common-header-menu.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
 		<displayheader>false</displayheader>
-		<css>common_header_menu.css</css>
+		<css>common-header-menu.css</css>
 	</attributes>
 </widget>
