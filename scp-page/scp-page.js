@@ -243,10 +243,10 @@ function trace(s){}
 function debug(s){}
 
 //---------------------------------------------------------------------------------------------------------------------
-// Accounts
+// Finance
 
 function accounts(terms) {
-	addPage('accounts', 'finance', 'accounts', 'Accounts', '', 'scp-accounts', '#content article.on');
+	addPage('accounts', 'finance', 'accounts', 'Finance', 'Accounts', 'scp-accounts', '#content article.on');
 }
 
 
@@ -258,7 +258,7 @@ var pageHandler = {
 	quotes: function(obj) {napierHandler();},
 	policies: function(obj) {pactHandler();},
 	renewals: function(obj) {pactHandler();},
-	accounts: function(obj) {accounts();},
+	finance: function(obj) {accounts();},
 	//claims: function(obj) {reportsHandler();}
 	documents: function(obj) {mmHandler();}
 };
