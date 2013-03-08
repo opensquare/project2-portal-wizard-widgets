@@ -5,8 +5,10 @@
 		<xsl:apply-templates select="/pactresponse/entity/TimeSpanEntity"/>
 	</xsl:template>
     <xsl:template match="TimeSpanEntity">
-		<div class="entity">
+		<div>
+            <xsl:attribute name="class">entity entity-<xsl:value-of select="identifier/relationship"/></xsl:attribute>
             <div class="entity-description"><xsl:value-of select="description"/></div>
+            <div class="entity-status"><xsl:value-of select="TimeSpanEntityVersion/Status"/></div>
             <div class="entity-properties">
                 <xsl:apply-templates select="TimeSpanEntityVersion/Properties/*"/>
             </div>
@@ -17,7 +19,7 @@
 	</xsl:template>
     <xsl:template match="Properties/*">
         <div>
-            <xsl:attribute name="class">entity-property entity-property-type-<xsl:value-of select="name()"/></xsl:attribute>
+            <xsl:attribute name="class">entity-property entity-property-type-<xsl:value-of select="name()"/> entity-property-name-<xsl:value-of select="@name"/></xsl:attribute>
             <span class="entity-property-name"><xsl:value-of select="@name"/></span>
             <span class="entity-property-value"><xsl:value-of select="."/></span>
         </div>
