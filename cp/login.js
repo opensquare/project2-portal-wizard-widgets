@@ -29,10 +29,10 @@ function Widget_cp() {
 				pw.enableForm($form);
 				switch (httpStatus) {
 					case 401:
-						widget.addInfoMessage('Invalid username or password. Please try again.', $messages);
+						widget.addInfo('Invalid username or password. Please try again.', $messages);
 						break;
 					default:
-						widget.addErrorMessage('Problem while loading (' + httpStatus + ')', $messages);
+						widget.addError('Problem while loading (' + httpStatus + ')', $messages);
 				}
 			});
 			return false;
@@ -50,17 +50,17 @@ function Widget_cp() {
 				type: 'POST',
 				data: $form.serialize()
 			}).done(function() {
-				widget.addInfoMessage('In a few moments you should receive an email with details of how to reset your password.', $messages);
+				widget.addInfo('In a few moments you should receive an email with details of how to reset your password.', $messages);
 				$('#login-form form').toggle();
 			}).fail(function() {
 				httpStatus = jqxhr.status;
 				pw.enableForm($form);
 				switch (httpStatus) {
 					case 400:
-						widget.addInfoMessage('Invalid email address. Please check and try again.', $messages);
+						widget.addInfo('Invalid email address. Please check and try again.', $messages);
 						break;
 					default:
-						widget.addErrorMessage('Problem while loading (' + httpStatus + ')', $messages);
+						widget.addError('Problem while loading (' + httpStatus + ')', $messages);
 				}
 			});
 			return false;
