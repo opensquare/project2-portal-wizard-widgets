@@ -235,7 +235,7 @@ function pactSearch(terms) {
 	}
 }
 function pactShow(terms) {
-	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
+	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp_policy_show', '#content article.on');
 }
 
 function trace(s){}
