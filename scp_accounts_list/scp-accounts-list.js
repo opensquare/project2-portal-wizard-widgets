@@ -17,7 +17,7 @@ function Widget_scp_accounts_list() {
 	}
 	
 	this.selectAccount = function(uid) {
-		notifyChannelOfEvent(this.channel, {
+		pw.notifyChannelOfEvent(this.channel, {
 			uid: uid
 		});
 	}

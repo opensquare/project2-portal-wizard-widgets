@@ -4,7 +4,7 @@ function Widget_scp_accounts_display() {
 	
 	this.initExtend = function() {
 		this.channel = this.$widgetDiv.attr("channel");
-		addListenerToChannel(this, this.channel);
+		pw.addListenerToChannel(this, this.channel);
 	}
 	
 	this.onReadyExtend = function() {
