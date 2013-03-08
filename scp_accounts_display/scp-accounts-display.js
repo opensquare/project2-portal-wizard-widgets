@@ -23,4 +23,3 @@ function Widget_scp_accounts_display() {
 	
 }
 
-Widget_scp_accounts_display.prototype = globalProperties.widgetPrototype;

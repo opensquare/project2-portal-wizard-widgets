@@ -23,5 +23,3 @@ function Widget_scp_accounts_list() {
 	}
 	
 }
-
-Widget_scp_accounts_list.prototype = globalProperties.widgetPrototype;
