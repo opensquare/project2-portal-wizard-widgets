@@ -1,51 +1,91 @@
-.schedulerLayout table{
-  width:99%!important;
-  margin:10px 0 0 4px;
-  text-align:left!important;
+.scp-scheduler-status success,
+.scp-scheduler-status now{
+	display:none;
 }
-.schedulerJobs table th,.schedulerResults table th{
-  background:#444;
-  color:#fff;
-  padding:4px;
-  border-right:1px solid #fff;
+.scp-scheduler-status, .scp-scheduler-status div{
+	display:inline-block;
 }
-.schedulerLayout table td{
-  padding:4px;
+.scheduler-job-list ul{
+	list-style: none;
+	padding-left:0;
+	width:99%;
+	margin: 0;
 }
-.schedulerJobs table td:nth-child(6),.schedulerResults table td:nth-child(4){
-  padding:0 4px;
+.scheduler-job-list li,
+.scheduler-job-list .jobsHeader{
+	padding: 1em 1.5em 1em 30px;
 }
-.schedulerJobs table th:nth-child(6){
-  border-right:none;
+.scheduler-job-list li:nth-child(even){
+	background-color: rgba(119,119,119,0.3);
 }
-.schedulerJobs tr:nth-child(even){
-  background:#eee;
+.scheduler-job-list .jobsHeader{
+	font-weight: bold;
 }
-.schedulerJobs tr:hover{
-  background:#ddf;
+.scheduler-job-list li>span{
+	display:inline-block;
+	border-left:1em solid transparent;
+	overflow:hidden;
+	vertical-align:top;
+	width:25%
 }
-.schedulerResults tfoot{
-  text-align:right;
+.scheduler-job-list .jobName,
+.scheduler-job-list .description{
+	width:23%;
 }
-.schedulerResults tfoot *{
-  margin-left:10px;
+.scheduler-job-list .nextFireTime{
+	width:20%;
 }
-.schedulerResults table{
-  table-layout:fixed;
+.scheduler-job-list .status{
+	width:7%;
 }
-.schedulerResults th:nth-child(1){
-  width:100px;
-  overflow:hidden;
+.scheduler-job-list .actions{
+	width:auto;
+	overflow:visible;
+	position:relative;
 }
-.schedulerResults th:nth-child(2),
-.schedulerResults th:nth-child(3),
-.schedulerResults th:nth-child(4),
-.schedulerResults th:nth-child(6),
-.schedulerResults th:nth-child(7){
-  width:80px;
-  overflow:hidden;
+.scheduler-job-list .title:before{
+	content: '▼';
 }
-.schedulerResults th:nth-child(5),
-.schedulerResults td:nth-child(5){
-  overflow:hidden;
+.scheduler-job-list .actions .box{
+	margin-top:-1px;
+	padding-top:4px;
+	display:block;
+	border: 2px solid;
+	border-top-width: 0;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border-color:rgba(0,0,0,0.25);
+}
+.scheduler-job-list .box a{
+	display:block;
+	padding:0.25em 1em;
+	color:rgba(0,0,0,0.65);
+}
+.scheduler-job-list .box a:last-child{
+	border-bottom-left-radius:0.4em;
+	border-bottom-right-radius:0.4em;
+}
+.scheduler-job-list .box a:nth-child(even){
+	background-color:#FFF;
+	color:rgba(0,0,0,0.65)
+}
+.scheduler-job-list .box a:nth-child(odd){
+	background-color:#DDD;
+}
+.resultDiv .close{
+	display:block;
+	text-align: right;
+}
+.resultDiv table{
+	border-collapse: collapse;
+	width:100%;
+}
+.resultDiv tbody tr:nth-child(odd) {
+	background-color: white;
+}
+.resultDiv tbody tr:nth-child(even) {
+	background-color: #DDD;
+}
+.resultDiv tfoot{
+	text-align: center;
 }

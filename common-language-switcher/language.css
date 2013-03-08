@@ -1,0 +1,16 @@
+#languageSwitcher{
+	float: right;
+	margin-top: -5px;
+}
+#languageSwitcher>a{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+}
+#languageSwitcher .finnish{
+	background: url('finland.png') no-repeat;
+}
+#languageSwitcher .english{
+	background: url('england.png') no-repeat;
+}

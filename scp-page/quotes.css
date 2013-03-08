@@ -50,7 +50,6 @@ article[type='internal'] .new-square[type='quotes'][subtype='quote'] {
 }
 #content .napier-search-input{
 	border-color: white;
-	background: rgba(255, 255, 255, 0.25);
 	border-radius: 0.2em;
 	font-size: 2em;
 	padding: 0 0.5em;
@@ -74,7 +73,7 @@ article[type='internal'] .new-square[type='quotes'][subtype='quote'] {
 	content: attr(calcref);
 }
 #content .napier-search-results li:nth-child(odd){
-	background-color: rgba(155,187,89,0.3);
+	background-color: rgba(192,89,77,0.3);
 }
 #content .napier-search-results li>*{
 	display: none;
@@ -97,7 +96,7 @@ article[type='internal'] .new-square[type='quotes'][subtype='quote'] {
 	position: absolute;
 	right: 4px;
 	top: 11px;
-	background-color: #6B8B39;
+	background-color: #A0302D;
 	border-radius: 1em;
 }
 

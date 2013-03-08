@@ -87,8 +87,8 @@ label {
 	width: 40%;
 }
 label.forRadio {
-	font-size: 1.2em;
 	width: auto;
+	padding-left: 0.25em;
 }
 label.forPayment {
 	font-size: 1.3em;
@@ -243,8 +243,10 @@ option:first-child{
 }
 
 .checkboxLabel {
-	display: inline;
+	display: inline-block;
 	padding: 0;
+	max-width: 22%;
+	vertical-align: top;
 }
 
 .disabledSummary {

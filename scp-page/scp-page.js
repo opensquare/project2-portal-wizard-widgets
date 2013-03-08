@@ -17,6 +17,7 @@ function urlParse(){
 				if(error.name == 'Error'){alert('Unknown page operation');} else {alert(error.message);};
 				//window.history.back();
 				window.location.hash = '';
+                throw error;
 			};
 		};
 	};
@@ -118,6 +119,10 @@ function napierHandler() {
 		napierShow(splithash[2]);
 		return true;
 	};
+	if(splithash[1].toLowerCase() == 'quote') {
+		quoteNew(splithash[2]);
+		return true;
+	};
 
 	// Throw error if no operator handler for type supplied
 	throw new Error();
@@ -168,7 +173,7 @@ function napierQuickSearch(terms){
 		data = data.replace(/<calc><calcref>/g,'<li calcref="');
 		data = data.replace(/<\/calcref>/g,'">');
 		data = data.replace(/<source>/g,'<span>');
-		data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quotes?show?">show<\/a><\/li>');
+		data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quotes?show?" onclick="$(this).attr(\'href\',\'#quotes?show?\'+$(this).parent().attr(\'calcref\'))">show<\/a><\/li>');
 		$(this).html(data);
 		// Find some interesting data and display it
 		$(this).find('quickSearch').each(function(){
@@ -198,7 +203,10 @@ function napierSearchClear() {
 	$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
 }
 function napierShow(terms) {
-	addPage('napiershow', 'quotes', 'show', 'Quotes show', '', 'scp-napier-show', '#content article.on');
+	addPage('napiershow', 'quotes', 'show', 'Quote', 'Show', 'scp-napier-show', '#content article.on');
+}
+function quoteNew(terms) {
+	addPage('napiershow', 'quotes', 'quote', 'Quote', 'New', 'scp-napier-show', '#content article.on');
 }
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -221,18 +229,24 @@ function pactHandler() {
 	throw new Error();
 }
 function pactSearch(terms) {
-	addPage('policysearch', 'policy', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+	addPage('policysearch', 'policies', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+    if(typeof(terms)!='undefined'){
+		pw.notifyChannelOfEvent('pactSearch', {searchValue: terms});
+	}
 }
 function pactShow(terms) {
 	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
 }
 
+function trace(s){}
+
+function debug(s){}
 
 //---------------------------------------------------------------------------------------------------------------------
-// Accounts
+// Finance
 
 function accounts(terms) {
-	addPage('accounts', 'finance', 'accounts', 'Accounts', '', 'scp-accounts', '#content article.on');
+	addPage('accounts', 'finance', 'accounts', 'Finance', 'Accounts', 'scp-accounts', '#content article.on');
 }
 
 
@@ -244,7 +258,7 @@ var pageHandler = {
 	quotes: function(obj) {napierHandler();},
 	policies: function(obj) {pactHandler();},
 	renewals: function(obj) {pactHandler();},
-	accounts: function(obj) {accounts();},
+	finance: function(obj) {accounts();},
 	//claims: function(obj) {reportsHandler();}
 	documents: function(obj) {mmHandler();}
 };

@@ -1,11 +1,10 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>ppi-quote.html</url>
-		<secure>false</secure>
+		<url>scp-accounts.html</url>
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>
-		<css>rq.css</css>
 	</attributes>
 </widget>
+
