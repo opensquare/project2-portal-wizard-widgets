@@ -24,7 +24,7 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 		success: function(data){
 			// Forward to next page by url
 			//location.pathname = '/' + data.nextWidget;
-			location.pathname = '/' + nextWidget;
+			window.location = nextWidget;
 		},
 		
 		error: function(XMLHttpRequest, textStatus, errorThrown){
