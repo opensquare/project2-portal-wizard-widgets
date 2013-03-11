@@ -1,9 +1,10 @@
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>scp-napier-search.html</url>
+		<url>scp-quote-show.html</url>
 	</parameters>
 	<attributes>
 		<displayheader>false</displayheader>
+		<js>scp-quote-show.js</js>
 	</attributes>
 </widget>

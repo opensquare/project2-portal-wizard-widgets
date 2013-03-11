@@ -29,7 +29,7 @@
 			</section>
 			<section id="content-newpage-aside">
 				<!-- Permanent New Page tab -->
-				<aside class="on" uid="internal-newpage" type="internal" subtype="newpage" hash="#internal?newpage">
+				<aside class="on" pageid="internal/newpage" type="internal" subtype="newpage">
 					<span class="title">New Page</span>
 				</aside>
 			</section>
@@ -38,7 +38,7 @@
 			</section>
 			<section id="content-newpage-article">
 				<!-- Permanent New Page page -->
-				<article class="on" uid="internal-newpage" type="internal" subtype="newpage" hash="#internal?newpage">
+				<article class="on" pageid="internal/newpage" type="internal" subtype="newpage" hash="">
 					<section class="content-header"><h2>Start a new page</h2></section>
 					<section id="new-page" class="content-body">
 						<details id="new-new" open>
@@ -58,12 +58,12 @@
 
 		<script type="text/javascript">
 			// Bind click events to all current and future tabs, and get them to show the corresponding page when clicked
-			$('#content-asides,#content-newpage-aside').on('click','aside', function(event){
-				// trigger display of clicked tab/page
-				var hashtag = $(this).attr('hash');
-				window.location.hash = hashtag;
-			});
+//			$('#content-asides,#content-newpage-aside').on('click', 'aside', function(event){
+//				// trigger display of clicked tab/page
+//				var hashtag = $(this).attr('hash');
+//				window.location.hash = hashtag;
+//			});
 
-			// Process hashtag, if any, on first load
-			if(window.location.hash.length>1){urlParse();};
+//			// Process hashtag, if any, on first load
+//			if(window.location.hash.length>1){urlParse();};
 		</script>
