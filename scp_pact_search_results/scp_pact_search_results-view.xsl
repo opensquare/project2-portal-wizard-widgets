@@ -13,7 +13,7 @@
 	</xsl:template>
 	<xsl:template match="IdentifiedEntity">
 		<div class="searchResult">
-			<a><xsl:attribute name="href">#policies?show?<xsl:value-of select="identifier/uid"/></xsl:attribute><xsl:value-of select="description"/></a>
+			<a><xsl:attribute name="href">#policies/show?<xsl:value-of select="identifier/uid"/></xsl:attribute><xsl:value-of select="description"/></a>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

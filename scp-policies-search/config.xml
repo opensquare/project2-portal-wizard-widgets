@@ -1,9 +1,11 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>scp-pact-search.html</url>
+		<url>scp-policies-search.html</url>
 	</parameters>
 	<attributes>
 		<displayheader>false</displayheader>
+		<js>scp-policies-search.js</js>
+		<page.title>Policy search</page.title>
 	</attributes>
 </widget>
