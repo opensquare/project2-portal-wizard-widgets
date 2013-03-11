@@ -1,7 +1,7 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>scp-accounts.html</url>
+		<url>scp-finance-accounts.html</url>
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>
