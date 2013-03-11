@@ -229,13 +229,13 @@ function pactHandler() {
 	throw new Error();
 }
 function pactSearch(terms) {
-	addPage('policysearch', 'policies', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
+	addPage('policysearch', 'policy', 'search', 'Policies', 'Search', 'scp-policies', '#content article.on');
     if(typeof(terms)!='undefined'){
 		pw.notifyChannelOfEvent('pactSearch', {searchValue: terms});
 	}
 }
 function pactShow(terms) {
-	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp-policy-show', '#content article.on');
+	addPage('policyshow', 'policy', 'show', 'Policies', 'Show', 'scp_policy_show', '#content article.on');
 }
 
 function trace(s){}

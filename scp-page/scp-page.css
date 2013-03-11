@@ -213,7 +213,7 @@ article[type="internal"] summary h2 {
 }
 article[type="internal"] .new-square-group{
 	display: inline-block;
-	padding: 0 2em;
+	padding: 0 7.6em 0 2em;
 }
 article[type="internal"] .new-square-group h3{
 	position: absolute;
