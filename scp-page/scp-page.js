@@ -97,13 +97,20 @@ function Widget_scp_page() {
 		}
 		console.log('mount widget' + $newWidget.attr('name'));
 		pw.mount($newWidget);
+		pullPageTitles(pageId, $newWidget);
 		selectPage(pageId);
+	}
+	
+	function pullPageTitles(pageId, $newWidget) {
+		var title = $newWidget.attr('page.title');
+		var subtitle = $newWidget.attr('page.subtitle');
+		setPageTitles(pageId, title, subtitle);
 	}
 	
 	function setPageTitles(pageId, title, subTitle) {
 		var $asideAndArticle = getAsideAndArticle(pageId);
-		$asideAndArticle.find('.title').html(title);
-		$asideAndArticle.find('.subtitle').html(subTitle);
+		if (title) $asideAndArticle.find('.title').html(title);
+		if (subTitle) $asideAndArticle.find('.subtitle').html(subTitle);
 	}
 	
 	function setPageArgs(pageId, args) {
