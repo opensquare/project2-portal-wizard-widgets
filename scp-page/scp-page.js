@@ -91,10 +91,11 @@ function Widget_scp_page() {
 		});
 		
 		// Load widget
-		var $newWidget = $('#content-articles article[pageId="' + pageId + '"] .widget');
+		var $newWidget = $('#content-articles article[pageId="' + pageId + '"] .widget').first();
 		if (pw.defined(pageArgs)) {
 			$newWidget.attr('page.args', pageArgs);
 		}
+		console.log('mount widget' + $newWidget.attr('name'));
 		pw.mount($newWidget);
 		selectPage(pageId);
 	}

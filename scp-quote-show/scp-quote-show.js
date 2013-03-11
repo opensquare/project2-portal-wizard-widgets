@@ -5,7 +5,7 @@ function Widget_scp_quote_show() {
 		var calcId = pageId.split('/')[2];
 		pw.notifyChannelOfEvent('scp-page.setPageTitles', { pageId: pageId, title: 'Quote Show', subTitle: 'Calc ' + calcId });
 		
-		$('.widget[name="quote-forms"]', this.$widgetDiv).attr('params', 'ref=' + calcId);
+		$('.widget[name="quote-forms"]', this.$widgetDiv).attr('calcref', calcId);
 	}
 	
 }
