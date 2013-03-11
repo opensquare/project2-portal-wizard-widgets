@@ -12,7 +12,7 @@
 		vehicleLookup.init();
 		
 		$(".findCar [type='button']").click(function() {
-			vehicleLookup.lookupVehicle(regInput.val());
+			vehicleLookup.lookupVehicle(regInput.val().toUpperCase());
 		})
 	})
 

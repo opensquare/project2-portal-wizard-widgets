@@ -177,6 +177,10 @@ option:first-child{
 	}
 }
 
+#input_reg {
+	text-transform: uppercase;
+}
+
 .rf-dropdown ul{
 	border: thin solid #0090C0;
 	display: inline-block;
