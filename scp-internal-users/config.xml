@@ -1,0 +1,11 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-internal-users.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<page.title>User management</page.title>
+	</attributes>
+</widget>
+
