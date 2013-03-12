@@ -33,7 +33,7 @@ header h2 span{
 
 #home-banner{
 	height: 500px;
-	background: url('banner.jpg') no-repeat center;
+	background: url('banner.jpg') no-repeat center; /* (c)xray10 @ flickr.com */
 	background-size: cover;
 }
 #home-banner>h1{
