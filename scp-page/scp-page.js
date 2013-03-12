@@ -128,7 +128,7 @@ function Widget_scp_page() {
 	}
 	
 	function selectPage(pageId) {
-		$('#content .on').removeClass('on');
+		$('#content aside[pageId].on,#content article[pageId].on').removeClass('on');
 		getAsideAndArticle(pageId).addClass('on');
 	}
 	
