@@ -18,7 +18,7 @@ body{
 	color: #333;
 	font-family: sans-serif;
 }
-button,a.button{
+button,a.button,input.button{
 	padding: 0.25em 1em;
 	border: none;
 	border-radius: 0.5em;

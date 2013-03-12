@@ -36,7 +36,7 @@ article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 #content article[type='quote'], #content article[type='quote'] .content-helper, #content article[type='quote'] .content-body{
 	border-color: #C0504D;
 }
-#content article[type='quote'] .content-header, #content article[type='quote'] .content-helper{
+#content article[type='quote'] .content-header, #content article[type='quote'] .content-helper, #content article[type='quote']::-webkit-scrollbar-thumb{
 	background-color: #C0504D;
 }
 
@@ -44,13 +44,13 @@ article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 #content article[type='quote'][subtype='search'] .content-body{
 	padding: 0;
 }
-#content div.scp-napier-search .content-header{
+#content div.scp-quote-search .content-header{
 	border-top: thin solid;
 	border-radius: 0;
 }
 #content .napier-search-input{
 	border-color: white;
-	border-radius: 0.2em;
+	border-radius: 0.25em;
 	font-size: 2em;
 	padding: 0 0.5em;
 	width: 70%;
@@ -58,7 +58,6 @@ article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 #content .napier-search-button{
 	font-size: 1.8em;
 }
-
 #content .napier-search-results ul{
 	width: 97%;
 	list-style: none;
