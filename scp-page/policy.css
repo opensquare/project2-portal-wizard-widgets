@@ -36,6 +36,25 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 #content article[type='policy'], #content article[type='policy'] .content-helper, #content article[type='policy'] .content-body{
 	border-color: #9BBB59;
 }
-#content article[type='policy'] .content-header, #content article[type='policy'] .content-helper{
+#content article[type='policy'] .content-header, #content article[type='policy'] .content-helper, #content article[type='policy']::-webkit-scrollbar-thumb{
 	background-color: #9BBB59;
+}
+
+/* Specific page styling */
+#content article[type='policy'][subtype='search'] .content-body{
+	padding: 0;
+}
+#content div.scp-policy-search .content-header{
+	border-top: thin solid;
+	border-radius: 0;
+}
+#content .pact-search-input{
+	border-color: white;
+	border-radius: 0.25em;
+	font-size: 2em;
+	padding: 0 0.5em;
+	width: 70%;
+}
+#content .pact-search-button{
+	font-size: 1.8em;
 }
