@@ -1,0 +1,399 @@
+.agreement{
+  margin:0 4px;
+}
+.agreement .agreement{
+  margin:0;
+}
+.agreement .pageSection{
+  margin:10px 0 10px 0;
+}
+.agreement h1,.agreement h2{
+  display:block;
+  font-size:120%;
+  border:none;
+  padding:8px;
+  background:transparent;
+  color:#ddd;
+  font-weight:normal;
+  padding:0 0 6px 0;
+  text-shadow:1px 1px 0 #fff;
+}
+.agreement h1{
+  background:url('images/folder.png') no-repeat !important;
+  padding:10px 0 20px 60px;
+  font-size:150%;
+  font-weight:normal;
+  border-bottom:2px ridge #aaf;
+  overflow:hidden;
+  color:#888;
+  margin:10px 0;
+  text-transform:capitalize;
+}
+.agreement .agreement h1{
+  background:url('images/folder-small.png') no-repeat !important;
+  font-size:120%;
+  color:#777;
+  padding:10px 0 10px 60px;
+}
+.agreement .entity{
+  border:none;
+  padding:8px 0;
+  background-image:none;
+}
+.agreement table{
+  margin:0 4px;
+}
+.agreement th, .agreement td{
+  text-align:left;
+  width:120px;
+  padding:4px;
+  overflow:hidden;
+}
+.agreement td{
+  width:200px;
+}
+.agreement .property-group{
+  display:inline-block;
+  padding-top:2px;
+  word-wrap:break-word;
+  margin-right:10px;
+}
+.agreement .property-label{
+  display:inline-block;
+  width:120px;
+  font-weight:bold;
+  padding:2px;
+  text-transform:capitalize;
+}
+.agreement .property-value{
+  display:inline-block;
+  width:170px;
+  background-color:#e8ecff;
+  padding:2px;
+  min-height:11px;
+  vertical-align:top;
+}
+.agreement .entity a{
+  display:inline-block;
+  text-decoration:none;
+  color:#222;
+  cursor:default;
+  background:#e3e3e3;
+  padding:2px;
+}
+.agreement .subAgreement .uplink {
+	display: none;
+}
+
+/* Specific agreement styles */
+/* Clients */
+#clientRelationship-title{
+  background-image:url('images/client.png')!important;
+}
+#clientRelationship .pactActions{
+  display:none;
+}
+#clientRelationship-properties{
+  display:none;
+}
+#clientRelationship .property-label{
+  width:200px;
+}
+#clientRelationship .property-value{
+  width:300px;
+}
+#clientRelationship-subEntities-title,#address-status,#clientIndDetails-status,#contactDetails-status,#licence-status,#employmentDetails-status{
+  display:none;
+}
+#clientRelationship .entity{
+  background-repeat:no-repeat;
+  margin:20px 0 0 0;
+  padding:0 0 0 100px;
+}
+#clientRelationship .entity h1{
+  border:none;
+  background-image:none!important;
+  margin:0;
+  padding:6px 0 0 0;
+  font-size:150%;
+}
+#clientRelationship .properties{
+  margin:10px 0 0 0;
+  padding:0;
+}
+#clientRelationship-properties .property-value{
+  background-color:#d8efdc;
+}
+#clientRelationship-address{
+  background-image:url('images/mail.gif');
+}
+#clientRelationship-address a{
+  display:none;
+}
+#clientRelationship-clientIndDetails{
+  background:url('images/person.gif') no-repeat;
+  padding:20px 0 0 100px;
+}
+#clientRelationship-clientIndDetails a{
+  display:none;
+}
+#clientRelationship-contactDetails{
+  background:url('images/phone.png') no-repeat;
+  padding:20px 0 0 100px;
+}
+#clientRelationship-contactDetails a{
+  display:none;
+}
+#clientRelationship-conviction{
+  background:url('images/speed-camera.png') no-repeat;
+  padding:20px 0 0 100px;
+}
+#clientRelationship-employmentDetails{
+  background:url('images/case.png') no-repeat;
+  padding:20px 0 0 100px;
+}
+#clientRelationship-employmentDetails a{
+  display:none;
+}
+#clientRelationship-licence{
+  background:url('images/badge.png') no-repeat;
+  padding:20px 0 0 100px;
+}
+#clientRelationship-licence a{
+  display:none;
+}
+#clientRelationship-subAgreements-title{
+  display:none;
+}
+#clientRelationship-selectedEntities-title{
+  display:none;
+}
+#claimSummary:before{
+  content:'Claim';
+  font-size:150%;
+  color:#888;
+  text-shadow:1px 1px 0 #FFFFFF;
+}
+#claimSummary{
+  background:url('images/claim.png') no-repeat;
+  padding:10px 0 0 100px;
+}
+#claimSummary-title,#claimSummary-properties h2{
+  display:none;
+}
+
+#paymentCard{
+  display:none;
+}
+#paymentCard-title{
+  background-image:url('images/creditcards.png') !important;
+  background-position:0 -6px !important;
+}
+#paymentCard-properties{
+  padding:0 0 0 100px;
+}
+#paymentCard-properties-title,#paymentCard-subEntities,#paymentCard-properties div{
+  display:none;
+}
+#paymentCard-cardType,#paymentCard-continuousAuthority{
+  display:block!important;
+}
+
+/* Quotes */
+#quote-title{
+  background-image:url('images/quote.png')!important;
+}
+#quote .pactActions a[action='displayPactForm']{
+  display:none;
+}
+#quote-properties{
+  font-size:125%;
+  padding:0 0 0 100px;
+}
+#quote-properties .property-value{
+  background-color:#d8efdc;
+}
+#quote-properties h2,#quote-creationDate{
+  display:none;
+}
+#quote .property-label{
+  width:200px;
+}
+#quote .property-value{
+  width:300px;
+}
+.mainContentQ #insurancePolicy .pactActions{
+  display:none;
+}
+
+/* Renewals */
+#renewal-title{
+  background-image:url('images/renewal.png')!important;
+}
+.mainContentR .displayAgreement:nth-child(2) .pactActions{
+  display:none;
+}
+
+/* Policies */
+#insurancePolicy-title{
+  background-image:url('images/motor-policy.png')!important;
+}
+#insurancePolicy-properties{
+  padding:0 0 0 100px;
+  font-size:125%;
+}
+#insurancePolicy-properties .property-value{
+  background-color:#d8efdc;
+}
+#insurancePolicy-properties h2,#insurancePolicy-onRiskDue,#insurancePolicy-prefix,#insurancePolicy-quickSearch1,#insurancePolicy-quickSearch2,#insurancePolicy-quickSearch3,#insurancePolicy-quickSearch4{
+  display:none;
+}
+#insurancePolicy-subAgreements-title{
+  display:none;
+}
+#insurancePolicy .agreement{
+  background-repeat:no-repeat;
+  margin:30px 0 0 0;
+  padding:0 0 0 100px;
+}
+#insurancePolicy .agreement .agreement{
+  margin:0;
+  padding:0;
+}
+#insurancePolicy .agreement h1{
+  border:none;
+  background-image:none!important;
+  margin:0;
+  padding:6px 0 3px 0;
+  font-size:150%;
+}
+#insurancePolicy .agreement h2{
+  display:none;
+}
+#insurancePolicy .property-label{
+  width:200px;
+}
+#insurancePolicy .property-value{
+  width:300px;
+}
+#insurancePolicy .account{
+  display:inline-block;
+  text-align:center;
+  vertical-align:top;
+}
+#insurancePolicy .account a{
+  display:inline-block;
+  width:100px;
+  height:0;
+  background:url('images/cart.gif') no-repeat top center;
+  padding-top:40px;
+  text-decoration:none;
+  color:inherit;
+}
+#insurancePolicy .account a:hover{
+  background-color:#E8ECFF;
+}
+#insurancePolicy-categorisation1-label{
+  overflow:hidden;
+  width:200px!important;
+  height:13px;
+}
+#insurancePolicy-categorisation1-label:before{
+  content:"PaymentType ";
+}
+
+#portalInsuranceSection{
+  background-image:url('images/display.png');
+  display:none;
+}
+#motorInsuranceSection{
+  background-image:url('images/vehicle.png');
+}
+#premium{
+  background-image:url('images/regular.png');
+}
+#regularInstalmentAgreement.status-Not-Applicable{
+   display:none;
+}
+#regularInstalmentAgreement-title{
+   display:none;
+}
+#MID{
+  background-image:url('images/mid.png');
+}
+#breakdownInsuranceSection{
+  background-image:url('images/breakdown.png');
+}
+#keysInsuranceSection{
+  background-image:url('images/key.png');
+}
+#legalInsuranceSection{
+  background-image:url('images/legal.png');
+}
+#gadgetInsuranceSection{
+  background-image:url('images/gadget.png');
+}
+#cancellationInsuranceSection{
+  background-image:url('images/trash.png');
+  display:none;
+}
+#MID-subEntities{
+  display:none;
+}
+
+/* Claims */
+#claimFolder-title{
+  background-image:url('images/claim-folder.png')!important;
+}
+
+div[mode] .pactActions > .widget-head {
+	display: none;
+}
+div[mode='claims'] .displayAgreement .pactActions > .widget-head {
+	display: block;
+}
+zdiv.itbClaim>h1{
+  font-size:140%;
+  margin-bottom:10px;
+}
+div.itbClaim .pactActions{
+  background:none!important;
+  border:none!important;
+}
+div.itbClaim .pactActions .widget-head{
+  display:none!important;
+}
+div.itbClaim .status{
+  padding:4px;
+  text-align:center;
+  text-decoration:underline;
+}
+div.itbClaim div h1{
+  background:#ddd;
+  margin-top:10px;
+  padding:4px;
+}
+div.itbClaim div h1 span{
+  float:left;
+}
+div.itbClaim div table{
+  margin:10px 16px;
+  border:1px solid #eee;
+}
+div.itbClaim div th,div.itbClaim div td{
+  width:200px;
+  text-align:left;
+  padding:4px;
+}
+div.itbClaim div td{
+  width:410px;
+}
+div.itbClaim div tr:nth-child(even){
+  background:#eee;
+}
+div.itbClaim div p,div.itbClaim div div,div.itbClaim div h3{
+  zmargin:10px 16px;
+}
+div.itbClaim a{
+  color:#6575a5;
+}

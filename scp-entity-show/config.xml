@@ -1,28 +1,7 @@
 <widget>
-	<type>pactResponseLayout</type>
+	<type>internalPage</type>
 	<parameters>
-		<xsl>scp-entity-show</xsl>
-		<pactrequest><![CDATA[<pactrequest>
-						<target><uid>{uid}</uid></target>
-						<context>
-                            <locale>
-                                <language>en</language>
-                                <country>GB</country>
-                            </locale>
-                            <actor><actorUid>123</actorUid></actor>
-                            <party><partyUid>123</partyUid></party>
-                            <sessionId>{sessionId}</sessionId>
-                            <dateFormat>dd/MM/yyyy</dateFormat>
-                        </context>
-						<timepoint>
-							<effectivetime>now</effectivetime>
-							<physicaltime>now</physicaltime>
-						</timepoint>
-						<return>
-							<name>asTimeSpanEntityVersionSnapshot</name>
-							<params><includePostings>false</includePostings><doQueries>false</doQueries></params>
-						</return>
-					</pactrequest>]]></pactrequest>
+		<url>scp-entity-show.jsp</url>
 	</parameters>
 	<attributes>
 		<js>scp-entity-show.js</js>
