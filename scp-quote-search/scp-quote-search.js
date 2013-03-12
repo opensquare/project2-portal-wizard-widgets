@@ -1,4 +1,4 @@
-function Widget_scp_quotes_search() {
+function Widget_scp_quote_search() {
 	
 	this.onReadyExtend = function() {
 		var pageId = this.$widgetDiv.parents('article').attr('pageId');

@@ -4,7 +4,7 @@ function Widget_scp_entity_show() {
 
 	this.initExtend = function() {
 		var url = document.URL;
-        var uid = url.substring(url.lastIndexOf("?")+1);
+        var uid = url.substring(url.lastIndexOf("/") + 1);
         this.loadHTMLWithParams("uid=" + uid);
 	}
 	

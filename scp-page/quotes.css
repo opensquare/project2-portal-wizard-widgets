@@ -1,47 +1,47 @@
 /* New page styling */
-article[type='internal'] .new-square[type='quotes'] {
+article[type='internal'] .new-square[type='quote'] {
 	background-image: url('images/napier-light.png');
 	background-color: #C0504D;
 }
-article[type='internal'] .new-square[type='quotes'][subtype='search'] {
+article[type='internal'] .new-square[type='quote'][subtype='search'] {
 	background-image: url('images/search-light.png');
 }
-article[type='internal'] .new-square[type='quotes'][subtype='quote'] {
+article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 	background-image: url('images/calculator-buttons-light.png');
 }
 
 /* Aside (tabs) styling */
-#content aside[type='quotes']{
+#content aside[type='quote']{
 	background-image: url('images/napier-dark.png');
 	border-color: #C0504D; 
 }
-#content aside[type='quotes'].on{
+#content aside[type='quote'].on{
 	background-color: #C0504D; 
 	background-image: url('images/napier-light.png');
 }
-#content aside[type='quotes'][subtype='quote']{
+#content aside[type='quote'][subtype='quote']{
 	background-image: url('images/quote-dark.png');
 }
-#content aside[type='quotes'][subtype='quote'].on{
+#content aside[type='quote'][subtype='quote'].on{
 	background-image: url('images/quote-light.png');
 }
-#content aside[type='quotes'][subtype='search']{
+#content aside[type='quote'][subtype='search']{
 	background-image: url('images/search-dark.png');
 }
-#content aside[type='quotes'][subtype='search'].on{
+#content aside[type='quote'][subtype='search'].on{
 	background-image: url('images/search-light.png');
 }
 
 /* Article (pages) styling */
-#content article[type='quotes'], #content article[type='quotes'] .content-helper, #content article[type='quotes'] .content-body{
+#content article[type='quote'], #content article[type='quote'] .content-helper, #content article[type='quote'] .content-body{
 	border-color: #C0504D;
 }
-#content article[type='quotes'] .content-header, #content article[type='quotes'] .content-helper{
+#content article[type='quote'] .content-header, #content article[type='quote'] .content-helper{
 	background-color: #C0504D;
 }
 
 /* Specific page styling */
-#content article[type='quotes'][subtype='search'] .content-body{
+#content article[type='quote'][subtype='search'] .content-body{
 	padding: 0;
 }
 #content div.scp-napier-search .content-header{

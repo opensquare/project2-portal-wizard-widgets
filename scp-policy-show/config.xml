@@ -1,9 +1,10 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>scp_policy_show.html</url>
+		<url>scp-policy-show.html</url>
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>
+		<page.title>Policy show</page.title>
 	</attributes>
 </widget>

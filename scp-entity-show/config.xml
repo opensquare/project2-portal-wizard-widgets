@@ -1,7 +1,7 @@
 <widget>
 	<type>pactResponseLayout</type>
 	<parameters>
-		<xsl>scp_entity_show</xsl>
+		<xsl>scp-entity-show</xsl>
 		<pactrequest><![CDATA[<pactrequest>
 						<target><uid>{uid}</uid></target>
 						<context>
@@ -25,6 +25,6 @@
 					</pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
-		<js>scp_entity_show.js</js>
+		<js>scp-entity-show.js</js>
 	</attributes>
 </widget>

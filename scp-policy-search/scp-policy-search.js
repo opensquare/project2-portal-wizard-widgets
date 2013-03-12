@@ -1,4 +1,4 @@
-function Widget_scp_policies_search() {
+function Widget_scp_policy_search() {
 	
 	this.onReadyExtend = function() {
 		$('form', this.$widgetDiv).submit(function() {
