@@ -307,7 +307,7 @@ option:first-child{
 	min-width: 16%;
 	height: 20px;
 	margin: 1% 2% 0 0;
-	padding: 10px 10px 10px 30px;
+	padding: 10px 12px 10px 30px;
 	list-style: none;
 	background: #777 no-repeat 6px center;
 	color: #FFF;
@@ -348,8 +348,17 @@ option:first-child{
 #crumbTrail li.drivers{
 	 background-image: url('person-group-light-small.png');
 }
+#crumbTrail li.about{
+	 background-image: url('person-light-small.png');
+}
 #crumbTrail li.policy{
 	 background-image: url('document-contract2-light-small.png');
+}
+#crumbTrail li.cover{
+	 background-image: url('document-contract2-light-small.png');
+}
+#crumbTrail li.occupation{
+	 background-image: url('briefcase-light-small.png');
 }
 #crumbTrail li.quote{
 	 background-image: url('currency-sign-pound-light-small.png');
@@ -366,11 +375,20 @@ option:first-child{
 #crumbTrail li.on.car:before{
 	 background-image: url('transport-car-light.png');
 }
+#crumbTrail li.on.about:before{
+	 background-image: url('person-light.png');
+}
 #crumbTrail li.on.drivers:before{
 	 background-image: url('person-group-light.png');
 }
 #crumbTrail li.on.policy:before{
 	 background-image: url('document-contract2-light.png');
+}
+#crumbTrail li.on.cover:before{
+	 background-image: url('document-contract2-light.png');
+}
+#crumbTrail li.on.occupation:before{
+	 background-image: url('briefcase-light.png');
 }
 #crumbTrail li.on.quote:before{
  background-image: url('currency-sign-pound-light.png');
