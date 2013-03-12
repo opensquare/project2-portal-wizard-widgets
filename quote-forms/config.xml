@@ -5,7 +5,7 @@
 		<secure>false</secure>
 	</parameters>
 	<attributes>
-		<css>quote.css</css>
+		<css>quote-forms.css</css>
 		<js>quote-forms.js</js>
 	</attributes>
 </widget>

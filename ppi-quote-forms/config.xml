@@ -5,6 +5,6 @@
 		<secure>false</secure>
 	</parameters>
 	<attributes>
-		<css>../quote-forms/quote.css</css>
+		<css>../quote-forms/quote-forms.css</css>
 	</attributes>
 </widget>
