@@ -14,7 +14,7 @@
 			</select>
 		</div>
 		<div class="field">
-			<label for="input_monthlyCover">Benefit amount per month (in <span class="amount">s</span>)</label>
+			<label for="input_monthlyCover" class="currency">Benefit amount per month</label>
 			<input type="text" name="perMonth" rf.validation="required pattern({regex: '^[0-9\.]+$', errorMessage: 'Invalid amount'})" id="input_monthlyCover"/>
 		</div>
 		<div class="field">
@@ -48,5 +48,10 @@
 			// retrigger start date rf.calculated after initial value is set
 			$("#input_coverStart").change();
 		})
+
+		/* Restrict and default HTML date tag */
+		$('#input_coverStart').attr("value", moment().format("YYYY-MM-DD"));
+		$('#input_coverStart').attr("max", moment().add('days', 29).format("YYYY-MM-DD"));
+		$('#input_coverStart').attr("min", moment().format("YYYY-MM-DD"));
 	</script>
 </form>
