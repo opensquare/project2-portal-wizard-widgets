@@ -1,0 +1,35 @@
+<widget>
+	<type>pactResponse</type>
+	<parameters>
+		<xsl>summary</xsl>
+		<pactrequest>
+			<![CDATA[
+			<pactrequest>
+			    <target>
+			        <uid>{policyUid}</uid>
+			    </target>
+			    <context>
+                    <actor><actorUid>123</actorUid></actor>
+                    <party><partyUid>123</partyUid></party>
+			    </context>
+			    <timepoint>
+			        <effectivetime>now</effectivetime>
+			        <physicaltime>now</physicaltime>
+			    </timepoint>
+			      <return>
+			        <name>asIdentifiedEntity</name>
+					<params>
+	          		 <descriptionPattern>[Agreement Role:product.[assocdescription.{productName}]]|{annualPremium}|{expiryDate.dd}|{expiryDate.MMMM}|{expiryDate.yy}|{paymentMethod}|{policyNumber}|{regNumberIndex}|[primaryInsuranceSection.{coverLevel}]|[primaryInsuranceSection.[vehicle.{make} {model}]]|[premium.{balance}]
+	          		 </descriptionPattern>
+	      		 </params>
+			    </return>
+			</pactrequest>
+			]]>
+		</pactrequest>
+	</parameters>
+	<attributes>
+		<js>summary.js</js>
+		<css>summary.css</css>
+		<delayLoad>true</delayLoad>
+	</attributes>
+</widget>
