@@ -10,7 +10,7 @@
 		   $(this).closest("div.field").addClass("on")
 		});
 
-		$("input[type='radio'], input[type='text'], input[type='checkbox'], select").change( function() {
+		$("input[type='radio'], input[type='text'], input[type='checkbox'], input[type='email'], input[type='password'], select").change( function() {
   			$(this).siblings('.invalid-message').remove();
   		});
 
