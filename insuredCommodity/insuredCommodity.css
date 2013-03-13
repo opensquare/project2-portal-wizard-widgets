@@ -1,0 +1,54 @@
+#cp-policy-details-commodity {
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
+#cp-policy-details-commodity a{
+	color: inherit;
+}
+#cp-policy-details-commodity:hover{
+	border-color: #92CE56;
+}
+#cp-policy-details-commodity:hover .title{
+	background-color: #92CE56;
+}
+#cp-policy-details-commodity .commodity{
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-details-commodity .commodity{
+	background-image: url('transport-car-dark.png');
+}
+#cp-policy-details-commodity .add{
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+	width: 4em;
+	margin-left: 2em;
+	background: url('symbol-add-dark-small.png') no-repeat center 20%;
+}
+#cp-policy-details-commodity a>span[href]{
+	display: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: -50px 0 0 -20px;
+	background: #D44 url('symbol-cross-light.png') no-repeat center center;
+	border-radius: 13em;
+}
+#cp-policy-details-commodity a:hover>span[href]{
+	display: inline-block;
+}

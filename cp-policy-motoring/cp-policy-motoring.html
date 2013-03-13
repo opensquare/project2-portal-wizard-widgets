@@ -3,14 +3,10 @@
 		<div class="widget" name="cp-header-menu"></div>
 	</header>
 
-	<section id="cp-banner">
-		<h1><a href="/logout" title="Logout and return"></a></h1>
-		<h2><b>Joe Smith's</b> customer portal</h2>
-	</section>
+	<div class="widget" name="cp-banner"></div>
 
 	<section id="cp-policy">
 		<div class="widget" name="help"></div>
-		<h1 id="cp-policy-title">Motor Insurance Policy: BMW 320i petrol 4dr 2005<span id="cp-policy-switcher" title="Select another policy"></span></h1>
 		<aside id="cp-policy-menu">
 			<a id="menu-summary" class="on" href="#cp-policy-summary">Summary</a>
 			<a id="menu-driving" href="#cp-policy-driving">Driving</a>
@@ -19,20 +15,21 @@
 			<a id="menu-docs" href="#cp-policy-docs">Documents</a>
 			<a id="menu-payments" href="#cp-policy-payments">Payments</a>
 		</aside>
-		<details id="cp-policy-summary" open>
-			<a name="cp-policy-summary"></a>
-			<summary>Summary</summary>
-			<div class="widget on" name="cp-policy-summary"></div>
-		</details>
+		
+		<div class="widget" name="summary"></div>
+
+
 		<details id="cp-policy-driving">
 			<a name="cp-policy-driving"></a>
 			<summary>Driving</summary>
 			<div class="widget on" name="cp-policy-driving"></div>
 		</details>
-		<details id="cp-policy-details">
-			<a name="cp-policy-details"></a>
+		<details id="cp-policy-details" open>
 			<summary>Details</summary>
-			<div class="widget" name="cp-policy-details"></div>
+
+			<div class="widget" name="policyholder"></div>
+			<div class="widget" name="namedDriver"></div>
+			<div class="widget" name="insuredCommodity"></div>
 		</details>
 		<details id="cp-policy-claims">
 			<a name="cp-policy-claims"></a>

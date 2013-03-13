@@ -1,0 +1,52 @@
+#cp-policy-details-pholder {
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
+#cp-policy-details-pholder a{
+	color: inherit;
+}
+#cp-policy-details-pholder:hover{
+	border-color: #92CE56;
+}
+#cp-policy-details-pholder:hover .title{
+	background-color: #92CE56;
+}
+#cp-policy-details-pholder .pholder{
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-details-pholder .Male{
+	background-image: url('person-man-dark.png');
+}
+#cp-policy-details-pholder .Female{
+	background-image: url('person-woman-dark.png');
+}
+}
+#cp-policy-details-pholder .add{
+	width: 4em;
+	margin-left: 2em;
+	background: url('symbol-add-dark-small.png') no-repeat center 20%;
+}
+#cp-policy-details-pholder a>span[href]{
+	display: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: -50px 0 0 -20px;
+	background: #D44 url('symbol-cross-light.png') no-repeat center center;
+	border-radius: 13em;
+}
+#cp-policy-details-pholder a:hover>span[href]{
+	display: inline-block;
+}

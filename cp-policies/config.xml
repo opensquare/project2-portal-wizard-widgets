@@ -1,0 +1,10 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>cp-policies.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>cp-policies.css</css>
+	</attributes>
+</widget>

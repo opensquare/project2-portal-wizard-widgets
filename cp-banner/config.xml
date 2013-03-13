@@ -1,0 +1,34 @@
+<widget>
+	<type>pactResponse</type>
+	<parameters>
+		<xsl>cp-banner</xsl>
+		<pactrequest>
+			<![CDATA[
+			<pactrequest>
+			    <target>
+			        <uid>{actorUid}</uid>
+			    </target>
+			    <context>
+                    <actor><actorUid>123</actorUid></actor>
+                    <party><partyUid>123</partyUid></party>
+			    </context>
+			    <timepoint>
+			        <effectivetime>now</effectivetime>
+			        <physicaltime>now</physicaltime>
+			    </timepoint>
+			  <return>
+			<name>asIdentifiedEntity</name>
+			<params>
+          		 <descriptionPattern>{firstName} {surname}</descriptionPattern>
+      		 </params>
+			</return>
+
+			</pactrequest>
+			]]>
+		</pactrequest>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+	</attributes>
+</widget>
+
