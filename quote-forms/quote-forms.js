@@ -17,7 +17,7 @@ function Widget_quote_forms() {
 			params.replace(/([^=&]+)=([^&]*)/g, function(m, key, value) {
 				paramsObj[key] = value;
 			});
-			if (typeof paramsObj.ref != 'undefined') {
+			if (typeof paramsObj.ref != 'undefined' && paramsObj.ref != null && paramsObj.ref.indexOf("{") == -1) {
 				cr = paramsObj.ref;
 			}
 		}
