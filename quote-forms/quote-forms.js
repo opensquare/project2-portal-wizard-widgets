@@ -2,9 +2,29 @@ function Widget_quote_forms() {
 	
 	this.onReadyExtend = function() {
 		var calcref = this.$widgetDiv.attr('calcref');
-		var initialData;
+		var params = this.$widgetDiv.attr('params');
+		
+		var cr;
+		
+		// SCP
 		if (typeof calcref != 'undefined') {
-			initialData = '<quote><calcref>' + calcref + '</calcref></quote>';
+			cr = calcref;
+		}
+		
+		// CP
+		if (typeof params != 'undefined') {
+			var paramsObj = {};
+			params.replace(/([^=&]+)=([^&]*)/g, function(m, key, value) {
+				paramsObj[key] = value;
+			});
+			if (typeof paramsObj.ref != 'undefined') {
+				cr = paramsObj.ref;
+			}
+		}
+		
+		var initialData;
+		if (typeof cr != 'undefined') {
+			initialData = '<quote><calcref>' + cr + '</calcref></quote>';
 		}
 		rf.loadFlow('widgets/quote-forms/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
 	}
