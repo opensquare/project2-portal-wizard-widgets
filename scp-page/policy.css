@@ -58,3 +58,12 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 #content .pact-search-button{
 	font-size: 1.8em;
 }
+#content .scp_pact_search_results {
+	min-height: 15em;
+}
+#content .searchResult{
+	padding: 1em;
+}
+#content .searchResult:hover{
+	background-color: rgba(155,187,89,0.5);
+}
