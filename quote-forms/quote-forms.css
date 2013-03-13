@@ -537,6 +537,13 @@ table .pcaAutoCompleteSmall>div{
 	font-size: 2em;
 	font-weight: normal;
 }
+.premium {
+	display: inline;
+	font-size: 2em;
+}
+.premDetail {
+	margin-left: 33.5%;
+}
 #landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before,
 #paymentPage .amount:before, #paymentPage .instalmentPremium:before, #paymentPage .iptAmount:before{
 	content: '£';

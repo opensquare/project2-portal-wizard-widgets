@@ -55,8 +55,6 @@
 </div>
 <div rf.includeIf="'{{//paymentType}}' === 'single'" class="field">
 	<label>Total premium</label>
-	<span>
-		<span class="amount">{{//calcResult/calcElement/annualPremium}}</span>
-		<span> - This amount includes Insurance Premium Tax of <span class="iptAmount">{{//calcResult/calcElement/totalTax}}</span></span>
-	</span>
+		<div class="amount premium">{{//calcResult/calcElement/annualPremium}}<br/></div>
+		<div class="premDetail">This amount includes Insurance Premium Tax of <span class="iptAmount">{{//calcResult/calcElement/totalTax}}</span></div>
 </div>

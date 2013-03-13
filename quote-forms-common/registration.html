@@ -7,11 +7,11 @@
 <div id="loginDetails">
 	<div class="field">
 		<label for="input_email">Email Address</label>
-		<input type="email" name="customer.email" rf.validation="required email" id="input_email" rf.validateOn="inputBlur"/>
+		<input type="email" name="customer.email" rf.validation="required email" id="input_email"/>
 	</div>
 	<div class="field">
 		<label for="input_password">Password</label>
-		<input type="password" name="customer.password" id="input_password" rf.validateOn="inputBlur"
+		<input type="password" name="customer.password" id="input_password"
 			   rf.validation="required pattern({regex: '^.{8,}?$', errorMessage:'Invalid Password'}) pattern({regex: '^.*[0-9]+.*$', errorMessage:'Invalid Password'})"/>
 		<div class="hint">Password must be at least 8 characters long and contain at least 1 number</div>
 	</div>
@@ -24,7 +24,7 @@
 <div id="contactDetails">
 	<div class="field">
 		<label for="input_mobile">Contact Number</label>
-		<input id="input_mobile" type="text" name="customer.mobileNumber" rf.validateOn="inputBlur" rf.validation="required pattern({regex: '^[0-9]{5,}?$', errorMessage:'Invalid Number'})"/>
+		<input id="input_mobile" type="text" name="customer.mobileNumber" rf.validation="required pattern({regex: '^[0-9]{5,}?$', errorMessage:'Invalid Number'})"/>
 	</div>
 </div>
 <div class="navigation">
