@@ -145,7 +145,7 @@ function Widget_scp_page() {
 		var hash = oldPage.attr('hash');
 		var title = oldPage.children('.title').text(); // TODO - limit to 40 characters
 		$('#content #new-closed').append(' \
-			<a class="new-square" href="' + hash + '" type="' + type + '" subType="' + subType + '")>' + title + '</a>');
+			<a class="new-square" href="#' + hash + '" type="' + type + '" subType="' + subType + '")>' + title + '</a>');
 		// remove tab/page
 		getAsideAndArticle(pageId).remove();
 		$('#content-newpage-aside aside').click();
