@@ -303,22 +303,21 @@ option:first-child{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 2em;
+	font-size: 3em;
 	text-align: center;
+	font-family:ukNumberPlate;
 }
 #uk_reg_plate:before {
 	content: "•";
-	position: relative;
-	font-size: 1.5em;
+	font-size: 1.9em;
 	color: #DEDEDE;
-	padding: 4px;
+	padding: 3px;
 }
 #uk_reg_plate:after {
 	content: "•";
-	position: relative;
-	font-size: 1.5em;
+	font-size: 1.9em;
 	color: #DEDEDE;
-	padding: 4px;
+	padding: 3px;
 }
 #uk_reg_plate {
 	border-radius: 5px;
@@ -353,6 +352,11 @@ option:first-child{
 }	
 #findReg {
 	margin-left: 70%
+}
+@font-face
+{
+	font-family: ukNumberPlate;
+	src: url('UKNumberPlate.ttf')
 }
 /* crumb trail */
 #crumbTrail li {
