@@ -177,10 +177,6 @@ option:first-child{
 	}
 }
 
-#input_reg {
-	text-transform: uppercase;
-}
-
 .rf-dropdown ul{
 	border: thin solid #0090C0;
 	display: inline-block;
@@ -299,7 +295,65 @@ option:first-child{
 	float: right;
 	margin: 0.5em 1em 0 0;
 }
-
+/* Number Plate */
+#input_reg {
+	text-transform: uppercase;
+	width: 75%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 2em;
+	text-align: center;
+}
+#uk_reg_plate:before {
+	content: "•";
+	position: relative;
+	font-size: 1.5em;
+	color: #DEDEDE;
+	padding: 4px;
+}
+#uk_reg_plate:after {
+	content: "•";
+	position: relative;
+	font-size: 1.5em;
+	color: #DEDEDE;
+	padding: 4px;
+}
+#uk_reg_plate {
+	border-radius: 5px;
+	width: 263px;
+	height: 50px;
+	border: 4px solid #DEDEDE;
+	background: white;
+	margin-left: 43.5%;
+	float: left;
+	margin-right: 5%;	
+}
+#flag{
+	background: #1e488c;
+	width: 10%;
+	height: 100%;
+	float: left;
+	border-radius: 2px;
+	color: #FFCC00;
+}
+#flag:before {
+	content: "◌";
+	font-size: 2.8em;
+	position: relative;
+	top: -10px;
+}
+#flag:after {
+	content: "GB";
+	font-size: 0.75em;
+	position: relative;
+	right: 23px;
+	top: 4px;
+}	
+#findReg {
+	margin-left: 70%
+}
 /* crumb trail */
 #crumbTrail li {
 	position: relative;
