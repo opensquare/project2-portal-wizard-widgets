@@ -148,7 +148,8 @@ function Widget_scp_page() {
 			<a class="new-square" href="#' + hash + '" type="' + type + '" subType="' + subType + '")>' + title + '</a>');
 		// remove tab/page
 		getAsideAndArticle(pageId).remove();
-		$('#content-newpage-aside aside').click();
+		// select first remaining page
+		$('#content aside[pageId]').first().click();
 	}
 	
 }
