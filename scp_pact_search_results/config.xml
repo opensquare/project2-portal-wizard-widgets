@@ -24,7 +24,7 @@
 						</timepoint>
 						<return>
 							<name>asIdentifiedEntity</name>
-							<params><descriptionPattern>{description} ({entityType} - {status})</descriptionPattern></params>
+							<params><descriptionPattern>{description}|{entityType}|{status}</descriptionPattern></params>
 						</return>
 					</pactrequest>]]></pactrequest>
 	</parameters>

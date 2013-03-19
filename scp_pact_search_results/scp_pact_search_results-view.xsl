@@ -12,8 +12,10 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="IdentifiedEntity">
-		<div class="searchResult">
-			<a><xsl:attribute name="href">#policy/show/<xsl:value-of select="identifier/uid"/></xsl:attribute><xsl:value-of select="description"/></a>
+        <xsl:variable name="descriptionParts" select="tokenize(description, '\|')"/>
+		<div>
+            <xsl:attribute name="class"><xsl:value-of select="concat('searchResult', ' ', $descriptionParts[2], ' ', $descriptionParts[3])"/></xsl:attribute>
+			<a><xsl:attribute name="href">#policy/show/<xsl:value-of select="identifier/uid"/></xsl:attribute><xsl:value-of select="$descriptionParts[1]"/></a>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
