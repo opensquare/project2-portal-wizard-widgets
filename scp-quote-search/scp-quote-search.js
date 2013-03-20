@@ -7,10 +7,20 @@ function Widget_scp_quote_search() {
 		pw.notifyChannelOfEvent('scp-page.setPageTitles', { pageId: pageId, title: 'Quotes Search' });
 		
 		var widget = this;
+		this.$widgetDiv.find('.napier-search-input').click(function() {
+			if(this.value==''){
+				napierSearchClear($(this).closest('div').find('.napier-search-results'));
+			};
+			return true;
+		});
 		this.$widgetDiv.find('form').submit(function() {
 			var val = widget.$widgetDiv.find('.napier-search-input').val();
-			pw.notifyChannelOfEvent('scp-page.setPageArgs', { pageId: pageId, args: val });
-			napierSearch(val);
+			if(val!=''){
+				pw.notifyChannelOfEvent('scp-page.setPageArgs', { pageId: pageId, args: val });
+				napierSearch(val);
+			} else {
+				napierSearchClear($(this).closest('div').find('.napier-search-results'));
+			};
 			return false;
 		});
 		
@@ -89,8 +99,10 @@ function Widget_scp_quote_search() {
 		);
 	}
 	
-	function napierSearchClear() {
-		$('.napier-search-results').html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
+	function napierSearchClear(el) {
+		if(typeof(el) != 'undefined') {
+			$(el).html('<section class="placeholder"><h2>Enter some search terms above and press Go</h2></section>');
+		};
 	}
-	
+
 }
