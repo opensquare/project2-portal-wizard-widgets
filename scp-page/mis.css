@@ -6,6 +6,9 @@ article[type='internal'] .new-square[type='mis'] {
 article[type='internal'] .new-square[type='mis'][subtype='reports'] {
 	background-image: url('images/reports-light.png');
 }
+article[type='internal'] .new-square[type='mis'][subtype='fraud'] {
+	background-image: url('images/binoculars-light.png');
+}
 
 /* Aside (tabs) styling */
 #content aside[type='mis']{
@@ -21,6 +24,12 @@ article[type='internal'] .new-square[type='mis'][subtype='reports'] {
 }
 #content aside[type='mis'][subtype='reports'].on{
 	background-image: url('images/reports-light.png');
+}
+#content aside[type='mis'][subtype='fraud']{
+	background-image: url('images/binoculars-dark.png');
+}
+#content aside[type='mis'][subtype='fraud'].on{
+	background-image: url('images/binoculars-light.png');
 }
 
 /* Article (pages) styling */

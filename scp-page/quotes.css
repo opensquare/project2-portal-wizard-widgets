@@ -9,6 +9,9 @@ article[type='internal'] .new-square[type='quote'][subtype='search'] {
 article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 	background-image: url('images/calculator-buttons-light.png');
 }
+article[type='internal'] .new-square[type='quote'][subtype='new'] {
+	background-image: url('images/plus-light.png');
+}
 
 /* Aside (tabs) styling */
 #content aside[type='quote']{
@@ -30,6 +33,12 @@ article[type='internal'] .new-square[type='quote'][subtype='quote'] {
 }
 #content aside[type='quote'][subtype='search'].on{
 	background-image: url('images/search-light.png');
+}
+#content aside[type='quote'][subtype='new']{
+	background-image: url('images/plus-dark.png');
+}
+#content aside[type='quote'][subtype='new'].on{
+	background-image: url('images/plus-light.png');
 }
 
 /* Article (pages) styling */

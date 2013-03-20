@@ -12,7 +12,7 @@ article[type="internal"] .new-square[type='internal'][subtype='products'] {
 	background-image: url('images/pact-light.png');
 }
 article[type="internal"] .new-square[type='internal'][subtype='batch'] {
-	background-image: url('images/gear-light.png');
+	background-image: url('images/backup-light.png');
 }
 
 /* Aside (tabs) styling */
@@ -43,10 +43,10 @@ article[type="internal"] .new-square[type='internal'][subtype='batch'] {
 	background-image: url('images/pact-light.png');
 }
 #content aside[type="internal"][subtype='batch'] {
-	background-image: url('images/gear-dark.png');
+	background-image: url('images/backup-dark.png');
 }
 #content aside[type="internal"][subtype='batch'].on {
-	background-image: url('images/gear-light.png');
+	background-image: url('images/backup-light.png');
 }
 
 /* Article (pages) styling */
