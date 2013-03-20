@@ -66,7 +66,12 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 #content .mm-search-results li{
 	position: relative;
 	padding: 1em 5.5em 1em 30px;
+}
+#content .mm-search-results .FINISHED_SUCCESSFULLY {
 	background: url('images/document_small.png') no-repeat 6px center;
+}
+#content .mm-search-results .FINISHED_WITH_ERRORS, #content .mm-search-results .QUEUED, #content .mm-search-results .DELETED {
+	background: url('images/document_small_error.png') no-repeat 6px center;
 }
 #content .mm-search-results li:before{
 	content: attr(calcref);
@@ -87,7 +92,7 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 #content .mm-search-results li span{
 	max-width: 27%;
 }
-#content .mm-search-results li a{
+#content .mm-search-results .FINISHED_SUCCESSFULLY a{
 	display: inline-block;
 	position: absolute;
 	right: 4px;
