@@ -189,7 +189,6 @@ summary>h2{
 	cursor: default;
 }
 .content-body{
-	padding: 1em;
 	border: 2px solid #777;
 	border-bottom-left-radius: 0.5em;
 	border-bottom-right-radius: 0.5em;
@@ -250,6 +249,53 @@ article[type="internal"] .new-square:hover {
 }
 #new-closed>summary{
 	margin-left: -2em;
+}
+
+/* Common page styling */
+#content article[subtype='search'] .content-body{
+	padding: 0;
+}
+#content article[subtype='search'] .content-body .content-header{
+	border-top: thin solid;
+	border-radius: 0;
+}
+#content article[subtype='search'] .content-body input[type='search']{
+	width: 70%;
+	padding: 0 0.5em;
+	border-color: white;
+	border-radius: 0.25em;
+	font-size: 2em;
+}
+#content article[subtype='search'] .content-body input[type='submit'].button{
+	font-size: 1.8em;
+}
+#content article[subtype='search'] .search-results{
+	width: 97%;
+	list-style: none;
+	padding-left: 1em;
+}
+#content article[subtype='search'] .search-results li{
+	position: relative;
+	padding: 1em 5.5em 1em 30px;
+	background-image: url('images/calculator-buttons-small.png');
+	background-repeat: no-repeat;
+	background-position: 6px center;
+}
+#content article[subtype='search'] .search-results li span{
+	max-width: 22%;
+	min-width: 8%;
+}
+#content article[subtype='search'] .search-results li a{
+	position: absolute;
+	display: block;
+	right: 4px;
+	top: 11px;
+	background-color: #A0302D;
+	border-radius: 1em;
+}
+
+span.currency:before{
+	content: '£';
 }
 
 #footer{

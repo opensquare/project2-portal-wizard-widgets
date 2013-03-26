@@ -3,708 +3,656 @@ form {
 	clear: both;
 }
 h1 {
+	margin-top: 1.5em; margin-bottom: 0.75em;
 	color: #333;
-	font-size: 230%;
-	font-weight: normal;
-	margin-top: 1.5em;
-	margin-bottom: 0.75em;
+	font-size: 230%; font-weight: normal;
 }
-input[type="date"] {
+div.widget[name='quote-forms'] input[type='date'] {
 	border: thin solid #0090C0;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1.3em; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
 }
-input[type="button"] {
-	background-color: #92CE56;
-	border: none;
-	border-radius: 0.25em;
-	color: #FFF;
-	cursor: pointer;
-	font-size: 1.2em;	
+div.widget[name='quote-forms'] input[type="button"] {
 	padding: 0.2em 1em;
+	color: #FFF; background-color: #92CE56;
+	border: none; border-radius: 0.25em;
+	font-size: 1.2em;	
+	cursor: pointer;
 }
-input[type="button"]:hover {
+div.widget[name='quote-forms'] input[type="button"]:hover {
 	background-color: #82BE46;
 }
-input[type="checkbox"] {
-    background-color: #FFF;
-    border: thin solid #0090C0;
-    padding: 0.45em;
-    vertical-align: middle;
-    -webkit-appearance: none;
+div.widget[name='quote-forms'] input[type="checkbox"] {
+	padding: 0.45em;
+	background-color: #FFF;
+	border: thin solid #0090C0;
+	vertical-align: middle;
+	-webkit-appearance: none;
 }
-input[type="checkbox"]:checked {
-	background-color: #0090C0; 
+div.widget[name='quote-forms'] input[type="checkbox"]:checked {
 	padding: 0.2em 0.4em 0.2em 0.4em;
+	background-color: #0090C0; 
 }
-input[type="checkbox"]:checked:after {
-	background-color: #0090C0; /*blue*/
-	color: #FFF;
+div.widget[name='quote-forms'] input[type="checkbox"]:checked:after {
 	content: '\2714';
+	color: #FFF; background-color: #0090C0; /*blue*/
 	font-size: 1.3em;   
 }
-input[type="radio"] {
+div.widget[name='quote-forms'] input[type="radio"] {
 	margin: -0.25em 0 0 0;
-    background-color: #FFF;
-    border: thin solid #0090C0;
-    padding: 0.45em;
-    vertical-align: middle;
-    -webkit-appearance: none;
+	padding: 0.45em;
+	background-color: #FFF;
+	border: thin solid #0090C0;
+	vertical-align: middle;
+	-webkit-appearance: none;
 }
-input[type="radio"]:checked {
+div.widget[name='quote-forms'] input[type="radio"]:checked {
+	padding: 0.2em 0.4em 0.2em 0.4em;
 	background-color: #0090C0; 
-    padding: 0.2em 0.4em 0.2em 0.4em;
 }
-input[type="radio"]:checked:after {
-	background-color: #0090C0; /*blue*/
-	color: #FFF;
+div.widget[name='quote-forms'] input[type="radio"]:checked:after {
 	content: '\2714';
+	color: #FFF; background-color: #0090C0; /*blue*/
     font-size: 1.3em;   
 }
-input[type="text"],input[type="email"],input[type="password"] {
+div.widget[name='quote-forms'] input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
 }
-input[type="submit"] {
-	background-color: #92CE56;
-	border: none;
-	border-radius: 0.25em;
-	color: #FFF;
-	cursor: pointer;
+div.widget[name='quote-forms'] input[type="submit"] {
+	margin:	1em 1em 1em 0; padding: 0.2em 1em;
+	border: none; border-radius: 0.25em;
+	color: #FFF; background-color: #92CE56;
 	font-size: 2em;	
-	margin:	1em 1em 1em 0;
-	padding: 0.2em 1em;
+	cursor: pointer;
 }
-input[type="submit"]:hover {
+div.widget[name='quote-forms'] input[type="submit"]:hover {
 	background-color: #82BE46;
 }
-label {
+div.widget[name='quote-forms'] label {
 	display: inline-block;
 	font-size: 1.2em;
 	padding: 0 1em 0 1em;
 	width: 40%;
 }
-label.forRadio {
+div.widget[name='quote-forms'] label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 }
-label.forPayment {
-	font-size: 1.3em;
-	position: relative;
-	right: 0.8em;
-	width: 2em;
+div.widget[name='quote-forms'] label.forPayment {
 	display: inline;
+	position: relative; right: 0.8em;
+	width: 2em;
+	font-size: 1.3em;
 }
-option {
+div.widget[name='quote-forms'] option {
 	color: #333;
 }
-p {
+div.widget[name='quote-forms'] p {
 	font-size: 1.2em;
 }
-select {
+div.widget[name='quote-forms'] select {
 	width: 20%;
 	margin-left: 0;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
 	color: #AAA;
 }
-select.changed {
+div.widget[name='quote-forms'] select.changed {
 	color: inherit;
 }
-select:disabled {
+div.widget[name='quote-forms'] select:disabled {
 	background-color: rgb(235, 235, 228);
 }
 
-div.field {
-	border-bottom: thin solid rgba(0, 0, 0, 0.1);
+div.widget[name='quote-forms'] div.field {
 	min-height: 2.2em;
 	padding: 1em 0;
+	border-bottom: thin solid rgba(0, 0, 0, 0.1);
 }
-div.field:hover {
+div.widget[name='quote-forms'] div.field:hover {
  	background-color: rgba(0,0,0,0.1);
  }
-div.field.on, div.field.on:hover {
+div.widget[name='quote-forms'] div.field.on,
+div.widget[name='quote-forms'] div.field.on:hover {
 	background-color: rgba(0,0,0,0.2);
 }
- div.field:hover {
- 	background-color: rgba(0,0,0,0.1);
- }
-div.field.on .hint{
+div.widget[name='quote-forms'] div.field.on .hint {
 	display: inline-block;
 }
-div.field a{
+div.widget[name='quote-forms'] div.field a {
+	margin-left: 2em;
 	color: #92CE56;
 	font-weight: bold;
-	margin-left: 2em;
 }
-div.field a:hover{
+div.widget[name='quote-forms'] div.field a:hover {
 	color: #82BE46;
 }
-option:first-child{
+div.widget[name='quote-forms'] option:first-child {
 	color: #999;
 }
-
-.hint{
+div.widget[name='quote-forms'] .hint {
 	display: none;
-	position: absolute;
-	right: 7em;
+	position: absolute; right: 7em;
 	width: 15em;
 	padding: 0.35em;
-	background-color: #92CE56;
+	color: #FFF; background-color: #92CE56;
 	border-radius: 0.25em;
-	color: #FFF;
 	z-index: 999;
 }
-.hint h3 {
+div.widget[name='quote-forms'] .hint h3 {
 	margin: 0;
 }
-.hint::before {
-	color: #92CE56;
+div.widget[name='quote-forms'] .hint::before {
 	content: '◄';
-	font-size: 2em;
 	position: absolute;
 	margin: -0.3em 0 0 -1em;
+	color: #92CE56;
+	font-size: 2em;
 }
 @media screen and (max-width: 1300px) {
-	.hint{
+	div.widget[name='quote-forms'] .hint {
 		margin-top: 3.5em;
 	}
-	.hint::before {
+	div.widget[name='quote-forms'] .hint::before {
 		content: '▲';
-		margin: -1em 0 0 -0em;
+		margin: -1em 0 0 0;
 	}
 }
 
-.rf-dropdown ul{
-	border: thin solid #0090C0;
+div.widget[name='quote-forms'] .rf-dropdown ul {
 	display: inline-block;
-	min-width: 20%;
-	max-height: 10em;
-	overflow: auto;
-	overflow-x: hidden;
-	overflow-y: auto;
+	max-height: 10em; min-width: 20%;
+	overflow: auto; overflow-x: hidden; overflow-y: auto;
 	margin: 0 0 0 34%;
 	padding: 0;
 	list-style: none;
 	background-color: #FFF;
+	border: thin solid #0090C0;
 	cursor: pointer;
 }
-.rf-dropdown li{
+div.widget[name='quote-forms'] .rf-dropdown li {
 	padding: 0.1em 0.5em;
 }
-.rf-dropdown li:hover{
-	color: #FFF;
-	background-color: #0090C0;
+div.widget[name='quote-forms'] .rf-dropdown li:hover {
+	color: #FFF; background-color: #0090C0;
 }
 
-.navigation {
-	text-align: right;
+div.widget[name='quote-forms'] .navigation {
 	clear: both;
+	text-align: right;
 }
-.navigation input[type="button"]{
-	font-size: 2em;	
+div.widget[name='quote-forms'] .navigation input[type="button"] {
 	margin: 1em 1em 1em 0;
+	font-size: 2em;	
 }
-.navigation input[type="button"]:first-child{
+div.widget[name='quote-forms'] .navigation input[type="button"]:first-child {
 	font-size: 1.5em;	
 }
 
-.invalid-message {
-	background: #D44; /*red*/
-	border-radius: 0.25em;
-	color: #FFF;
-	font-weight: bold;
+div.widget[name='quote-forms'] .invalid-message {
 	margin-left: 0.5em;
 	padding: 0.5em;
+	color: #FFF; background: #D44; /*red*/
+	border-radius: 0.25em;
+	font-weight: bold;
 }
 
-.vehicle_search {
-	background-color: #FFF;
-	border: thin solid #0090C0;
-	border-radius: 0.25em;
+div.widget[name='quote-forms'] .vehicle_search {
 	margin-left: 30%;
 	padding: 0.5em;
 	width: 50%;
+	background-color: #FFF;
+	border: thin solid #0090C0; border-radius: 0.25em;
 }
 
-#makeModel label {
+div.widget[name='quote-forms'] #makeModel label {
 	width: 20%;
 	text-align: left;
 }
 
-#makeModel input {
+div.widget[name='quote-forms'] #makeModel input {
 	width: 60%;
 }
 
-#modelDetail {
+div.widget[name='quote-forms'] #modelDetail {
 	padding: 1em 0 1em 0;
 }
 
-.checkboxLabel {
+div.widget[name='quote-forms'] .checkboxLabel {
 	display: inline-block;
-	padding: 0;
 	max-width: 22%;
+	padding: 0;
 	vertical-align: top;
 }
 
-.disabledSummary {
+div.widget[name='quote-forms'] .disabledSummary {
 	font-size: 1.2em;
 }
 
-.carFound label {
+div.widget[name='quote-forms'] .carFound label {
 	margin: 0.5em 0 0.5em 0;
 }
-.carFound span {
+div.widget[name='quote-forms'] .carFound span {
 	display: inline-block;
 	max-width: 23em;
 	font-size: 1.2em;
 }
 
-.currency:after {
+div.widget[name='quote-forms'] .currency:after {
 	content: '£';
 	float: right;
 	margin-right: -4%;
 }
 
-#input_title,
-.titleSelect{
+div.widget[name='quote-forms'] #input_title, div.widget[name='quote-forms'] .titleSelect {
 	width: auto;
 }
 
-.dateSel,
-.dateSel select{
+div.widget[name='quote-forms'] .dateSel, div.widget[name='quote-forms'] .dateSel select {
 	width: auto;
 }
 
-.disabled {
+div.widget[name='quote-forms'] .disabled {
 	opacity: 0.5;
 }
-.disabled h1{
+div.widget[name='quote-forms'] .disabled h1 {
 	font-size: 180%
 }
-.disabled a {
-	color: #92CE56;
+div.widget[name='quote-forms'] .disabled a {
 	font-weight: bold;
 	float: right;
 	margin-right: 5%;
+	color: #92CE56;
 }
 
-#sectionOne a {
+div.widget[name='quote-forms'] #sectionOne a {
 	float: right;
 	margin: 0.5em 1em 0 0;
 }
 /* Number Plate */
-#input_reg {
-	text-transform: uppercase;
-	width: 75%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 3em;
-	text-align: center;
-	font-family:ukNumberPlate;
-}
-#uk_reg_plate:before {
-	content: "•";
-	font-size: 1.9em;
-	color: #DEDEDE;
-	padding: 3px;
-}
-#uk_reg_plate:after {
-	content: "•";
-	font-size: 1.9em;
-	color: #DEDEDE;
-	padding: 3px;
-}
-#uk_reg_plate {
-	border-radius: 5px;
-	width: 263px;
-	height: 50px;
-	border: 4px solid #DEDEDE;
-	background: white;
-	margin-left: 43.5%;
-	float: left;
-	margin-right: 5%;	
-}
-#flag{
-	background: #1e488c;
-	width: 10%;
-	height: 100%;
-	float: left;
-	border-radius: 2px;
-	color: #FFCC00;
-}
-#flag:before {
-	content: "◌";
-	font-size: 2.8em;
-	position: relative;
-	top: -10px;
-}
-#flag:after {
-	content: "GB";
-	font-size: 0.75em;
-	position: relative;
-	right: 23px;
-	top: 4px;
-}	
-#findReg {
-	margin-left: 70%
-}
-@font-face
-{
+@font-face {
 	font-family: ukNumberPlate;
 	src: url('UKNumberPlate.ttf')
 }
+div.widget[name='quote-forms'] #input_reg {
+	width: 75%; height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+	font-family: ukNumberPlate; font-size: 3em;
+	text-transform: uppercase;
+}
+div.widget[name='quote-forms'] #uk_reg_plate:before {
+	content: "•";
+	padding: 3px;
+	font-size: 1.9em;
+	color: #DEDEDE;
+}
+div.widget[name='quote-forms'] #uk_reg_plate:after {
+	content: "•";
+	padding: 3px;
+	font-size: 1.9em;
+	color: #DEDEDE;
+}
+div.widget[name='quote-forms'] #uk_reg_plate {
+	float: left;
+	width: 263px; height: 50px;
+	margin-right: 5%; margin-left: 43.5%;
+	border: 4px solid #DEDEDE; border-radius: 5px;
+	background: white;
+}
+div.widget[name='quote-forms'] #flag {
+	float: left;
+	width: 10%; height: 100%;
+	border-radius: 2px;
+	color: #FFCC00; background: #1E488C;
+}
+div.widget[name='quote-forms'] #flag:before {
+	content: "◌";
+	position: relative;
+	top: -10px;
+	font-size: 2.8em;
+}
+div.widget[name='quote-forms'] #flag:after {
+	content: "GB";
+	position: relative;
+	top: 4px; right: 23px;
+	font-size: 0.75em;
+}	
+div.widget[name='quote-forms'] #findReg {
+	margin-left: 70%
+}
 /* crumb trail */
-#crumbTrail li {
+div.widget[name='quote-forms'] #crumbTrail li {
 	position: relative;
 	float: left;
-	min-width: 16%;
-	height: 20px;
+	min-width: 16%; height: 20px;
 	margin: 1% 2% 0 0;
 	padding: 10px 12px 10px 30px;
 	list-style: none;
-	background: #777 no-repeat 6px center;
-	color: #FFF;
+	color: #FFF; background: #777 no-repeat 6px center;
 	border-radius: 10em 1em 1em 10em;
 	white-space: nowrap;
 }
-#crumbTrail li:after {
+div.widget[name='quote-forms'] #crumbTrail li:after {
 	content: '♦';
 	position: absolute;
-	top: -20px;
-	right: -17px;
+	top: -20px; right: -17px;
 	color: #777;
 	font-size: 64px;
 }
-#crumbTrail li.on {
+div.widget[name='quote-forms'] #crumbTrail li.on {
 	height: 40px;
 	margin-left: 3%;
 	padding-left: 15px;
 	background-color: #0DB4F2;
-	font-size: 1.5em;
-	font-weight: bold;
+	font-size: 1.5em; font-weight: bold;
 }
-#crumbTrail li.on:before {
+div.widget[name='quote-forms'] #crumbTrail li.on:before {
 	content: '';
 	float: left;
-	width: 75px;
-	height: 75px;
+	width: 75px; height: 75px;
 	margin: -18px 0 0 -50px;
 	border-radius: 10em;
 	background: #0DB4F2 no-repeat center center;
 }
-#crumbTrail li.on:after {
+div.widget[name='quote-forms'] #crumbTrail li.on:after {
 	color: #0DB4F2;
 }
-#crumbTrail li.car{
-	 background-image: url('transport-car-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.car {
+	background-image: url('transport-car-light-small.png');
 }
-#crumbTrail li.drivers{
-	 background-image: url('person-group-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.drivers {
+	background-image: url('person-group-light-small.png');
 }
-#crumbTrail li.about{
-	 background-image: url('person-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.about {
+	background-image: url('person-light-small.png');
 }
-#crumbTrail li.policy{
-	 background-image: url('document-contract2-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.policy {
+	background-image: url('document-contract2-light-small.png');
 }
-#crumbTrail li.cover{
-	 background-image: url('document-contract2-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.cover {
+	background-image: url('document-contract2-light-small.png');
 }
-#crumbTrail li.occupation{
-	 background-image: url('briefcase-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.occupation {
+	background-image: url('briefcase-light-small.png');
 }
-#crumbTrail li.quote{
-	 background-image: url('currency-sign-pound-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.quote {
+	background-image: url('currency-sign-pound-light-small.png');
 }
-#crumbTrail li.apply{
-	 background-image: url('email-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.apply {
+	background-image: url('email-light-small.png');
 }
-#crumbTrail li.pay{
-	 background-image: url('coins-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.pay {
+	background-image: url('coins-light-small.png');
 }
-#crumbTrail li.welcome{
-	 background-image: url('handshake-light-small.png');
+div.widget[name='quote-forms'] #crumbTrail li.welcome {
+	background-image: url('handshake-light-small.png');
 }
-#crumbTrail li.on.car:before{
-	 background-image: url('transport-car-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.car:before {
+	background-image: url('transport-car-light.png');
 }
-#crumbTrail li.on.about:before{
-	 background-image: url('person-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.about:before {
+	background-image: url('person-light.png');
 }
-#crumbTrail li.on.drivers:before{
-	 background-image: url('person-group-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.drivers:before {
+	background-image: url('person-group-light.png');
 }
-#crumbTrail li.on.policy:before{
-	 background-image: url('document-contract2-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.policy:before {
+	background-image: url('document-contract2-light.png');
 }
-#crumbTrail li.on.cover:before{
-	 background-image: url('document-contract2-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.cover:before {
+	background-image: url('document-contract2-light.png');
 }
-#crumbTrail li.on.occupation:before{
-	 background-image: url('briefcase-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.occupation:before {
+	background-image: url('briefcase-light.png');
 }
-#crumbTrail li.on.quote:before{
- background-image: url('currency-sign-pound-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.on.quote:before {
+	background-image: url('currency-sign-pound-light.png');
 }
-#crumbTrail li.apply.on:before{
-	 background-image: url('email-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.apply.on:before {
+	background-image: url('email-light.png');
 }
-#crumbTrail li.pay.on:before{
-	 background-image: url('coins-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.pay.on:before {
+	background-image: url('coins-light.png');
 }
-#crumbTrail li.welcome.on:before{
-	 background-image: url('handshake-light.png');
+div.widget[name='quote-forms'] #crumbTrail li.welcome.on:before {
+	background-image: url('handshake-light.png');
 }
 
-.rf-debugbar{
+div.widget[name='quote-forms'] .rf-debugbar {
 	opacity: 0.15;
 }
 
-.loading{
-	width: 100%;
-	height: 100px;
+div.widget[name='quote-forms'] .loading {
+	width: 100%; height: 100px;
 	background: url('loading.gif') no-repeat center center;
 }
 
 /* Customer Details page specific styling */
-#customerDetails label,
-#paymentPage label{
+div.widget[name='quote-forms'] #customerDetails label, div.widget[name='quote-forms'] #paymentPage label {
 	display: inline-block;
-	font-size: 1.2em;
 	padding: 0 1em 0 1em;
 	width: 30%;
+	font-size: 1.2em;
 }
-
-#customerDetails label.forRadio {
+div.widget[name='quote-forms'] #customerDetails label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 	font-size: 1.2em;
 }
 /*address lookup formatting*/
-.findAddress div.labelWrapper{
-	vertical-align:top;
-}
-.findAddress div.labelWrapper,
-.findAddress div.tableWrapper{
-	display:inline-block;
-}
-.findAddress div.labelWrapper {
-	padding: 0 1em;
-	width:30.5%;
-}
-.findAddress div.tableWrapper{
-	width:44%;
-}
-#customerDetails .findAddress label,
-#paymentPage .findAddress label{
-	width:100%;
-	padding:0;
-}
-.findAddress input{
-	width:100%;
-}
-.addressFound label,
-.accountDetails label{
+div.widget[name='quote-forms'] .findAddress div.labelWrapper {
 	vertical-align: top;
 }
-#addressLabel,
-.bankDetails{
+div.widget[name='quote-forms'] .findAddress div.labelWrapper, div.widget[name='quote-forms'] .findAddress div.tableWrapper {
 	display: inline-block;
 }
-#addressLabel span,
-.bankDetails>span{
+div.widget[name='quote-forms'] .findAddress div.labelWrapper {
+	padding: 0 1em;
+	width: 30.5%;
+}
+div.widget[name='quote-forms'] .findAddress div.tableWrapper {
+	width: 44%;
+}
+div.widget[name='quote-forms'] #customerDetails .findAddress label,
+div.widget[name='quote-forms'] #paymentPage .findAddress label {
+	width: 100%;
+	padding: 0;
+}
+div.widget[name='quote-forms'] .findAddress input {
+	width: 100%;
+}
+div.widget[name='quote-forms'] .addressFound label,
+div.widget[name='quote-forms'] .accountDetails label {
+	vertical-align: top;
+}
+div.widget[name='quote-forms'] #addressLabel,
+div.widget[name='quote-forms'] .bankDetails {
+	display: inline-block;
+}
+div.widget[name='quote-forms'] #addressLabel span,
+div.widget[name='quote-forms'] .bankDetails>span {
 	display: block;
-	font-size:1.2em;
+	font-size: 1.2em;
 }
-.pcaCapturePlusTable td{
+div.widget[name='quote-forms'] .pcaCapturePlusTable td {
+	position: static !important;
 	z-index: 1;
-	position:static!important;
 }
-table .pcaAutoCompleteSmall>div{
-	background-color:#FFF;
+div.widget[name='quote-forms'] table .pcaAutoCompleteSmall>div {
+	width: 100% !important; max-height:10em;
+	overflow-x: hidden;
+	padding-right: 0.6em !important;
+	background-color: #FFF;
 	border: thin solid #0090C0;
-	overflow-x:hidden;
-	max-height:10em;
-	padding-right:0.6em!important;
-	width:100%!important;
 }
-.pcaAutoCompleteSmall .item,
-.pcaAutoCompleteSmall .selectedItem{
-	width:100%;
-	display:inline-block;
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem {
+	display: inline-block;
+	width: 100%;
 }
-.pcaAutoCompleteSmall .item{
-	border-width:0!important;
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item {
+	border-width: 0 !important;
 }
-.pcaAutoCompleteSmall .item:hover,
-.pcaAutoCompleteSmall .selectedItem:hover{
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item:hover,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem:hover {
 	background-color: #0090C0;
 }
-.pcaAutoCompleteSmall .item:hover span,
-.pcaAutoCompleteSmall .selectedItem:hover span{
-	color: #FFF!important;
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .item:hover span,
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem:hover span {
+	color: #FFF !important;
 }
-.pcaAutoCompleteSmall .selectedItem{
+div.widget[name='quote-forms'] .pcaAutoCompleteSmall .selectedItem {
 	background-color: #EEE;
 }
-.pcaCapturePlusTable .recentFavouritesSmall{
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall {
 	background-color: #FFF;
 }
-.pcaCapturePlusTable .recentFavouritesSmall a{
-	color:#000;
-	margin:0;
-	font-weight:normal;
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall a {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
 }
-.pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover{
+div.widget[name='quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
 	background-color: rgba(0,0,0,0.2);
 }
 
 /* Landing Page styling */
-#landingPage h1 {
+div.widget[name='quote-forms'] #landingPage h1 {
 	margin-bottom: 0;
 }
-#landingPage .pane {
+div.widget[name='quote-forms'] #landingPage .pane {
 	float: right;
 	clear: both;
 	width: 40%;
 	margin: 0 2em 2em 2em;
 	vertical-align: top;
-	border: thick solid #0DB4F2;
-	border-radius: 1em;
+	border: thick solid #0DB4F2; border-radius: 1em;
 }
-#landingPage .pane h2 {
+div.widget[name='quote-forms'] #landingPage .pane h2 {
 	margin: 0;
 	padding: 0.2em 0.5em;
-	background: #0DB4F2;
-	color: #FFF;
+	color: #FFF; background: #0DB4F2;
 }
-#landingPage .pane input[type="button"] {
-	font-size: 2em;
+div.widget[name='quote-forms'] #landingPage .pane input[type="button"] {
 	float: right;
 	margin: 0.5em;
+	font-size: 2em;
 }
-#landingPage .amount {
+div.widget[name='quote-forms'] #landingPage .amount {
 	display: inline-block;
 	width: 100%;
 	text-align: right;
-	font-size: 2em;
-	font-weight: normal;
+	font-size: 2em; font-weight: normal;
 }
-.premium {
+div.widget[name='quote-forms'] .premium {
 	display: inline;
 	font-size: 2em;
 }
-.premDetail {
+div.widget[name='quote-forms'] .premDetail {
 	margin-left: 33.5%;
 }
-#landingPage .amount:before, #landingPage .instalmentPremium:before, #landingPage .iptAmount:before,
-#paymentPage .amount:before, #paymentPage .instalmentPremium:before, #paymentPage .iptAmount:before{
+div.widget[name='quote-forms'] #landingPage .amount:before, div.widget[name='quote-forms'] #landingPage .instalmentPremium:before,
+div.widget[name='quote-forms']  #landingPage .iptAmount:before, div.widget[name='quote-forms'] #paymentPage .amount:before,
+div.widget[name='quote-forms']  #paymentPage .instalmentPremium:before,
+div.widget[name='quote-forms']  #paymentPage .iptAmount:before {
 	content: '£';
 }
-#landingPage .pane p {
+div.widget[name='quote-forms'] #landingPage .pane p {
 	margin: 0;
 	padding: 0.5em;
 }
-#landingPage p>span {
+div.widget[name='quote-forms'] #landingPage p>span {
 	font-weight: bold;
 }
-#landingPage .smallprint {
+div.widget[name='quote-forms'] #landingPage .smallprint {
 	margin-bottom: 0;
 	padding: 0.25em;
-	font-size: 0.7em;
 	border-top: thin solid rgba(0,0,0,0.25);
+	font-size: 0.7em;
 }
-#landingPage #details{
+div.widget[name='quote-forms'] #landingPage #details {
 	clear: both;
 }
-#landingPage h3 {
+div.widget[name='quote-forms'] #landingPage h3 {
 	display: none;
 }
-#landingPage .details{
+div.widget[name='quote-forms'] #landingPage .details {
 	min-height: 50px;
 	padding-left: 60px;
 }
-#landingPage .duration{
+div.widget[name='quote-forms'] #landingPage .duration {
 	background: url('calendar-year-dark.png') no-repeat; 
 }
-#landingPage .vehicle{
+div.widget[name='quote-forms'] #landingPage .vehicle {
 	background: url('transport-car-dark.png') no-repeat; 
 }
-#landingPage .drivers{
+div.widget[name='quote-forms'] #landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
 }
-#save {
+div.widget[name='quote-forms'] #save {
 	margin-bottom: 1em;
-	border: thick solid #92CE56;
-	border-radius: 1em;
+	border: thick solid #92CE56; border-radius: 1em;
 }
-#save:before {
+div.widget[name='quote-forms'] #save:before {
 	content: '';
-	height: 0px;
-	width: 0px;
 	float: right;
+	height: 0; width: 0;
 	margin: -24px 40px 0 0;
-	border-left: 20px dotted transparent;
-	border-right: 20px dotted transparent;
-	border-bottom: 20px dotted #92CE56;
+	border-right: 20px dotted transparent; border-bottom: 20px dotted #92CE56; border-left: 20px dotted transparent;
 }
-#save span {
+div.widget[name='quote-forms'] #save span {
 	padding: 0.1em 0.25em;
-	background: #92CE56;
-	color: #fff;
+	color: #FFF; background: #92CE56;
 	white-space: nowrap;
 	border-radius: 0.25em;
 	font-weight: bold;
 }
-#save p {
+div.widget[name='quote-forms'] #save p {
 	margin: 0;
 	padding: 0.5em;
 }
-#save li {
+div.widget[name='quote-forms'] #save li {
 	padding-bottom: 1em;
 }
-#save li a {
+div.widget[name='quote-forms'] #save li a {
 	padding: 0.5em 0.4em;
 	border-radius: 10em;
-	background: #0DB4F2;
-	color: #fff;
+	color: #FFF; background: #0DB4F2;
 	font-weight: bold;
 }
 
 /*Driver summary icons*/
-.Male {
+div.widget[name='quote-forms'] .Male {
 	display: inline-block;
 	height: 50px;
+	padding: 12px 50px;
 	vertical-align: middle;
 	font-size: 1.3em;
-	background: no-repeat center top;
-	background-image: url('person-man-dark.png');
-	padding: 12px 50px;
+	background: url('person-man-dark.png') no-repeat center top;
 }
-.Female {
+div.widget[name='quote-forms'] .Female {
 	display: inline-block;
 	height: 50px;
+	padding: 12px 50px;
 	vertical-align: middle;
 	font-size: 1.3em;
-	background: no-repeat center top;
-	background-image: url('person-woman-dark.png');
-	padding: 12px 50px;
+	background: url('person-woman-dark.png') no-repeat center top;
 }
 /*Payment page*/
-#paymentPage label.forRadio{
-	font-size: 1.3em;
+div.widget[name='quote-forms'] #paymentPage label.forRadio {
 	position: relative;
 	right: 0.8em;
 	width: 3em;
+	font-size: 1.3em;
 }
-#input_sort_code{
-	width:10%;
+div.widget[name='quote-forms'] #input_sort_code {
+	width: 10%;
 }
-#input_code{
-	width:5%;
+div.widget[name='quote-forms'] #input_code {
+	width: 5%;
 }

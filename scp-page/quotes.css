@@ -50,33 +50,6 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 }
 
 /* Specific page styling */
-#content article[type='quote'][subtype='search'] .content-body{
-	padding: 0;
-}
-#content div.scp-quote-search .content-header{
-	border-top: thin solid;
-	border-radius: 0;
-}
-#content .napier-search-input{
-	border-color: white;
-	border-radius: 0.25em;
-	font-size: 2em;
-	padding: 0 0.5em;
-	width: 70%;
-}
-#content .napier-search-button{
-	font-size: 1.8em;
-}
-#content .napier-search-results ul{
-	width: 97%;
-	list-style: none;
-	padding-left: 1em;
-}
-#content .napier-search-results li{
-	position: relative;
-	padding: 1em 5.5em 1em 30px;
-	background: url('images/calculator-buttons-small.png') no-repeat 6px center;
-}
 #content .napier-search-results li:before{
 	content: attr(calcref);
 }
@@ -92,22 +65,4 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 	overflow: hidden;
 	border-left: 1em solid transparent;
 	white-space: nowrap;
-}
-#content .napier-search-results li span{
-	max-width: 22%;
-}
-#content .napier-search-results .reg{
-	text-transform: uppercase;
-}
-#content .napier-search-results li a{
-	display: inline-block;
-	position: absolute;
-	right: 4px;
-	top: 11px;
-	background-color: #A0302D;
-	border-radius: 1em;
-}
-
-span.currency:before{
-	content: '£';
 }
