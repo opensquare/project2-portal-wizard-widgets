@@ -1,11 +1,10 @@
 <widget>
-	<type>layout</type>
+	<type>internalPage</type>
 	<parameters>
-		<url>scp-quote-show.html</url>
+		<url>scp-timeline.html</url>
 	</parameters>
 	<attributes>
 		<displayheader>false</displayheader>
-		<css>scp-quote-show.css</css>
-		<js>scp-quote-show.js</js>
+		<page.reusable>true</page.reusable>
 	</attributes>
 </widget>

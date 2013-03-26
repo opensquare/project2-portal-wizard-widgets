@@ -1,0 +1,24 @@
+div.widget.scp-quote-show .content-header-pulldown {
+	min-height: 3px;
+	background: #C0504D;
+	border-top: thin solid #fff;
+}
+div.widget.scp-quote-show .content-header-pulldown>div {
+	display: none;
+}
+div.widget.scp-quote-show .content-header-pulldown-tabs>span {
+	color: #FFF;
+	background: #C0504D no-repeat 6px top;
+	padding: 0.1em 1em 0.1em 2em;
+	border-radius: 0 0 0.5em 0.5em;
+	cursor: pointer;
+}
+div.widget.scp-quote-show .content-header-pulldown-tabs .on {
+	font-weight: bold;
+}
+div.widget.scp-quote-show .content-header-pulldown-tabs .notes {
+	background-image: url('pencil-small-light.png');
+}
+div.widget.scp-quote-show .content-header-pulldown-tabs .timeline {
+	background-image: url('ruler-small-light.png');
+}
