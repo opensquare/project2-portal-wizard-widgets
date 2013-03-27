@@ -59,29 +59,18 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 }
 
 /* Specific page styling */
-#content article[type='policy'][subtype='search'] .content-body{
-	padding: 0;
+
+/* Search page */
+#content article[type='policy'][subtype='search'] .search-results li:nth-child(odd){
+	background-color: rgba(155,187,89,0.3);
 }
-#content div.scp-policy-search .content-header{
-	border-top: thin solid;
-	border-radius: 0;
+#content article[type='policy'][subtype='search'] .search-results li {
+	background-image: url('images/pact-dark-small.png');
 }
-#content .pact-search-input{
-	border-color: white;
-	border-radius: 0.25em;
-	font-size: 2em;
-	padding: 0 0.5em;
-	width: 70%;
+#content article[type='policy'][subtype='search'] .search-results li.clientRelationship {
+	background-image: url('images/id-dark-small.png');
 }
-#content .pact-search-button{
-	font-size: 1.8em;
-}
-#content .scp_pact_search_results {
-	min-height: 15em;
-}
-#content .searchResult{
-	padding: 1em;
-}
-#content .searchResult:hover{
-	background-color: rgba(155,187,89,0.5);
+
+#content article[type='policy'][subtype='search'] .search-results li a{
+	background-color: #9BBB59;
 }

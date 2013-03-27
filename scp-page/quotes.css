@@ -50,6 +50,8 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 }
 
 /* Specific page styling */
+
+/* Search page */
 #content .napier-search-results li:before{
 	content: attr(calcref);
 }
@@ -65,4 +67,7 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 	overflow: hidden;
 	border-left: 1em solid transparent;
 	white-space: nowrap;
+}
+#content article[subtype='search'] .napier-search-results li a{
+	background-color: #A0302D;
 }
