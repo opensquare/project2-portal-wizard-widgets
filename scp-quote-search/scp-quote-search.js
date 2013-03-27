@@ -37,7 +37,7 @@ function Widget_scp_quote_search() {
 				napierQuickSearch(terms);
 			} else {
 				var calcref = terms.split(',');
-	  			$('.napier-search-results').html('<ul></ul>');
+	  			$('.napier-search-results').html('<ul class="search-results"></ul>');
 
 				for (var i=0;i<calcref.length;i++){ 
 					// Iterate through numbers
@@ -64,7 +64,7 @@ function Widget_scp_quote_search() {
 	
 	function napierQuickSearch(terms){
 		var endpoint = 'proxy/napier/';
-		$('.napier-search-results').html('<ul><span class="loading"></span></ul>');
+		$('.napier-search-results').html('<ul class="search-results"><span class="loading"></span></ul>');
 		$('.napier-search-results ul').load(endpoint+'search/quickSearch='+terms+' calc', function(){
 			// Turn xml into LIs
 			var data = $(this).html();

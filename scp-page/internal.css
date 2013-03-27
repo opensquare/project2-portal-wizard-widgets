@@ -1,4 +1,7 @@
 /* New page styling */
+article[type='internal'][subtype='newpage'] .content-body{
+	padding: 0.5em 1em 1em;
+}
 article[type='internal'] .new-square[type='internal'] {
 	background-image: url('images/gear-light.png');
 }
@@ -51,6 +54,7 @@ article[type="internal"] .new-square[type='internal'][subtype='batch'] {
 
 /* Article (pages) styling */
 
+/* User management page */
 /* onoff courtesy of http://proto.io/freebies/onoff/  */
 .onoffswitch {
 	display: inline-block; position: relative; width: 122px; margin-right: 2%;
