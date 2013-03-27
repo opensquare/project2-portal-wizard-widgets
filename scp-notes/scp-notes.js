@@ -6,6 +6,14 @@ function Widget_scp_notes() {
 
 	this.onReadyExtend = function() {
 		loadNotes(0, globOffset);
+
+		$('#add').click(function() {
+			var noteWidth = $('#notes_ul li').outerWidth() + 20; 
+			var ulOffset = parseInt($('#notes_ul').css('left')) - noteWidth;
+				var $noteHtml = $('<li onClick=editNote(this) >' + 'Click to edit....'  + '</li>');
+				$('#notes_ul:not(:animated)').animate({'left' : ulOffset},1500);
+				$('#notes_ul').append($noteHtml);
+			});
 	}
 }
 
@@ -37,4 +45,11 @@ function loadNotes(offset, limit){
 	});
 
 }
+
+function editNote(element){
+	$(element).attr('contentEditable', true).addClass('edit');
+
+}
+
+
 
