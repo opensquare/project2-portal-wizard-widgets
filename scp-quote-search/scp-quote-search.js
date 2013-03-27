@@ -71,13 +71,17 @@ function Widget_scp_quote_search() {
 			data = data.replace(/<calc><calcref>/g,'<li calcref="');
 			data = data.replace(/<\/calcref>/g,'">');
 			data = data.replace(/<source>/g,'<span>');
-			data = data.replace(/<\/calc>/g,'<\/span><a class="button" href="#quote/show/">show<\/a><\/li>');
+			data = data.replace(/<\/calc>/g,'<\/span><a class="button">show<\/a><\/li>');
 			$(this).html(data);
 			// Find some interesting data and display it
 			$(this).find('quickSearch').each(function(){
 				var qsTerms = $(this).text();
 				qsTerms = qsTerms.split(',');
 				$(this).before('<span>'+qsTerms[0]+'</span><span>'+qsTerms[1]+'</span><span>'+qsTerms[2]+'</span><span>'+qsTerms[3]+'</span>');
+			});
+			$(this).find('li[calcref]').each(function(){
+				var ref= $(this).attr('calcref');
+				$(this).children('a.button').attr('href','#quote/show/'+ref);
 			});
 		});
 	}
