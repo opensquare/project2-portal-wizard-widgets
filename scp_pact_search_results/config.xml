@@ -24,12 +24,13 @@
 						</timepoint>
 						<return>
 							<name>asIdentifiedEntity</name>
-							<params><descriptionPattern>{description}|{entityType}|{status}</descriptionPattern></params>
+							<params><descriptionPattern>{description} ({entityType} - {status})</descriptionPattern></params>
 						</return>
 					</pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
 		<js>scp_pact_search_results.js</js>
 		<channel>pactSearch</channel>
+		<delayLoad>true</delayLoad>
 	</attributes>
 </widget>
