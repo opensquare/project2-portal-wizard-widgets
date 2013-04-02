@@ -73,7 +73,7 @@
 	</div>
 	<div class="field">
 		<label for="input_card_number">Card Number (without spaces)</label>
-		<input type="text" id="input_card_number" name="card.number" rf.validation="required pattern({regex:'^[0-9]{16}$', errorMessage:'Invalid card number'})" rf.validateOn="inputBlur"/>
+		<input type="text" id="input_card_number" name="card.number" rf.validation="required pattern({regex:'^[0-9]{16}$', errorMessage:'Invalid card number'})"/>
 	</div>
 	<div class="field">
 		<label for="input_card_from_month">Valid From</label>
@@ -100,12 +100,12 @@
 	</div>
 	<div class="field">
 		<label for="input_issue">Issue Number</label>
-		<input type="text" id="input_issue" name="card.issue" rf.validation="pattern({regex:'^[0-9]*$', errorMessage:'Invalid number'})" rf.validateOn="inputBlur"/>
+		<input type="text" id="input_issue" name="card.issue" rf.validation="pattern({regex:'^[0-9]*$', errorMessage:'Invalid number'})"/>
 		<div class="hint">Leave blank if not present</div>
 	</div>
 	<div class="field">
 		<label for="input_code">3 Digit Security Code</label>
-		<input type="password" id="input_code" maxlength="3" name="card.code" rf.validation="required pattern({regex:'^[0-9]{3}$', errorMessage:'Invalid number'})" rf.validateOn="inputBlur"/>
+		<input type="password" id="input_code" maxlength="3" name="card.code" rf.validation="required pattern({regex:'^[0-9]{3}$', errorMessage:'Invalid number'})" />
 		<div class="hint">This can be found on the back of your card</div>
 	</div>
 	
