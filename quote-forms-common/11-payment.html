@@ -115,6 +115,9 @@
 	
 	<script type="text/javascript">
 		rf.onFormLoad(function(){
+			$('form select').change( function(){
+					$(this).addClass('changed');
+			})
 			$("#input_sort_code").keyup(function(event) {
 				var value = $(this).val();
 				var val = value.replace(/[^0-9]/g, '');
