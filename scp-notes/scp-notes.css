@@ -3,8 +3,8 @@
 }
 #notes {
 	margin-left: 4em;
-	/*float: left;*/
-	width: 1040px; /* width: 80% */
+	min-height: 370px;
+	width: 1040px; 
 	overflow: hidden;
 }
 #notes_ul {  
