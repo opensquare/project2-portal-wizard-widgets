@@ -13,7 +13,7 @@ function Widget_scp_notes() {
 		//key = 5815;
 
 		//Find total notes for key.
-		$.ajax({type:"GET",url:'http://localhost:8080/portal-wizard/proxy/scribe/notes/count?key='+key,dataType: "text"}).done(function(count){totalNotes = JSON.parse(count).count});
+		$.ajax({type:"GET",url:'proxy/scribe/notes/count?key='+key,dataType: "text"}).done(function(count){totalNotes = JSON.parse(count).count});
 
 		loadNotes(0, globOffset, key, null);
 
@@ -61,7 +61,7 @@ function slide(direction) {
 
 function loadNotes(offset, limit, key, callback){
 
-	$.ajax('http://localhost:8080/portal-wizard/proxy/scribe/notes?offset=' + offset + '&limit=' + limit + '&key=' + key + '&order=desc').done(function(notesArray) {
+	$.ajax('proxy/scribe/notes?offset=' + offset + '&limit=' + limit + '&key=' + key + '&order=desc').done(function(notesArray) {
 		for (var i = 0; i < notesArray.length; i++) {
 
 			creationTime = notesArray[i].creationTime;
@@ -130,14 +130,14 @@ function createEditor(editorId){
 function saveNote(content, thisElement){
 	alert("saving note")
 	thisElement.setAttribute("saved", "saved");
-	$.post("http://localhost:8080/portal-wizard/proxy/scribe/create", { message: content, group: "SCP Quote", key: key } );
+	$.post("proxy/scribe/create", { message: content, group: "SCP Quote", key: key } );
 
 }
 
 function updateNote(currentContent, uid){
 	
 	if(initialContent != currentContent){
-		$.ajax({url: 'http://localhost:8080/portal-wizard/proxy/scribe/' + uid, type: 'POST', data: { message: currentContent}});
+		$.ajax({url: 'proxy/scribe/' + uid, type: 'POST', data: { message: currentContent}});
 	}
 	
 }
@@ -150,7 +150,7 @@ function deleteNote(element){
 
 	if (result == true && saved == "saved") {
 		$(element).parent().parent().remove();
-		$.ajax({url: 'http://localhost:8080/portal-wizard/proxy/scribe/' + uid, type: 'DELETE'});
+		$.ajax({url: 'proxy/scribe/' + uid, type: 'DELETE'});
 	} else if (result == true) {
 		$(element).parent().parent().remove();
 	} 
