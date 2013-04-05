@@ -128,7 +128,6 @@ function createEditor(editorId){
 }
 
 function saveNote(content, thisElement){
-	alert("saving note")
 	thisElement.setAttribute("saved", "saved");
 	$.post("proxy/scribe/create", { message: content, group: "SCP Quote", key: key } );
 
