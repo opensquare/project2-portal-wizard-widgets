@@ -1,32 +1,20 @@
 .edit{
-	border: solid 5px yellow;
+	width:520px;
 }
 #notes {
 	margin-left: 4em;
 	/*float: left;*/
-	width: 80%;
+	width: 1040px; /* width: 80% */
 	overflow: hidden;
 }
 #notes_ul {  
 	position: relative;
-	left: -330px;
+	margin-top: 100px;
+	left: 0px; /* Needs to be present and 0px */
 	list-style-type: none;
-	margin: 0px;
 	padding: 0px;
 	width: 9999px;
 	padding-bottom: 10px;
-}
-#notes_ul li {
-	float: left;
-	border-radius: 10px;
-	width: 310px;
-	padding: 5px;
-	height: 110px;
-	background: #FFF;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
 }
 .add:before {
 	content: url('symbol_add.png') no-repeat;
@@ -34,21 +22,64 @@
     height: 50px;
     display: block;
     position: absolute;
-    top: 6em;
+    top: 16em;
     right: 7em;
 }
 #prev > a {
 	position: absolute;
-	top: 6em;
+	top: 16em;
 	width: 3em;
     height: 50px;
     background: url('arrow_left2.png') no-repeat;   
 }
 #next > a {
     position: absolute;
-	top: 6em;
+	top: 16em;
 	right: 3em;
 	width: 3em;
     height: 50px;
     background: url('arrow_right2.png') no-repeat; 
+}
+.note {
+	float: left;
+	border-radius: 10px 0 10px 10px;
+	width: 500px;
+	height: 210px;
+	background: #FFF;
+	text-indent: 10px;
+
+}
+.noteContainer {
+	float: left;
+	border-radius: 10px;
+	width: 500px;
+	padding: 5px;
+	height: 210px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 50px;	
+}
+.tab {
+	z-index: 9999;
+	position: absolute;
+	width: 200px;
+	height: 40px;
+	margin: -40px 0 0 300px;
+	background: white;
+	border-radius: 10px 10px 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+.cross {
+	z-index: 9999;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: 14px 0 0 150px;
+	background: grey url('symbol-cross-light.png') no-repeat center center;
+	border-radius: 10px;
+}
+.cross:hover {
+	background: red url('symbol-cross-light.png') no-repeat center center;
 }
