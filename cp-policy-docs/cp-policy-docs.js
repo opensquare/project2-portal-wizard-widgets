@@ -11,7 +11,7 @@ function Widget_cp_policy_docs() {
 				$('.mm-documents').html('<ul name="docSearchResultsLists"></ul>');
 
 				for (var i = 0; i < searchResultsArray.length; i++) {
-					var $searchItemHtml = $('<a class="pdf" href=' + 'proxy/mailmerger/output/document/'+searchResultsArray[i].id+'/0' + '>'
+					var $searchItemHtml = $('<a class="pdf" target="_blank" href=' + 'proxy/mailmerger/output/document/'+searchResultsArray[i].id+'/0' + '>'
 							+ searchResultsArray[i].template + searchResultsArray[i].description +  moment(new Date(searchResultsArray[i].date)).format("DD/MM/YYYY") + '</a>');
 					$('.mm-documents').append($searchItemHtml);
 				}
