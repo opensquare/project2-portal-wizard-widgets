@@ -69,7 +69,7 @@ function loadNotes(offset, limit, key, callback){
 
 			var $noteHtml = $('<div class="noteContainer"><div class="tab"><a class="cross" href="#" onClick="deleteNote(this);return false;" title="Delete..."></a>' + moment(creationTime).format("MMMM Do YYYY, h:mm:ss a") + '<br/>' + notesArray[i].group + '</div><div saved="saved" class="note" id=' + "newNote" + editorOffset + ' uid=' + notesArray[i].id + ' contentEditable="true">' + notesArray[i].message + '</div></div>');
 			$('#notes_ul, this.$widgetDiv').prepend($noteHtml);
-			
+
 			if (typeof callback === 'function') {
 		        callback();
 		    }
@@ -104,7 +104,7 @@ function createEditor(editorId){
 			var element = event.editor.element.getAttribute( 'id' );
 			initialContent = $('#' + element).html() 
 		   $('#' + element).css("border-radius", "0px")
-		      
+
     });
 
 
@@ -122,7 +122,7 @@ function createEditor(editorId){
 		}     
 
 		   $('#' + element).css("border-radius", "10px 0 10px 10px")
-		      
+
     });
 
 }
@@ -134,15 +134,15 @@ function saveNote(content, thisElement){
 }
 
 function updateNote(currentContent, uid){
-	
+
 	if(initialContent != currentContent){
 		$.ajax({url: 'proxy/scribe/' + uid, type: 'POST', data: { message: currentContent}});
 	}
-	
+
 }
 
 function deleteNote(element){
-	 
+
 	uid = $(element).parent().siblings(".note").attr("uid");
 	saved = $(element).parent().siblings(".note").attr("saved");
 	var result = confirm("Permanently delete this note?");
@@ -154,4 +154,5 @@ function deleteNote(element){
 		$(element).parent().parent().remove();
 	} 
 
+	editorOffset--;
 }
