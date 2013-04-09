@@ -29,6 +29,7 @@
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>
+		<css>cp-banner.css</css>
 	</attributes>
 </widget>
 

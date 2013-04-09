@@ -8,6 +8,7 @@
 		<section id="cp-banner">
 		<h1><a href="/logout" title="Logout and return"></a></h1>	
 		<h2><b><xsl:value-of select="description"/>'s</b> customer portal</h2>
+		<a id="header-logout" href="/logout">Logout</a>
 	</section>
 	 </xsl:template>
 </xsl:stylesheet>
