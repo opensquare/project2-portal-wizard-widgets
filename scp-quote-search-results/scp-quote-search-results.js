@@ -67,7 +67,7 @@ function Widget_scp_quote_search_results() {
 			$(this).find('quickSearch').each(function(){
 				var qsTerms = $(this).text();
 				qsTerms = qsTerms.split(',');
-				$(this).before('<span>'+qsTerms[0]+'</span><span>'+qsTerms[1]+'</span><span>'+qsTerms[2]+'</span><span>'+qsTerms[3]+'</span>');
+				$(this).before('<span>'+$.trim(qsTerms[0])+'</span><span>'+$.trim(qsTerms[1])+'</span><span>'+$.trim(qsTerms[2])+'</span><span>'+$.trim(qsTerms[3])+'</span>');
 			});
 			$(this).find('li[calcref]').each(function(){
 				var ref= $(this).attr('calcref');
