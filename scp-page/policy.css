@@ -70,7 +70,6 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 #content article[type='policy'][subtype='search'] .search-results li.clientRelationship {
 	background-image: url('images/id-dark-small.png');
 }
-
 #content article[type='policy'][subtype='search'] .search-results li a{
 	background-color: #9BBB59;
 }

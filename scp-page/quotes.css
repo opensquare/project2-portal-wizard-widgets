@@ -52,22 +52,24 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 /* Specific page styling */
 
 /* Search page */
-#content .napier-search-results li:before{
-	content: attr(calcref);
-}
-#content .napier-search-results li:nth-child(odd){
+#content article[type='quote'][subtype='search'] .search-results li:nth-child(odd) {
 	background-color: rgba(192,89,77,0.3);
 }
-#content .napier-search-results li>*{
+#content article[type='quote'][subtype='search'] .search-results li:before {
+	content: attr(calcref);
+}
+#content article[type='quote'][subtype='search'] .search-results li>*{
 	display: none;
 }
-#content .napier-search-results calcSource, #content .napier-search-results physicalTime,#content .napier-search-results li span{
+#content article[type='quote'][subtype='search'] .search-results calcSource,
+#content article[type='quote'][subtype='search'] .search-results physicalTime,
+#content article[type='quote'][subtype='search'] .search-results li span{
 	display: inline-block;
 	max-width: 12.5%;
 	overflow: hidden;
 	border-left: 1em solid transparent;
 	white-space: nowrap;
 }
-#content article[subtype='search'] .napier-search-results li a{
+#content article[type='quote'][subtype='search'] .search-results li a{
 	background-color: #A0302D;
 }
