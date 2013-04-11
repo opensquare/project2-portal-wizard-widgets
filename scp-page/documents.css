@@ -52,9 +52,10 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 }
 #content article[type='documents'][subtype='search'] li:before{
 	content: attr(ref);
+	margin-right: 2%;
 }
 #content article[type='documents'][subtype='search'] li:nth-child(odd){
-	background-color: rgba(79,129,189,0.3);
+	background-color: rgba(79,129,189,0.3) !important;
 }
 zz#content .mm-search-results li span{
 	display: inline-block;
