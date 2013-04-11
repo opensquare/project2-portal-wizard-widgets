@@ -11,10 +11,7 @@
                         name: "calc",
                         target: "calculating",
                         submission: {
-							url: "{{appPath}}/calcRetrieval",
-                            data: {
-								calcRef: "xpath://calcref"
-							},
+							url: "{{$esb-url}}/resource/calc/calcdata/{{//calcref}}.xml",
 							method: "get",
 							postTransform: "xslt/retrieveCalc.xsl",
 							resultInsertPoint: "/"
@@ -55,7 +52,7 @@
 						name: "next",
 						submission: {
 							preTransform: "xslt/toNapier.xsl", 
-							url: "{{napier-loadbalancer-url}}/REST/calcs",
+							url: "{{$esb-url}}/action/motor/quote/calc",
 							data: {
 								source: "motor-new-business",
                                 quickSearch1: "xpath://customer/surname",
@@ -107,7 +104,7 @@
 					{
 						name: "next",
 						submission: {
-							url: "{{script-runner-url}}",
+							url: "{{$script-runner-url}}",
 							data: {
 								script: "NewBusiness/script/createAndAcceptApplicationFromFormData.py",
 								data: "[dataDocument]"

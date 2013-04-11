@@ -11,7 +11,7 @@
 						name: "calc",
 						target: "calculating",
 						submission: {
-							url: "{{appPath}}/calcRetrieval",
+							url: "{{$appPath}}/calcRetrieval",
 							data: {
 								calcRef: "xpath://calcref"
 							},
@@ -31,7 +31,7 @@
 						name: "next",
 						submission: {
 							preTransform: "xslt/toNapier.xsl",
-							url: "{{napier-loadbalancer-url}}/REST/calcs",
+							url: "{{$napier-loadbalancer-url}}/REST/calcs",
 							data: {
 								source: "ppi-new-business",
 								quickSearch1: "xpath://customer/surname",
