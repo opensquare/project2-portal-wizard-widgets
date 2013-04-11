@@ -1,9 +1,6 @@
 <section class="content-header">
-	<form>
-		<input type="search" class="pact-search-input" autofocus placeholder="search terms" name="searchValue"/>
-		<input type="submit" class="button pact-search-button" value="Go" />
-	</form>
+	<div class="widget" name="common-search" searchChannel="polSearch" />
 </section>
-<section class="pact-search-results" class="content-body">
-	<div class="widget" name="scp_pact_search_results"/>
+<section class="content-body">
+	<div class="widget search-results" name="scp-policy-search-results" channel="polSearch" />
 </section>
