@@ -6,6 +6,6 @@
 	<attributes>
 		<displayheader>false</displayheader>
 		<js>scp-quote-search-results.js</js>
-		<page.reusable>true</page.reusable>
+		<delayload>true</delayload>
 	</attributes>
 </widget>

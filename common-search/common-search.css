@@ -5,14 +5,14 @@
 	border-top: thin solid;
 	border-radius: 0;
 }
-#content article[subtype='search'] .content-body input[type='search']{
+#content article[subtype='search'] .content-header input.search-input{
 	width: 70%;
 	padding: 0 0.5em;
 	border-color: white;
 	border-radius: 0.25em;
 	font-size: 2em;
 }
-#content article[subtype='search'] .content-body .button[type='submit']{
+#content article[subtype='search'] .content-body .button.search-button{
 	font-size: 1.8em;
 }
 #content article[subtype='search'] .search-results:empty:before{
