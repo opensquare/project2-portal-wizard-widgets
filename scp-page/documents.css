@@ -71,6 +71,7 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 	background: url('images/document_small.png') no-repeat 6px center;
 }
 #content .mm-search-results .FINISHED_WITH_ERRORS, #content .mm-search-results .QUEUED, #content .mm-search-results .DELETED {
+	color: #aaa;
 	background: url('images/document_small_error.png') no-repeat 6px center;
 }
 #content .mm-search-results li:before{
