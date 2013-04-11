@@ -55,9 +55,6 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 	padding: 0 0.5em;
 	width: 70%;
 }
-#content .mm-search-button{
-	font-size: 1.8em;
-}
 #content .mm-search-results ul{
 	width: 97%;
 	list-style: none;
@@ -75,13 +72,10 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 	background: url('images/document_small_error.png') no-repeat 6px center;
 }
 #content .mm-search-results li:before{
-	content: attr(calcref);
+	content: attr(ref);
 }
 #content .mm-search-results li:nth-child(odd){
 	background-color: rgba(79,129,189,0.3);
-}
-#content .mm-search-results li>*{
-	display: none;
 }
 #content .mm-search-results li span{
 	display: inline-block;
