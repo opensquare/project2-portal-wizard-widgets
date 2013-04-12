@@ -57,8 +57,9 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 }
 #content article[type='quote'][subtype='search'] .search-results li:before {
 	content: attr(calcref);
+	margin-right: 2%;
 }
-#content article[type='policy'][subtype='search'] .search-results li {
+#content article[type='quote'][subtype='search'] .search-results li {
 	background-image: url('images/calculator-buttons-small.png');
 }
 #content article[type='quote'][subtype='search'] .search-results li>*{
@@ -70,8 +71,10 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 	display: inline-block;
 	max-width: 12.5%;
 	overflow: hidden;
-	border-left: 1em solid transparent;
 	white-space: nowrap;
+}
+#content article[type='quote'][subtype='search'] .search-results li span:empty{
+	display: none !important;
 }
 #content article[type='quote'][subtype='search'] .search-results li a{
 	display: block;
