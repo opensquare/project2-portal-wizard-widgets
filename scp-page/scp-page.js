@@ -9,6 +9,7 @@ function Widget_scp_page() {
 		pw.addListenerToChannel(this, channelSetPageArgs);
 		urlParse();
 		setAsideClickHandler($('#content-newpage-aside aside'));
+        initPopups();
 	}
 	
 	this.handleEvent = function(channel, event) {
@@ -79,7 +80,7 @@ function Widget_scp_page() {
                 </section> \
                 <section class="content-helper"></section> \
                 <section class="content-body"> \
-                    <div class="widget" name="' + widgetName + '"></div> \
+                    <div class="widget" name="' + widgetName + '" page.id="'+ pageId + '" page.args="' + pageArgs + '"></div> \
                 </section>')
 		);
 		
@@ -151,5 +152,22 @@ function Widget_scp_page() {
 		// select first remaining page
 		$('#content aside[pageId]').first().click();
 	}
+    
+    function initPopups(){
+        $("a.popup").live("click", function(){
+            var hashtag = $(this).attr("href");
+            hashtag = hashtag.substr(1);
+			var hashtagParts = hashtag.split('?');
+			var pageId = hashtagParts[0];
+			var pageArgs = hashtagParts[1];
+            var idParts = pageId.split('/');
+			var type = idParts[0];
+			var subType = idParts[1];
+            $("#popupContent").html("<div class='widget' name='scp-" + type + "-" + subType + "' page.id='" + pageId + "' page.args='" + pageArgs + "'>...</div>");
+            pw.mount($("#popupContent .widget:first"));
+            $("#popupContainer").show();
+            return false;
+        })
+    }
 	
 }

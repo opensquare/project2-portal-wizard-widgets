@@ -13,6 +13,11 @@
 			</xsl:variable>
 			<xsl:attribute name="id"><xsl:value-of select="$agreementIDBase"/></xsl:attribute>
 			<xsl:apply-templates select="agreement/description"/>
+            <div class="widget" name="scp-pact-actions">
+                <xsl:attribute name="params">agreementUid=<xsl:value-of select="agreement/uid"/><xsl:if test="$effectiveTime != ''">&amp;effectiveTime=<xsl:value-of select="$effectiveTime"/></xsl:if>&amp;viewParams=%3Cdepth%3E0%3C/depth%3E%3CsuppressInternalActions%3Etrue%3C/suppressInternalActions%3E</xsl:attribute>
+                <xsl:attribute name="id"><xsl:value-of select="$agreementIDBase"/>-actions</xsl:attribute>
+                ...
+            </div>
 			<xsl:apply-templates select="agreement/uplink"/>
 			<!--a href="javascript:void(0)" class="historyLink ui-button">
 				<xsl:attribute name="onclick">issueUpdate("timelineRequested('<xsl:value-of select="agreement/uid"/>')")</xsl:attribute>View Agreement History</a-->
@@ -276,7 +281,8 @@
 	<xsl:template name="accountLink">
 		<xsl:param name="uid"/>
 		<xsl:param name="text"/>
-		<a href="#" action="selectAccount">
+		<a class="popup" action="selectAccount">
+            <xsl:attribute name="href">#account/show/<xsl:value-of select="$uid"/></xsl:attribute>
 			<xsl:attribute name="uid"><xsl:value-of select="$uid"/></xsl:attribute>
 			<xsl:value-of select="$text"/>
 		</a>

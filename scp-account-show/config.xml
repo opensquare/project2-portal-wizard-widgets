@@ -1,9 +1,9 @@
 <widget>
 	<type>pactResponseLayout</type>
 	<parameters>
-		<xsl>displayAgreement</xsl>
+		<xsl>scp-account-show</xsl>
 		<pactrequest><![CDATA[<pactrequest>
-		<target><uid>{agreementUid}</uid></target>
+		<target><uid>{accountUid}</uid></target>
 	<context>
 		<locale>
 			<language>en</language>
@@ -23,14 +23,14 @@
 		<physicaltime>now</physicaltime>
 	</timepoint>
 	<return>
-		<name>asTimeSpanEntityVersion</name>
-		<params><useCache>true</useCache><depth>1</depth></params>
+		<name>asAccumulatorVersionWithPostingHistory</name>
 	</return>
 </pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
-		<css>agreement.css</css>
-		<displayHeader>false</displayHeader>
-		<waitForNested>true</waitForNested>
+		<js>scp-account-show.js</js>
+		<css>scp-account-show.css</css>
+		<delayLoad>true</delayLoad>
+        <page.title>Account display</page.title>
 	</attributes>
 </widget>
