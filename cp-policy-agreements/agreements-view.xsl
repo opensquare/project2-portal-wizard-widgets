@@ -6,7 +6,7 @@
    </xsl:template>
 	<xsl:template match="/pactresponse/entity/IdentifiedEntity">
 		<article>
-			<xsl:attribute name="class"><xsl:value-of select="tokenize(description, '\|')[2]"/></xsl:attribute>
+			<xsl:attribute name="class">cp-policy <xsl:value-of select="tokenize(description, '\|')[2]"/></xsl:attribute>
             <xsl:attribute name="onclick">location.href='<xsl:value-of select="tokenize(description, '\|')[3]"/>'</xsl:attribute>
             <h2><xsl:value-of select="tokenize(description, '\|')[1]"/></h2>
 			<p>View the details of your policy here.</p>
