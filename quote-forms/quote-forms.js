@@ -27,6 +27,21 @@ function Widget_quote_forms() {
 			initialData = '<quote><calcref>' + cr + '</calcref></quote>';
 		}
 		rf.loadFlow('widgets/quote-forms/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
-	}
-	
+
+
+		var setLanguage = function() {
+			var language = ($('#languageSwitcher').children().attr('class') == 'finnish') ? 'english' : 'finnish';
+			$.getJSON('widgets/common-language-switcher/finnish.json', function(data) {
+				$.each(data, function(key, val) {
+					if(language == 'finnish'){replaceString(document.body, key, val);}
+					else {replaceString(document.body, val, key);}	
+				});
+			});
+		};
+
+		rf.onEveryFormLoad(setLanguage);
+
+	}	
 }
+
+	
