@@ -73,3 +73,52 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 #content article[type='policy'][subtype='search'] .search-results li a{
 	background-color: #9BBB59;
 }
+
+/* Accounts popup */
+#popup {
+	border-color: #9BBB59 !important;
+}
+#popupClose {
+	color: #FFF;
+}
+#popup .pactAccount {
+	padding: 1px;
+}
+#popup .pactAccount h1 {
+	margin-top: 0;
+	padding: 2%;
+	color: #FFF;
+	background-color: #9BBB59;
+	border-radius: 4px 4px 0 0;
+}
+#popup .pactAccount .balance {
+	font-size: 1em;
+	font-weight: normal;
+	text-align: right;
+}
+#popup .pactAccount .balance span {
+	padding: 0 0.1em 0 0.5em;
+	font-size: 2em;
+}
+#popup .pactAccount table {
+	min-width: 35em;
+	font-size: small;
+}
+#popup .pactAccount th, #popup .pactAccount td {
+	padding: 0.2em 0.5em;
+}
+#popup .pactAccount th:nth-child(3), #popup .pactAccount td:nth-child(3) {
+	text-align: right;
+}
+#popup .pactAccount th {
+	color: #FFF;
+	background-color: #555;
+	text-align: left;
+}
+#popup .pactAccount tbody:empty {
+	display: block;
+	min-height: 5em;
+}
+.pactAccount .transaction.debit {
+	color: #c77;
+}

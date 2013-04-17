@@ -29,7 +29,6 @@
 	</parameters>
 	<attributes>
 		<js>scp-account-show.js</js>
-		<css>scp-account-show.css</css>
 		<delayLoad>true</delayLoad>
         <page.title>Account display</page.title>
 	</attributes>

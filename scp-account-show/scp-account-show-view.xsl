@@ -3,33 +3,26 @@
 	<xsl:output method="xml" omit-xml-declaration="yes"/>
 	<xsl:strip-space elements="*"/>
 	<xsl:template match="/account">
-		<!--div id="actions">
-			<h1 class="titlebar">Actions</h1>
-			<ul>
-				<xsl:apply-templates select="actions/action">
-					<xsl:sort select="description"/>
-				</xsl:apply-templates>
-			</ul>
-			<xsl:apply-templates select="uplink"/>
-		</div-->
 		<div class="pactAccount">
 			<h1 class="titlebar">
 				<xsl:value-of select="description"/>
 			</h1>
-			<h3 class="balance">Balance: <xsl:value-of select="balance"/></h3>
-			<div class="transactionsSection">
-				<div class="transactions">
-					<table>
+			<h3 class="balance">Balance: <span><xsl:value-of select="balance"/></span></h3>
+			<div class="transactions">
+				<table>
+					<thead>
 						<tr>
 							<th class="effectiveDate">Effective Date</th>
 							<th class="description">Description</th>
 							<th class="amount">Amount</th>
 						</tr>
+					</thead>
+					<tbody>
 						<xsl:apply-templates select="postings/posting">
 							<xsl:sort select="seq" order="descending" data-type="number"/>
 						</xsl:apply-templates>
-					</table>
-				</div>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</xsl:template>
