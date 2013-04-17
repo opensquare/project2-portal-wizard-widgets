@@ -30,7 +30,7 @@ function Widget_quote_forms() {
 
 
 		var setLanguage = function() {
-			var language = ($('#languageSwitcher').children().attr('class') == 'finnish') ? 'english' : 'finnish';
+			var language = ($('#currentLocale').html().substring(2) == 'en') ? 'english' : 'finnish';
 			$.getJSON('widgets/common-language-switcher/finnish.json', function(data) {
 				$.each(data, function(key, val) {
 					if(language == 'finnish'){replaceString(document.body, key, val);}

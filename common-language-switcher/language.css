@@ -1,16 +1,31 @@
-#languageSwitcher{
+nav{
 	float: right;
 	margin-top: -5px;
+	background: #CDCDCD;
+	padding: 5px;
+	border-radius: 6px;
+	width: 40px;
+	height: 20px;
 }
-#languageSwitcher>a{
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	cursor: pointer;
+nav:hover{
+	height: 100px;
 }
-#languageSwitcher .finnish{
+nav > #languages {
+	display: none;
+}
+nav:hover > #languages {
+	display: block;
+
+}
+.finnish{
 	background: url('finland.png') no-repeat;
+	display: block;
+	height: 26px;
+	margin: 8px;
 }
-#languageSwitcher .english{
+.english{
 	background: url('england.png') no-repeat;
+	display: block;
+	height: 26px;
+	margin: 8px;
 }

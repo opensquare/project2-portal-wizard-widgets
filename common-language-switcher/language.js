@@ -9,8 +9,8 @@ function changeLanguage(element){
 				else {replaceString(document.body, val, key);}	
 			});
 		});
-
-	$(element).removeClass(language).addClass(nextLanguage);
+  
+    document.getElementById('currentLocale').innerHTML = '▼ ' + $(element).attr('local')
 }
 
 function replaceString(node, replaceThis, replaceWith) {
