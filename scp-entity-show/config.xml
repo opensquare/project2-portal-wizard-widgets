@@ -5,5 +5,6 @@
 	</parameters>
 	<attributes>
 		<js>scp-entity-show.js</js>
+        <page.title>Entity show</page.title>
 	</attributes>
 </widget>
