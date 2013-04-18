@@ -30,6 +30,7 @@
 	<xsl:template match="/agreement/description">
 		<h1 class="agreementDescription widget-title ui-themed">
 			<xsl:attribute name="uid"><xsl:value-of select="../uid"/></xsl:attribute>
+			<xsl:attribute name="title"><xsl:value-of select="translate(../relationship, ' ', '_')"/></xsl:attribute>
 			<xsl:attribute name="id"><xsl:value-of select="translate(../relationship, ' ', '_')"/>-title</xsl:attribute>
 			<xsl:value-of select="."/>
 		</h1>
