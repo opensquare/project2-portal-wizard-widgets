@@ -1,0 +1,34 @@
+<widget>
+	<type>pactResponse</type>
+	<parameters>
+		<xsl>cp-summary-ppi</xsl>
+		<pactrequest>
+			<![CDATA[
+			<pactrequest>
+			    <target>
+			        <uid>{policyUid}</uid>
+			    </target>
+			    <context>
+                    <actor><actorUid>123</actorUid></actor>
+                    <party><partyUid>123</partyUid></party>
+			    </context>
+			    <timepoint>
+			        <effectivetime>now</effectivetime>
+			        <physicaltime>now</physicaltime>
+			    </timepoint>
+			      <return>
+			        <name>asIdentifiedEntity</name>
+					<params>
+	          		 <descriptionPattern>[Agreement Role:product.[assocdescription.{productName}]], [primaryInsuranceSection.{sectionDescription}: {coverLevel}], {expiryTime.dd}, {expiryTime.MMMM}, {expiryTime.yyyy}</descriptionPattern>
+	      		 </params>
+			    </return>
+			</pactrequest>
+			]]>
+		</pactrequest>
+	</parameters>
+	<attributes>
+		<js>cp-summary-ppi.js</js>
+		<css>cp-summary-ppi.css</css>
+		<delayLoad>true</delayLoad>
+	</attributes>
+</widget>
