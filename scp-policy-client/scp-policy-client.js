@@ -1,4 +1,4 @@
-function Widget_scp_entity_show() {
+function Widget_scp_policy_client() {
 
 	this.channel = null;
 

@@ -27,13 +27,13 @@
             </span>
             <xsl:variable name="widget">
                 <xsl:choose>
-                    <xsl:when test="$entityType='policy'">policy</xsl:when>
+                    <xsl:when test="$entityType='policy'">show</xsl:when>
                     <xsl:when test="$entityType='clientRelationship'">client</xsl:when>
                     <xsl:otherwise>entity</xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
             <a class="button">
-                <xsl:attribute name="href">#<xsl:value-of select="$widget"/>/show/<xsl:value-of select="identifier/uid"/>
+                <xsl:attribute name="href">#policy/<xsl:value-of select="$widget"/>/<xsl:value-of select="identifier/uid"/>
                 </xsl:attribute>
 				show
             </a>
