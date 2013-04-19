@@ -29,13 +29,3 @@ nav:hover > #languages {
 	height: 26px;
 	margin: 8px;
 }
-.newLanguage {
-	color: grey;
-	font-size: 10px;
-	display: block;
-	text-align: center;
-	margin: 4px;
-}
-.newLanguage:hover {
-	text-decoration: none;
-}
