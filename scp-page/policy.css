@@ -57,6 +57,12 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 #content article[type='policy'] .content-header, #content article[type='policy'] .content-helper, #content article[type='policy']::-webkit-scrollbar-thumb{
 	background-color: #9BBB59;
 }
+#content article[type='policy'] .content-header-pulldown {
+	background-color: #9BBB59;
+}
+#content article[type='policy'] .content-header-pulldown-tabs>span {
+	background-color: #9BBB59;
+}
 
 /* Specific page styling */
 

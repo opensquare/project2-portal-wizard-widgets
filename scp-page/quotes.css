@@ -48,6 +48,12 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 #content article[type='quote'] .content-header, #content article[type='quote'] .content-helper, #content article[type='quote']::-webkit-scrollbar-thumb{
 	background-color: #C0504D;
 }
+#content article[type='quote'] .content-header-pulldown {
+	background-color: #C0504D;
+}
+#content article[type='quote'] .content-header-pulldown-tabs>span {
+	background-color: #C0504D;
+}
 
 /* Specific page styling */
 
