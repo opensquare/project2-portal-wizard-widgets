@@ -14,8 +14,8 @@
 			</select>
 		</div>
 		<div class="field">
-			<label for="input_monthlyCover" class="currency">Benefit amount per month</label>
-			<input type="text" name="perMonth" rf.validation="required pattern({regex: '^[0-9\.]+$', errorMessage: 'Invalid amount'})" id="input_monthlyCover"/>
+			<label for="input_monthlyCover">Benefit amount per month</label>
+			<input type="text" name="perMonth" rf.validation="required pattern({regex: '^[0-9\.]+$', errorMessage: 'Invalid amount'})" id="input_monthlyCover"/>{{//currency}}
 		</div>
 		<div class="field">
 			<label for="input_period">Duration of benefits</label>

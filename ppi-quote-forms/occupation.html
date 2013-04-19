@@ -19,8 +19,8 @@
 			<input id="input_occupation" type="text" name="description" rf.validation="required fromSource" rf.customType="auto-complete-select({ codeFieldName: 'code' })" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbLists-occupationSheet.xml?transformer=xslt&xslt=/itb-resources-test2/lists/occupationLookupTransformJSONmin.xsl&contentType=application%2Fjson&occupation=[value]" />
 		</div>
 		<div class="field">
-			<label for="input_salary" class="currency">Salary</label>
-			<input type="text" name="salary" rf.validation="required pattern({regex: '^[0-9\.]+$' , errorMessage: 'Invalid amount'})" id="input_salary"/>
+			<label for="input_salary">Salary</label>
+			<input type="text" name="salary" rf.validation="required pattern({regex: '^[0-9\.]+$' , errorMessage: 'Invalid amount'})" id="input_salary"/>{{//currency}}
 			<div class="hint">Please enter your annual salary, leaving out any commas</div>
 		</div>
 		<div class="navigation">

@@ -15,9 +15,9 @@
 			<dob>
 				<xsl:value-of select="concat(/quote/customer/dob, ' ', '00:00:00')"/>
 			</dob>
-			<monthlyBenefit>
-				<xsl:value-of select="concat(/quote/cover/perMonth, ' ', /quote/currency)"/>
-			</monthlyBenefit>
+			<benefit>
+				<xsl:value-of select="/quote/cover/perMonth"/>
+			</benefit>
 			<!--part name="additionalData">
 				<xsl:copy-of select="/quote/*[not(name()='calcRef')][not(name()='userType')]"/>
 				<calcSource>RQ</calcSource>
