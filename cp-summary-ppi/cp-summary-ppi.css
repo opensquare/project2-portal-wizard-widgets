@@ -19,6 +19,9 @@
 	background: url('symbol-refresh-dark.png') no-repeat right top;
 	cursor: pointer;
 }
+#cp-policy-switcher:empty {
+	opacity: 0.5;
+}
 #cp-policy-summary-cover{
 	min-width: 30em;
 	text-align: left!important;

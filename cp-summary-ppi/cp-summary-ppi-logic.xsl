@@ -5,7 +5,7 @@
        <xsl:apply-templates select="/pactresponse/entity/IdentifiedEntity"/>
    </xsl:template>
 	<xsl:template match="/pactresponse/entity/IdentifiedEntity">
-		<h1 id="cp-policy-title"><xsl:value-of select="tokenize(description, ', ')[1]"/> Policy </h1><h3><span id="cp-policy-switcher" title="Select another policy"></span></h3>
+		<h1 id="cp-policy-title"><xsl:value-of select="tokenize(description, ', ')[1]"/> Policy <span id="cp-policy-switcher" title="Select another policy"></span></h1>
 
 		<details id="cp-policy-summary" open="open">
 			<a name="cp-policy-summary"></a>
