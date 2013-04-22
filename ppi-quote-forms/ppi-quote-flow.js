@@ -52,6 +52,20 @@
 		buy: [
 			{ id: "singlePayment", url:"../quote-forms-common/10-single-payment.html", actions:["next:payment", "back:main.quote"]},
 			{ id: "payment", docBase: "/quote/payment", url:"../quote-forms-common/11-payment.html", actions:["next"]},
+			{ id: "saving", url:"../quote-forms-common/12-saving.html", actions:[
+					{
+						name: "next",
+						submission: {
+							url: "{{$script-runner-url}}",
+							data: {
+								script: "NewBusiness/script/importNBCaseFromForms.py",
+								data: "[dataDocument]"
+							},
+							method: "post",
+							resultInsertPoint: "/quote/pact"
+						}
+					}
+				]},
 			{ id: "complete", url:"../quote-forms-common/complete.html"}
 		]
 	}
