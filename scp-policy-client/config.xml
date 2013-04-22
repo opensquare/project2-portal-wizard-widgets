@@ -1,7 +1,7 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>scp-policy-client.jsp</url>
+		<url>scp-policy-client.html</url>
 	</parameters>
 	<attributes>
 		<js>scp-policy-client.js</js>
