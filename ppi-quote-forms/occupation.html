@@ -20,7 +20,8 @@
 		</div>
 		<div class="field">
 			<label for="input_salary">Salary</label>
-			<input type="text" name="salary" rf.validation="required pattern({regex: '^[0-9\.]+$' , errorMessage: 'Invalid amount'})" id="input_salary"/>{{//currency}}
+			<input type="text" name="salary" rf.validation="required pattern({regex: '^[0-9\.]+$' , errorMessage: 'Invalid amount'})" id="input_salary"/>
+			<span> {{//currency}}</span>
 			<div class="hint">Please enter your annual salary, leaving out any commas</div>
 		</div>
 		<div class="navigation">

@@ -165,7 +165,7 @@ div.widget[name='ppi-quote-forms'] .rf-dropdown ul {
 	display: inline-block;
 	max-height: 10em; min-width: 20%;
 	overflow: auto; overflow-x: hidden; overflow-y: auto;
-	margin: 0 0 0 43%;
+	margin: 0 0 0 43.5%;
 	padding: 0;
 	list-style: none;
 	background-color: #FFF;
@@ -424,7 +424,16 @@ div.widget[name='ppi-quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall a
 div.widget[name='ppi-quote-forms'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
 	background-color: rgba(0,0,0,0.2);
 }
-
+div.widget[name='ppi-quote-forms'] .occ.section select {
+	width: 39%;
+}
+div.widget[name='ppi-quote-forms'] .occ.section #input_occupation {
+	width: 38%;
+}
+div.widget[name='ppi-quote-forms'] .occ.section #input_salary,
+div.widget[name='ppi-quote-forms'] .occ.section #input_monthly_cover {
+	width: 10%;
+}
 /* Landing Page styling */
 div.widget[name='ppi-quote-forms'] #landingPage h1 {
 	margin-bottom: 0;
