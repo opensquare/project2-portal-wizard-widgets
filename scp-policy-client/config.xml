@@ -5,6 +5,7 @@
 	</parameters>
 	<attributes>
 		<js>scp-policy-client.js</js>
+		<css>scp-policy-client.css</css>
 		<page.title>Policy - Client</page.title>
 	</attributes>
 </widget>
