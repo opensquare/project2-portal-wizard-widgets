@@ -2,14 +2,10 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
 	<xsl:output method="xml"/>
 	<xsl:template match="/agreement">
-		<div>
-			<span class="widget-title" style="display:none">
-				<xsl:value-of select="description"/> Actions</span>
-			<div class="userActions">
-				<xsl:apply-templates select="actions/action[not(starts-with(description, '_'))][not(contains(description, 'asAgreementForParty'))][not(contains(description, 'Create New Version'))]">
-					<xsl:sort select="description"/>
-				</xsl:apply-templates>
-			</div>
+		<div class="userActions">
+			<xsl:apply-templates select="actions/action[not(starts-with(description, '_'))][not(contains(description, 'asAgreementForParty'))][not(contains(description, 'Create New Version'))]">
+				<xsl:sort select="description"/>
+			</xsl:apply-templates>
 		</div>
 	</xsl:template>
 	<xsl:template match="action">

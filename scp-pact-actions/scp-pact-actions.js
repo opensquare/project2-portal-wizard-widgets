@@ -16,6 +16,10 @@ function Widget_scp_pact_actions(){
 		if (this.parameterMap.agreementUid == undefined) {
 			this.parameterMap.agreementUid = this.$widgetDiv.parents("[homeAgreementUid]").attr("homeAgreementUid");
 		}
+
+		this.$widgetDiv.click(function() {
+			$(this).toggleClass('on');
+		});
 	}
 
     this.onReadyExtend = function(){

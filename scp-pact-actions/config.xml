@@ -35,8 +35,7 @@
 </pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
-		<style>background:none;</style>
-		<title>Actions</title>
 		<js>scp-pact-actions.js</js>
+		<css>scp-pact-actions.css</css>
 	</attributes>
 </widget>
