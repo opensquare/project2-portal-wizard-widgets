@@ -29,6 +29,7 @@
 </pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
+		<js>displayAgreement.js</js>
 		<css>agreement.css</css>
 		<displayHeader>false</displayHeader>
 		<waitForNested>true</waitForNested>
