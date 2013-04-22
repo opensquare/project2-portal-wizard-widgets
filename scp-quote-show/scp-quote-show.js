@@ -9,18 +9,3 @@ function Widget_scp_quote_show() {
 	}
 	
 }
-
-function pulldownToggle(element, selector) {
-	//initEditors();
-
-	var onAlready = $(element).hasClass('on')
-	
-
-	if(onAlready != true){
-		initEditors();
-		$(element).addClass('on').parentsUntil('div.widget[name]').find('.content-header-pulldown>div.widget[name='+selector+']').slideDown('fast');
-	} else {
-		destroyEditors();
-		$(element).parent().children().removeClass('on').parentsUntil('div.widget[name]').find('.content-header-pulldown>div.widget[name]').slideUp('fast');
-	}
-}
