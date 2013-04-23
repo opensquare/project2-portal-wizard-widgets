@@ -24,3 +24,14 @@
 #cp-policy-claims .add{
 	background: url('symbol-add-dark-small.png') no-repeat center 20%;
 }
+#cp-policy-details-claim {
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
