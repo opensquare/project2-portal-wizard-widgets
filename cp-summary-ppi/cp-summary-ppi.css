@@ -7,6 +7,7 @@
 	border-radius: 0.5em;
 	float: left;
 	margin: 0.5em;
+	height: 100px;
 }
 #cp-policy-title{
 	margin-top: 0;
@@ -24,15 +25,14 @@
 }
 #cp-policy-summary-cover{
 	min-width: 30em;
-	text-align: left!important;
 }
 #cp-policy-summary .cover{
 	display: inline-block;
-	height: 50px;
-	padding: 50px 2.5em 0 0.5em;
+	height: 30px;
+	padding: 50px 1.5em 0 0.5em;
 	font-size: 0.8em;
 	background: no-repeat center top;
-	width: 195px;
+	width: 120px;
 }
 #cp-policy-summary .cover.comp{
 	background-image: url('shape-shield-dark.png');
@@ -53,9 +53,6 @@
 }
 #cp-policy-summary .premium-due {
 	display: block;
-	font-size: 1.5em;
-}
-#cp-policy-summary .premium-due:before {
-	content: "£";
-	padding: 2px;
+	font-size: 2em;
+	padding: 0.2em
 }

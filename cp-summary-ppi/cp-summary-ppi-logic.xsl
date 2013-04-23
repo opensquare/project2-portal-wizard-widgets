@@ -18,16 +18,9 @@
 				<span class="cover comp"><xsl:value-of select="tokenize(description, ', ')[5]"/></span>
 				<span class="cover comp"><xsl:value-of select="tokenize(description, ', ')[6]"/></span>
 			</div>
-			<div id="cp-policy-summary-renewal" class="pane">
-				<span class="title">Renewal</span>
-				<span class="renewal-day"><xsl:value-of select="tokenize(description, ', ')[7]"/></span>
-				<span class="renewal-month"><xsl:value-of select="tokenize(description, ', ')[8]"/></span>
-				<span class="renewal-year"><xsl:value-of select="tokenize(description, ', ')[9]"/></span>
-			</div>
-			<div id="cp-policy-summary-premium" class="pane">
-				<span class="title">Premium</span>
-				<span class="premium-due">fixme</span>
-			</div>
+			<div class="widget" name="cp-policy-premium">
+				<xsl:attribute name="params">polUid=<xsl:value-of select="identifier/uid"/></xsl:attribute>
+			...</div>
 		</details>
 	</xsl:template>
 </xsl:stylesheet>

@@ -1,12 +1,13 @@
 <widget>
 	<type>pactResponse</type>
 	<parameters>
-		<xsl>cp-summary-ppi</xsl>
+		<xsl>cp-policy-premium</xsl>
 		<pactrequest>
 			<![CDATA[
 			<pactrequest>
 			    <target>
-			        <uid>{policyUid}</uid>
+			        <uid>{polUid}</uid>
+					<partPath>Shadow Loan Account</partPath>
 			    </target>
 			    <context>
                     <actor><actorUid>123</actorUid></actor>
@@ -17,18 +18,10 @@
 			        <physicaltime>now</physicaltime>
 			    </timepoint>
 			      <return>
-			        <name>asIdentifiedEntity</name>
-					<params>
-	          		 <descriptionPattern>[Agreement Role:product.[assocdescription.{productName}]], [primaryInsuranceSection.{sectionDescription}]</descriptionPattern>
-	      		 </params>
-			    </return>
+					<name>asAccumulatorPostingHistory</name>
+				</return>
 			</pactrequest>
 			]]>
 		</pactrequest>
 	</parameters>
-	<attributes>
-		<js>cp-summary-ppi.js</js>
-		<css>cp-summary-ppi.css</css>
-		<delayLoad>true</delayLoad>
-	</attributes>
 </widget>
