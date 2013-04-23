@@ -1,0 +1,91 @@
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.all.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.aspnetmvc.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.culture.en-GB.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/kendo.dataviz.min.js'></script>
+	<script type='text/javascript' src='widgets/cp-policy-motoring/js/modernizr-1.7.min.js'></script>
+	<script>
+		$(document).ready(function() {
+			$('#cp-policy-driving-journies').hide();
+			$('#cp-policy-driving-journies-expanded').hide();
+			$('#telematicsProxy').append("<div class='loading'/>");
+			$('#recentMonths').children().each(function(){
+		   		var monthOffset = $(this).val();
+		   		if(monthOffset != 0 ){
+		   			$(this).text(moment().subtract('months', monthOffset).format("MMM YY"));
+		   		}
+			});
+			//Default to this month
+			 var sd = moment().startOf('month').format("DD/MM/YYYY");
+			 var ed = moment().format("DD/MM/YYYY");
+			//Quindell: sd and ed cannot be equal!
+			if(sd == ed){
+				sd = moment().subtract('days', 1).format("DD/MM/YYYY");
+			}
+			telematicData(sd, ed);
+			document.getElementById('telematicsWindow').src = 'http://81.144.178.203/Telematics/Journey/IsotrakJourney?sCarReg=DY55%20NKC&sTravelDate=05/02/2013';
+		});
+
+		function telematicData(sd, ed){			
+			var endpoint = '/proxy/telematics'	
+			var dates = '?sVehicleRegNo=DY55%20NKC&sStartDate=' + sd + '&sEndDate=' + ed
+			
+			$('#telematicsProxy').load(endpoint+dates, function() {
+			   $(this).find(".chart-title").remove(); 
+			   $(this).find("#Quindell").remove(); 
+			   $(this).find("#logindisplay").remove();
+			   $(this).find("#banner").remove();
+			   $('#cp-policy-driving-journies').show();
+
+				var numericValues = new Array();
+				$("dd").each(function(){numericValues.push($(this).text())});
+				var journies =  Math.round(numericValues[6].replace("miles","").trim() / numericValues[7].replace("miles","").trim());
+			   	$('#journeyNumber').text(journies);
+			});
+		}
+
+		$('li').click(function() {
+			$('#cp-policy-driving-journies').hide();
+			$('#telematicsProxy').empty();
+			$('#telematicsProxy').append("<div class='loading'/>");
+
+			$(this).addClass("on");
+		    $(this).siblings().removeClass("on");
+
+			var offset = $(this).val();
+			var sd = moment().subtract('months', offset).startOf('month').format("DD/MM/YYYY");
+			var ed = moment().subtract('months', offset).endOf('month').format("DD/MM/YYYY");
+
+			if(offset == 0){
+				ed = moment().format("DD/MM/YYYY");
+				if(sd == ed){sd = moment().subtract('days', 1).format("DD/MM/YYYY");}
+			}
+			telematicData(sd, ed);
+		});
+	</script>
+
+	<div id="telematics">
+		<h2>Telematics Driving Dashboard</h2>
+
+		<div id="cp-policy-driving-journies">
+			<span class="title">Total completed journies:</span>
+			<span id="journeyNumber" class="journies"></span><a href="#telematicJourney">View details ►</a>
+		</div>
+		
+		<ul id="recentMonths">
+			<li value="6"></li>
+			<li value="5"></li>
+			<li value="4"></li>
+			<li value="3"></li>
+			<li value="2"></li>
+			<li value="1"></li>
+			<li value="0" class="on">Current Month</li>
+		</ul>
+		<div id='telematicsProxy'/>
+	</div>	
+
+	<div id="telematicJourney" class="journeyWindow">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<iframe id="telematicsWindow" src="" scrolling="no"></iframe>
+		</div>
+	</div>

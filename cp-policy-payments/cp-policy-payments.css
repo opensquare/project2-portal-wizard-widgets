@@ -3,6 +3,8 @@
 }
 #cp-policy-payments-table th{
 	border-bottom: medium solid;
+	color: #333;
+	background: none;
 }
 #cp-policy-payments-table td:last-child:before{
 	content:'£';
