@@ -5,6 +5,7 @@
 		<pactrequest><![CDATA[<pactrequest>
 						<target>
 							<SelectTimeSpanEntity>
+								<entityType>claim</entityType>
 								<quickSearch><value>{searchValue}</value><comparison>startsWith</comparison></quickSearch>
 							</SelectTimeSpanEntity>
 						</target>
