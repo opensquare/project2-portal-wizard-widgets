@@ -28,7 +28,13 @@
             </xsl:when>
             <xsl:otherwise>
                 <a class="userAction pw-button popup">
-                    <xsl:attribute name="href">#form/<xsl:value-of select="translate(description, ' ABCDEFGHIJKLMNOPQRSTUVWXYZ', '-abcdefghijklmnopqrstuvwxyz')"/>?userType=staff<xsl:apply-templates select=".">
+                    <xsl:variable name="formsLayout">
+                        <xsl:choose>
+                            <xsl:when test="properties/formsLayout"><xsl:value-of select="properties/formsLayout"/></xsl:when>
+                            <xsl:otherwise>confirm</xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <xsl:attribute name="href">#form/<xsl:value-of select="$formsLayout"/>?userType=staff<xsl:apply-templates select=".">
                             <xsl:with-param name="context">paramString</xsl:with-param>
                         </xsl:apply-templates>
                     </xsl:attribute>
