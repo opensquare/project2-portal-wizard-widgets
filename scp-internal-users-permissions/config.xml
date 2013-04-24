@@ -4,7 +4,7 @@
 		<url>scp-internal-users-permissions.html</url>
 	</parameters>
 	<attributes>
+		<js>scp-internal-users-permissions.js</js>
 		<displayHeader>false</displayHeader>
 	</attributes>
 </widget>
-

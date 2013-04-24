@@ -4,8 +4,8 @@
 		<url>scp-internal-users.html</url>
 	</parameters>
 	<attributes>
+		<js>scp-internal-users.js</js>
 		<displayHeader>false</displayHeader>
 		<page.title>User management</page.title>
 	</attributes>
 </widget>
-
