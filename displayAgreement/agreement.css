@@ -73,3 +73,9 @@
   background:#e3e3e3;
   padding:2px;
 }
+.agreement .account>.popup {
+  display: inline-block;
+  min-width: 50px;
+  padding: 50px 1em 0 1em;
+  background: #EEE url('coins-dark.png') no-repeat center top;
+}

@@ -1,3 +1,10 @@
-.displayAgreement .agreement h1 {
-  background-image: url('id-dark.png');
+.scp-policy-client .widget-content>.displayAgreement>div>.agreement>h1 {
+	background-image: url('id-dark.png');
+}
+#clientRelationship-email, #clientRelationship-home, #clientRelationship-postcode, #clientRelationship-status,
+#address-status, #address-addressType,
+#clientIndDetails-status, 
+#contactDetails-status,
+#employmentDetails-status {
+	display: none;
 }

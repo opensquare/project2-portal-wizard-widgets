@@ -249,6 +249,7 @@
 	<!-- Accounts -->
 	<xsl:template match="account">
 		<div class="account">
+			<span class="property-label"></span>
 			<xsl:call-template name="accountLink">
 				<xsl:with-param name="uid" select="uid"/>
 				<xsl:with-param name="text" select="description"/>
