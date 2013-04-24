@@ -1,5 +1,5 @@
 function commonSearchSubmission(channel,terms) {
-	var $searchResultsContainer = $('[channel="'+channel+'"]').parent().find('.search-results');
+	var $searchResultsContainer = $('[channel="'+channel+'"]').parent().find('.search-results,.search-results .widget-content').last();
 	$searchResultsContainer.empty();
 
 	if(terms!=''){

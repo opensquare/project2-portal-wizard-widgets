@@ -15,7 +15,7 @@
 #content article[subtype='search'] .content-body .button.search-button{
 	font-size: 1.8em;
 }
-#content article[subtype='search'] .search-results:empty:before{
+#content article[subtype='search'] .search-results:empty:before, #content article[subtype='search'] .search-results .widget-content:empty:before{
 	content: 'Enter some search terms above and press Go';
 	display: block;
 	margin: 100px 0;
