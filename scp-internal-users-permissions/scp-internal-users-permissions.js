@@ -5,6 +5,9 @@ function Widget_scp_internal_users_permissions() {
 
 	this.onReadyExtend = function() {
 		pw.addListenerToChannel(this, channelGroupSelected);
+		$('.save-button', _this.$widgetDiv).click(function() {
+			saveRole();
+		});
 	};
 
 	this.handleEvent = function(channel, event) {
@@ -37,4 +40,21 @@ function Widget_scp_internal_users_permissions() {
 		return false;
 	}
 
+	function saveRole() {
+		_this.role.permissions = [];
+		$('li', _this.$widgetDiv).each(function() {
+			var $li = $(this);
+			if ($li.find('input').attr('checked') == 'checked') {
+				_this.role.permissions.push({"id":$li.data('id')});
+			}
+		});
+		$.ajax({
+			type:"POST",
+			url:"proxy/security/role/update",
+			data:JSON.stringify(_this.role),
+			dataType:"json",
+			contentType:"application/json"}).done(function() {
+				alert("Permissions saved.");
+		});
+	}
 }

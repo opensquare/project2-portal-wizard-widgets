@@ -10,6 +10,7 @@ function Widget_scp_internal_users() {
 		});
 
 		populateGroups();
+		loadUsers();
 	};
 
 	function populateGroups() {
@@ -21,6 +22,13 @@ function Widget_scp_internal_users() {
 				_this.$groupSelect.append($option);
 			}
 			displaySelectedGroup();
+		});
+	}
+
+	function loadUsers() {
+		$.get('proxy/security/user/all').done(function(usersArray) {
+			_this.users = usersArray;
+			pw.notifyChannelOfEvent('scp-internal-users.users-loaded', {users:usersArray});
 		});
 	}
 
