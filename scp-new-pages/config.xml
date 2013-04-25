@@ -1,7 +1,7 @@
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>scp-new-pages.html</url>
+		<url>scp-new-pages.jsp</url>
 	</parameters>
 	<attributes>
 		<displayheader>false</displayheader>
