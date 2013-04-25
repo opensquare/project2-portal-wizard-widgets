@@ -18,8 +18,11 @@
 .scheduler-job-list li:nth-child(even){
 	background-color: rgba(119,119,119,0.3);
 }
-.scheduler-job-list .jobsHeader{
-	background: url('gear-dark-small.png') left center;
+.scheduler-job-list li {
+	background: url('gear-dark-small.png') no-repeat left center;
+}
+.scheduler-job-list li.jobsHeader{
+	background: none;
 	font-weight: bold;
 }
 .scheduler-job-list li>span{

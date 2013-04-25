@@ -9,12 +9,11 @@
 					<table>
 						<thead>
 							<tr>
-								<th>Execution Start Time</th>
-								<th>Execution End Time</th>
-								<th>Successful</th>
+								<th>Start Time</th>
+								<th>End Time</th>
+								<th>Success</th>
 								<th>Message</th>
-								<th>View Report</th>
-								<th>View Output</th>
+								<th colspan="2">Actions</th>
 							</tr>
 						</thead>
 						<tbody>
