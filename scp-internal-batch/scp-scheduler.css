@@ -1,3 +1,10 @@
+.scp-scheduler-status {
+	text-align: right;
+	padding: 1em;
+	text-transform: capitalize;
+	font-weight: bold;
+	color: #888;
+}
 .scp-scheduler-status success,
 .scp-scheduler-status now{
 	display:none;
