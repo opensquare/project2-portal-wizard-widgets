@@ -4,7 +4,7 @@
 		<url>scp-scheduler.html</url>
 	</parameters>
 	<attributes>
-		<displayHeader>false</displayHeader>
+		<page.title>Automated jobs</page.title>
 		<css>scp-scheduler.css</css>
 	</attributes>
 </widget>
