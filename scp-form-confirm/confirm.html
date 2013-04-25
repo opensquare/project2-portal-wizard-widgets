@@ -1,4 +1,6 @@
 <form rhinoforms="true">
 	<h1>Confirm</h1>
-    <input type="submit" rf.action="next" value="Submit"/>
+	<p>Please confirm this action...</p>
+	<input class="button" type="submit" rf.action="next" value="Yes"/>
+	<a class="button" onclick="$('#popupContainer').hide()">No</a>
 </form>
