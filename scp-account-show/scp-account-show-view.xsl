@@ -30,7 +30,7 @@
 		<tr class="transaction">
 		<xsl:attribute name="class">
 			<xsl:choose>
-				<xsl:when test="number(translate(amount, ',', '')) &gt; 0">transaction credit</xsl:when>
+				<xsl:when test="number(translate(substring-before(concat(amount, ' '), ' '), ',', '')) &gt; 0">transaction credit</xsl:when>
 				<xsl:otherwise>transaction debit</xsl:otherwise>
 			</xsl:choose>
 			</xsl:attribute>
