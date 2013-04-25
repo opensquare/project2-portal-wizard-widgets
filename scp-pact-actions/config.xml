@@ -9,8 +9,8 @@
 			<language>en</language>
 			<country>GB</country>
 		</locale>
-		<actor><actorUid>fdfc97eb-0101-007f-391a-74efd6e3eb76</actorUid></actor>
-        <party><partyUid>64c08101-0101-007f-372f-2b323ca6124b</partyUid></party>
+		<actor><actorUid>{actorUid}</actorUid></actor>
+        <party><partyUid>{partyUid}</partyUid></party>
 		<process/>
 		<evType/>
 		<evSubType/>
