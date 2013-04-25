@@ -82,7 +82,7 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 
 /* Accounts popup */
 #popup {
-	border-color: #9BBB59 !important;
+	border-color: #9BBB59;
 }
 #popupClose {
 	color: #FFF;

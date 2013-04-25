@@ -151,3 +151,7 @@ article[type="internal"] .new-square[type='internal'][subtype='batch'] {
 	padding-left: 40px;
 	background: url('images/person-dark-small.png') no-repeat;
 }
+/*Popup styling*/
+#popup[type='internal'] {
+	border-color: #777;
+}

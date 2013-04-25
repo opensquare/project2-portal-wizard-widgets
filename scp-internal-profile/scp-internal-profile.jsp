@@ -23,10 +23,10 @@
 		<summary><h3>User Settings</h3></summary>
 		<div class="user-settings">
 			<div>
-				<span><a href="#" onclick="return false;">Change Password</a></span>
+				<span><a href="#internal/change-password?id=<%=String.valueOf(oslPrinciple.getUserId())%>" class="popup" onclick="return false;">Change Password</a></span>
 			</div>
 			<div>
-				<span><a href="#" onclick="return false;">Set default pages on login</a></span>
+				<span><a href="#" class="popup" onclick="return false;">Default Login Pages</a></span>
 			</div>
 		</div>
 	</details>

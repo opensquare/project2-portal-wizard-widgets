@@ -163,6 +163,7 @@ function Widget_scp_page() {
             var idParts = pageId.split('/');
 			var type = idParts[0];
 			var subType = idParts[1];
+			$('#popup').attr('type', type);
             $("#popupContent").html("<div class='widget' name='scp-" + type + "-" + subType + "' page.id='" + pageId + "' page.args='" + pageArgs + "'>...</div>");
             pw.mount($("#popupContent .widget:first"));
             $("#popupContainer").show();
