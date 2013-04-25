@@ -14,7 +14,7 @@
 						<party><partyUid>123</partyUid></party>
 					</context>
 					<timepoint>
-						<effectivetime>now</effectivetime>
+						<effectivetime>ff</effectivetime>
 						<physicaltime>now</physicaltime>
 					</timepoint>
 					<return>
