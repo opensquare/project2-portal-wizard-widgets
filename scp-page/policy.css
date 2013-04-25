@@ -82,7 +82,7 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 
 /* Accounts popup */
 #popup {
-	border-color: #9BBB59;
+	border-color: #9BBB59 !important;
 }
 #popupClose {
 	color: #FFF;
@@ -95,7 +95,7 @@ article[type="internal"] .new-square[type='policy'][subtype='renewals'] {
 	padding: 2%;
 	color: #FFF;
 	background-color: #9BBB59;
-	border-radius: 4px 4px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 #popup .pactAccount .balance {
 	font-size: 1em;
