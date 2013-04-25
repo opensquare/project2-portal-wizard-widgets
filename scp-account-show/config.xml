@@ -19,7 +19,7 @@
 		<timeWarning>2000</timeWarning>
 	</context>
 	<timepoint>
-		<effectivetime>now</effectivetime>
+		<effectivetime>ff</effectivetime>
 		<physicaltime>now</physicaltime>
 	</timepoint>
 	<return>
