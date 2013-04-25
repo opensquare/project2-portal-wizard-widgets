@@ -73,13 +73,29 @@
 .scheduler-job-list .box a:nth-child(odd){
 	background-color:#DDD;
 }
+.resultDiv {
+	margin: 0.5em;
+	padding: 0 1em;
+	border: thin inset #fff;
+}
 .resultDiv .close{
 	display:block;
+	margin-bottom: 0.25em;
 	text-align: right;
+	font-size: small;
+}
+.resultDiv .close:hover{
+	text-decoration: underline;
 }
 .resultDiv table{
-	border-collapse: collapse;
 	width:100%;
+	font-size: small;
+	line-height: 2em;
+	border-collapse: collapse;
+}
+.resultDiv thead {
+	color: #FFF;
+	background-color: #777;
 }
 .resultDiv tbody tr:nth-child(odd) {
 	background-color: white;
@@ -88,5 +104,5 @@
 	background-color: #DDD;
 }
 .resultDiv tfoot{
-	text-align: center;
+	text-align: right;
 }
