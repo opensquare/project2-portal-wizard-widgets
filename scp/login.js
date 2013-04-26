@@ -31,10 +31,10 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 			httpStatus = XMLHttpRequest.status;
 			switch (httpStatus) {
 				case 401:
-					$loginForm.pwrWidget('addMessage','Invalid username or password. Please try again.','info').pwrUtils('enableForm');
+					$loginForm.parentsUntil('.widget').parent().prepend('<div class="widget-messages"><ul><li>Invalid username or password. Please try again.</li></ul></div>');
 					break;
 				default:
-					$loginForm.pwrWidget('addMessage','Problem while loading ('+httpStatus+')','error').pwrUtils('enableForm');
+					$loginForm.parentsUntil('.widget').parent().prepend('<div class="widget-messages"><ul><li>Problem while loading ('+httpStatus+')</li></ul></div>');
 			}
 			login_logFailedLogin(uid);
 		}
