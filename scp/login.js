@@ -13,7 +13,8 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 	var $loginForm = $("#login-form-enter");
 	var loginFormData = $loginForm.serialize();
 
-	// $loginForm.pwrUtils('disableForm').pwrWidget('clearMessages');
+	$loginForm.parentsUntil('.widget').find('.widget-messages').empty();
+	$loginForm.addClass('loading');
 	
 	$.ajax({
 		type: "POST",
@@ -39,6 +40,8 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 			login_logFailedLogin(uid);
 		}
 	});
+
+	$loginForm.removeClass('loading');
 	return false; // stops the form submitting in the normal way
 }
 
