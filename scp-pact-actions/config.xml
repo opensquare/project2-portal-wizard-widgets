@@ -10,7 +10,7 @@
 			<country>GB</country>
 		</locale>
 		<actor><actorUid>123</actorUid></actor>
-        <party><partyUid>d4c37f34-0101-007f-2dd7-e4d6f1692b37</partyUid></party>
+        <party><partyUid>123</partyUid></party>
 		<process/>
 		<evType/>
 		<evSubType/>
@@ -27,7 +27,7 @@
 		<params>
             <depth>0</depth>
             <suppressInternalActions>true</suppressInternalActions>
-            <partyuid>64c08101-0101-007f-372f-2b323ca6124b</partyuid>
+            <partyuid>d4c37f34-0101-007f-2dd7-e4d6f1692b37</partyuid>
             <actoruid>fdfc97eb-0101-007f-391a-74efd6e3eb76</actoruid>
             <authorities>act,view</authorities>
         </params>
