@@ -105,6 +105,7 @@
 			<xsl:if test="accounts/account">
 				<div class="pageSection accounts">
 					<h2 class="ui-themed">Accounts</h2>
+					<span class="property-label"></span>
 					<xsl:apply-templates select="accounts/account"/>
 				</div>
 			</xsl:if>
@@ -248,14 +249,13 @@
 	</xsl:template>
 	<!-- Accounts -->
 	<xsl:template match="account">
-		<div class="account">
-			<span class="property-label"></span>
+		<span class="account">
 			<xsl:call-template name="accountLink">
 				<xsl:with-param name="uid" select="uid"/>
 				<xsl:with-param name="text" select="description"/>
 				<xsl:with-param name="classes">account</xsl:with-param>
 			</xsl:call-template>
-		</div>
+		</span>
 	</xsl:template>
 	<xsl:template match="param">&amp;<xsl:value-of select="@name"/>=<xsl:value-of select="text()"/>
 	</xsl:template>
