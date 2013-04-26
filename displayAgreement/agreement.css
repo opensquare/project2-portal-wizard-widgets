@@ -76,7 +76,12 @@
 .agreement .account>.popup {
   display: inline-block;
   min-width: 50px;
+  max-width: 150px;
+  min-height: 40px;
+  vertical-align: top;
+  margin-right: 1em;
   padding: 50px 1em 0 1em;
+  text-align: center;
   background: #EEE url('coins-dark.png') no-repeat center top;
 }
 .documents {
