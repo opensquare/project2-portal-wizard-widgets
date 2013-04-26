@@ -31,10 +31,10 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 			httpStatus = XMLHttpRequest.status;
 			switch (httpStatus) {
 				case 401:
-					$loginForm.parentsUntil('.widget').parent().prepend('<div class="widget-messages"><ul><li>Invalid username or password. Please try again.</li></ul></div>');
+					$loginForm.parentsUntil('.widget').parent().first().prepend('<div class="widget-messages"><ul><li>Invalid username or password. Please try again.</li></ul></div>');
 					break;
 				default:
-					$loginForm.parentsUntil('.widget').parent().prepend('<div class="widget-messages"><ul><li>Problem while loading ('+httpStatus+')</li></ul></div>');
+					$loginForm.parentsUntil('.widget').parent().first().prepend('<div class="widget-messages"><ul><li>Problem while loading ('+httpStatus+')</li></ul></div>');
 			}
 			login_logFailedLogin(uid);
 		}
