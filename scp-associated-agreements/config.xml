@@ -29,6 +29,7 @@
 					</pactrequest>]]></pactrequest>
 	</parameters>
 	<attributes>
+		<css>scp-associated-agreements.css</css>
 		<js>scp-associated-agreements.js</js>
 		<delayLoad>true</delayLoad>
 	</attributes>

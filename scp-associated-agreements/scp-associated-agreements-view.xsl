@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="xml"/>
     <xsl:template match="/">
+        <h1 class="associatedAgreements">Associated Agreements</h1>
         <ul>
             <xsl:choose>
                 <xsl:when test="/pactresponse/entity/IdentifiedEntity">
