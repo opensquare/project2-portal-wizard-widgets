@@ -106,7 +106,10 @@
 .resultDiv tbody td {
 	border-right: thin solid #AAA;
 }
-.resultDiv tbody td:last-child {
+.resultDiv tbody td:nth-child(4) {
+	word-break: break-word;
+}
+.resultDiv tbody td:nth-child(5), .resultDiv tbody td:last-child {
 	border-right: none;
 }
 .resultDiv thead {
