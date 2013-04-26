@@ -1,7 +1,7 @@
 .scp-policy-client .widget-content>.displayAgreement>div>.agreement>h1 {
 	background-image: url('id-dark.png');
 }
-.scp-policy-client .scp-associated-aggrements .clientRelationship {
+.scp-policy-client .scp-associated-agreements .clientRelationship {
 	display: none;
 }
 .documents {
