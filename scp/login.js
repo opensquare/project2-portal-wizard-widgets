@@ -13,7 +13,7 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 	var $loginForm = $("#login-form-enter");
 	var loginFormData = $loginForm.serialize();
 
-	$loginForm.parentsUntil('.widget').find('.widget-messages').empty();
+	$loginForm.parentsUntil('.widget').parent().find('.widget-messages').empty()
 	$loginForm.addClass('loading');
 	
 	$.ajax({
@@ -37,7 +37,7 @@ function login_loginEnter(nextWidget){  // Called on submission of login form
 				default:
 					$loginForm.parentsUntil('.widget').parent().first().prepend('<div class="widget-messages"><ul><li>Problem while loading ('+httpStatus+')</li></ul></div>');
 			}
-			login_logFailedLogin(uid);
+			//login_logFailedLogin(uid);
 		}
 	});
 

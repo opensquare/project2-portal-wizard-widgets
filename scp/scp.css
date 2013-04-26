@@ -140,6 +140,9 @@ div.widget>.widget-messages>div.error{
 #login-form-reset-text{
 	padding: 0.6em 0;
 }
+#login-forms .loading{
+	opacity: 0.5;
+}
 
 footer{
 	width: 40%;
