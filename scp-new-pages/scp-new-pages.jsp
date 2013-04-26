@@ -1,11 +1,9 @@
-<%@ page import="com.osl.security.OslPrinciple" %>
 <%@ page import="org.apache.shiro.SecurityUtils" %>
 <%@ page import="org.apache.shiro.subject.Subject" %>
 
 <%Subject user = SecurityUtils.getSubject();%>
-<%OslPrinciple oslPrinciple = user.getPrincipals().oneByType(OslPrinciple.class);%>
 
-						<%if (user.isPermitted("quotes-search") && user.isPermitted("quotes-quote")) {%>
+						<%if (user.isPermitted("quotes-search") || user.isPermitted("quotes-quote")) {%>
 						<div class="new-square-group">
 							<h3>Quotes</h3>
 							<%if (user.isPermitted("quotes-search")) {%>
@@ -16,7 +14,7 @@
 							<%}%>
 						</div>
 						<%}%>
-						<%if (user.isPermitted("policy-search") && user.isPermitted("policy-nb") && user.isPermitted("policy-servicing") && user.isPermitted("policy-renewals")) {%>
+						<%if (user.isPermitted("policy-search") || user.isPermitted("policy-nb") || user.isPermitted("policy-servicing") || user.isPermitted("policy-renewals")) {%>
 						<div class="new-square-group">
 							<h3>Policies</h3>
 							<%if (user.isPermitted("policy-search")) {%>
@@ -42,7 +40,7 @@
 							<a class="new-square" href="#finance/nonlifereserves" type="finance" subtype="nonlifereserves">Non-life reserving accounts</a>
 						</div>
 						<%}%>
-						<%if (user.isPermitted("claims-search") && user.isPermitted("claims-claim")) {%>
+						<%if (user.isPermitted("claims-search") || user.isPermitted("claims-claim")) {%>
 						<div class="new-square-group">
 							<h3>Claims</h3>
 							<%if (user.isPermitted("claims-search")) {%>
@@ -59,7 +57,7 @@
 							<a class="new-square" href="#documents/search" type="documents" subtype="search">Document search</a>
 						</div>
 						<%}%>
-						<%if (user.isPermitted("mis-dashboard") && user.isPermitted("mis-reports")) {%>
+						<%if (user.isPermitted("mis-dashboard") || user.isPermitted("mis-reports")) {%>
 						<div class="new-square-group">
 							<h3>Management</h3>
 							<%if (user.isPermitted("mis-dashboard")) {%>
@@ -82,7 +80,7 @@
 							<a class="new-square" href="#internal/batch" type="internal" subtype="batch">Automated jobs</a>
 							<%}%>
 						</div>
-						<%if (user.isPermitted("external-network") && user.isPermitted("external-pactdash") && user.isPermitted("external-napierdash") && user.isPermitted("external-mmdash") && user.isPermitted("external-pwdash")) {%>
+						<%if (user.isPermitted("external-network") || user.isPermitted("external-pactdash") || user.isPermitted("external-napierdash") || user.isPermitted("external-mmdash") || user.isPermitted("external-pwdash")) {%>
 						<div class="new-square-group">
 							<h3>Sys Admin</h3>
 							<%if (user.isPermitted("external-network")) {%>
