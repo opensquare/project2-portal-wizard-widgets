@@ -1,7 +1,6 @@
-.displayAgreement .agreement h1 {
-  background-image: url('id-dark.png');
+.scp-policy-client .widget-content>.displayAgreement>div>.agreement>h1 {
+	background-image: url('id-dark.png');
 }
-
 .documents {
 	padding: 10px 0 10px 30px;
 	background: url('document.png') no-repeat center left;;
@@ -9,7 +8,6 @@
 	border-bottom: thin solid;
 	font-weight: normal;
 }
-
 .mm-documents .pdf {
 	display: inline-block;
 	margin: 0px 10px 15px 10px;
