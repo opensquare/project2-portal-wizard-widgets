@@ -3,7 +3,8 @@ function Widget_cp_policy_docs() {
 
 	this.onReadyExtend = function() {
 
-			var policyId = window.location.hash.replace('#', '');
+			var url = document.URL;
+     		var policyId = url.substring(url.lastIndexOf("/") + 1);
 			var url = 'proxy/mailmerger/jobs/search/' + encodeURIComponent('%'+ policyId +'%');
 		
 			$.ajax(url).done(function(searchResultsArray) {
