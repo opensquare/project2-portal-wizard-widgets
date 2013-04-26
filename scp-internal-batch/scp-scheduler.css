@@ -97,7 +97,6 @@
 .resultDiv table{
 	width:100%;
 	font-size: small;
-	line-height: 2em;
 	border-collapse: collapse;
 }
 .resultDiv th, .resultDiv td {
