@@ -30,7 +30,7 @@
                 <xsl:choose>
                     <xsl:when test="$entityType='policy'">#policy/show</xsl:when>
                     <xsl:when test="$entityType='clientRelationship'">#policy/client</xsl:when>
-                    <xsl:when test="$entityType='claim'">#claim/show</xsl:when>
+                    <xsl:when test="$entityType='claim'">#claims/show</xsl:when>
                     <xsl:otherwise>#policy/entity</xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
