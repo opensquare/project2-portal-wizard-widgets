@@ -5,6 +5,7 @@ function Widget_cp_policy_docs() {
 
 			var url = document.URL;
      		var policyId = url.substring(url.lastIndexOf("/") + 1);
+     		policyId = policyId.substring(policyId.lastIndexOf("#") + 1);
 			var url = 'proxy/mailmerger/jobs/search/' + encodeURIComponent('%'+ policyId +'%');
 		
 			$.ajax(url).done(function(searchResultsArray) {
