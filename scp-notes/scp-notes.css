@@ -68,6 +68,9 @@
 	padding: 5px;
 	border-radius: 10px;
 }
+.noteContainer.SystemNote a{
+	display: none;
+}
 .tab {
 	z-index: 9999;
 	position: absolute;

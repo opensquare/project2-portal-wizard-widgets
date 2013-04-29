@@ -67,10 +67,10 @@ function loadNotes(offset, limit, key, callback){
 			creationTime = notesArray[i].creationTime;
 			creationTime = creationTime.replace('BST', 'GMT'); // moment.js issue - cannot pass BST timezone
 
-			var $noteHtml = $('<div class="noteContainer"><div class="tab"><a class="cross" href="#" onClick="deleteNote(this);return false;" title="Delete..."></a>' + moment(creationTime).format("MMMM Do YYYY, h:mm:ss a") + '<br/>' + notesArray[i].group + '</div><div saved="saved" class="note" id=' + "newNote" + editorOffset + ' uid=' + notesArray[i].id + ' contentEditable="true">' + notesArray[i].message + '</div></div>');
+			var $noteHtml = $('<div class="noteContainer '+ notesArray[i].group.replace(' ','') +'"><div class="tab"><a class="cross" href="#" onClick="deleteNote(this);return false;" title="Delete..."></a>' + moment(creationTime).format("MMMM Do YYYY, h:mm:ss a") + '<br/>' + notesArray[i].group + '</div><div saved="saved" class="note" id=' + "newNote" + editorOffset + ' uid=' + notesArray[i].id + ' contentEditable="true">' + notesArray[i].message + '</div></div>');
 			$('#notes_ul, this.$widgetDiv').prepend($noteHtml);
 
-			if (typeof callback === 'function') {
+			if (typeof callback === 'function' && notesArray[i].group != 'System Note') {
 		        callback();
 		    }
              editorOffset++   
