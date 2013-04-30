@@ -6,7 +6,7 @@
                 actions: [{
 						name: "next",
 						submission: {
-							url: "proxy/script-runner",
+							url: "http://project-pact-internal.osl-cloud.com:3010/executeScript/",
 							data: {
                                 script: "shared/script/invokeAction.py",
 								actionUid: "xpath://actionUid",
