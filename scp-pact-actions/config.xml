@@ -10,7 +10,7 @@
 			<country>GB</country>
 		</locale>
 		<actor><actorUid>{actorUid}</actorUid></actor>
-        <party><partyUid>{partyUid}</partyUid></party>
+		<party><partyUid>{partyUid}</partyUid></party>
 		<process/>
 		<evType/>
 		<evSubType/>
@@ -25,12 +25,12 @@
 	<return>
 		<name>asActionsForParty</name>
 		<params>
-            <depth>0</depth>
-            <suppressInternalActions>true</suppressInternalActions>
-            <partyuid>{partyUid}</partyuid>
-            <actoruid>{actorUid}</actoruid>
-            <authorities>act,view</authorities>
-        </params>
+			<depth>0</depth>
+			<suppressInternalActions>true</suppressInternalActions>
+			<partyuid>{partyUid}</partyuid>
+			<actoruid>{actorUid}</actoruid>
+			<authorities>act,view</authorities>
+		</params>
 	</return>
 </pactrequest>]]></pactrequest>
 	</parameters>
