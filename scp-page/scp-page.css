@@ -68,7 +68,7 @@ summary>h2{
 }
 #header-title{
 	display: inline-block;
-	max-width: 45%;
+	max-width: 50%;
 	max-height: 2em;
 	overflow: hidden;
 	margin: 0;
@@ -80,15 +80,16 @@ summary>h2{
 }
 #header-user{
 	float: right;
-	width: 45%;
+	width: 40%;
 	vertical-align: top;
 	text-align: right;
 }
 #header-user-name{
 	display: inline-block;
-	width: 50%;
+	width: 60%;
 	max-height: 3em;
 	overflow: hidden;
+	margin-right: 1%;
 	text-align: left;
 	vertical-align: top;
 	padding: 0.25em 0.25em 0.25em 3em;
@@ -299,7 +300,7 @@ span.currency:before{
 	font-size: 0.75em;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
 	#content article{
 		position: static;
 		width: auto;
@@ -310,15 +311,23 @@ span.currency:before{
 	#content aside{
 		display: inline-block;
 		left: auto;
-		width: auto;
+		width: 8em;
+		height: 3em;
 		min-height: auto;
-		padding: 0.5em 1em;
+		padding: 0.25em 0.5em;
+		vertical-align: bottom;
+		font-size: 0.8em;
+		text-align: center;
 		background-image: none!important;
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
+		border-bottom: none;
 	}
 	#content aside .subtitle{
 		display: none;
+	}
+	#footer{
+		position: static;
 	}
 }
 
