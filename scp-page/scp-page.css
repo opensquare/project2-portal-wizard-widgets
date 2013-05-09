@@ -115,14 +115,15 @@ summary>h2{
 }
 
 #content{
-	padding: 1%;
+	padding: 1em;
+	min-height: 400px;
 }
 #content aside{
 	position: relative;
-	left: 84%;
-	width: 16%;
+	left: 83%;
+	width: 17%;
 	min-height: 5em;
-	padding: 1em 4em 1em 0.75em;
+	padding: 1em 4em 1em 1.25em;
 	background: #FFF url('images/plus-dark.png') no-repeat 95% 20%;
 	border: medium solid #555;
 	border-top-right-radius: 2em;
@@ -136,7 +137,6 @@ summary>h2{
 }
 #content-newpage-aside aside{
 	color: #AAA;
-	border-style: dashed;
 }
 #content article{
 	position: absolute;
