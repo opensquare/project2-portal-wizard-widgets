@@ -101,6 +101,7 @@ summary>h2{
 	border-bottom: 1px dashed; 
 }
 #header-logout {
+	display: inline-block;
 	margin: 0 1em;
 	padding: 0.1em 1em;
 	background: rgba(0,0,0,0.1);

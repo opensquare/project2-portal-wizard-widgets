@@ -36,7 +36,16 @@ article[type='internal'] .new-square[type='documents'][subtype='documents'] {
 #content article[type='documents'], #content article[type='documents'] .content-helper, #content article[type='documents'] .content-body{
 	border-color: #4F81BD;
 }
-#content article[type='documents'] .content-header, #content article[type='documents'] .content-helper, #content article[type='documents']::-webkit-scrollbar-thumb{
+#content article[type='documents'] .content-header, #content article[type='documents'] .content-helper{
+	background-color: #4F81BD;
+}
+#content article[type='documents']::-webkit-scrollbar-thumb{
+	background-color: #4F81BD;
+}
+#content article[type='documents'] .content-header-pulldown {
+	background-color: #4F81BD;
+}
+#content article[type='documents'] .content-header-pulldown-tabs>span {
 	background-color: #4F81BD;
 }
 

@@ -36,7 +36,10 @@ article[type='internal'] .new-square[type='claims'][subtype='new'] {
 #content article[type='claims'], #content article[type='claims'] .content-helper, #content article[type='claims'] .content-body{
 	border-color: #4BACC6;
 }
-#content article[type='claims'] .content-header, #content article[type='claims'] .content-helper, content article[type='claims']::-webkit-scrollbar-thumb{
+#content article[type='claims'] .content-header, #content article[type='claims'] .content-helper{
+	background-color: #4BACC6;
+}
+#content article[type='claims']::-webkit-scrollbar-thumb{
 	background-color: #4BACC6;
 }
 #content article[type='claims'] .content-header-pulldown {

@@ -18,7 +18,16 @@ article[type='internal'] .new-square[type='finance'] {
 #content article[type='finance'], #content article[type='finance'] .content-helper, #content article[type='finance'] .content-body {
 	border-color: #9BBB59;
 }
-#content article[type='finance']::-webkit-scrollbar-thumb, #content article[type='finance'] .content-header, #content article[type='finance'] .content-helper {
+#content article[type='finance'] .content-header, #content article[type='finance'] .content-helper {
+	background-color: #9BBB59;
+}
+#content article[type='finance']::-webkit-scrollbar-thumb{
+	background-color: #9BBB59;
+}
+#content article[type='finance'] .content-header-pulldown {
+	background-color: #9BBB59;
+}
+#content article[type='finance'] .content-header-pulldown-tabs>span {
 	background-color: #9BBB59;
 }
 #content article[type='finance']>.content-body{

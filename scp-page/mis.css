@@ -39,3 +39,12 @@ article[type='internal'] .new-square[type='mis'][subtype='fraud'] {
 #content article[type='mis'] .content-header, #content article[type='mis'] .content-helper{
 	background-color: #8064A2;
 }
+#content article[type='mis']::-webkit-scrollbar-thumb{
+	background-color: #8064A2;
+}
+#content article[type='mis'] .content-header-pulldown {
+	background-color: #8064A2;
+}
+#content article[type='mis'] .content-header-pulldown-tabs>span {
+	background-color: #8064A2;
+}
