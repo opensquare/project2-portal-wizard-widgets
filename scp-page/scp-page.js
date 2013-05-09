@@ -8,7 +8,7 @@ function Widget_scp_page() {
 		pw.addListenerToChannel(this, channelSetPageTitles);
 		pw.addListenerToChannel(this, channelSetPageArgs);
 		urlParse();
-		setAsideClickHandler($('#content-newpage-aside aside'));
+		setAsideClickHandler($('#content-asides aside'));
         initPopups();
 	}
 	
