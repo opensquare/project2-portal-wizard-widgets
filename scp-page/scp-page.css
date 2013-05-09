@@ -103,7 +103,6 @@ summary>h2{
 }
 #header-logout {
 	display: inline-block;
-	margin: 0 1em;
 	padding: 0.1em 1em;
 	background: rgba(0,0,0,0.1);
 	border-radius: 0.25em;
@@ -258,13 +257,14 @@ article[type="internal"] .new-square-group{
 }
 article[type="internal"] .new-square-group h3{
 	position: absolute;
-	width: 6.2em;
-	-webkit-transform-origin: 2em 4em;
-	-ms-transform-origin: 2em 4em;
+	width: 9.5em;
+	-webkit-transform-origin: 3.5em 5.5em;
+	-ms-transform-origin: 3.5em 5.5em;
+	transform-origin: 3.5em 5.5em;
 	-webkit-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 	overflow: hidden;
-	padding: 0.1em 0.5em;
 	text-align: right;
 	font-size: 0.75em;
 	font-weight: normal;
