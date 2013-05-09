@@ -327,7 +327,8 @@ span.currency:before{
 		border-top-right-radius: 1em;
 	}
 	#content aside.on {
-		margin-bottom: 1.75em;
+		box-sizing: content-box;
+		margin-bottom: 0;
 	}
 	#content aside .subtitle{
 		display: none;
