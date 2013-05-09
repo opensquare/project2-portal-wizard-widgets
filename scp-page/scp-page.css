@@ -117,14 +117,13 @@ summary>h2{
 
 #content{
 	padding: 1em;
-	min-height: 400px;
 }
 #content aside{
 	position: relative;
 	left: 83%;
 	width: 17%;
 	min-height: 5em;
-	padding: 1em 4em 1em 1.25em;
+	padding: 0.5em 4em 1em 1.5em;
 	background: #FFF url('images/plus-dark.png') no-repeat 95% 20%;
 	border: medium solid #555;
 	border-top-right-radius: 2em;
@@ -312,8 +311,8 @@ span.currency:before{
 		display: inline-block;
 		left: auto;
 		width: 8em;
-		height: 3em;
-		min-height: auto;
+		height: 3.2em;
+		overflow: hidden;
 		padding: 0.25em 0.5em;
 		vertical-align: bottom;
 		font-size: 0.8em;
