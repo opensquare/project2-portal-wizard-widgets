@@ -1,7 +1,7 @@
 <widget>
 	<type>internalPage</type>
 	<parameters>
-		<url>cp-footer.html</url>
+		<url>common-footer.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
