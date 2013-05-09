@@ -125,6 +125,7 @@ summary>h2{
 	min-height: 5em;
 	margin-top: -2.75em;
 	padding: 0.5em 4em 1em 1.5em;
+	color: #777;
 	background: #FFF url('images/plus-dark.png') no-repeat 95% 20%;
 	border: medium solid #555;
 	border-top-right-radius: 2em;
@@ -134,17 +135,11 @@ summary>h2{
 #content aside:first-child {
 	margin-top: 0;
 }
-#content aside:last-child {
-	margin-bottom: 0;
-}
 #content aside.on {
 	margin-bottom: 2.75em;
 	background: #555 url('images/plus-light.png') no-repeat 95% 20%;
 	color: #fff;
 	font-weight: bold;
-}
-#content-newpage-aside aside{
-	color: #AAA;
 }
 #content article{
 	position: absolute;
@@ -263,7 +258,9 @@ article[type="internal"] .new-square-group h3{
 	position: absolute;
 	width: 6.2em;
 	-webkit-transform-origin: 2em 4em;
+	-ms-transform-origin: 2em 4em;
 	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
 	overflow: hidden;
 	padding: 0.1em 0.5em;
 	text-align: right;
@@ -312,13 +309,6 @@ span.currency:before{
 }
 
 @media screen and (max-width: 750px) {
-	#content article{
-		position: static;
-		width: auto;
-	}
-	#content-asides,#content-newpage-aside{
-		display: inline-block;
-	}
 	#content aside{
 		display: inline-block;
 		left: auto;
@@ -333,10 +323,16 @@ span.currency:before{
 		background-image: none!important;
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
-		border-bottom: none;
+	}
+	#content aside.on {
+		margin-bottom: 1.75em;
 	}
 	#content aside .subtitle{
 		display: none;
+	}
+	#content article{
+		position: static;
+		width: auto;
 	}
 	#footer{
 		position: static;

@@ -45,7 +45,10 @@ article[type='internal'] .new-square[type='quote'][subtype='new'] {
 #content article[type='quote'], #content article[type='quote'] .content-helper, #content article[type='quote'] .content-body{
 	border-color: #C0504D;
 }
-#content article[type='quote'] .content-header, #content article[type='quote'] .content-helper, #content article[type='quote']::-webkit-scrollbar-thumb{
+#content article[type='quote'] .content-header, #content article[type='quote'] .content-helper{
+	background-color: #C0504D;
+}
+#content article[type='quote']::-webkit-scrollbar-thumb{
 	background-color: #C0504D;
 }
 #content article[type='quote'] .content-header-pulldown {
