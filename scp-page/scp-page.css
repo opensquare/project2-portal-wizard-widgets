@@ -123,6 +123,7 @@ summary>h2{
 	left: 83%;
 	width: 17%;
 	min-height: 5em;
+	margin-top: -2.75em;
 	padding: 0.5em 4em 1em 1.5em;
 	background: #FFF url('images/plus-dark.png') no-repeat 95% 20%;
 	border: medium solid #555;
@@ -130,7 +131,14 @@ summary>h2{
 	cursor: pointer;
 	z-index: 10;
 }
-#content aside.on{
+#content aside:first-child {
+	margin-top: 0;
+}
+#content aside:last-child {
+	margin-bottom: 0;
+}
+#content aside.on {
+	margin-bottom: 2.75em;
 	background: #555 url('images/plus-light.png') no-repeat 95% 20%;
 	color: #fff;
 	font-weight: bold;
@@ -239,13 +247,17 @@ span.loading {
 	background: url('images/loading-small.gif') no-repeat center center;
 }
 
-/* New page styling */ 
+/* New page styling */
+.scp-new-pages:empty {
+	height: 8em;
+	background: url('images/loading.gif') no-repeat center center;
+}
 article[type="internal"] summary h2 {
 	display: inline-block;
 }
 article[type="internal"] .new-square-group{
 	display: inline-block;
-	padding: 0 7.75em 0 2em;
+	padding: 0 0 0 2em;
 }
 article[type="internal"] .new-square-group h3{
 	position: absolute;
@@ -312,6 +324,7 @@ span.currency:before{
 		left: auto;
 		width: 8em;
 		height: 3.2em;
+		min-height: 3.2em;
 		overflow: hidden;
 		padding: 0.25em 0.5em;
 		vertical-align: bottom;
