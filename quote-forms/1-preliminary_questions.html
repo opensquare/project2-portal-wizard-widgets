@@ -1,0 +1,127 @@
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+
+<ul id="crumbTrail">
+  <li class="car">Your car</li>
+  <li class="policy">Your policy</li>
+  <li class="drivers">Your drivers</li>
+  <li class="quote">Your quote</li>
+ </ul>
+
+<form rhinoforms="true">
+
+	<ol id="preliminaryQuestions">
+		<li class="field">
+			<span>Model Insurance only offer comprehensive cover - is that ok</span>
+			<label for="only_offer_comp">
+				<span>Yes</span>
+				<input type="radio" name="only_offer_comp" value="yes" rf.validation="required" />
+			</label>
+			<label for="only_offer_comp">
+				<span>No</span>
+				<input type="radio" name="only_offer_comp" value="no" rf.validation="required" />
+			</label>
+		</li>
+
+		<li class="field">
+			<span>Are you the main user of the car ??</span>
+			<label for="main_user_of_car">
+				<span>Yes</span>
+				<input type="radio" name="main_user_of_car" value="yes" rf.validation="required" />
+			</label>
+			<label for="main_user_of_car">
+				<span>No</span>
+				<input type="radio" name="main_user_of_car" value="no" rf.validation="required" />
+			</label>
+		</li>
+		
+		<li class="field">
+			<span>Do you have the car owner's permission to fit a telematics box and do you and any named drivers agree to ingenie using and processing any recorded driving data</span>
+			<label for="permission_fit_telematics">
+				<span>Yes</span>
+				<input type="radio" name="permission_fit_telematics" value="yes" rf.validation="required" />
+			</label>
+			<label for="permission_fit_telematics">
+				<span>No</span>
+				<input type="radio" name="permission_fit_telematics" value="no" rf.validation="required" />
+			</label>
+		</li>
+		
+		<li class="field">
+			<span>Is the vehicle owned by you, your parent, grandparent, husband/wife or civil partner</span>
+			<label for="vehicle_owned_by_you">
+				<span>Yes</span>
+				<input type="radio" name="vehicle_owned_by_you" value="yes" rf.validation="required" />
+			</label>
+			<label for="vehicle_owned_by_you">
+				<span>No</span>
+				<input type="radio" name="vehicle_owned_by_you" value="no" rf.validation="required" />
+			</label>
+		</li>
+		
+		<li>
+			<span>Have you or any other drivers of the car you want to insure:</span>
+			<ol>
+				<li class="field">
+					<span>Had any restrictions added to your/their driving licence by the DVLA due to any disability or medical condition ??</span>
+					<label for="any_restrictions">
+						<span>Yes</span>
+						<input type="radio" name="any_restrictions" value="yes" rf.validation="required" />
+					</label>
+					<label for="any_restrictions">
+						<span>No</span>
+						<input type="radio" name="any_restrictions" value="no" rf.validation="required" />
+					</label>
+				</li>
+				<li class="field">
+					<span>Been refused, had cancelled or had any special terms imposed on previous insurance policies</span>
+					<label for="been_refused">
+						<span>Yes</span>
+						<input type="radio" name="been_refused" value="yes" rf.validation="required" />
+					</label>
+					<label for="been_refused">
+						<span>No</span>
+						<input type="radio" name="been_refused" value="no" rf.validation="required" />
+					</label>
+				</li>
+				<li class="field">
+					<span>Had any non-motoring convictions that are not spent under the Rehabilitation of Offenders Act 1974 or any convictions for help</span>
+					<label for="convictions">
+						<span>Yes</span>
+						<input type="radio" name="convictions" value="yes" rf.validation="required" />
+					</label>
+					<label for="convictions">
+						<span>No</span>
+						<input type="radio" name="convictions" value="no" rf.validation="required" />
+					</label>
+				</li>							
+			</ol>
+		</li>
+		
+		<li class="field">
+			<span>Has the car been changed from the manufacturer's standard specification? ??<br />
+			<a href="#">Click here to see a list of unacceptable modifications</a></span>
+			<label for="standard_spec">
+				<span>Yes</span>
+				<input type="radio" name="standard_spec" value="yes" rf.validation="required" />
+			</label>
+			<label for="standard_spec">
+				<span>No</span>
+				<input type="radio" name="standard_spec" value="no" rf.validation="required" />
+			</label>
+		</li>
+		
+		<li class="field">
+			<span>Will the vehicle be used for any commercial purposes including private hire, driving tuition, rallies and anything to do with the motor trade</span>
+			<label for="commercial_purposes">
+				<span>Yes</span>
+				<input type="radio" name="commercial_purposes" value="yes" rf.validation="required" />
+			</label>
+			<label for="ocommercial_purposes">
+				<span>No</span>
+				<input type="radio" name="commercial_purposes" value="no" rf.validation="required" />
+			</label>
+		</li>
+		
+	</ol>
+
+</form>

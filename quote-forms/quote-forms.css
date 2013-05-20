@@ -7,6 +7,9 @@ h1 {
 	color: #333;
 	font-size: 230%; font-weight: normal;
 }
+ol li ol li {
+	list-style-type: lower-roman;
+}
 div.widget[name='quote-forms'] input[type='date'] {
 	border: thin solid #0090C0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
@@ -106,7 +109,7 @@ div.widget[name='quote-forms'] select:disabled {
 	background-color: rgb(235, 235, 228);
 }
 
-div.widget[name='quote-forms'] div.field {
+div.widget[name='quote-forms'] div.field, ol li.field {
 	min-height: 2.2em;
 	padding: 1em 0;
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
