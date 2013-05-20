@@ -135,6 +135,12 @@ div.widget[name='quote-forms'] div.field a:hover {
 div.widget[name='quote-forms'] option:first-child {
 	color: #999;
 }
+.hintMsg {
+	color: #FFF;
+	padding: 0.35em;
+	border-radius: 0.25em;
+	background-color: #92CE56;
+}
 div.widget[name='quote-forms'] .hint {
 	display: none;
 	position: absolute; right: 7em;
