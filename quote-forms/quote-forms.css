@@ -14,6 +14,9 @@ ol li ol li {
 		width:auto;
 		list-style-type: lower-roman;
 	}
+		ol li label span {
+			width:80%;
+		}
 div.widget[name='quote-forms'] input[type='date'] {
 	border: thin solid #0090C0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
