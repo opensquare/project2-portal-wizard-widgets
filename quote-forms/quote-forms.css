@@ -10,11 +10,11 @@ h1 {
 ol li ol li {
 	list-style-type: lower-roman;
 }
-	ol li label {
+	ol li.field label {
 		width:auto;
 		list-style-type: lower-roman;
 	}
-		ol li label span {
+		ol li.field span {
 			width:80%;
 		}
 div.widget[name='quote-forms'] input[type='date'] {
