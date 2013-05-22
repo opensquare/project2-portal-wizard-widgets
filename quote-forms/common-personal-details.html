@@ -70,6 +70,23 @@
 		</div>
 		
 		<div class="field">
+			<label for="status_employment">Employment Status</label>
+			<input type="hidden" name="employmentStatus" />
+			<select id="status_employment" name="statusEmployment" rf.validation="required" rf.preselectFirstOption="true">
+				<option>Please Select</option>
+				<option value="E">Employee or Staff</option>
+				<option value="SE">Self-Employed</option>
+				<option value="D">Director</option>
+				<option value="P">Proprietor or Partner</option>
+				<option value="U">Unemployed</option>
+				<option value="H">Houseperson</option>
+				<option value="FTE">Full-Time Education</option>
+				<option value="G">Government</option>
+				<option value="C">Club or Association</option>
+			</select>
+		</div>
+
+		<div class="field">
 			<label for="input_occupation">Primary occupation</label>
 			<input type="hidden" name="occupationCode" />
 			<input id="input_occupation" type="text" name="occupation" rf.validation="required fromSource" rf.customType="auto-complete-select({ codeFieldName: 'occupationCode' })" rf.source="http://integration.osldev.net/resource-manager/REST/files/itb-resources-test2/lists/_itbLists-occupationSheet.xml?transformer=xslt&xslt=/itb-resources-test2/lists/occupationLookupTransformJSONmin.xsl&contentType=application%2Fjson&occupation=[value]" />
@@ -135,6 +152,24 @@
 			<label for="input_ownHome_yes" class="forRadio">Yes</label>
 			<input id="input_ownHome_no" type="radio" name="ownHome" value="no"/>
 			<label for="input_ownHome_no" class="forRadio">No</label>
+		</div>
+
+		<div class="field">
+			<label for="hear_about_us">How did you hear about us?</label>
+			<input type="hidden" name="hearAbout_us" />
+			<select id="hear_about_us" name="hearAboutUs" rf.validation="required" rf.preselectFirstOption="true">
+				<option value="UNKNOWN">Please Select</option>
+				<option value="FAMILY">Family or friend</option>
+				<option value="TWITTER">Twitter</option>
+				<option value="FBOOK">Facebook</option>
+				<option value="YOUTUBE">YouTube</option>
+				<option value="GOOGL">Google</option>
+				<option value="COMPAR">Comparison site</option>
+				<option value="ONLINEAR">Online article</option>
+				<option value="NEWMAG">Newspaper/magazine article</option>
+				<option value="PETROL">Petrol station advertising screen</option>
+				<option value="OTHER">Other</option>
+			</select>
 		</div>
 	</div>
 		

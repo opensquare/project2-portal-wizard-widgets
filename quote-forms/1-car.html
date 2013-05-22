@@ -186,7 +186,7 @@
 
 		<div class="field">	
 			<div>
-				<label for="input_purchaseDate">When did you buy the car?</label>
+				<label for="input_purchaseDate">When did you start driving the car?</label>
 
 				<select id="input_purchaseDateMonth" name="purchaseDateMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 					<option disabled selected></option>
@@ -228,6 +228,47 @@
 			<input id="input_protectNoClaims" type="checkbox" name="protectNoClaims" rf.includeIf="{ utils.isGreaterThan(fields.noClaimsYears.value, 0) }"></input>
 		</div>
 
+		<div class="field">
+			<label for="selectPurpose">What purpose do you use the car?</label>
+			<select id="selectPurpose" name="selectPurpose" rf.validation="required" rf.preselectFirstOption="true">
+				<option selected="" value="">Please Select</option>
+				<option value="SDPexC">Social, Domestic & Pleasure</option>
+				<option value="SDP">Social, Domestic & Pleasure (incl. commuting)</option>
+				<option value="C1">Business Use</option>
+			</select>
+		</div>
+
+		<div class="field">
+			<label for="annualMileage">Annual Mileage?</label>
+			<input id="annualMileage" name="annualMileage" rf.validation="required" />
+		</div>
+
+		<div class="field">
+			<label for="voluntaryExcess">How many years No Claims Discount do you have?</label>
+			<select id="voluntaryExcess" name="voluntaryExcess" rf.validation="required"
+				<option selected="" value="">Please Select</option>
+				<option value="0">None</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="150">150</option>
+				<option value="200">200</option>
+				<option value="250">250</option>
+				<option value="300">300</option>
+			</select>
+		</div>
+
+		<div class="field">
+			<label for="vehicleOwner">Who is the owner of the car?</label>
+			<select id="vehicleOwner" name="vehicleOwner" rf.validation="required"
+				<option selected="" value="">Please Select</option>
+				<option value="Proposer">You</option>
+				<option value="Spouse">Spouse</option>
+				<option value="Civil">Civil Partner</option>
+				<option value="Leased">Private Lease Company</option>
+				<option value="Company">Company</option>
+				<option value="Other">Other (e.g. Parent/Grandparent)</option>
+			</select>
+		</div>
 	</div>
 
 	<div id="disabledSectionTwo" class="disabled">
