@@ -196,20 +196,23 @@
 				</select>
 				
 				<input id="input_noPurchaseDate" type="checkbox" name="noPurchaseDate" onclick="$('#input_purchaseDateMonth, #input_purchaseDateYear').attr('disabled', this.checked);"></select>
-				<label for="input_noPurchaseDate" class="checkboxLabel">I don't own the car yet</label>
+				<label for="input_noPurchaseDate" class="checkboxLabel">I don't have the car yet</label>
 
 				<input type="hidden" name="monthsOwned" rf.calculated="{ if (fields.purchaseDateMonth.value ) { utils.monthsBetween(moment('01/' + fields.purchaseDateMonth.value + '/' + fields.purchaseDateYear.value, 'DD/MM/YYYY'), new Date()); }else{0}}" />
 			</div>
 
-			<div class="hint">We need your purchase date so we can find your exact car and help you get a more accurate quote.</div>
+			<div class="hint">We need this date so we can find your exact car and help you get a more accurate quote.</div>
 		</div>
 		
+
+		<!--
 		<div class="field">
 			<label for="input_dayParking">Where do you park most days?</label>
 			<select id="input_dayParking" name="dayParkingCode" rf.validation="required" rf.source="resources/dayParking.csv" rf.preselectFirstOption="true">
 				<option disabled selected/>
 			</select>
 		</div>
+	-->
 		
 		<div class="field">
 			<label for="input_nightParking">Where do you park most nights?</label>
@@ -230,43 +233,27 @@
 
 		<div class="field">
 			<label for="selectPurpose">What purpose do you use the car?</label>
-			<select id="selectPurpose" name="selectPurpose" rf.validation="required" rf.preselectFirstOption="true">
-				<option selected="" value="">Please Select</option>
-				<option value="SDPexC">Social, Domestic & Pleasure</option>
-				<option value="SDP">Social, Domestic & Pleasure (incl. commuting)</option>
-				<option value="C1">Business Use</option>
+			<select id="selectPurpose" name="selectPurpose" rf.resource="resources/purpose.csv" rf.validation="required" rf.preselectFirstOption="true">
+				<option disable selected>Please Select</option>
 			</select>
 		</div>
 
 		<div class="field">
 			<label for="annualMileage">Annual Mileage?</label>
-			<input id="annualMileage" name="annualMileage" rf.validation="required" />
+			<input id="annualMileage" type="text" name="annualMileage" rf.validation="required" />
 		</div>
 
 		<div class="field">
-			<label for="voluntaryExcess">How many years No Claims Discount do you have?</label>
-			<select id="voluntaryExcess" name="voluntaryExcess" rf.validation="required"
-				<option selected="" value="">Please Select</option>
-				<option value="0">None</option>
-				<option value="50">50</option>
-				<option value="100">100</option>
-				<option value="150">150</option>
-				<option value="200">200</option>
-				<option value="250">250</option>
-				<option value="300">300</option>
+			<label for="voluntaryExcess">How much would like your voluntary excess to be?</label>
+			<select id="voluntaryExcess" name="voluntaryExcess" rf.resource="resources/voluntaryExcess.csv" rf.validation="required"
+				<option disabled selected>Please Select</option>
 			</select>
 		</div>
 
 		<div class="field">
 			<label for="vehicleOwner">Who is the owner of the car?</label>
-			<select id="vehicleOwner" name="vehicleOwner" rf.validation="required"
-				<option selected="" value="">Please Select</option>
-				<option value="Proposer">You</option>
-				<option value="Spouse">Spouse</option>
-				<option value="Civil">Civil Partner</option>
-				<option value="Leased">Private Lease Company</option>
-				<option value="Company">Company</option>
-				<option value="Other">Other (e.g. Parent/Grandparent)</option>
+			<select id="vehicleOwner" name="vehicleOwner" rf.resource="resources/vehicleOwner.csv" rf.validation="required"
+				<option disabled selected>Please Select</option>
 			</select>
 		</div>
 	</div>

@@ -41,15 +41,8 @@
 		<div class="field">
 			<label for="input_dateOfBirth">Date of birth</label>
 
-			<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true">
+			<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.resource="resources/dateDay.csv" rf.preselectFirstOption="true">
 					<option disabled selected>Day</option>
-					<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-					<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-					<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-					<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-					<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
-					<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
-					<option>31</option>
 			</select>
 			<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="resources/months.csv" rf.preselectFirstOption="true">
 					<option disabled selected>Month</option>
@@ -72,17 +65,8 @@
 		<div class="field">
 			<label for="status_employment">Employment Status</label>
 			<input type="hidden" name="employmentStatus" />
-			<select id="status_employment" name="statusEmployment" rf.validation="required" rf.preselectFirstOption="true">
-				<option>Please Select</option>
-				<option value="E">Employee or Staff</option>
-				<option value="SE">Self-Employed</option>
-				<option value="D">Director</option>
-				<option value="P">Proprietor or Partner</option>
-				<option value="U">Unemployed</option>
-				<option value="H">Houseperson</option>
-				<option value="FTE">Full-Time Education</option>
-				<option value="G">Government</option>
-				<option value="C">Club or Association</option>
+			<select id="status_employment" name="statusEmployment" rf.source="resources/employmentStatus.csv" rf.validation="required" rf.preselectFirstOption="true">
+				<option disable selected>Please Select</option>
 			</select>
 		</div>
 
@@ -146,6 +130,7 @@
 			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
 		</div>
 		
+		<!--
 		<div class="field">
 			<label>Do you own your own home</label>
 			<input id="input_ownHome_yes" type="radio" name="ownHome" value="yes" rf.validation="required"/>
@@ -153,22 +138,13 @@
 			<input id="input_ownHome_no" type="radio" name="ownHome" value="no"/>
 			<label for="input_ownHome_no" class="forRadio">No</label>
 		</div>
+		-->
 
 		<div class="field">
 			<label for="hear_about_us">How did you hear about us?</label>
 			<input type="hidden" name="hearAbout_us" />
-			<select id="hear_about_us" name="hearAboutUs" rf.validation="required" rf.preselectFirstOption="true">
-				<option value="UNKNOWN">Please Select</option>
-				<option value="FAMILY">Family or friend</option>
-				<option value="TWITTER">Twitter</option>
-				<option value="FBOOK">Facebook</option>
-				<option value="YOUTUBE">YouTube</option>
-				<option value="GOOGL">Google</option>
-				<option value="COMPAR">Comparison site</option>
-				<option value="ONLINEAR">Online article</option>
-				<option value="NEWMAG">Newspaper/magazine article</option>
-				<option value="PETROL">Petrol station advertising screen</option>
-				<option value="OTHER">Other</option>
+			<select id="hear_about_us" name="hearAboutUs" rf.source="resources/howDidYouHere.csv" rf.validation="required" rf.preselectFirstOption="true">
+				<option disabled selected>Please Select</option>
 			</select>
 		</div>
 	</div>
