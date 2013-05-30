@@ -196,6 +196,7 @@
         <xsl:if test="claimType!=''">
             <part partname="claim" xmlns="">
                 <xsl:copy-of select="*"/>
+                <dateOfLoss><xsl:value-of select="date"/></dateOfLoss>
                 <type>
                     <xsl:value-of select="$type"/>
                 </type>
@@ -221,6 +222,8 @@
                 </suspension>
             </part>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="address">
     </xsl:template>
     <xsl:template name="encodeValue">
         <xsl:param name="_value"/>
