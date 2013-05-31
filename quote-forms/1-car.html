@@ -72,10 +72,10 @@
 
 		<div class="field findCar" rf.includeIf="{ fields.knowReg.value == 'yes' }">
 			<label for="input_reg">Registration number</label>
-			<input id="abiLookupProxy" type="hidden" style="display:none" rf.source="{{$vehicle-model-lookup}}" />
+			<input id="abiLookupProxy" type="hidden" style="display:none" rf.source="http://localhost:8080{{$contextPath}}/{{$vehicle-model-lookup}}" />
 			<div id="uk_reg_plate">
 				<div id="flag"></div>
-				<input  id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}"/>
+				<input  id="input_reg" type="text" name="reg" rf.validation="required" rf.source="http://localhost:8080{{$contextPath}}/{{$vehicle-lookup}}"/>
 			</div>
 			<input type="hidden" name="vehKey" rf.validation="required"/>
 			<input type="button" value="Find" id="findReg"/>
