@@ -12,15 +12,70 @@ div.widget[name='quote-forms'] h1 {
 	color: #333;
 	font-size: 230%; font-weight: normal;
 }
-div.widget[name='quote-forms'] ol li ol li {
+
+
+#preliminary_questions ol {
+	padding-left: 30px;
+}
+#preliminary_questions ol li.field {
+	font-size: 33px;
+	line-height: 20px;
+	font-weight: bold;
+	color:#92CE56;
+}
+	#preliminary_questions ol li.field span {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: normal;
+		color:#000000;
+	}
+	#preliminary_questions ol li.field label {
+		color:#92CE56;
+		font-size: 22px;
+		line-height: 20px;
+		font-weight: bold;
+		color:#92CE56;
+	}
+	#preliminary_questions ol li.field .radios {
+		width:110px;
+		float: right;
+	}
+		#preliminary_questions ol li.field .radios label {
+			padding: 0 4px;
+			text-align: center;
+		}
+			#preliminary_questions ol li.field .radios label input {
+				padding-left: 6px;
+				display: inline;
+			}
+
+			#preliminary_questions ol li.field .radios label .invalid-message {
+				position:relative;
+				z-index: 10;
+				left: 110px;
+				color:#ffffff;
+			}
+
+		#preliminary_questions ol li.field .radios label span {
+			color:#92CE56;
+		}
+
+div.widget[name='quote-forms'] ol li ol {
+	padding-top: 18px;
+}
+div.widget[name='quote-forms'] ol li ol li.field {
 	list-style-type: lower-roman;
+	font-weight: normal;
+	border-bottom:none;
+	border-top: thin solid rgba(0, 0, 0, 0.1);
 }
 div.widget[name='quote-forms'] ol li.field label {
 		width:auto;
 		list-style-type: lower-roman;
 }
 div.widget[name='quote-forms'] ol li.field span {
-			width:80%;
+	display: inline-block;
+	width:80%;
 }
 div.widget[name='quote-forms'] input[type='date'] {
 	border: thin solid #0090C0;
@@ -122,8 +177,7 @@ div.widget[name='quote-forms'] select:disabled {
 }
 
 div.widget[name='quote-forms'] div.field, ol li.field {
-	min-height: 2.2em;
-	padding: 1em 0;
+	padding: 20px 0;
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
 }
 div.widget[name='quote-forms'] div.field:hover {
