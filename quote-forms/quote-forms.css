@@ -352,7 +352,8 @@ div.widget[name='quote-forms'] #sectionOne a {
 	src: url('UKNumberPlate.ttf')
 }
 div.widget[name='quote-forms'] #input_reg {
-	width: 75%; height: 100%;
+	width: 89%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -361,22 +362,21 @@ div.widget[name='quote-forms'] #input_reg {
 	text-transform: uppercase;
 }
 div.widget[name='quote-forms'] #uk_reg_plate:before {
-	content: "•";
 	padding: 3px;
 	font-size: 1.9em;
 	color: #DEDEDE;
 }
 div.widget[name='quote-forms'] #uk_reg_plate:after {
-	content: "•";
 	padding: 3px;
 	font-size: 1.9em;
 	color: #DEDEDE;
 }
 div.widget[name='quote-forms'] #uk_reg_plate {
-	float: left;
-	width: 263px; height: 50px;
-	margin-right: 5%; margin-left: 43.5%;
-	border: 4px solid #DEDEDE; border-radius: 5px;
+	width: 263px;
+	height: 50px;
+	border: 4px solid #DEDEDE;
+	border-radius: 5px;
+	display: inline-block;
 	background: white;
 }
 div.widget[name='quote-forms'] #flag {
@@ -398,7 +398,9 @@ div.widget[name='quote-forms'] #flag:after {
 	font-size: 0.75em;
 }	
 div.widget[name='quote-forms'] #findReg {
-	margin-left: 70%
+	margin:15px 0 0 42.5%;
+	position: relative;
+	left: 200px;
 }
 /* crumb trail */
 div.widget[name='quote-forms'] #crumbTrail li {
