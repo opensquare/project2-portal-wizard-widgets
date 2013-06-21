@@ -1,0 +1,130 @@
+	<header>
+		<h2>Speak to us today <span>0800 123 456</span></h2>
+		<div class="widget" name="cp-header-menu"></div>
+	</header>
+
+	<div class="widget" name="cp-banner"></div>
+
+	<section id="cp-policy">
+		<div class="widget" name="help"></div>
+		<aside id="cp-policy-menu">
+			<a id="menu-summary" class="on" href="#cp-policy-summary">Summary</a>
+			<a id="menu-details" href="#cp-policy-details">Details/Changes</a>
+			<a id="menu-claims" href="#cp-policy-claims">Claims</a>
+			<a id="menu-docs" href="#cp-policy-docs">Documents</a>
+			<a id="menu-payments" href="#cp-policy-payments">Payments</a>
+		</aside>
+		
+		<div class="widget" name="cp-summary-ppi"></div>	
+
+		<details id="cp-policy-details" open>
+			<summary>Details</summary>
+
+			<div class="widget" name="policyholder"></div>
+			<div class="widget" name="cp-policy-beneficiary"></div>
+		</details>
+		<details id="cp-policy-claims">
+			<a name="cp-policy-claims"></a>
+			<summary>Claims</summary>
+			<div class="widget" name="cp-policy-claims"></div>
+		</details>
+		<details id="cp-policy-docs">
+			<a name="cp-policy-docs"></a>
+			<summary>Documents</summary>
+			<div class="widget" name="cp-policy-docs"></div>
+		</details>
+		<details id="cp-policy-payments">
+			<a name="cp-policy-payments"></a>
+			<summary>Payments</summary>
+			<div class="widget" name="cp-policy-payments"></div>
+		</details>
+
+	</section>
+
+
+	<footer>
+		<div class="widget" name="cp-footer"></div>
+	</footer>
+
+	<script type="text/javascript">
+		$(window).scroll(function(){
+   			$('#cp-policy-menu').css('top',Math.max(0,350-$(this).scrollTop()));
+   			// open <details> as the user scrolls down
+   			var scrollPosition = $(window).scrollTop() + $(window).height();
+   			$('#cp-policy details[open!="open"]').each(function(){
+				if($(this).position().top < scrollPosition){$(this).attr('open','')};
+   			});
+   			// Highlight relevant menu items as the user scrolls down
+   			scrollPosition = $(window).scrollTop();
+   			var menu = $('#cp-policy-menu a');
+   			var href = "";
+   			$('#cp-policy details').each(function(){
+				if(href == "" && $(this).position().top > scrollPosition-30){
+					href = $(this).attr('id');
+					menu.removeClass('on');
+					menu.filter('[href="#'+href+'"]').addClass('on');
+				};
+   			});
+		});
+
+		// Enhance menu click behaviour
+		$('#cp-policy-menu a').click(function(){
+			$('#cp-policy-menu a').removeClass('on');
+			var place = $(this).addClass('on').attr('href');
+			$(place).attr('open','');
+		});
+
+
+
+
+	</script>
+<!--
+		$(document).ready(function() {
+		  function filterPath(string) {
+		  return string
+		    .replace(/^\//,'')
+		    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+		    .replace(/\/$/,'');
+		  }
+		  var locationPath = filterPath(location.pathname);
+		  var scrollElem = scrollableElement('html', 'body');
+		 
+		  $('a[href*=#]').each(function() {
+		    var thisPath = filterPath(this.pathname) || locationPath;
+		    if (  locationPath == thisPath
+		    && (location.hostname == this.hostname || !this.hostname)
+		    && this.hash.replace(/#/,'') ) {
+		      var $target = $(this.hash), target = this.hash;
+		      if (target) {
+		        var targetOffset = $target.offset().top;
+		        $(this).click(function(event) {
+		          event.preventDefault();
+		          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+		            location.hash = target;
+		          });
+		        });
+		      }
+		    }
+		  });
+		 
+		  // use the first element that is "scrollable"
+		  function scrollableElement(els) {
+		    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+		      var el = arguments[i],
+		          $scrollElement = $(el);
+		      if ($scrollElement.scrollTop()> 0) {
+		        return el;
+		      } else {
+		        $scrollElement.scrollTop(1);
+		        var isScrollable = $scrollElement.scrollTop()> 0;
+		        $scrollElement.scrollTop(0);
+		        if (isScrollable) {
+		          return el;
+		        }
+		      }
+		    }
+		    return [];
+		  }
+		 
+		});
+	</script-->

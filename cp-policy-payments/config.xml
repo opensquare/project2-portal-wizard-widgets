@@ -1,0 +1,34 @@
+<widget>
+	<type>pactResponse</type>
+	<parameters>
+		<xsl>cp-policy-payments</xsl>
+		<pactrequest>
+			<![CDATA[
+			<pactrequest>
+				<target>
+					<uid>{polUid}</uid>
+						<partPath>premium.Premium.Premium Paid</partPath>
+				</target>
+				<timepoint>
+					<effectivetime>now</effectivetime>
+					<physicaltime>now</physicaltime>
+				</timepoint>
+				<context>
+					<locale>
+						<language>en</language>
+						<country>GB</country>
+					</locale>
+				</context>
+				<return>
+					<name>asAccumulatorPostingHistory</name>
+				</return>
+			</pactrequest>
+			]]>
+		</pactrequest>
+	</parameters>
+	<attributes>
+		<js>cp-policy-payments.js</js>
+		<css>cp-policy-payments.css</css>
+		<delayLoad>true</delayLoad>
+	</attributes>
+</widget>

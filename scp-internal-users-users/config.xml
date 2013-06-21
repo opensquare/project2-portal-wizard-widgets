@@ -1,0 +1,11 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-internal-users-users.html</url>
+	</parameters>
+	<attributes>
+		<js>scp-internal-users-users.js</js>
+		<displayHeader>false</displayHeader>
+	</attributes>
+</widget>
+

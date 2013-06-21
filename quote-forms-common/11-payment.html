@@ -1,0 +1,174 @@
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+<script type='text/javascript' src='widgets/quote-forms-common/js/address-lookup.js' ></script>
+<script type='text/javascript' src='widgets/quote-forms/js/account-validation.js' ></script>
+<link rel="stylesheet" type="text/css" href="//services.postcodeanywhere.co.uk/css/captureplus-1.34.min.css?key=ut99-ca31-nt36-bt86" />
+<script type="text/javascript" src="//services.postcodeanywhere.co.uk/js/captureplus-1.34.min.js?key=ut99-ca31-nt36-bt86&app=6352"></script>
+<div id="ut99ca31nt36bt866352"></div>
+<ul id="crumbTrail">
+	<li class="apply">Apply</li>
+	<li class="pay on">Pay</li>
+	<li class="welcome">Welcome</li>
+</ul>
+<form rhinoforms="true" id="paymentPage">
+	<h1>Pay</h1>
+	<div>
+		<rf.include src="payment-type-details.html"/>
+	</div>
+	<h1>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h1>
+	<div class="field">
+		<label>Is this card registered to you?</label>
+		<input type="radio" name="phCard" value="true" checked id="ph_card_y" rf.validation="required"/><label for="ph_card_y" class="forRadio">Yes</label>
+		<input type="radio" name="phCard" value="false" id="ph_card_n" rf.validation="required"/><label for="ph_card_n" class="forRadio">No</label>
+	</div>
+	<div class="field" rf.includeIf="fields.phCard.value == 'false'">
+		<label for="input_c_title">Card holder's name</label>
+		<select id="input_c_title" class="titleSelect" name="card.title" rf.source="../quote-forms-common/resources/titles.txt" rf.preselectFirstOption="true">
+			<option disabled selected>Title</option>
+		</select>
+		<input id="input_c_firstName" type="text" name="card.firstName" placeholder="First Name"/>
+		<input id="input_c_surname" type="text" name="card.surname" rf.validation="required" placeholder="Surname"/>
+	</div>
+	<div class="field" rf.includeIf="fields.phCard.value == 'false'">
+		<label>Date of birth</label>
+		<select id="input_dateOfBirthDay" name="dateOfBirthDay" class="dateSel" rf.preselectFirstOption="true" rf.rangeStart="1" rf.rangeEnd="31">
+				<option disabled selected>Day</option>
+		</select>
+		<select id="input_dateOfBirthMonth" name="dateOfBirthMonth" class="dateSel" rf.source="../quote-forms-common/resources/months.csv" rf.preselectFirstOption="true">
+				<option disabled selected>Month</option>
+		</select>
+		<select id="input_dateOfBirthYear" name="dateOfBirthYear" class="dateSel" rf.rangeStart="moment().subtract('years', 16).format('YYYY')" rf.rangeEnd="moment().subtract('years', 99).format('YYYY')" rf.preselectFirstOption="true" value="">
+				<option disabled selected>Year</option>
+		</select>
+	</div>
+	<div class="field findAddress" rf.includeIf="fields.phCard.value == 'false'">
+		<div class="labelWrapper">
+			<label for="input_address">Billing Address</label>
+			</div>
+		<div class="tableWrapper">
+			<input class="addressLookup" id="input_address" type="text" placeholder="Start typing your address or postcode"/>
+		</div>
+	</div>
+	<div rf.includeIf="fields.phCard.value == 'false'">
+		<div class="field addressFound" style="display:none">
+			<span id="addressLabel">
+				<span name="address.line1">{{address.line1}}</span>
+				<span name="address.line2">{{address.line2}}</span>
+				<span name="address.line3">{{address.line3}}</span>
+				<span name="address.line4">{{address.line4}}</span>
+				<span name="address.postcode">{{address.postcode}}</span>
+			</span>
+			<input type="hidden" name="address.line1"/>
+			<input type="hidden" name="address.line2"/>
+			<input type="hidden" name="address.line3"/>
+			<input type="hidden" name="address.line4"/>
+			<input type="hidden" name="address.postcode"/>
+			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
+		</div>
+	</div>
+	<div class="field">
+		<label for="input_card_type">Card Type</label>
+		<select name="card.cardType" id="input_card_type" rf.validation="required" rf.source="../quote-forms-common/resources/cardTypes.txt" rf.preselectFirstOption="true">
+			<option disabled selected></option>
+		</select>
+	</div>
+	<div class="field">
+		<label for="input_card_number">Card Number (without spaces)</label>
+		<input type="text" id="input_card_number" name="card.number" rf.validation="required pattern({regex:'^[0-9]{16}$', errorMessage:'Invalid card number'})"/>
+	</div>
+	<div class="field">
+		<label for="input_card_from_month">Valid From</label>
+		<select id="input_card_from_month" name="card.validFromMonth" class="dateSel" rf.preselectFirstOption="true">
+			<option disabled selected>Month</option><option>01</option><option>02</option><option>03</option><option>04</option>
+			<option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option>
+			<option>11</option><option>12</option>
+		</select>
+		<select id="input_card_from_year" name="card.validFromYear" class="dateSel" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() - 5" rf.preselectFirstOption="true" value="">
+			<option disabled selected>Year</option>
+		</select>
+		<div class="hint">Leave blank if not present</div>
+	</div>
+	<div class="field">
+		<label for="input_expires_month">Expires</label>
+		<select id="input_expires_month" name="card.expireMonth" class="dateSel" rf.preselectFirstOption="true">
+			<option disabled selected>Month</option><option>01</option><option>02</option><option>03</option><option>04</option>
+			<option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option>
+			<option>11</option><option>12</option>
+		</select>
+		<select id="input_expires_year" name="card.expireYear" class="dateSel" rf.rangeStart="new Date().getFullYear()" rf.rangeEnd="new Date().getFullYear() + 5" rf.preselectFirstOption="true" value="" rf.validation="required">
+			<option disabled selected>Year</option>
+		</select>
+	</div>
+	<div class="field">
+		<label for="input_issue">Issue Number</label>
+		<input type="text" id="input_issue" name="card.issue" rf.validation="pattern({regex:'^[0-9]*$', errorMessage:'Invalid number'})"/>
+		<div class="hint">Leave blank if not present</div>
+	</div>
+	<div class="field">
+		<label for="input_code">3 Digit Security Code</label>
+		<input type="password" id="input_code" maxlength="3" name="card.code" rf.validation="required pattern({regex:'^[0-9]{3}$', errorMessage:'Invalid number'})" />
+		<div class="hint">This can be found on the back of your card</div>
+	</div>
+	
+	<div class="navigation">
+		<input type="submit" value="Next" rf.action="next"/>
+	</div>
+	
+	<script type="text/javascript">
+		rf.onFormLoad(function(){
+			$('form select').change( function(){
+					$(this).addClass('changed');
+			})
+			$("#input_sort_code").keyup(function(event) {
+				var value = $(this).val();
+				var val = value.replace(/[^0-9]/g, '');
+
+				if (val.length >= 2) {
+					val = val.substr(0 , 2) + "-" + val.substr(2);
+					if (val.length >= 5) {
+						val = val.substr(0 , 5) + "-" + val.substr(5);
+					}
+				}
+				if (val.length > 8) {
+					val = val.substr(0, 8);
+				}
+
+				if (event.keyCode == 8) {
+					if (val.length == 3) {
+						val = val.substr(0,val.length - 1);
+					}
+					if (val.length == 6) {
+						val = val.substr(0,val.length - 1);
+					}
+				}
+				$(this).val(val);
+			});
+			// populate account title
+			var title = '{{//customer/title}}';
+			$("#input_title").val(title);
+			
+			var addressLookupProxyUrl = $("#findAddressProxy").attr("rf.source") + "?rf.flowId=" + $("[name='rf.flowId']").val();
+			var inputErrorCallback = function() {
+				alert("Please provide a valid postcode");
+			}
+			new AddressLookup().init(addressLookupProxyUrl, inputErrorCallback);
+			var bav = new BankAccountValidation("ZM35-CP99-HN47-CP35");
+			$("#validate_account").click(function(){
+				var account = $("#input_account_number").val();
+				var sortCode = $("#input_sort_code").val();
+				if (!account) {
+					alert('Please enter an account number');
+				} else if (!sortCode){
+					alert('Please enter a sort code');
+				} else {
+					bav.doValidation(account, sortCode);
+				}
+			});
+			$("[rf\\.action='next']").click(function(){
+				if ($(":input[name='bank.postCode']").val() == '' && '{{//paymentType}}' === 'multiple') {
+					alert('Please Validate Bank Account');
+				}
+			})
+		});
+		
+	</script>
+</form>

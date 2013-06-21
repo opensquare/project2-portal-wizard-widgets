@@ -1,0 +1,10 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>scp-quote-show.html</url>
+	</parameters>
+	<attributes>
+		<displayheader>false</displayheader>
+		<js>scp-quote-show.js</js>
+	</attributes>
+</widget>

@@ -1,0 +1,58 @@
+#cp-policy-summary .pane{
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
+#cp-policy-title{
+	margin-top: 0;
+	font-size: 1.8em;
+}
+#cp-policy-switcher{
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: url('symbol-refresh-dark.png') no-repeat right top;
+	cursor: pointer;
+}
+#cp-policy-summary-cover{
+	min-width: 30em;
+	text-align: left!important;
+}
+#cp-policy-summary .cover{
+	display: inline-block;
+	height: 50px;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-summary .cover.comp{
+	background-image: url('shape-shield-dark.png');
+}
+#cp-policy-summary .cover.breakdown{
+	background-image: url('traffic-cone-dark.png');
+}
+#cp-policy-summary .renewal-day{
+	display: block;
+	font-size: 2em;
+}
+#cp-policy-summary .renewal-year{
+	display: none;
+}
+#cp-policy-summary .miles{
+	display: block;
+	font-size: 2em;
+}
+#cp-policy-summary .premium-due {
+	display: block;
+	font-size: 1.5em;
+}
+#cp-policy-summary .premium-due:before {
+	content: "£";
+	padding: 2px;
+}

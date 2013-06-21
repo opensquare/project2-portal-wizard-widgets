@@ -1,0 +1,10 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>cp-policy-details.html</url>
+	</parameters>
+	<attributes>
+		<css>cp-policy-details.css</css>
+		<displayheader>false</displayheader>
+	</attributes>
+</widget>

@@ -1,0 +1,35 @@
+#cp-policy-details-beneficiaries {
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
+#cp-policy-details-beneficiaries a{
+	color: inherit;
+}
+#cp-policy-details-beneficiaries:hover{
+	border-color: #92CE56;
+}
+#cp-policy-details-beneficiaries:hover .title{
+	background-color: #92CE56;
+}
+#cp-policy-details-beneficiaries .company{
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+	background-image: url('building-bank-dark.png');
+}
+#cp-policy-details-beneficiaries a:hover>span[href]{
+	display: inline-block;
+}
+#cp-policy-details-beneficiaries .driver:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,60 @@
+#cp-policy-details-drivers {
+	display: inline-block;
+	height: 6em;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	border: medium solid #555;
+	border-radius: 0.5em;
+	float: left;
+	margin: 0.5em;
+}
+#cp-policy-details-drivers a{
+	color: inherit;
+}
+#cp-policy-details-drivers:hover{
+	border-color: #92CE56;
+}
+#cp-policy-details-drivers:hover .title{
+	background-color: #92CE56;
+}
+#cp-policy-details-drivers .driver{
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+}
+#cp-policy-details-drivers .Male{
+	background-image: url('person-man-dark.png');
+}
+#cp-policy-details-drivers .Female{
+	background-image: url('person-woman-dark.png');
+}
+#cp-policy-details-drivers .add {
+	display: inline-block;
+	height: 50px;
+	vertical-align: top;
+	padding: 50px 0.5em 0 0.5em;
+	font-size: 0.8em;
+	background: no-repeat center top;
+		width: 4em;
+	margin-left: 2em;
+	background: url('symbol-add-dark-small.png') no-repeat center 20%;
+}
+#cp-policy-details-drivers a>span[href]{
+	display: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: -50px 0 0 -20px;
+	background: #D44 url('symbol-cross-light.png') no-repeat center center;
+	border-radius: 13em;
+}
+#cp-policy-details-drivers a:hover>span[href]{
+	display: inline-block;
+}
+#cp-policy-details-drivers .driver:hover {
+	text-decoration: none;
+}

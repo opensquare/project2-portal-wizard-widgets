@@ -1,0 +1,27 @@
+<widget>
+	<type>pactResponse</type>
+	<parameters>
+		<xsl>cp-policy-premium</xsl>
+		<pactrequest>
+			<![CDATA[
+			<pactrequest>
+			    <target>
+			        <uid>{polUid}</uid>
+					<partPath>Shadow Loan Account</partPath>
+			    </target>
+			    <context>
+                    <actor><actorUid>123</actorUid></actor>
+                    <party><partyUid>123</partyUid></party>
+			    </context>
+			    <timepoint>
+			        <effectivetime>now</effectivetime>
+			        <physicaltime>now</physicaltime>
+			    </timepoint>
+			      <return>
+					<name>asAccumulatorPostingHistory</name>
+				</return>
+			</pactrequest>
+			]]>
+		</pactrequest>
+	</parameters>
+</widget>

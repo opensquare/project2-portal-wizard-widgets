@@ -1,0 +1,11 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>ppi-quote-forms.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>ppi-quote-forms.css</css>
+		<js>ppi-quote-forms.js</js>
+	</attributes>
+</widget>

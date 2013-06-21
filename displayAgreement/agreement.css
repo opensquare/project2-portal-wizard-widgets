@@ -1,0 +1,101 @@
+.agreement{
+  margin:0 4px;
+}
+.agreement .agreement{
+  margin:0;
+}
+.agreement .pageSection{
+  margin:10px 0 10px 0;
+}
+.agreement h1{
+  display:block;
+  margin:10px 0;
+  padding:10px 0 20px 60px;
+  overflow:hidden;
+  border-bottom:thick solid;
+  background:url('cube.png') no-repeat center left;
+  font-size:175%;
+  font-weight:normal;
+  text-transform:capitalize;
+}
+.agreement .agreement h1{
+  padding:10px 0 10px 30px;
+  background-image: url('cube-small.png');
+  font-size:120%;
+  border-bottom: thin solid;
+}
+.agreement h2{
+  display: none;
+}
+.agreement .entity{
+  border:none;
+  padding:8px 0;
+  background-image:none;
+}
+.agreement table{
+  margin:0 4px;
+}
+.agreement th, .agreement td{
+  text-align:left;
+  width:120px;
+  padding:4px;
+  overflow:hidden;
+}
+.agreement td{
+  width:200px;
+}
+.agreement .property-group{
+  display:inline-block;
+  width: 100%;
+  margin-top:2px;
+  word-wrap:break-word;
+}
+.agreement .property-label{
+  display:inline-block;
+  width:30%;
+  padding:0.1em;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+.agreement .property-value{
+  display:inline-block;
+  width:60%;
+  padding: 0.1em 0.25em;
+  background-color:#EEE;
+  min-height:1.2em;
+  vertical-align:top;
+}
+.agreement .entity a{
+  display:inline-block;
+  text-decoration:none;
+  color:#222;
+  cursor:default;
+  background:#e3e3e3;
+  padding:2px;
+}
+.agreement .account>.popup {
+  display: inline-block;
+  min-width: 50px;
+  max-width: 150px;
+  min-height: 40px;
+  vertical-align: top;
+  margin-right: 1em;
+  padding: 50px 1em 0 1em;
+  text-align: center;
+  background: #EEE url('coins-dark.png') no-repeat center top;
+}
+.documents {
+  padding: 10px 0 10px 30px;
+  background: url('document.png') no-repeat center left;;
+  font-size: 120%;
+  border-bottom: thin solid;
+  font-weight: normal;
+}
+.mm-documents .pdf {
+  display: inline-block;
+  margin: 0px 10px 15px 10px;
+  padding: 12px 50px;
+  white-space: nowrap;
+  background: url('file-pdf.png') no-repeat left;
+  color: inherit;
+}
