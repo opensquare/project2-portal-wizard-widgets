@@ -1,0 +1,24 @@
+	<div class="side1">
+		<div class="picture {{//*[@name='brand']}}"></div>
+		<div class="status">{{//status}}</div>
+	</div><div class="side2">
+		<div class="property-group name">
+			<span class="property-value clientIndDetails-firstName auto" title="First name">{{//description}}</span>
+		</div>
+		<div class="property-group dates">
+			<span class="property-label">Created</span>
+			<span class="property-value auto">{{//*[@name='creationTime']}}</span>
+			<span class="property-label">Effective</span>
+			<span class="property-value auto">{{//*[@name='effectiveTime']}}</span>
+            <span class="property-label">Expires</span>
+			<span class="property-value auto">{{//*[@name='expiryTime']}}</span>
+		</div>
+		<div class="property-group premium">
+			<span class="property-label">Premium</span>
+			<span class="property-value auto">{{//*[@name='annualPremium']}}</span>
+			<span class="property-label">Payment</span>
+			<span class="property-value auto">{{//*[@name='paymentMethod']}}</span>
+		</div>
+        <div class="widget" name="scp-policy-vehicle-display" params="agreementUid={{//*[relationship='primaryInsuranceSection']/uid}}">...</div>
+        <div class="widget" name="scp-policy-driving-display" params="agreementUid={{//*[relationship='primaryInsuranceSection']/uid}}"/>
+    </div>
