@@ -139,3 +139,39 @@
 .scp-policy-telematics-display .licence :nth-child(2) {
 	margin-right: 3em;
 }
+
+/* Driving Reports formatting */
+.scp-policy-telematics-display .drivingReports {
+	display: inline-block;
+}
+.drivingReports .property-group {
+	width: 10em;
+	height: 5em;
+	padding: 0;
+}
+.drivingReports.data .property-group {
+	width: 2em;
+}
+.data .property-value {
+	width: 100%;
+	padding: 0;
+	color: white;
+	background: rgba(0,0,0,0.35);
+	border-bottom: thin solid;
+	text-align: center;
+}
+.data .acceleration {
+	background: red;
+}
+.data .deceleration {
+	background: blue;
+}
+.data .speed {
+	background: lightgreen;
+}
+.data .tod {
+	background: cyan;
+}
+.data .tor {
+	background: magenta;
+}

@@ -16,27 +16,42 @@
         <span class="property-label">Adjustment</span>
         <span class="property-value auto">{{//*[@name='adjustmentFactor']}}</span>
     </div>
+    <div class="drivingReport labels">
+        <h2></h2>
+        <div class="property-group acceleration">
+            <span class="property-label">Acceleration</span>
+        </div>
+        <div class="property-group deceleration">
+            <span class="property-label">Deceleration</span>
+        </div>
+        <div class="property-group speed">
+            <span class="property-label">Speed</span>
+        </div>
+        <div class="property-group tod">
+            <span class="property-label">Time Of Day</span>
+        </div>
+        <div class="property-group tor">
+            <span class="property-label">Type Of Road</span>
+        </div>
+    </div>
     <rf.forEach select="/pactresponse/entity/TimeSpanEntity/TimeSpanEntityVersion/Parts/*[identifier/relationship='Driving Report']" as="drivingReport">
-        <details>
-            <summary>{{drivingReport.description}}</summary>
-            <div class="property-group">
-                <span class="property-label">Start Time</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='reportStartTime']}}</span>
-                <span class="property-label">End Time</span>
-                <span class="property-value auto">{{drivingReport.//*[@name=' reportEndTime']}}</span>
+        <div class="drivingReport data">
+            <h2 title="{{drivingReport.description}}"></h2>
+            <div class="property-group acceleration">
+                <span class="property-value">{{drivingReport.//*[@name='accelerationPoints']}}</span>
             </div>
-            <div class="property-group">
-                <span class="property-label">Acceleration</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='accelerationPoints']}}</span>
-                <span class="property-label">Deceleration</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='decelerationPoints']}}</span>
-                <span class="property-label">Speed</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='speedPoints']}}</span>
-                <span class="property-label">Time Of Day</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='timeOfDayPoints']}}</span>
-                <span class="property-label">Type Of Road</span>
-                <span class="property-value auto">{{drivingReport.//*[@name='typeOfRoadPoints']}}</span>
+            <div class="property-group deceleration">
+                <span class="property-value">{{drivingReport.//*[@name='decelerationPoints']}}</span>
             </div>
-        </details>
+            <div class="property-group speed">
+                <span class="property-value">{{drivingReport.//*[@name='speedPoints']}}</span>
+            </div>
+            <div class="property-group tod">
+                <span class="property-value">{{drivingReport.//*[@name='timeOfDayPoints']}}</span>
+            </div>
+            <div class="property-group tor">
+                <span class="property-value">{{drivingReport.//*[@name='typeOfRoadPoints']}}</span>
+            </div>
+        </div>
     </rf.forEach>
 </div>
