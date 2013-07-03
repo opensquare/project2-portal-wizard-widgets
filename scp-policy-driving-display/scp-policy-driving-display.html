@@ -28,29 +28,29 @@
             <span class="property-label">Speed</span>
         </div>
         <div class="property-group tod">
-            <span class="property-label">Time Of Day</span>
+            <span class="property-label">Time of day</span>
         </div>
         <div class="property-group tor">
-            <span class="property-label">Type Of Road</span>
+            <span class="property-label">Type of road</span>
         </div>
     </div>
     <rf.forEach select="/pactresponse/entity/TimeSpanEntity/TimeSpanEntityVersion/Parts/*[identifier/relationship='Driving Report']" as="drivingReport">
         <div class="drivingReport data">
             <h2 title="{{drivingReport.description}}"></h2>
             <div class="property-group acceleration">
-                <span class="property-value">{{drivingReport.//*[@name='accelerationPoints']}}</span>
+                <span class="property-value" style="height{{drivingReport.//*[@name='accelerationPoints']}}:em">{{drivingReport.//*[@name='accelerationPoints']}}</span>
             </div>
             <div class="property-group deceleration">
-                <span class="property-value">{{drivingReport.//*[@name='decelerationPoints']}}</span>
+                <span class="property-value" style="height{{drivingReport.//*[@name='decelerationPoints']}}:em">{{drivingReport.//*[@name='decelerationPoints']}}</span>
             </div>
             <div class="property-group speed">
-                <span class="property-value">{{drivingReport.//*[@name='speedPoints']}}</span>
+                <span class="property-value" style="height{{drivingReport.//*[@name='speedPoints']}}:em">{{drivingReport.//*[@name='speedPoints']}}</span>
             </div>
             <div class="property-group tod">
-                <span class="property-value">{{drivingReport.//*[@name='timeOfDayPoints']}}</span>
+                <span class="property-value" style="height{{drivingReport.//*[@name='timeOfDayPoints']}}:em">{{drivingReport.//*[@name='timeOfDayPoints']}}</span>
             </div>
             <div class="property-group tor">
-                <span class="property-value">{{drivingReport.//*[@name='typeOfRoadPoints']}}</span>
+                <span class="property-value" style="height{{drivingReport.//*[@name='typeOfRoadPoints']}}:em">{{drivingReport.//*[@name='typeOfRoadPoints']}}</span>
             </div>
         </div>
     </rf.forEach>

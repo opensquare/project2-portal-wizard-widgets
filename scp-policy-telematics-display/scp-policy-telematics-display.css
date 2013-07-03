@@ -142,13 +142,13 @@
 
 /* Driving Reports formatting */
 .scp-policy-driving-display {
-	content-reset: section;
+	counter-reset: section;
 }
 .scp-policy-driving-display .drivingReport {
 	display: inline-block;
 }
-.scp-policy-driving-display .drivingReport h2:before {
-	content-increment: section;
+.scp-policy-driving-display .drivingReport.data h2:before {
+	counter-increment: section;
 	content: counter(section);
 }
 .scp-policy-driving-display .drivingReport .property-group {
