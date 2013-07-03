@@ -28,7 +28,7 @@
 /* Side1 formatting */
 .scp-policy-telematics-display .picture {
 	min-height: 100px;
-	background: url('transport-car-dark-large.png') no-repeat center;
+	background: url('policy-motor-dark-large.png') no-repeat center;
 	background-size: contain;
 }
 .scp-policy-telematics-display .status {
