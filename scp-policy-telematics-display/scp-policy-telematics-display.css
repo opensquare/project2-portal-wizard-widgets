@@ -141,18 +141,25 @@
 }
 
 /* Driving Reports formatting */
-.scp-policy-telematics-display .drivingReports {
+.scp-policy-driving-display {
+	content-reset: section;
+}
+.scp-policy-driving-display .drivingReport {
 	display: inline-block;
 }
-.drivingReports .property-group {
+.scp-policy-driving-display .drivingReport h2:before {
+	content-increment: section;
+	content: counter(section);
+}
+.scp-policy-driving-display .drivingReport .property-group {
 	width: 10em;
 	height: 5em;
 	padding: 0;
 }
-.drivingReports.data .property-group {
+.scp-policy-driving-display .drivingReport.data .property-group {
 	width: 2em;
 }
-.data .property-value {
+.scp-policy-driving-display .data .property-value {
 	width: 100%;
 	padding: 0;
 	color: white;
@@ -160,18 +167,18 @@
 	border-bottom: thin solid;
 	text-align: center;
 }
-.data .acceleration {
+.scp-policy-driving-display .data .acceleration {
 	background: red;
 }
-.data .deceleration {
+.scp-policy-driving-display .data .deceleration {
 	background: blue;
 }
-.data .speed {
+.scp-policy-driving-display .data .speed {
 	background: lightgreen;
 }
-.data .tod {
+.scp-policy-driving-display .data .tod {
 	background: cyan;
 }
-.data .tor {
+.scp-policy-driving-display .data .tor {
 	background: magenta;
 }
