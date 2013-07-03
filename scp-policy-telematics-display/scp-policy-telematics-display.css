@@ -151,6 +151,9 @@
 	counter-increment: section;
 	content: counter(section);
 }
+.scp-policy-driving-display .drivingReport.data h2 {
+	text-align: center;
+}
 .scp-policy-driving-display .drivingReport .property-group {
 	width: 10em;
 	height: 5em;
