@@ -28,14 +28,8 @@
 /* Side1 formatting */
 .scp-policy-telematics-display .picture {
 	min-height: 100px;
-	background: url('person-dark-large.png') no-repeat center;
+	background: url('transport-car-dark-large.png') no-repeat center;
 	background-size: contain;
-}
-.scp-policy-telematics-display .picture.Male {
-	background-image: url('person-man-dark-large.png');
-}
-.scp-policy-telematics-display .picture.Female {
-	background-image: url('person-woman-dark-large.png');
 }
 .scp-policy-telematics-display .status {
 	text-align: center;
