@@ -26,17 +26,17 @@ function onLoad() {
     theme1.autoWidth = true; // Set the Timeline's "width" automatically.
                              // Set autoWidth on the Timeline's first band's theme,
                              // will affect all bands.
-    theme1.timeline_start = new Date(Date.UTC(2003, 0, 1));
-    theme1.timeline_stop  = new Date(Date.UTC(2023, 0, 1));
+    var now = new Date();
+    theme1.timeline_start = new Date(Date.UTC(now.getYear()-3, 0, 1));
+    theme1.timeline_stop  = new Date(Date.UTC(now.getYear()+3, 0, 1));
     
-    var d = Timeline.DateTime.parseGregorianDateTime("2013")
     var bandInfos = [
         Timeline.createBandInfo({
             width:          45, // set to a minimum, autoWidth will then adjust
-            intervalUnit:   Timeline.DateTime.YEAR, 
-            intervalPixels: 200,
+            intervalUnit:   Timeline.DateTime.MONTH, 
+            intervalPixels: 125,
             eventSource:    eventSource1,
-            date:           d,
+            date:           now,
             theme:          theme1,
             layout:         'original'  // original, overview, detailed
         })
