@@ -66,7 +66,9 @@ var timelineLoaded = false;
 
 function loadTimeline(){
     if(!timelineLoaded){
-        $.getJSON('proxy/script-runner/executeScript/Util/getTimeline/output.json', function(data){
+        var url = document.URL;
+        var uid = url.substring(url.lastIndexOf("/") + 1);
+        $.getJSON('proxy/script-runner/executeScript/Util/getTimeline/output.json?uid=' + uid, function(data){
             timeline_data = data;
             onLoad();
        });
