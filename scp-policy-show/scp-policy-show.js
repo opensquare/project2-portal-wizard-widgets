@@ -10,7 +10,13 @@ function Widget_scp_policy_show() {
 
 	this.initExtend = function() {
 		var uid = this.$widgetDiv.parents('article').attr('pageid').split('/')[2];
+        var args = this.$widgetDiv.attr("page.args");
+        var effectiveTime = "now";
+        if(args.indexOf("=") > -1){
+            effectiveTime = args.split("=")[1];
+        }
 		this.$widgetDiv.attr('uid',uid);
+        this.$widgetDiv.attr('effectiveTime',effectiveTime);
 		this.$widgetDiv.attr('homeAgreementuid',uid);
 	}
 	

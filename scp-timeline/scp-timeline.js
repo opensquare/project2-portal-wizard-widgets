@@ -13,9 +13,18 @@ function onLoad() {
         if(type == "note"){
             alert("This is a note: " + evt.getDescription());
         }else if(type=='version'){
-            alert("This is a version: loading version...");
+            startTime = evt.getStart();
+            startTime = startTime.getFullYear() + "-" + (startTime.getMonth()+1) + "-" + startTime.getDate() + " " + startTime.getHours() + ":" + startTime.getMinutes() + ":" + startTime.getSeconds();
+            alert("Loading view at effective time: " + startTime);
+            var hash = window.location.hash;
+            if(hash.indexOf("?") > -1){
+                hash = hash.substring(0, hash.indexOf("?"));
+            }
+            hash = hash + "?effectiveTime=" + startTime;
+            window.location.hash = hash;
         }else if(type=='event'){
-            alert("This is an event: " + evt.getProperty('title'));
+            startTime = evt.getStart();
+            alert(startTime + ": " + evt.getProperty('title'));
         }
     }
 
@@ -27,8 +36,8 @@ function onLoad() {
                              // Set autoWidth on the Timeline's first band's theme,
                              // will affect all bands.
     var now = new Date();
-    theme1.timeline_start = new Date(Date.UTC(now.getYear()-3, 0, 1));
-    theme1.timeline_stop  = new Date(Date.UTC(now.getYear()+3, 0, 1));
+    theme1.timeline_start = new Date(Date.UTC(now.getFullYear()-3, 0, 1));
+    theme1.timeline_stop  = new Date(Date.UTC(now.getFullYear()+3, 0, 1));
     
     var bandInfos = [
         Timeline.createBandInfo({
@@ -67,10 +76,11 @@ var timelineLoaded = false;
 function loadTimeline(){
     if(!timelineLoaded){
         var url = document.URL;
-        var uid = url.substring(url.lastIndexOf("/") + 1);
-        $.getJSON('proxy/script-runner/executeScript/Util/getTimeline/output.json?uid=' + uid, function(data){
+        var queryString = url.substring(url.lastIndexOf("/") + 1).replace("?", "&");
+        $.getJSON('proxy/script-runner/executeScript/Util/getTimeline/output.json?uid=' + queryString, function(data){
             timeline_data = data;
             onLoad();
+            timelineLoaded = true;
        });
     }
 }
