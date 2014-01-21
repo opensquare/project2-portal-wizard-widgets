@@ -1,0 +1,16 @@
+<data>
+    <brand>PBT</brand>
+    <brandAbbreviation>PBT</brandAbbreviation>
+    <productName>Product Builder Test 1</productName>
+    <referenceNumberSequence>3</referenceNumberSequence>
+    <referenceNumberLength>8</referenceNumberLength>
+    <policyTemplate>Motor Telematics Policy template</policyTemplate>
+    <clientTemplate>Motor Client Relationship template</clientTemplate>
+    <insurer>insureCo</insurer>
+    <vendor>VendorCo</vendor>
+    <rqWidget>quote</rqWidget>
+    <cpWidget>cp-policy-motoring</cpWidget>
+    <newBusinessCalc>/Products/Motor/Lookups,/Products/Motor/Precalculation,/Products/Motor/Risk</newBusinessCalc>
+    <addons>
+    </addons>
+</data>

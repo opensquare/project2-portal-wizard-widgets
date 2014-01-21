@@ -2,83 +2,13 @@ form {
 	padding: 0.2em 2em 0 2em;
 	clear: both;
 }
-
-.rf-included-false{
-	display: none;
-}
-div.widget[name='quote-forms'] h1 {
-
+h1 {
 	margin-top: 1.5em; margin-bottom: 0.75em;
 	color: #333;
 	font-size: 230%; font-weight: normal;
 }
-
-
-#preliminary_questions ol {
-	padding-left: 30px;
-}
-#preliminary_questions ol li.field {
-	font-size: 33px;
-	line-height: 20px;
-	font-weight: bold;
-	color:#92CE56;
-}
-	#preliminary_questions ol li.field span {
-		font-size: 16px;
-		line-height: 18px;
-		font-weight: normal;
-		color:#000000;
-	}
-	#preliminary_questions ol li.field label {
-		color:#92CE56;
-		font-size: 22px;
-		line-height: 20px;
-		font-weight: bold;
-		color:#92CE56;
-	}
-	#preliminary_questions ol li.field .radios {
-		width:110px;
-		float: right;
-	}
-		#preliminary_questions ol li.field .radios label {
-			padding: 0 4px;
-			text-align: center;
-		}
-			#preliminary_questions ol li.field .radios label input {
-				padding-left: 6px;
-				display: inline;
-			}
-
-			#preliminary_questions ol li.field .radios label .invalid-message {
-				position:relative;
-				z-index: 10;
-				left: 110px;
-				color:#ffffff;
-			}
-
-		#preliminary_questions ol li.field .radios label span {
-			color:#92CE56;
-		}
-
-div.widget[name='quote-forms'] ol li ol {
-	padding-top: 18px;
-}
-div.widget[name='quote-forms'] ol li ol li.field {
-	list-style-type: lower-roman;
-	font-weight: normal;
-	border-bottom:none;
-	border-top: thin solid rgba(0, 0, 0, 0.1);
-}
-div.widget[name='quote-forms'] ol li.field label {
-		width:auto;
-		list-style-type: lower-roman;
-}
-div.widget[name='quote-forms'] ol li.field span {
-	display: inline-block;
-	width:80%;
-}
 div.widget[name='quote-forms'] input[type='date'] {
-	border: thin solid #0090C0;
+	border: thin solid #0090C0; width: 15%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
 }
 div.widget[name='quote-forms'] input[type="button"] {
@@ -176,8 +106,9 @@ div.widget[name='quote-forms'] select:disabled {
 	background-color: rgb(235, 235, 228);
 }
 
-div.widget[name='quote-forms'] div.field, ol li.field {
-	padding: 20px 0;
+div.widget[name='quote-forms'] div.field {
+	min-height: 2.2em;
+	padding: 1em 0;
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
 }
 div.widget[name='quote-forms'] div.field:hover {
@@ -200,12 +131,6 @@ div.widget[name='quote-forms'] div.field a:hover {
 }
 div.widget[name='quote-forms'] option:first-child {
 	color: #999;
-}
-.hintMsg {
-	color: #FFF;
-	padding: 0.35em;
-	border-radius: 0.25em;
-	background-color: #92CE56;
 }
 div.widget[name='quote-forms'] .hint {
 	display: none;
@@ -236,11 +161,18 @@ div.widget[name='quote-forms'] .hint::before {
 	}
 }
 
+div.widget[name='quote-forms'] .rf-debugbar {
+	background-color: inherit;
+}
+
+div.widget[name='quote-forms'] div.field.occupation .rf-dropdown {
+	left: 39%;
+	display: none;
+	width: 19%;
+}
 div.widget[name='quote-forms'] .rf-dropdown ul {
-	display: inline-block;
-	max-height: 10em; min-width: 20%;
+	max-height: 10em; min-width: 100%;
 	overflow: auto; overflow-x: hidden; overflow-y: auto;
-	margin: 0 0 0 34%;
 	padding: 0;
 	list-style: none;
 	background-color: #FFF;
@@ -352,8 +284,7 @@ div.widget[name='quote-forms'] #sectionOne a {
 	src: url('UKNumberPlate.ttf')
 }
 div.widget[name='quote-forms'] #input_reg {
-	width: 89%;
-	height: 100%;
+	width: 75%; height: 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -362,21 +293,22 @@ div.widget[name='quote-forms'] #input_reg {
 	text-transform: uppercase;
 }
 div.widget[name='quote-forms'] #uk_reg_plate:before {
+	content: "•";
 	padding: 3px;
 	font-size: 1.9em;
 	color: #DEDEDE;
 }
 div.widget[name='quote-forms'] #uk_reg_plate:after {
+	content: "•";
 	padding: 3px;
 	font-size: 1.9em;
 	color: #DEDEDE;
 }
 div.widget[name='quote-forms'] #uk_reg_plate {
-	width: 263px;
-	height: 50px;
-	border: 4px solid #DEDEDE;
-	border-radius: 5px;
-	display: inline-block;
+	float: left;
+	width: 263px; height: 50px;
+	margin-right: 5%; margin-left: 43.5%;
+	border: 4px solid #DEDEDE; border-radius: 5px;
 	background: white;
 }
 div.widget[name='quote-forms'] #flag {
@@ -398,9 +330,7 @@ div.widget[name='quote-forms'] #flag:after {
 	font-size: 0.75em;
 }	
 div.widget[name='quote-forms'] #findReg {
-	margin:15px 0 0 42.5%;
-	position: relative;
-	left: 200px;
+	margin-left: 70%
 }
 /* crumb trail */
 div.widget[name='quote-forms'] #crumbTrail li {
@@ -731,5 +661,5 @@ div.widget[name='quote-forms'] #input_sort_code {
 	width: 10%;
 }
 div.widget[name='quote-forms'] #input_code {
-	width: 5%;
+	width: 10%;
 }

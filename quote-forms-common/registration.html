@@ -1,9 +1,25 @@
 <h1>Apply</h1>
+
+<div rf.includeIf="{'{{//quote/vehicle/reg}}' == '' }">
+
+	<p> 
+		In order to register your insurance policy we now require the full registration of the vehicle in question.
+	</p>
+	<div class="field" style="min-height: 5.2em;">
+		<label for="input_reg">Registration number</label>
+		<div id="uk_reg_plate">
+				<div id="flag"></div>
+				<input  id="input_reg" type="text" name="reg" rf.validation="required" maxlength="8"/>
+		</div>
+	</div>
+</div>
+
 <p>
 	We just need a few contact details before you can purchase your insurance policy. The email and
 	password you supply will enable you to access your own Customer Portal, where you can view
-	information about your policy, access your policy documents and more.
+	information about your policy, access your policy documents online, and more.
 </p>
+
 <div id="loginDetails">
 	<div class="field">
 		<label for="input_email">Email Address</label>
@@ -14,8 +30,6 @@
 		<input type="password" name="customer.password" id="input_password"
 			   rf.validation="required pattern({regex: '^.{8,}?$', errorMessage:'Invalid Password'}) pattern({regex: '^.*[0-9]+.*$', errorMessage:'Invalid Password'})"/>
 		<div class="hint">Password must be at least 8 characters long and contain at least 1 number</div>
-	</div>
-	<div class="field">
 		<label for="input_password_confirm">Confirm Password</label>
 		<input type="password" name="passwordConfirm" id="input_password_confirm" 
 			   rf.validationFunction="if (fields.customer_password.value !== field.value && field.value !== '') {error = {name: field.name, message: 'This password must match the one entered above'} } else { this.validate('required')}"/>
@@ -24,7 +38,7 @@
 <div id="contactDetails">
 	<div class="field">
 		<label for="input_mobile">Contact Number</label>
-		<input id="input_mobile" type="text" name="customer.mobileNumber" rf.validation="required pattern({regex: '^[0-9]{5,}?$', errorMessage:'Invalid Number'})"/>
+		<input id="input_mobile" type="text" name="customer.mobilePhone" rf.validation="required pattern({regex: '^[0-9]{5,}?$', errorMessage:'Invalid Number'})"/>
 	</div>
 </div>
 <div class="navigation">

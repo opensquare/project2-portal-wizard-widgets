@@ -11,14 +11,13 @@
                         name: "calc",
                         target: "calculating",
                         submission: {
-							url: "{{$esb-url}}/resource/calc/calcdata/{{//calcref}}.xml",
+							url: "{{$esb-url}}/calc/calcdata/{{//calcref}}.xml",
 							method: "get",
 							postTransform: "xslt/retrieveCalc.xsl",
 							resultInsertPoint: "/"
 						}
                     }
                 ]},
-	       	{ id: "preliminary", docBase: "/quote/preliminary", url: "1-preliminary_questions.html", actions: [ "next"] },
 	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "1-car.html", actions: [ "next"] },
 			{ id: "customer", docBase: "/quote/customer", url: "1-customer.html", actions: [ "back", "next" ] },
 			{ id: "driver", docBase: "/quote/customer", url: "2-driver.html",
@@ -53,14 +52,13 @@
 						name: "next",
 						submission: {
 							preTransform: "xslt/toNapier.xsl", 
-							url: "{{$esb-url}}/action/motor/quote/calc",
+							url: "{{$esb-url}}/motor/quote/calc",
 							data: {
 								source: "motor-new-business",
                                 quickSearch1: "xpath://customer/surname",
                                 quickSearch2: "xpath://customer/address/postcode",
                                 quickSearch3: "xpath://customer/email",
                                 quickSearch4: "xpath://vehicle/reg",
-								calcType: "xpath://product/calc",
 								calcData: "[dataDocument]"
 							},
 							method: "post",
@@ -105,10 +103,9 @@
 					{
 						name: "next",
 						submission: {
-							url: "{{$script-runner-url}}",
+							url: "{{$esb-url}}/motor/quote/create",
 							data: {
-								script: "NewBusiness/script/createAndAcceptApplicationFromFormData.py",
-								data: "[dataDocument]"
+								scriptData: "[dataDocument]"
 							},
 							method: "post",
 							resultInsertPoint: "/quote/pact"
