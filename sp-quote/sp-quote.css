@@ -298,24 +298,21 @@ div.widget[name='sp-quote'] #input_reg {
 	font-family: ukNumberPlate; font-size: 3em;
 	text-transform: uppercase;
 }
-div.widget[name='sp-quote'] #uk_reg_plate:before {
-	content: "•";
-	padding: 3px;
-	font-size: 1.9em;
-	color: #DEDEDE;
-}
-div.widget[name='sp-quote'] #uk_reg_plate:after {
-	content: "•";
-	padding: 3px;
-	font-size: 1.9em;
-	color: #DEDEDE;
-}
 div.widget[name='sp-quote'] #uk_reg_plate {
-	float: left;
-	width: 263px; height: 50px;
-	margin-right: 5%; margin-left: 43.5%;
+	display: inline-block;
+	width: 290px;
+	height: 60px;
+	margin-right: 5%;
 	border: 4px solid #DEDEDE; border-radius: 5px;
 	background: white;
+}
+div.widget[name='sp-quote'] #uk_reg_plate:before, div.widget[name='sp-quote'] #uk_reg_plate:after {
+	content: "•";
+	display: inline-block;
+	padding: 10px 4px;
+	font-size: 26px;
+	color: #888;
+	vertical-align: top;
 }
 div.widget[name='sp-quote'] #flag {
 	float: left;
@@ -336,13 +333,14 @@ div.widget[name='sp-quote'] #flag:after {
 	font-size: 0.75em;
 }	
 div.widget[name='sp-quote'] #findReg {
-	margin-left: 70%
+	display: inline-block;
+	vertical-align: bottom;
 }
 /* crumb trail */
 div.widget[name='sp-quote'] #crumbTrail li {
 	position: relative;
 	float: left;
-	min-width: 16%; height: 20px;
+	min-width: 16%; height: 40px;
 	margin: 1% 2% 0 0;
 	padding: 10px 12px 10px 30px;
 	list-style: none;
@@ -358,11 +356,12 @@ div.widget[name='sp-quote'] #crumbTrail li:after {
 	font-size: 64px;
 }
 div.widget[name='sp-quote'] #crumbTrail li.on {
-	height: 40px;
+	height: 60px;
 	margin-left: 3%;
 	padding-left: 15px;
 	background-color: #0DB4F2;
-	font-size: 1.5em; font-weight: bold;
+	font-size: 24px;
+	font-weight: bold;
 }
 div.widget[name='sp-quote'] #crumbTrail li.on:before {
 	content: '';
