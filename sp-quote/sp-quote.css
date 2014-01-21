@@ -51,13 +51,25 @@ header h2 span{
 		width:98%;
 	}
 }
-#languageSwitcher{
+header .common-header-menu, header .common-language-switcher {
 	float: right;
+}
+header .common-language-switcher nav {
+	position: absolute;
+	width: auto;
+	height: auto;
+	margin: -6px 0 0 0;
+	font-size: small;
+	background: transparent;
+	border: thin solid;
+	transition: 1s;
+}
+header .common-language-switcher nav:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+header .common-language-switcher #languages a {
 	width: 26px;
-	height: 26px;
-	margin-top: -5px;
-	background: url('finland.png') no-repeat;
-	cursor: pointer;
+	margin: 8px auto;
 }
 #banner{
 	height: 300px;
@@ -108,8 +120,8 @@ footer {
 	margin: 3em auto 1em auto;
 	background-color: #777;
 	color: #FFF;
-	font-size: 0.75em;
-	border-radius: 0.25em;
+	font-size: 10px;
+	border-radius: 0.5em;
 }
 footer p {
 	padding: 0 1em 1em 1em;
