@@ -139,7 +139,7 @@ footer p:first-child {
 
 /* Form specific styling */
 div.widget[name='sp-quote'] input[type='date'] {
-	border: thin solid #0090C0; width: 15%;
+	border: thin solid #0090C0; width: 18%; min-width: 9em; 
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
 }
 div.widget[name='sp-quote'] input[type="button"] {
@@ -234,7 +234,8 @@ div.widget[name='sp-quote'] select.changed {
 	color: inherit;
 }
 div.widget[name='sp-quote'] select:disabled {
-	background-color: rgb(235, 235, 228);
+	border-color: #888;
+	opacity: 0.5;
 }
 
 div.widget[name='sp-quote'] div.field {
