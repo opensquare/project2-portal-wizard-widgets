@@ -20,32 +20,6 @@
                 ]},
 	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "1-car.html", actions: [ "next"] },
 			{ id: "customer", docBase: "/quote/customer", url: "1-customer.html", actions: [ "back", "next" ] },
-			{ id: "driver", docBase: "/quote/customer", url: "2-driver.html",
-				actions: [
-					"back",
-					
-					"addConviction:conviction.editConviction(index=next)",
-					"editConviction:conviction.editConviction(index=?)",
-					"deleteConviction:delete(xpath=convictions/conviction[index], index=?)",
-					
-					"addClaim:claim.editClaim(index=next)",
-					"editClaim:claim.editClaim(index=?)",
-					"deleteClaim:delete(xpath=claims/claim[index], index=?)",
-					
-					"next"
-				]
-			},
-			{ id: "drivers", url: "5-drivers.html", 
-				actions: [
-					"back", 
-
-					"addAdditionalDriver:additionalDriver.editAdditionalDriver(index=next)",
-					"editAdditionalDriver:additionalDriver.editAdditionalDriver(index=?)",
-					"deleteAdditionalDriver:delete(xpath=additionalDrivers/driver[index], index=?)",
-
-					"next"
-				]
-			},
 			{ id: "calculating", url: "8-calculating.html", 
 				actions: [
 					{
