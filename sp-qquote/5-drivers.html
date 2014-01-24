@@ -1,0 +1,34 @@
+<script type='text/javascript' src='widgets/quote-forms/js/form-hints.js' ></script>
+
+ <ul id="crumbTrail">
+  <li class="car">Your car</li>
+  <li class="policy">Your policy</li>
+  <li class="drivers on">Your drivers</li>
+  <li class="quote">Your quote</li>
+ </ul>
+
+<form rhinoforms="true">
+	
+	<h1>6. Main Driver</h1>
+
+	<div class="field">
+		<span class="{{customer.gender}}"></span>{{customer.firstName}} {{customer.surname}}
+		<a href="#" rf.action="back">Edit</a>
+	</div>
+
+	<h1>7. Additional Drivers</h1>
+	<rf.forEach select="additionalDrivers/driver" as="d">
+		<div class="field">
+			<span class="{{d.gender}}"></span>{{d.firstName}} {{d.surname}}
+			<a href="#" rf.action="editAdditionalDriver?index={{d.index}}">Edit</a>
+			<a href="#" rf.action="deleteAdditionalDriver?index={{d.index}}">Delete</a>
+		</div>
+	</rf.forEach>
+
+	<input type="button" rf.action="addAdditionalDriver" value="Add Driver" style="margin:0.5em;"/>
+	
+	<div class="navigation">
+		<input type="button" rf.action="back" value="Back"/>
+		<input type="submit" rf.action="next" value="Next"/>
+	</div>
+</form>		
