@@ -6,5 +6,6 @@
 	</parameters>
 	<attributes>
 		<css>index.css</css>
+		<js>index.js</js>
 	</attributes>
 </widget>
