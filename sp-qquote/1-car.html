@@ -60,24 +60,16 @@
 
 </script>
 
- <ul id="crumbTrail">
-  <li class="car on">Your car</li>
-  <li class="policy">Your policy</li>
-  <li class="drivers">Your drivers</li>
-  <li class="quote">Your quote</li>
- </ul>
-
 <form rhinoforms="true">
 
 	<div id="sectionOne">
-		<h1>1. Start Date</h1>	
+		<!--h1>1. Start Date</h1>
 		<div class="field">
 			<label for="input_coverStartDate">When do you want your plan to start?</label>
 			<input id="input_coverStartDate" type="date" name="coverStartDate" rf.validation="required date({ format: 'YYYY-MM-DD' })" />
 			<div class="hint">This can be up to 30 days in the future. If you have a current plan please check the date that it will expire. This should be stated on the renewal notice from your provider.</div>
-		</div>
+		</div-->
 
-		<h1>2. Find Vehicle</h1>
 		<div class="field knowReg">
 			<label>Do you know the vehicle registration number?</label>
 				<input id="input_knowReg_yes" type="radio" name="knowReg" value="yes" rf.validation="required" checked/>
@@ -114,7 +106,6 @@
 		<input type="hidden" name="vehDesc" rf.calculated="if (fields.knowReg.value == 'no') { fields.vehDescNoReg.value }else{ fields.vehDescReg.value}" /> 
 		<input type="hidden" name="vehicleAge" rf.calculated="{if (fields.yom.value) { new Date().getFullYear() - fields.yom.value } }"/>
 		
-
 		<div class="field manualLookUp" rf.includeIf="{ fields.knowReg.value == 'no' }">
 			<div><label>Vehicle Search</label></div>
 			<div class="vehicle_search">
@@ -131,12 +122,10 @@
 					<input id="input_yomProxy" type="hidden" name="yomProxy"
 			   			rf.source="http://integration.osldev.net/resource-manager/REST/files/osl-resources/lists/_itbVehicleLists-ABIDetails.xml?transformer=xslt&xslt=/osl-resources/lists/makeModelYOMTransform.xsl&contentType=application%2Fjson&vehicle=[value]"/>
 					
-
 					<label for="input_body">Body Type</label>
 					<select id="input_body" type="select" style="width: 42%;" name="bodyType" disabled/>
 					<input id="input_bodyProxy" type="hidden" test="test" name="bodyTypeProxy"
 			   			rf.source="http://integration.osldev.net/resource-manager/REST/files/osl-resources/lists/_itbVehicleLists-ABIDetails.xml?transformer=xslt&xslt=/osl-resources/lists/makeModelBodyTypeTransform.xsl&contentType=application%2Fjson&vehicle=[value]"/>
-
 
 					<label for="input_transmission">Transmission</label>
 					<select id="input_transmission" type="select" style="width: 42%;" name="transmissionNoReg" disabled/>
@@ -217,7 +206,7 @@
 		<a href="" onclick="toggleSections();return false;">Edit</a>
 	</div>
 
-	<div id="sectionTwo">
+	<!--div id="sectionTwo">
 		<h1>3. Vehicle Details</h1>
 
 		<div class="field">	
@@ -268,7 +257,7 @@
 
 	<div id="disabledSectionTwo" class="disabled">
 		<h1>3. Vehicle Details</h1>
-	</div>
+	</div-->
 
 	<div class="navigation" id="navigation">
 		<input type="submit" rf.action="next" value="Next"/>

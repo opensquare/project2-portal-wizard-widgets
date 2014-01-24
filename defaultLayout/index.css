@@ -53,23 +53,25 @@ section {
 	min-height: 100vh;
 	background-image: url('rhobinn@flickr.com2.jpg');
 	color: #FFF;
+	text-align: right;
 }
-#one h1 {
+#one>h1 {
 	padding-left: 1.75em;
 	background: url('quindell-large-white.png') no-repeat;
 	background-size: contain;
 	font-size: 3em;
 	text-shadow: 0 0 10px #000;
+	text-align: left;
 }
 #one>div {
-	float:right;
-	clear: both;
+	display: inline-block;
 	width: 50%;
 	margin-top: 2.5%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,0.2);
 	border: medium solid;
 	border-radius: 1em;
+	text-align: left;
 }
 footer {
 	padding: 0.25em 1em 1em;
