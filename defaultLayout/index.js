@@ -37,7 +37,6 @@ function Widget_defaultLayout() {
 		twoPos = $('#two').offset().top;
 		threePos = $('#three').offset().top;
 		fourPos = $('#four').offset().top;
-		fivePos = $('#five').offset().top;
 		snapZone = 20;
 	};
 }

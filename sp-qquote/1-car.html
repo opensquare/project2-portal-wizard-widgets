@@ -35,7 +35,6 @@
 			<div id="flag"></div>
 			<input  id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}"/>
 		</div>
-		<input type="button" value="Find" id="findReg"/>
 		<input type="hidden" name="make" />
 		<input type="hidden" name="model" />
 		<input type="hidden" name="fuel" />
@@ -48,6 +47,6 @@
 	</div>
 		
 	<div class="navigation" id="navigation">
-		<input type="submit" rf.action="next" value="Next"/>
+		<input class="button" type="submit" rf.action="next" value="Next"/>
 	</div>
 </form>

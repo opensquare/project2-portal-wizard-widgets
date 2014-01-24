@@ -57,10 +57,7 @@ body {
 	min-height: 10em;
 }
 #home-banner>h1 {
-	width: 400px;
-	height: 125px;
 	margin: 0 0 0 1%;
-	background: url('model-insurance.png') no-repeat left bottom;
 }
 #home-banner h2 {
 	display: inline-block;
@@ -122,7 +119,7 @@ div.widget>.widget-messages>div.error {
 	vertical-align: top;
 	background: rgba(255,255,255,0.8);
 	border-radius: 0.5em;
-	box-shadow: 0 0 0 0.5em rgba(0,0,0,0.1);
+	box-shadow: 0 0 0 0.5em rgba(0,0,0,0.2);
 	display: inline-block;
 	text-align: left;
 }

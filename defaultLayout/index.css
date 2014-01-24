@@ -8,10 +8,10 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-a.button {
+.button {
 	float: right;
 	padding: 0.25em 1em;
-	background: #33F;
+	background: #33F !important;
 	border-radius: 0.25em;
 }
 body,h1 {

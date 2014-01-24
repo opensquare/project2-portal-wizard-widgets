@@ -77,7 +77,7 @@ div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
-	margin:	1em 1em 1em 0; padding: 0.2em 1em;
+	padding: 0.2em 1em;
 	border: none; border-radius: 0.25em;
 	color: #FFF; background-color: #92CE56;
 	font-size: 2em;	
@@ -124,14 +124,6 @@ div.widget[name='sp-qquote'] select:disabled {
 div.widget[name='sp-qquote'] div.field {
 	min-height: 2.2em;
 	padding: 1em 0;
-	border-bottom: thin solid rgba(0, 0, 0, 0.1);
-}
-div.widget[name='sp-qquote'] div.field:hover {
- 	background-color: rgba(0,0,0,0.1);
- }
-div.widget[name='sp-qquote'] div.field.on,
-div.widget[name='sp-qquote'] div.field.on:hover {
-	background-color: rgba(0,0,0,0.2);
 }
 div.widget[name='sp-qquote'] div.field.on .hint {
 	display: inline-block;
