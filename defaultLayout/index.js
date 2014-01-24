@@ -26,7 +26,6 @@ function Widget_defaultLayout() {
 				if (currentPos >= twoPos-1) {clickThis = '#two'};
 				if (currentPos >= threePos-1) {clickThis = '#three'};
 				if (currentPos >= fourPos-1) {clickThis = '#four'};
-				if (currentPos >= fivePos-1) {clickThis = '#five'};
 				$('nav.static a').removeClass('on');
 				$('nav.static a[href="'+clickThis+'"]').addClass('on');
 			},1000);
