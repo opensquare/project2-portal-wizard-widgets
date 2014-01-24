@@ -1,31 +1,143 @@
 /* Override of standard HTML tags */
-div.widget[name='sp-quote'] *, div.widget[name='sp-quote'] *:before, div.widget[name='sp-quote'] *:after {
+*,*:before,*:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-div.widget[name='sp-quote'] a {
+a {
 	text-decoration: none;
 }
-div.widget[name='sp-quote'] a:hover {
+a:hover {
 	text-decoration: underline;
 }
-div.widget[name='sp-quote'] form {
-	padding: 0.2em 2em 0 2em;
-	clear: both;
-}
-div.widget[name='sp-quote'] h1 {
-	margin-top: 1.5em; margin-bottom: 0.75em;
-	color: #333;
-	font-size: 230%; font-weight: normal;
-}
-
-/* Form specific styling */
-div.widget[name='sp-quote'] {
+body {
 	min-width: 275px;
 	margin: 0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background: #F0F0F0;
 	color: #333;
 }
+form {
+	padding: 0.2em 2em 0 2em;
+	clear: both;
+}
+h1 {
+	margin-top: 1.5em; margin-bottom: 0.75em;
+	color: #333;
+	font-size: 230%; font-weight: normal;
+}
+
+/* Styling background text (if any) for environment label */
+#backgroundText text{
+	fill: none;
+	stroke: rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for contained page elements (widgets) */
+header{
+	width: 80%;
+	margin: 1em auto;
+	padding-bottom: 1em;
+}
+header h2{
+	float: left;
+	margin: 0;
+	font-size: 1em;
+	color: #0DB4F2; /* Blue */
+}
+header h2 span{
+	color: #92CE56; /* Green */
+}
+@media screen and (max-width: 1000px) {
+	header{
+		width:98%;
+	}
+}
+header .common-header-menu, header .common-language-switcher {
+	float: right;
+}
+header .common-language-switcher nav {
+	position: absolute;
+	width: auto;
+	height: auto;
+	margin: -6px 0 0 0;
+	font-size: small;
+	background: transparent;
+	border: thin solid;
+	transition: 1s;
+}
+header .common-language-switcher nav:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+header .common-language-switcher #languages a {
+	width: 26px;
+	margin: 8px auto;
+}
+#banner{
+	height: 300px;
+	background: url('banner.jpg') no-repeat center;
+	background-size: cover;
+}
+#banner>h1{
+	width: 400px;
+	height: 125px;
+	margin: 0 0 0 1%;
+}
+#banner>h1>a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url('capstone.png') no-repeat left bottom;
+}
+#banner h2{
+	display: inline-block;
+	margin: 0;
+	padding: 0 0.5em 0 4em;
+	background: rgba(255,255,255,0.35);
+	color: rgba(0,0,0,0.9);
+	font-weight: normal;
+	font-size: 2em;
+	border-radius: 0 0.15em 0.15em 0;
+}
+@media screen and (max-width: 600px) {
+	#banner{
+		height: 100px;
+	}
+}
+#content{
+	width: 80%;
+	min-height: 400px;
+	margin: -6em auto 0 auto;
+	background-color: rgba(255,255,255,0.85);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border-radius: 0.25em;
+}
+@media screen and (max-width: 1000px) {
+	#content{
+		width:98%;
+	}
+}
+footer {
+	width: 80%;
+	margin: 3em auto 1em auto;
+	background-color: #777;
+	color: #FFF;
+	font-size: 10px;
+	border-radius: 0.5em;
+}
+footer p {
+	padding: 0 1em 1em 1em;
+	margin: 0;
+}
+footer p:first-child {
+	padding-top: 1em;
+	font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+	footer {
+		width:98%;
+	}
+}
+
+/* Form specific styling */
 div.widget[name='sp-quote'] input[type='date'] {
 	border: thin solid #0090C0; width: 18%; min-width: 9em; 
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
