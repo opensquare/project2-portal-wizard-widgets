@@ -1,4 +1,4 @@
-function Widget_sp_quote() {
+function Widget_sp_qquote() {
 	
 	this.onReadyExtend = function() {
 		var calcref = this.$widgetDiv.attr('calcref');

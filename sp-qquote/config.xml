@@ -1,11 +1,11 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>sp-quote.html</url>
+		<url>sp-qquote.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
-		<css>sp-quote.css</css>
-		<js>sp-quote.js</js>
+		<css>sp-qquote.css</css>
+		<js>sp-qquote.js</js>
 	</attributes>
 </widget>
