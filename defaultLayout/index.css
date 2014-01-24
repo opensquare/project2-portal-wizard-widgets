@@ -11,7 +11,7 @@ a:hover {
 .button {
 	float: right;
 	padding: 0.25em 1em;
-	background: #33F !important;
+	background: #33F;
 	border-radius: 0.25em;
 }
 body,h1 {
