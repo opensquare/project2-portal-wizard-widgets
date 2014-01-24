@@ -9,7 +9,6 @@ div.widget[name='sp-qquote'] a:hover {
 	text-decoration: underline;
 }
 div.widget[name='sp-qquote'] form {
-	padding: 0.2em 2em 0 2em;
 	clear: both;
 }
 div.widget[name='sp-qquote'] h1 {
@@ -23,8 +22,6 @@ div.widget[name='sp-qquote'] {
 	min-width: 275px;
 	margin: 0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	background: #F0F0F0;
-	color: #333;
 }
 div.widget[name='sp-qquote'] input[type='date'] {
 	border: thin solid #0090C0; width: 18%; min-width: 9em; 
@@ -90,10 +87,8 @@ div.widget[name='sp-qquote'] input[type="submit"]:hover {
 	background-color: #82BE46;
 }
 div.widget[name='sp-qquote'] label {
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 0 1em 0 1em;
-	width: 40%;
+	padding: 0 1em 0 0;
+	width: 35%;
 }
 div.widget[name='sp-qquote'] label.forRadio {
 	width: auto;
@@ -317,7 +312,8 @@ div.widget[name='sp-qquote'] #uk_reg_plate {
 	width: 290px;
 	height: 60px;
 	margin-right: 5%;
-	border: 4px solid #DEDEDE; border-radius: 5px;
+	border: 4px solid #EC0;
+	border-radius: 5px;
 	background: white;
 }
 div.widget[name='sp-qquote'] #uk_reg_plate:before, div.widget[name='sp-qquote'] #uk_reg_plate:after {
