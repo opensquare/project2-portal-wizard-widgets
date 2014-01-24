@@ -58,6 +58,11 @@ body {
 }
 #home-banner>h1 {
 	margin: 0 0 0 1%;
+	padding-left: 1.75em;
+	background: url('quindell-large-white.png') no-repeat;
+	background-size: contain;
+	font-size: 3em;
+	text-shadow: 0 0 10px #000;
 }
 #home-banner h2 {
 	display: inline-block;
