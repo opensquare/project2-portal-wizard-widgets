@@ -26,7 +26,7 @@ function Widget_sp_qquote() {
 		if (typeof cr != 'undefined') {
 			initialData = '<quote><calcref>' + cr + '</calcref></quote>';
 		}
-		rf.loadFlow('widgets/sp-quote/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
+		rf.loadFlow('widgets/sp-qquote/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
 
 	}	
 }
