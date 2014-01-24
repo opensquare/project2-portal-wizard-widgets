@@ -28,19 +28,6 @@ function Widget_sp_qquote() {
 		}
 		rf.loadFlow('widgets/sp-quote/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
 
-
-		var setLanguage = function() {
-			var language = ($('#currentLocale').html().substring(2) == 'en') ? 'english' : 'finnish';
-			$.getJSON('widgets/common-language-switcher/finnish.json', function(data) {
-				$.each(data, function(key, val) {
-					if(language == 'finnish'){replaceString(document.body, key, val);}
-					else {replaceString(document.body, val, key);}	
-				});
-			});
-		};
-
-		rf.onEveryFormLoad(setLanguage);
-
 	}	
 }
 
