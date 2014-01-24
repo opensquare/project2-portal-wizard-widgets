@@ -1,62 +1,62 @@
 /* Override of standard HTML tags */
-div.widget[name='sp-quote'] *, div.widget[name='sp-quote'] *:before, div.widget[name='sp-quote'] *:after {
+div.widget[name='sp-qquote'] *, div.widget[name='sp-qquote'] *:before, div.widget[name='sp-qquote'] *:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-div.widget[name='sp-quote'] a {
+div.widget[name='sp-qquote'] a {
 	text-decoration: none;
 }
-div.widget[name='sp-quote'] a:hover {
+div.widget[name='sp-qquote'] a:hover {
 	text-decoration: underline;
 }
-div.widget[name='sp-quote'] form {
+div.widget[name='sp-qquote'] form {
 	padding: 0.2em 2em 0 2em;
 	clear: both;
 }
-div.widget[name='sp-quote'] h1 {
+div.widget[name='sp-qquote'] h1 {
 	margin-top: 1.5em; margin-bottom: 0.75em;
 	color: #333;
 	font-size: 230%; font-weight: normal;
 }
 
 /* Form specific styling */
-div.widget[name='sp-quote'] {
+div.widget[name='sp-qquote'] {
 	min-width: 275px;
 	margin: 0;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background: #F0F0F0;
 	color: #333;
 }
-div.widget[name='sp-quote'] input[type='date'] {
+div.widget[name='sp-qquote'] input[type='date'] {
 	border: thin solid #0090C0; width: 18%; min-width: 9em; 
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
 }
-div.widget[name='sp-quote'] input[type="button"] {
+div.widget[name='sp-qquote'] input[type="button"] {
 	padding: 0.2em 1em;
 	color: #FFF; background-color: #92CE56;
 	border: none; border-radius: 0.25em;
 	font-size: 1.2em;	
 	cursor: pointer;
 }
-div.widget[name='sp-quote'] input[type="button"]:hover {
+div.widget[name='sp-qquote'] input[type="button"]:hover {
 	background-color: #82BE46;
 }
-div.widget[name='sp-quote'] input[type="checkbox"] {
+div.widget[name='sp-qquote'] input[type="checkbox"] {
 	padding: 0.45em;
 	background-color: #FFF;
 	border: thin solid #0090C0;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
-div.widget[name='sp-quote'] input[type="checkbox"]:checked {
+div.widget[name='sp-qquote'] input[type="checkbox"]:checked {
 	padding: 0.2em 0.4em 0.2em 0.4em;
 	background-color: #0090C0; 
 }
-div.widget[name='sp-quote'] input[type="checkbox"]:checked:after {
+div.widget[name='sp-qquote'] input[type="checkbox"]:checked:after {
 	content: '\2714';
 	color: #FFF; background-color: #0090C0; /*blue*/
 	font-size: 1.3em;   
 }
-div.widget[name='sp-quote'] input[type="radio"] {
+div.widget[name='sp-qquote'] input[type="radio"] {
 	margin: -0.25em 0 0 0;
 	padding: 0.45em;
 	background-color: #FFF;
@@ -64,95 +64,95 @@ div.widget[name='sp-quote'] input[type="radio"] {
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
-div.widget[name='sp-quote'] input[type="radio"]:checked {
+div.widget[name='sp-qquote'] input[type="radio"]:checked {
 	padding: 0.2em 0.4em 0.2em 0.4em;
 	background-color: #0090C0; 
 }
-div.widget[name='sp-quote'] input[type="radio"]:checked:after {
+div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
 	content: '\2714';
 	color: #FFF; background-color: #0090C0; /*blue*/
     font-size: 1.3em;   
 }
-div.widget[name='sp-quote'] input[type="text"],input[type="email"],input[type="password"] {
+div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
 }
-div.widget[name='sp-quote'] input[type="submit"] {
+div.widget[name='sp-qquote'] input[type="submit"] {
 	margin:	1em 1em 1em 0; padding: 0.2em 1em;
 	border: none; border-radius: 0.25em;
 	color: #FFF; background-color: #92CE56;
 	font-size: 2em;	
 	cursor: pointer;
 }
-div.widget[name='sp-quote'] input[type="submit"]:hover {
+div.widget[name='sp-qquote'] input[type="submit"]:hover {
 	background-color: #82BE46;
 }
-div.widget[name='sp-quote'] label {
+div.widget[name='sp-qquote'] label {
 	display: inline-block;
 	font-size: 1.2em;
 	padding: 0 1em 0 1em;
 	width: 40%;
 }
-div.widget[name='sp-quote'] label.forRadio {
+div.widget[name='sp-qquote'] label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 }
-div.widget[name='sp-quote'] label.forPayment {
+div.widget[name='sp-qquote'] label.forPayment {
 	display: inline;
 	position: relative; right: 0.8em;
 	width: 2em;
 	font-size: 1.3em;
 }
-div.widget[name='sp-quote'] option {
+div.widget[name='sp-qquote'] option {
 	color: #333;
 }
-div.widget[name='sp-quote'] p {
+div.widget[name='sp-qquote'] p {
 	font-size: 1.2em;
 }
-div.widget[name='sp-quote'] select {
+div.widget[name='sp-qquote'] select {
 	width: 20%;
 	margin-left: 0;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
 	color: #AAA;
 }
-div.widget[name='sp-quote'] select.changed {
+div.widget[name='sp-qquote'] select.changed {
 	color: inherit;
 }
-div.widget[name='sp-quote'] select:disabled {
+div.widget[name='sp-qquote'] select:disabled {
 	border-color: #888;
 	opacity: 0.5;
 }
 
-div.widget[name='sp-quote'] div.field {
+div.widget[name='sp-qquote'] div.field {
 	min-height: 2.2em;
 	padding: 1em 0;
 	border-bottom: thin solid rgba(0, 0, 0, 0.1);
 }
-div.widget[name='sp-quote'] div.field:hover {
+div.widget[name='sp-qquote'] div.field:hover {
  	background-color: rgba(0,0,0,0.1);
  }
-div.widget[name='sp-quote'] div.field.on,
-div.widget[name='sp-quote'] div.field.on:hover {
+div.widget[name='sp-qquote'] div.field.on,
+div.widget[name='sp-qquote'] div.field.on:hover {
 	background-color: rgba(0,0,0,0.2);
 }
-div.widget[name='sp-quote'] div.field.on .hint {
+div.widget[name='sp-qquote'] div.field.on .hint {
 	display: inline-block;
 }
-div.widget[name='sp-quote'] div.field a {
+div.widget[name='sp-qquote'] div.field a {
 	margin-left: 2em;
 	color: #92CE56;
 	font-weight: bold;
 }
-div.widget[name='sp-quote'] div.field a:hover {
+div.widget[name='sp-qquote'] div.field a:hover {
 	color: #82BE46;
 }
-div.widget[name='sp-quote'] option:first-child {
+div.widget[name='sp-qquote'] option:first-child {
 	color: #999;
 }
-div.widget[name='sp-quote'] .hint {
+div.widget[name='sp-qquote'] .hint {
 	display: none;
 	position: absolute; right: 7em;
 	width: 15em;
@@ -161,10 +161,10 @@ div.widget[name='sp-quote'] .hint {
 	border-radius: 0.25em;
 	z-index: 999;
 }
-div.widget[name='sp-quote'] .hint h3 {
+div.widget[name='sp-qquote'] .hint h3 {
 	margin: 0;
 }
-div.widget[name='sp-quote'] .hint::before {
+div.widget[name='sp-qquote'] .hint::before {
 	content: '◄';
 	position: absolute;
 	margin: -0.3em 0 0 -1em;
@@ -172,25 +172,25 @@ div.widget[name='sp-quote'] .hint::before {
 	font-size: 2em;
 }
 @media screen and (max-width: 1300px) {
-	div.widget[name='sp-quote'] .hint {
+	div.widget[name='sp-qquote'] .hint {
 		margin-top: 3.5em;
 	}
-	div.widget[name='sp-quote'] .hint::before {
+	div.widget[name='sp-qquote'] .hint::before {
 		content: '▲';
 		margin: -1em 0 0 0;
 	}
 }
 
-div.widget[name='sp-quote'] .rf-debugbar {
+div.widget[name='sp-qquote'] .rf-debugbar {
 	background-color: inherit;
 }
 
-div.widget[name='sp-quote'] div.field.occupation .rf-dropdown {
+div.widget[name='sp-qquote'] div.field.occupation .rf-dropdown {
 	left: 39%;
 	display: none;
 	width: 19%;
 }
-div.widget[name='sp-quote'] .rf-dropdown ul {
+div.widget[name='sp-qquote'] .rf-dropdown ul {
 	max-height: 10em; min-width: 100%;
 	overflow: auto; overflow-x: hidden; overflow-y: auto;
 	padding: 0;
@@ -199,26 +199,26 @@ div.widget[name='sp-quote'] .rf-dropdown ul {
 	border: thin solid #0090C0;
 	cursor: pointer;
 }
-div.widget[name='sp-quote'] .rf-dropdown li {
+div.widget[name='sp-qquote'] .rf-dropdown li {
 	padding: 0.1em 0.5em;
 }
-div.widget[name='sp-quote'] .rf-dropdown li:hover {
+div.widget[name='sp-qquote'] .rf-dropdown li:hover {
 	color: #FFF; background-color: #0090C0;
 }
 
-div.widget[name='sp-quote'] .navigation {
+div.widget[name='sp-qquote'] .navigation {
 	clear: both;
 	text-align: right;
 }
-div.widget[name='sp-quote'] .navigation input[type="button"] {
+div.widget[name='sp-qquote'] .navigation input[type="button"] {
 	margin: 1em 1em 1em 0;
 	font-size: 2em;	
 }
-div.widget[name='sp-quote'] .navigation input[type="button"]:first-child {
+div.widget[name='sp-qquote'] .navigation input[type="button"]:first-child {
 	font-size: 1.5em;	
 }
 
-div.widget[name='sp-quote'] .invalid-message {
+div.widget[name='sp-qquote'] .invalid-message {
 	margin-left: 0.5em;
 	padding: 0.5em;
 	color: #FFF; background: #D44; /*red*/
@@ -226,7 +226,7 @@ div.widget[name='sp-quote'] .invalid-message {
 	font-weight: bold;
 }
 
-div.widget[name='sp-quote'] .vehicle_search {
+div.widget[name='sp-qquote'] .vehicle_search {
 	margin-left: 30%;
 	padding: 0.5em;
 	width: 50%;
@@ -234,67 +234,67 @@ div.widget[name='sp-quote'] .vehicle_search {
 	border: thin solid #0090C0; border-radius: 0.25em;
 }
 
-div.widget[name='sp-quote'] #makeModel label {
+div.widget[name='sp-qquote'] #makeModel label {
 	width: 20%;
 	text-align: left;
 }
 
-div.widget[name='sp-quote'] #makeModel input {
+div.widget[name='sp-qquote'] #makeModel input {
 	width: 60%;
 }
 
-div.widget[name='sp-quote'] #modelDetail {
+div.widget[name='sp-qquote'] #modelDetail {
 	padding: 1em 0 1em 0;
 }
 
-div.widget[name='sp-quote'] .checkboxLabel {
+div.widget[name='sp-qquote'] .checkboxLabel {
 	display: inline-block;
 	max-width: 22%;
 	padding: 0;
 	vertical-align: top;
 }
 
-div.widget[name='sp-quote'] .disabledSummary {
+div.widget[name='sp-qquote'] .disabledSummary {
 	font-size: 1.2em;
 }
 
-div.widget[name='sp-quote'] .carFound label {
+div.widget[name='sp-qquote'] .carFound label {
 	margin: 0.5em 0 0.5em 0;
 }
-div.widget[name='sp-quote'] .carFound span {
+div.widget[name='sp-qquote'] .carFound span {
 	display: inline-block;
 	max-width: 23em;
 	font-size: 1.2em;
 }
 
-div.widget[name='sp-quote'] .currency:after {
+div.widget[name='sp-qquote'] .currency:after {
 	content: '£';
 	float: right;
 	margin-right: -4%;
 }
 
-div.widget[name='sp-quote'] #input_title, div.widget[name='sp-quote'] .titleSelect {
+div.widget[name='sp-qquote'] #input_title, div.widget[name='sp-qquote'] .titleSelect {
 	width: auto;
 }
 
-div.widget[name='sp-quote'] .dateSel, div.widget[name='sp-quote'] .dateSel select {
+div.widget[name='sp-qquote'] .dateSel, div.widget[name='sp-qquote'] .dateSel select {
 	width: auto;
 }
 
-div.widget[name='sp-quote'] .disabled {
+div.widget[name='sp-qquote'] .disabled {
 	opacity: 0.5;
 }
-div.widget[name='sp-quote'] .disabled h1 {
+div.widget[name='sp-qquote'] .disabled h1 {
 	font-size: 180%
 }
-div.widget[name='sp-quote'] .disabled a {
+div.widget[name='sp-qquote'] .disabled a {
 	font-weight: bold;
 	float: right;
 	margin-right: 5%;
 	color: #92CE56;
 }
 
-div.widget[name='sp-quote'] #sectionOne a {
+div.widget[name='sp-qquote'] #sectionOne a {
 	float: right;
 	margin: 0.5em 1em 0 0;
 }
@@ -303,7 +303,7 @@ div.widget[name='sp-quote'] #sectionOne a {
 	font-family: ukNumberPlate;
 	src: url('UKNumberPlate.ttf')
 }
-div.widget[name='sp-quote'] #input_reg {
+div.widget[name='sp-qquote'] #input_reg {
 	width: 75%; height: 100%;
 	margin: 0;
 	padding: 0;
@@ -312,7 +312,7 @@ div.widget[name='sp-quote'] #input_reg {
 	font-family: ukNumberPlate; font-size: 3em;
 	text-transform: uppercase;
 }
-div.widget[name='sp-quote'] #uk_reg_plate {
+div.widget[name='sp-qquote'] #uk_reg_plate {
 	display: inline-block;
 	width: 290px;
 	height: 60px;
@@ -320,7 +320,7 @@ div.widget[name='sp-quote'] #uk_reg_plate {
 	border: 4px solid #DEDEDE; border-radius: 5px;
 	background: white;
 }
-div.widget[name='sp-quote'] #uk_reg_plate:before, div.widget[name='sp-quote'] #uk_reg_plate:after {
+div.widget[name='sp-qquote'] #uk_reg_plate:before, div.widget[name='sp-qquote'] #uk_reg_plate:after {
 	content: "•";
 	display: inline-block;
 	padding: 10px 4px;
@@ -328,30 +328,30 @@ div.widget[name='sp-quote'] #uk_reg_plate:before, div.widget[name='sp-quote'] #u
 	color: #888;
 	vertical-align: top;
 }
-div.widget[name='sp-quote'] #flag {
+div.widget[name='sp-qquote'] #flag {
 	float: left;
 	width: 10%; height: 100%;
 	border-radius: 2px;
 	color: #FFCC00; background: #1E488C;
 }
-div.widget[name='sp-quote'] #flag:before {
+div.widget[name='sp-qquote'] #flag:before {
 	content: "◌";
 	position: relative;
 	top: -10px;
 	font-size: 2.8em;
 }
-div.widget[name='sp-quote'] #flag:after {
+div.widget[name='sp-qquote'] #flag:after {
 	content: "GB";
 	position: relative;
 	top: 4px; right: 23px;
 	font-size: 0.75em;
 }	
-div.widget[name='sp-quote'] #findReg {
+div.widget[name='sp-qquote'] #findReg {
 	display: inline-block;
 	vertical-align: bottom;
 }
 /* crumb trail */
-div.widget[name='sp-quote'] #crumbTrail li {
+div.widget[name='sp-qquote'] #crumbTrail li {
 	position: relative;
 	float: left;
 	min-width: 16%; height: 40px;
@@ -362,14 +362,14 @@ div.widget[name='sp-quote'] #crumbTrail li {
 	border-radius: 10em 1em 1em 10em;
 	white-space: nowrap;
 }
-div.widget[name='sp-quote'] #crumbTrail li:after {
+div.widget[name='sp-qquote'] #crumbTrail li:after {
 	content: '♦';
 	position: absolute;
 	top: -20px; right: -17px;
 	color: #777;
 	font-size: 64px;
 }
-div.widget[name='sp-quote'] #crumbTrail li.on {
+div.widget[name='sp-qquote'] #crumbTrail li.on {
 	height: 60px;
 	margin-left: 3%;
 	padding-left: 15px;
@@ -377,7 +377,7 @@ div.widget[name='sp-quote'] #crumbTrail li.on {
 	font-size: 24px;
 	font-weight: bold;
 }
-div.widget[name='sp-quote'] #crumbTrail li.on:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on:before {
 	content: '';
 	float: left;
 	width: 75px; height: 75px;
@@ -385,173 +385,173 @@ div.widget[name='sp-quote'] #crumbTrail li.on:before {
 	border-radius: 10em;
 	background: #0DB4F2 no-repeat center center;
 }
-div.widget[name='sp-quote'] #crumbTrail li.on:after {
+div.widget[name='sp-qquote'] #crumbTrail li.on:after {
 	color: #0DB4F2;
 }
-div.widget[name='sp-quote'] #crumbTrail li.car {
+div.widget[name='sp-qquote'] #crumbTrail li.car {
 	background-image: url('transport-car-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.drivers {
+div.widget[name='sp-qquote'] #crumbTrail li.drivers {
 	background-image: url('person-group-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.about {
+div.widget[name='sp-qquote'] #crumbTrail li.about {
 	background-image: url('person-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.policy {
+div.widget[name='sp-qquote'] #crumbTrail li.policy {
 	background-image: url('document-contract2-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.cover {
+div.widget[name='sp-qquote'] #crumbTrail li.cover {
 	background-image: url('document-contract2-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.occupation {
+div.widget[name='sp-qquote'] #crumbTrail li.occupation {
 	background-image: url('briefcase-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.quote {
+div.widget[name='sp-qquote'] #crumbTrail li.quote {
 	background-image: url('currency-sign-pound-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.apply {
+div.widget[name='sp-qquote'] #crumbTrail li.apply {
 	background-image: url('email-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.pay {
+div.widget[name='sp-qquote'] #crumbTrail li.pay {
 	background-image: url('coins-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.welcome {
+div.widget[name='sp-qquote'] #crumbTrail li.welcome {
 	background-image: url('handshake-light-small.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.car:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.car:before {
 	background-image: url('transport-car-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.about:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.about:before {
 	background-image: url('person-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.drivers:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.drivers:before {
 	background-image: url('person-group-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.policy:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.policy:before {
 	background-image: url('document-contract2-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.cover:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.cover:before {
 	background-image: url('document-contract2-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.occupation:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.occupation:before {
 	background-image: url('briefcase-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.on.quote:before {
+div.widget[name='sp-qquote'] #crumbTrail li.on.quote:before {
 	background-image: url('currency-sign-pound-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.apply.on:before {
+div.widget[name='sp-qquote'] #crumbTrail li.apply.on:before {
 	background-image: url('email-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.pay.on:before {
+div.widget[name='sp-qquote'] #crumbTrail li.pay.on:before {
 	background-image: url('coins-light.png');
 }
-div.widget[name='sp-quote'] #crumbTrail li.welcome.on:before {
+div.widget[name='sp-qquote'] #crumbTrail li.welcome.on:before {
 	background-image: url('handshake-light.png');
 }
 
-div.widget[name='sp-quote'] .rf-debugbar {
+div.widget[name='sp-qquote'] .rf-debugbar {
 	opacity: 0.15;
 }
 
-div.widget[name='sp-quote'] .loading {
+div.widget[name='sp-qquote'] .loading {
 	width: 100%; height: 100px;
 	background: url('loading.gif') no-repeat center center;
 }
 
 /* Customer Details page specific styling */
-div.widget[name='sp-quote'] #customerDetails label, div.widget[name='sp-quote'] #paymentPage label {
+div.widget[name='sp-qquote'] #customerDetails label, div.widget[name='sp-qquote'] #paymentPage label {
 	display: inline-block;
 	padding: 0 1em 0 1em;
 	width: 30%;
 	font-size: 1.2em;
 }
-div.widget[name='sp-quote'] #customerDetails label.forRadio {
+div.widget[name='sp-qquote'] #customerDetails label.forRadio {
 	width: auto;
 	padding-left: 0.25em;
 	font-size: 1.2em;
 }
 /*address lookup formatting*/
-div.widget[name='sp-quote'] .findAddress div.labelWrapper {
+div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
 	vertical-align: top;
 }
-div.widget[name='sp-quote'] .findAddress div.labelWrapper, div.widget[name='sp-quote'] .findAddress div.tableWrapper {
+div.widget[name='sp-qquote'] .findAddress div.labelWrapper, div.widget[name='sp-qquote'] .findAddress div.tableWrapper {
 	display: inline-block;
 }
-div.widget[name='sp-quote'] .findAddress div.labelWrapper {
+div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
 	padding: 0 1em;
 	width: 30.5%;
 }
-div.widget[name='sp-quote'] .findAddress div.tableWrapper {
+div.widget[name='sp-qquote'] .findAddress div.tableWrapper {
 	width: 44%;
 }
-div.widget[name='sp-quote'] #customerDetails .findAddress label,
-div.widget[name='sp-quote'] #paymentPage .findAddress label {
+div.widget[name='sp-qquote'] #customerDetails .findAddress label,
+div.widget[name='sp-qquote'] #paymentPage .findAddress label {
 	width: 100%;
 	padding: 0;
 }
-div.widget[name='sp-quote'] .findAddress input {
+div.widget[name='sp-qquote'] .findAddress input {
 	width: 100%;
 }
-div.widget[name='sp-quote'] .addressFound label,
-div.widget[name='sp-quote'] .accountDetails label {
+div.widget[name='sp-qquote'] .addressFound label,
+div.widget[name='sp-qquote'] .accountDetails label {
 	vertical-align: top;
 }
-div.widget[name='sp-quote'] #addressLabel,
-div.widget[name='sp-quote'] .bankDetails {
+div.widget[name='sp-qquote'] #addressLabel,
+div.widget[name='sp-qquote'] .bankDetails {
 	display: inline-block;
 }
-div.widget[name='sp-quote'] #addressLabel span,
-div.widget[name='sp-quote'] .bankDetails>span {
+div.widget[name='sp-qquote'] #addressLabel span,
+div.widget[name='sp-qquote'] .bankDetails>span {
 	display: block;
 	font-size: 1.2em;
 }
-div.widget[name='sp-quote'] .pcaCapturePlusTable td {
+div.widget[name='sp-qquote'] .pcaCapturePlusTable td {
 	position: static !important;
 	z-index: 1;
 }
-div.widget[name='sp-quote'] table .pcaAutoCompleteSmall>div {
+div.widget[name='sp-qquote'] table .pcaAutoCompleteSmall>div {
 	width: 100% !important; max-height:10em;
 	overflow-x: hidden;
 	padding-right: 0.6em !important;
 	background-color: #FFF;
 	border: thin solid #0090C0;
 }
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .item,
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .selectedItem {
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item,
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
 	display: inline-block;
 	width: 100%;
 }
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .item {
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item {
 	border-width: 0 !important;
 }
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .item:hover,
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .selectedItem:hover {
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover,
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover {
 	background-color: #0090C0;
 }
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .item:hover span,
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .selectedItem:hover span {
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover span,
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover span {
 	color: #FFF !important;
 }
-div.widget[name='sp-quote'] .pcaAutoCompleteSmall .selectedItem {
+div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
 	background-color: #EEE;
 }
-div.widget[name='sp-quote'] .pcaCapturePlusTable .recentFavouritesSmall {
+div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall {
 	background-color: #FFF;
 }
-div.widget[name='sp-quote'] .pcaCapturePlusTable .recentFavouritesSmall a {
+div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall a {
 	margin: 0;
 	color: #000;
 	font-weight: normal;
 }
-div.widget[name='sp-quote'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
+div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
 	background-color: rgba(0,0,0,0.2);
 }
 
 /* Landing Page styling */
-div.widget[name='sp-quote'] #landingPage h1 {
+div.widget[name='sp-qquote'] #landingPage h1 {
 	margin-bottom: 0;
 }
-div.widget[name='sp-quote'] #landingPage .pane {
+div.widget[name='sp-qquote'] #landingPage .pane {
 	float: right;
 	clear: both;
 	width: 40%;
@@ -559,93 +559,93 @@ div.widget[name='sp-quote'] #landingPage .pane {
 	vertical-align: top;
 	border: thick solid #0DB4F2; border-radius: 1em;
 }
-div.widget[name='sp-quote'] #landingPage .pane h2 {
+div.widget[name='sp-qquote'] #landingPage .pane h2 {
 	margin: 0;
 	padding: 0.2em 0.5em;
 	color: #FFF; background: #0DB4F2;
 }
-div.widget[name='sp-quote'] #landingPage .pane input[type="button"] {
+div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
 	float: right;
 	margin: 0.5em;
 	font-size: 2em;
 }
-div.widget[name='sp-quote'] #landingPage .amount {
+div.widget[name='sp-qquote'] #landingPage .amount {
 	display: inline-block;
 	width: 100%;
 	text-align: right;
 	font-size: 2em; font-weight: normal;
 }
-div.widget[name='sp-quote'] .premium {
+div.widget[name='sp-qquote'] .premium {
 	display: inline;
 	font-size: 2em;
 }
-div.widget[name='sp-quote'] .premDetail {
+div.widget[name='sp-qquote'] .premDetail {
 	margin-left: 33.5%;
 }
-div.widget[name='sp-quote'] #landingPage .amount:before, div.widget[name='sp-quote'] #landingPage .instalmentPremium:before,
-div.widget[name='sp-quote']  #landingPage .iptAmount:before, div.widget[name='sp-quote'] #paymentPage .amount:before,
-div.widget[name='sp-quote']  #paymentPage .instalmentPremium:before,
-div.widget[name='sp-quote']  #paymentPage .iptAmount:before {
+div.widget[name='sp-qquote'] #landingPage .amount:before, div.widget[name='sp-qquote'] #landingPage .instalmentPremium:before,
+div.widget[name='sp-qquote']  #landingPage .iptAmount:before, div.widget[name='sp-qquote'] #paymentPage .amount:before,
+div.widget[name='sp-qquote']  #paymentPage .instalmentPremium:before,
+div.widget[name='sp-qquote']  #paymentPage .iptAmount:before {
 	content: '£';
 }
-div.widget[name='sp-quote'] #landingPage .pane p {
+div.widget[name='sp-qquote'] #landingPage .pane p {
 	margin: 0;
 	padding: 0.5em;
 }
-div.widget[name='sp-quote'] #landingPage p>span {
+div.widget[name='sp-qquote'] #landingPage p>span {
 	font-weight: bold;
 }
-div.widget[name='sp-quote'] #landingPage .smallprint {
+div.widget[name='sp-qquote'] #landingPage .smallprint {
 	margin-bottom: 0;
 	padding: 0.25em;
 	border-top: thin solid rgba(0,0,0,0.25);
 	font-size: 0.7em;
 }
-div.widget[name='sp-quote'] #landingPage #details {
+div.widget[name='sp-qquote'] #landingPage #details {
 	clear: both;
 }
-div.widget[name='sp-quote'] #landingPage h3 {
+div.widget[name='sp-qquote'] #landingPage h3 {
 	display: none;
 }
-div.widget[name='sp-quote'] #landingPage .details {
+div.widget[name='sp-qquote'] #landingPage .details {
 	min-height: 50px;
 	padding-left: 60px;
 }
-div.widget[name='sp-quote'] #landingPage .duration {
+div.widget[name='sp-qquote'] #landingPage .duration {
 	background: url('calendar-year-dark.png') no-repeat; 
 }
-div.widget[name='sp-quote'] #landingPage .vehicle {
+div.widget[name='sp-qquote'] #landingPage .vehicle {
 	background: url('transport-car-dark.png') no-repeat; 
 }
-div.widget[name='sp-quote'] #landingPage .drivers {
+div.widget[name='sp-qquote'] #landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
 }
-div.widget[name='sp-quote'] #save {
+div.widget[name='sp-qquote'] #save {
 	margin-bottom: 1em;
 	border: thick solid #92CE56; border-radius: 1em;
 }
-div.widget[name='sp-quote'] #save:before {
+div.widget[name='sp-qquote'] #save:before {
 	content: '';
 	float: right;
 	height: 0; width: 0;
 	margin: -24px 40px 0 0;
 	border-right: 20px dotted transparent; border-bottom: 20px dotted #92CE56; border-left: 20px dotted transparent;
 }
-div.widget[name='sp-quote'] #save span {
+div.widget[name='sp-qquote'] #save span {
 	padding: 0.1em 0.25em;
 	color: #FFF; background: #92CE56;
 	white-space: nowrap;
 	border-radius: 0.25em;
 	font-weight: bold;
 }
-div.widget[name='sp-quote'] #save p {
+div.widget[name='sp-qquote'] #save p {
 	margin: 0;
 	padding: 0.5em;
 }
-div.widget[name='sp-quote'] #save li {
+div.widget[name='sp-qquote'] #save li {
 	padding-bottom: 1em;
 }
-div.widget[name='sp-quote'] #save li a {
+div.widget[name='sp-qquote'] #save li a {
 	padding: 0.5em 0.4em;
 	border-radius: 10em;
 	color: #FFF; background: #0DB4F2;
@@ -653,7 +653,7 @@ div.widget[name='sp-quote'] #save li a {
 }
 
 /*Driver summary icons*/
-div.widget[name='sp-quote'] .Male {
+div.widget[name='sp-qquote'] .Male {
 	display: inline-block;
 	height: 50px;
 	padding: 12px 50px;
@@ -661,7 +661,7 @@ div.widget[name='sp-quote'] .Male {
 	font-size: 1.3em;
 	background: url('person-man-dark.png') no-repeat center top;
 }
-div.widget[name='sp-quote'] .Female {
+div.widget[name='sp-qquote'] .Female {
 	display: inline-block;
 	height: 50px;
 	padding: 12px 50px;
@@ -670,15 +670,15 @@ div.widget[name='sp-quote'] .Female {
 	background: url('person-woman-dark.png') no-repeat center top;
 }
 /*Payment page*/
-div.widget[name='sp-quote'] #paymentPage label.forRadio {
+div.widget[name='sp-qquote'] #paymentPage label.forRadio {
 	position: relative;
 	right: 0.8em;
 	width: 3em;
 	font-size: 1.3em;
 }
-div.widget[name='sp-quote'] #input_sort_code {
+div.widget[name='sp-qquote'] #input_sort_code {
 	width: 10%;
 }
-div.widget[name='sp-quote'] #input_code {
+div.widget[name='sp-qquote'] #input_code {
 	width: 10%;
 }
