@@ -1,0 +1,78 @@
+		<nav class="static">
+			<a href="#one" class="on">Home</a>
+			<a href="#two">How it works</a>
+			<a href="#three">Our garage network</a>
+			<a href="#four">About us</a>
+		</nav>
+		<section id="one">
+			<h1>Quindell SMR</h1>
+			<div>
+				<p>Lorem ipsum dolor sit amet, his ad nusquam comprehensam. No nec erant meliore offendit. Est numquam invenire hendrerit et, te oblique temporibus sea. Cum no error vidisse tritani, qui ne soleat recusabo. Ferri semper quo te.</p>
+				<p>Meis mollis instructior sea ex, vis feugiat periculis at. Pertinax liberavisse est in, alii delenit vituperata eu vis. Vim sumo viderer eu, an fugit aperiri nam. Eu probo magna qui. Sed et blandit prodesset.</p>
+				<a href="#two">Read more...</a>
+			</div>
+			<div>
+				<h2>Account holder login or register <a href="cp" class="button">Login/Register</a></h2>
+			</div>
+			<div>
+				<h2>Get a quote</h2>
+				<div class="widget" name="sp-quote"></div>
+			</div>
+		</section>
+		<section id="two">
+			<h1>How it works</h1>
+		</section>
+		<section id="three">
+			<h1>Our garage network</h1>
+		</section>
+		<section id="four">
+			<h1>About us</h1>
+		</section>
+
+		<footer>
+			<h2>&copy; Quindell Plc, 2014</h2>
+			<p>Quindell Plc is a Public limited company registered in England &amp; Wales with registration number 05542221 and is a Group VAT registered company with registration 115161748. Quindell Plc’s registered office is at Quindell Court, 1 Barnes Wallis Road, Segensworth, Fareham, Hampshire, PO15 5UA.</p>
+		</footer>
+
+		<script type="text/javascript">
+
+			function determinePositions(){
+				onePos = $('#one').offset().top;
+				twoPos = $('#two').offset().top;
+				threePos = $('#three').offset().top;
+				fourPos = $('#four').offset().top;
+				fivePos = $('#five').offset().top;
+				snapZone = 20;
+			};
+			
+			determinePositions();
+
+			$(window).on('resize', determinePositions());
+
+			// Set up top menu
+			$('nav a').click(function(){
+				$('nav').removeClass('static');
+				$('nav a').removeClass('on');
+				$(this).addClass('on');
+				var currentPos = $(window).scrollTop();
+				var target = $(this).attr('href');
+				var pos = $(target).offset();
+				var delay = Math.abs(pos.top-currentPos);
+				$('body,html').animate({scrollTop:pos.top},delay,function(){$('nav').addClass('static');});
+				return false;
+			});
+
+			// Highlight appropriate menu item
+			setInterval(function(){
+				var clickThis = '#one';
+				var tolerance = 50;
+				var currentPos = $(window).scrollTop()+tolerance;
+				if (currentPos >= onePos-1) {clickThis = '#one'};
+				if (currentPos >= twoPos-1) {clickThis = '#two'};
+				if (currentPos >= threePos-1) {clickThis = '#three'};
+				if (currentPos >= fourPos-1) {clickThis = '#four'};
+				if (currentPos >= fivePos-1) {clickThis = '#five'};
+				$('nav.static a').removeClass('on');
+				$('nav.static a[href="'+clickThis+'"]').addClass('on');
+			},1000);
+		</script>

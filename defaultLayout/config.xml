@@ -1,11 +1,10 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>demo.html</url>
+		<url>index.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
-		<displayHeader>false</displayHeader>
-		<css>demo.css</css>
+		<css>index.css</css>
 	</attributes>
 </widget>

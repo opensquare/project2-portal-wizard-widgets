@@ -1,0 +1,82 @@
+*,*:before,*:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a.button {
+	float: right;
+	padding: 0.25em 1em;
+	background: #33F;
+	border-radius: 0.25em;
+}
+body,h1 {
+	margin: 0;
+	font-family: sans-serif;
+}
+h1 {
+	font-size: 1.75em;
+}
+h2 {
+	font-size: 1.25em;
+}
+nav {
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0,0,0,0.25);
+	color: #FFF;
+	font-size: 1em;
+	text-align: right;
+}
+nav a {
+	display: inline-block;
+	padding: 0.5em 2em 0.25em;
+}
+nav a.on {
+	background-color: rgba(255,255,255,0.9);
+	color: #333;
+}
+nav a.on:hover {
+	text-decoration: none;
+}
+section {
+	min-height: 50vh;
+	padding: 4%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#one {
+	min-height: 100vh;
+	background-image: url('rhobinn@flickr.com2.jpg');
+	color: #FFF;
+}
+#one h1 {
+	padding-left: 1.75em;
+	background: url('quindell-large-white.png') no-repeat;
+	background-size: contain;
+	font-size: 3em;
+	text-shadow: 0 0 10px #000;
+}
+#one>div {
+	float:right;
+	clear: both;
+	width: 50%;
+	margin-top: 2.5%;
+	padding: 1em 2em;
+	background-color: rgba(0,0,0,0.2);
+	border: medium solid;
+	border-radius: 1em;
+}
+footer {
+	padding: 0.25em 1em 1em;
+	background-color: #333;
+	color: #FFF;
+	font-size: 0.75em;
+}
+footer p {
+	margin: 0;
+}
