@@ -105,6 +105,28 @@ section {
 	font-weight: bold;
 	padding-left: 42px;
 	background: no-repeat;
+	background-size: contain;
+}
+#two .block:nth-child(1) h3 {
+	background-image: url('umbrella-light.png');
+}
+#two .block:nth-child(2) h3 {
+	background-image: url('piggybank-light.png');
+}
+#two .block:nth-child(3) h3 {
+	background-image: url('lightbulb-light.png');
+}
+#two .block:nth-child(4) h3 {
+	background-image: url('key.png');
+}
+#two .block:nth-child(5) h3 {
+	background-image: url('coffee-light.png');
+}
+#two .block:nth-child(6) h3 {
+	background-image: url('certificate-light.png');
+}
+#two .block>p {
+	line-height: 1.5em;
 }
 footer {
 	padding: 0.25em 1em 1em;
