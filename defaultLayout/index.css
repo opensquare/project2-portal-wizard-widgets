@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+
 *,*:before,*:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -46,12 +48,13 @@ nav a.on:hover {
 section {
 	min-height: 50vh;
 	padding: 4%;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 #one {
 	min-height: 100vh;
+	font-family: 'Audiowide', cursive;
 	background-image: url('rhobinn@flickr.com2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: #FFF;
 	text-align: right;
 }
@@ -69,9 +72,20 @@ section {
 	margin-top: 2.5%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,0.5);
-	border: medium solid;
+	border: medium solid rgba(255,255,255,0.25);
 	border-radius: 1em;
 	text-align: left;
+}
+#one #summary p {
+	margin-bottom: 0;
+}
+#one #summary a {
+	float: right;
+	font-weight: bold;
+	color: #66f;
+}
+#two {
+	background-image: url('dark-stripe-tile.jpg');
 }
 footer {
 	padding: 0.25em 1em 1em;
