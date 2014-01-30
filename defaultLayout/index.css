@@ -51,7 +51,6 @@ section {
 }
 #one {
 	min-height: 100vh;
-	font-family: 'Audiowide', cursive;
 	background-image: url('rhobinn@flickr.com2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -62,6 +61,7 @@ section {
 	padding-left: 1.75em;
 	background: url('quindell-large-white.png') no-repeat;
 	background-size: contain;
+	font-family: 'Audiowide';
 	font-size: 3em;
 	text-shadow: 0 0 10px #000;
 	text-align: left;
@@ -86,6 +86,9 @@ section {
 }
 #two {
 	background-image: url('dark-stripe-tile.jpg');
+}
+#two h1 {
+	color: #FFF;
 }
 footer {
 	padding: 0.25em 1em 1em;
