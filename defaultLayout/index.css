@@ -117,7 +117,7 @@ section {
 	background-image: url('lightbulb-light.png');
 }
 #two .block:nth-child(4) h3 {
-	background-image: url('key.png');
+	background-image: url('key-light.png');
 }
 #two .block:nth-child(5) h3 {
 	background-image: url('coffee-light.png');
@@ -127,6 +127,11 @@ section {
 }
 #two .block>p {
 	line-height: 1.5em;
+}
+#three #map {
+	width: 50vw;
+	height: 75vh;
+	background: contain url('google-map.png') no-repeat;
 }
 footer {
 	padding: 0.25em 1em 1em;
