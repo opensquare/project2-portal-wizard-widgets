@@ -1,0 +1,43 @@
+<script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
+
+<form rhinoforms="true">
+
+	<div class="field">
+		<label for="input_current_mileage">Current Mileage:</label>
+		<input  id="input_current_mileage" type="text" name="currentMileage" rf.validation="required"/>
+	</div>
+    
+    <div class="field">
+        <label for="input_planStart">Plan Start Date:</label>
+        <input id="input_planStart" type="date" name="startDateISO" rf.validation="required date({ format: 'YYYY-MM-DD' })" 
+               rf.initialValue="if('{{startDate}}' !== '') {new moment('{{startDate}}').format('YYYY-MM-DD')}"/>
+        <input type="hidden" name="startDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" rf.calculated="if (fields.startDateISO.value !=='') {new moment(fields.startDateISO.value).format('DD/MM/YYYY');}"/>
+    </div>
+    
+    <div class="field">
+		<label for="input_annual_mileage">Annual Mileage:</label>
+		<input  id="input_annual_mileage" type="text" name="annualMileage" rf.validation="required"/>
+	</div>
+    
+    <div class="field">
+		<label for="input_start_mileage">Estimated Mileage at Start of Plan:</label>
+		<input  id="input_start_mileage" type="text" name="startMileage" rf.validation="required"/>
+	</div>
+		
+	<div class="navigation" id="navigation">
+		<input class="button" type="submit" rf.action="next" value="Next"/>
+        <input class="button" type="submit" rf.action="back" value="Back"/>
+	</div>
+    
+    <script>
+		rf.onFormLoad(function(){
+			// retrigger start date rf.calculated after initial value is set
+			$("#input_planStart").change();
+		})
+
+		/* Restrict and default HTML date tag */
+		$('#input_planStart').attr("value", moment().format("YYYY-MM-DD"));
+		$('#input_planStart').attr("max", moment().add('days', 29).format("YYYY-MM-DD"));
+		$('#input_planStart').attr("min", moment().format("YYYY-MM-DD"));
+	</script>
+</form>

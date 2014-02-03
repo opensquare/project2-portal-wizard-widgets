@@ -3,8 +3,9 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" encoding="UTF-8" />
 	<xsl:template match="/">
-        <quote>
-            <xsl:copy-of select="//part[@partname='additionalData']/*"/>
-        </quote>
+		<vehicle>
+            <key><xsl:value-of select="//SearchVehicleResult/VehicleInstanceKey"/></key>
+            <description><xsl:value-of select="//SearchVehicleResult/ShortDescription"/></description>
+        </vehicle>
 	</xsl:template>
 </xsl:stylesheet>

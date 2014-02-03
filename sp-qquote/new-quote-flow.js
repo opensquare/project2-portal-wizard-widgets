@@ -4,70 +4,77 @@
 	libraries: ["js/utils.js"],
 	formLists: {
 		main: [
-            { id: "initialisation", url: "../quote-forms-common/initialisation.html",
-                actions: [
-                    "next",
-                    {
-                        name: "calc",
-                        target: "calculating",
-                        submission: {
-							url: "{{$esb-url}}/calc/calcdata/{{//calcref}}.xml",
-							method: "get",
-							postTransform: "xslt/retrieveCalc.xsl",
-							resultInsertPoint: "/"
-						}
-                    }
-                ]},
-	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "1-car.html", actions: [ "next"] },
-			{ id: "customer", docBase: "/quote/customer", url: "1-customer.html", actions: [ "back", "next" ] },
-			{ id: "calculating", url: "8-calculating.html", 
-				actions: [
-					{
-						name: "next",
-						submission: {
-							preTransform: "xslt/toNapier.xsl", 
-							url: "{{$esb-url}}/motor/quote/calc",
-							data: {
-								source: "motor-new-business",
-                                quickSearch1: "xpath://customer/surname",
-                                quickSearch2: "xpath://customer/address/postcode",
-                                quickSearch3: "xpath://customer/email",
-                                quickSearch4: "xpath://vehicle/reg",
-								calcData: "[dataDocument]"
+	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "vehicle.html", actions: ["next"] },
+            {
+				id : "searching",
+				url : "8-searching.html",
+				actions : [{
+						name : "next",
+						submission : {
+							url : "{{$esb-url}}/ccp/vehicleLookup",
+							data : {
+								vrm : "xpath://vehicle/reg"
 							},
-							method: "post",
-							postTransform: "xslt/fromNapier.xsl",
-							resultInsertPoint: "/quote/calc"
+                            postTransform: "xslt/vehicleLookupResponse.xsl",
+                            resultInsertPoint: "/quote/vehicleLookup"
 						}
 					}
 				]
 			},
-			{ id: "quote", url: "9-quote.html", actions: [ "back:vehicle", "finish", "sorry:sorry", "single:buy.singlePayment", "multiple:buy.multiplePayment" ] },
-			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
-		],
-		conviction: [
-			{ id: "editConviction", docBase: "convictions/conviction[index]", url: "3-edit-conviction.html", actions: [ "cancel", "next" ] }
-		],
-		claim: [
-			{ id: "editClaim", docBase: "claims/claim[index]", url: "4-edit-claim.html", actions: [ "cancel", "next" ] }
-		],
-		additionalDriver: [
-			{ id: "editAdditionalDriver", docBase: "/quote/additionalDrivers/driver[index]", url: "6-edit-additional-driver.html", 
+            { id: "confirm-vehicle", url: "confirm-vehicle.html", actions: ["back", "next"]},
+            { id: "cover", url: "cover.html", docBase: "/quote/cover", actions: ["back", "next"]},
+            { id: "calculating1", url: "calculating.html", 
 				actions: [
-				    "cancel",
-					"back",
-					
-					"addConviction:conviction.editConviction(index=next)",
-					"editConviction:conviction.editConviction(index=?)",
-					"deleteConviction:delete(xpath=convictions/conviction[index], index=?)",
-					
-					"addClaim:claim.editClaim(index=next)",
-					"editClaim:claim.editClaim(index=?)",
-					"deleteClaim:delete(xpath=claims/claim[index], index=?)",
-					
-					"next"
+					{
+						name: "next",
+						submission: {
+							url: "{{$esb-url}}/ccp/setVehicleUserParameters",
+							data: {
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+                                annualMileage: "xpath://cover/annualMileage",
+                                currentMileage: "xpath://cover/currentMileage",
+                                startDate: "xpath://cover/startDate",
+                                startMileage: "xpath://cover/startMileage",
+							},
+							method: "post",
+							resultInsertPoint: "/quote/setVehicleUserParametersResponse"
+						}
+					}
 				]
 			},
+            { id: "calculating2", url: "calculating.html", 
+				actions: [
+					{
+						name: "next",
+						submission: {
+							url: "{{$esb-url}}/ccp/getServicePlan",
+							data: {
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+							},
+							method: "post",
+							resultInsertPoint: "/quote/getServicePlanResponse"
+						}
+					}
+				]
+			},
+            { id: "calculating3", url: "calculating.html", 
+				actions: [
+					{
+						name: "next",
+						submission: {
+							url: "{{$esb-url}}/ccp/getQuote",
+							data: {
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+							},
+							method: "post",
+                            postTransform: "xslt/getQuoteResponse.xsl",
+							resultInsertPoint: "/quote/getQuoteResponse"
+						}
+					}
+				]
+			},
+			{ id: "quote", url: "quote.html", actions: [ "back:cover", "finish", "sorry:sorry", "single:buy.singlePayment", "multiple:buy.multiplePayment" ] },
+			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
 		],
 		buy: [
 			{ id: "singlePayment", url:"../quote-forms-common/10-single-payment.html", actions:["next:payment", "back:main.quote"]},
