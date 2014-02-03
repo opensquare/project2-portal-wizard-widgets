@@ -7,7 +7,7 @@
 	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "vehicle.html", actions: ["next"] },
             {
 				id : "searching",
-				url : "8-searching.html",
+				url : "searching.html",
 				actions : [{
 						name : "next",
 						submission : {
