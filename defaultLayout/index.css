@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
 *,*:before,*:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -44,14 +46,14 @@ nav a.on:hover {
 	text-decoration: none;
 }
 section {
-	min-height: 50vh;
+	min-height: 100vh;
 	padding: 4%;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 #one {
 	min-height: 100vh;
 	background-image: url('rhobinn@flickr.com2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: #FFF;
 	text-align: right;
 }
@@ -59,6 +61,7 @@ section {
 	padding-left: 1.75em;
 	background: url('quindell-large-white.png') no-repeat;
 	background-size: contain;
+	font-family: 'Audiowide';
 	font-size: 3em;
 	text-shadow: 0 0 10px #000;
 	text-align: left;
@@ -69,9 +72,66 @@ section {
 	margin-top: 2.5%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,0.5);
-	border: medium solid;
+	border: medium solid rgba(255,255,255,0.25);
 	border-radius: 1em;
 	text-align: left;
+}
+#one #summary p {
+	margin-bottom: 0;
+}
+#one #summary a {
+	float: right;
+	font-weight: bold;
+	color: #66f;
+}
+#two {
+	background-image: url('dark-stripe-tile.jpg');
+	color: #FFF;
+}
+#two>div {
+	margin: 2em;
+	text-align: right;
+}
+#two .block {
+	display: inline-block;
+	width: 17em;
+	vertical-align: top;
+	margin: 0 1.75em 5.5em 1.75em;
+	text-align: left;
+}
+#two .block h3{
+	min-height: 35px;
+	margin: 0;
+	font-weight: bold;
+	padding-left: 42px;
+	background: no-repeat;
+	background-size: contain;
+}
+#two .block:nth-child(1) h3 {
+	background-image: url('umbrella-light.png');
+}
+#two .block:nth-child(2) h3 {
+	background-image: url('piggybank-light.png');
+}
+#two .block:nth-child(3) h3 {
+	background-image: url('lightbulb-light.png');
+}
+#two .block:nth-child(4) h3 {
+	background-image: url('key-light.png');
+}
+#two .block:nth-child(5) h3 {
+	background-image: url('coffee-light.png');
+}
+#two .block:nth-child(6) h3 {
+	background-image: url('certificate-light.png');
+}
+#two .block>p {
+	line-height: 1.5em;
+}
+#three #map {
+	width: 50vw;
+	height: 75vh;
+	background: contain url('google-map.png') no-repeat;
 }
 footer {
 	padding: 0.25em 1em 1em;
