@@ -10,12 +10,6 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-.button {
-	float: right;
-	padding: 0.25em 1em;
-	background: #33F;
-	border-radius: 0.25em;
-}
 body,h1 {
 	margin: 0;
 	font-family: sans-serif;
@@ -78,6 +72,9 @@ section {
 	border-radius: 1em;
 	text-align: left;
 }
+#one #summary {
+	margin-bottom: 1em;
+}
 #one #summary p {
 	margin-bottom: 0;
 }
@@ -85,6 +82,16 @@ section {
 	float: right;
 	font-weight: bold;
 	color: #66f;
+}
+#one button {
+	float: left;
+	padding: 0.25em 1em;
+	color: inherit;
+	background: #33F;
+	border: none;
+	border-radius: 0.25em;
+	font-size: inherit;
+	cursor: pointer;
 }
 #one>h2>button:nth-child(2) {
 	float: right;
@@ -134,12 +141,19 @@ section {
 	line-height: 1.5em;
 }
 #three>div {
+	display: inline-block;
 	width: 40vw;
 	height: 75vh;
+	vertical-align: top;
 }
 #three #map {
+	float: right;
 	background: url('google-map.png') no-repeat;
 	background-size: contain;
+}
+#four {
+	background: #333;
+	color: #FFF;
 }
 footer {
 	padding: 0.25em 1em 1em;

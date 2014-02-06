@@ -29,7 +29,7 @@ div.widget[name='sp-qquote'] input[type='date'] {
 }
 div.widget[name='sp-qquote'] input[type="button"] {
 	padding: 0.2em 1em;
-	color: #FFF; background-color: #92CE56;
+	color: inherit;
 	border: none; border-radius: 0.25em;
 	font-size: 1.2em;	
 	cursor: pointer;
