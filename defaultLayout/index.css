@@ -64,7 +64,7 @@ section {
 #one>div {
 	display: inline-block;
 	width: 50%;
-	min-height: 70vh;
+	max-height: 75vh;
 	margin-top: 2.5%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,0.5);
@@ -73,7 +73,7 @@ section {
 	text-align: left;
 }
 #one #summary {
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 }
 #one #summary p {
 	margin-bottom: 0;
@@ -83,7 +83,7 @@ section {
 	font-weight: bold;
 	color: #66f;
 }
-#one button {
+#one h2>button {
 	float: left;
 	padding: 0.25em 1em;
 	color: inherit;
@@ -93,8 +93,12 @@ section {
 	font-size: inherit;
 	cursor: pointer;
 }
-#one>h2>button:nth-child(2) {
+#one h2>button:nth-child(2) {
 	float: right;
+}
+#one .widget {
+	clear: both;
+	margin-top: 5em;
 }
 #two {
 	background-image: url('dark-stripe-tile.jpg');
@@ -149,7 +153,7 @@ section {
 #three #map {
 	float: right;
 	background: url('google-map.png') no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 #four {
 	background: #333;
@@ -160,7 +164,8 @@ footer {
 	background-color: #333;
 	color: #FFF;
 	font-size: 0.75em;
+	border-top: thin dashed rgba(255,255,255,0.5);
 }
-footer p {
-	margin: 0;
+footer p:nth-child(1) {
+	font-weight: bold;
 }
