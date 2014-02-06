@@ -13,11 +13,11 @@
 					<a href="#two">Read more...</a>
 				</div>
 				<h2>
-					<button onclick="$('.widget[name=sp-qquote]').slideUp();$('.widget[name=cp-login]').slideToggle();return false;">Account holder Login/Register &#9658;</button>
-					<button onclick="$('.widget[name=cp-login]').slideUp();$('.widget[name=sp-qquote]').slideToggle();return false;">Get a quote &#9658;</button>
+					<button onclick="popWidget('cp-login')">Account holder Login/Register &#9658;</button>
+					<button onclick="popWidget('sp-qquote')">Get a quote &#9658;</button>
 				</h2>
-				<div class="widget" name="cp-login" style="display:none"></div>
-				<div class="widget" name="sp-qquote" style="display:none"></div>
+				<!--div class="widget" name="cp-login" style="display:none"></div>
+				<div class="widget" name="sp-qquote" style="display:none"></div-->
 			</div>
 		</section>
 		<section id="two">
@@ -66,3 +66,10 @@
 		<footer>
 			<div class="widget" name="common-footer"></div>
 		</footer>
+		<div id="popupContainer" style="display:none">
+			<div id="popupBackground" onclick="$('#popupContainer').hide()"> </div>
+			<div id="popup">
+				<a id="popupClose" onclick="$('#popupContainer').hide()">close</a>
+				<div id="popupContent"> </div>
+			</div>
+		</div>
