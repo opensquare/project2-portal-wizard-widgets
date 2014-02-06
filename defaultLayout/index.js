@@ -40,10 +40,9 @@ function Widget_defaultLayout() {
 	};
 
 	function popWidget(widgetName){
-			$("#popupContent").html("<div class='widget' name='" + widgetName + "'></div>");
-			pw.mount($("#popupContent .widget:first"));
-			$("#popupContainer").show();
-			return false;
-		})
+		$("#popupContent").html("<div class='widget' name='" + widgetName + "'></div>");
+		pw.mount($("#popupContent .widget:first"));
+		$("#popupContainer").show();
+		return false;
 	};
 }
