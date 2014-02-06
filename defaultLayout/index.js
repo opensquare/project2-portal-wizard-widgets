@@ -29,20 +29,20 @@ function Widget_defaultLayout() {
 			$('nav.static a').removeClass('on');
 			$('nav.static a[href="'+clickThis+'"]').addClass('on');
 		},1000);
-
-		function determinePositions(){
-			onePos = $('#one').offset().top;
-			twoPos = $('#two').offset().top;
-			threePos = $('#three').offset().top;
-			fourPos = $('#four').offset().top;
-			snapZone = 20;
-		};
-
-		function popWidget(widgetName){
-			$("#popupContent").html("<div class='widget' name='" + widgetName + "'></div>");
-			pw.mount($("#popupContent .widget:first"));
-			$("#popupContainer").show();
-			return false;
-		};
 	}
+
+	function determinePositions(){
+		onePos = $('#one').offset().top;
+		twoPos = $('#two').offset().top;
+		threePos = $('#three').offset().top;
+		fourPos = $('#four').offset().top;
+		snapZone = 20;
+	};
 }
+
+function popWidget(widgetName){
+	$("#popupContent").html("<div class='widget' name='" + widgetName + "'></div>");
+	pw.mount($("#popupContent .widget:first"));
+	$("#popupContainer").show();
+	return false;
+};
