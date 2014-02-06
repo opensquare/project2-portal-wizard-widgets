@@ -1,52 +1,147 @@
-#cp-policy-details-pholder {
+.policyholder .property-group:hover button {
+	opacity: 1;
+}
+.policyholder .side1 {
 	display: inline-block;
-	height: 6em;
-	overflow: hidden;
+	width: 15%;
+	margin-top: 1em;
 	vertical-align: top;
+}
+.policyholder .side2 {
+	display: inline-block;
+	width: 84%;
+	margin-top: 1em;
+}
+.policyholder details {
+	margin-left: 0;
+	padding-top: 1em;
+}
+.policyholder summary {
+	margin-bottom: 1em;
+	font-size: 1.25em;
+	font-weight: normal;
+	color: #777;
+	border-bottom: thin solid;
+	cursor: pointer;
+}
+
+/* Side1 formatting */
+.policyholder .picture {
+	min-height: 100px;
+	background: url('person-dark-large.png') no-repeat center;
+	background-size: contain;
+}
+.policyholder .picture.Male {
+	background-image: url('person-man-dark-large.png');
+}
+.policyholder .picture.Female {
+	background-image: url('person-woman-dark-large.png');
+}
+.policyholder .status {
 	text-align: center;
-	border: medium solid #555;
-	border-radius: 0.5em;
+	font-size: small;
+	font-weight: bold;
+}
+
+/* Side2 formatting */
+.policyholder .property-group {
+	margin: 0 0 2em 0;
+	clear: left;
+}
+.policyholder .property-group > .property-group {
+	display: inline-block;
+	margin: 0 2em 0 0;
+}
+.policyholder .property-label {
+	display: inline-block;
+	width: 10%;
+	min-width: 6em;
+	padding: 0.1em 0 0.1em 0;
+	color: #9BBB59;
+}
+.policyholder .property-value {
+	display: inline-block;
+	padding: 0.1em 1em 0.1em 0.25em;
+	color: #000;
+	border-bottom: thin dashed #CCC;
+}
+.policyholder .property-value:empty:before {
+	content: '\00a0'; /* fix missing content height problem */
+}
+.policyholder .property-group > .property-group .property-value {
 	float: left;
-	margin: 0.5em;
 }
-#cp-policy-details-pholder a{
-	color: inherit;
+.policyholder .name {
+	padding-bottom: 0.5em;
+	border-bottom: thick solid #777;
 }
-#cp-policy-details-pholder:hover{
-	border-color: #92CE56;
+.policyholder .name .property-value {
+	padding: 0 0.25em 0 0!important;
+	font-size: 1.6em;
+	border-bottom: none;
 }
-#cp-policy-details-pholder:hover .title{
-	background-color: #92CE56;
+.policyholder .genderage :nth-child(2) {
+	margin-right: 3em;
 }
-#cp-policy-details-pholder .pholder{
+.policyholder .occupation :nth-child(2) {
+	margin-right: 3em;
+}
+.policyholder .address {
+	margin: 0 0 2em 0;
+}
+.policyholder .address .property-label {
+	float: left;
+	margin-right: 0.3em; /* compensation for white space in markup */
+}
+.policyholder .map {
+	float: right;
+	-webkit-filter: grayscale(100%) brightness(60%) contrast(200%);
+}
+.policyholder .contact-details:hover .map {
+	-webkit-filter: none;
+}
+.policyholder .map img {
+	border-radius: 0.35em;
+}
+.policyholder .address .property-group {
+	display: block;
+	margin: 0
+}
+.policyholder .property-group .auto {
+	min-width: auto;
+	padding-right: 1em;
+}
+.policyholder .property-group .short {
+	width: 10%;
+	min-width: 6em;
+}
+.policyholder .property-group .medium {
+	width: 35%;
+	min-width: 15em;
+}
+.policyholder .property-group .long {
+	width: 75%;
+	min-width: 24em;
+}
+.policyholder .action {
 	display: inline-block;
-	height: 50px;
+	width: 1.35em;
+	height: 1.35em;
+	margin-left: 0.5em;
+	background: #555 no-repeat center center;
+	background-size: 1em;
+	border-radius: 0.25em;
 	vertical-align: top;
-	padding: 50px 0.5em 0 0.5em;
-	font-size: 0.8em;
-	background: no-repeat center top;
 }
-#cp-policy-details-pholder .Male{
-	background-image: url('person-man-dark.png');
+.policyholder details:hover .action {
+	background-color: #0DB4F2;
 }
-#cp-policy-details-pholder .Female{
-	background-image: url('person-woman-dark.png');
+.policyholder .property-group.email .send {
+	background-image: url('email-light-small.png');
 }
+.policyholder .property-group.phone .call {
+	background-image: url('phone-light-small.png');
 }
-#cp-policy-details-pholder .add{
-	width: 4em;
-	margin-left: 2em;
-	background: url('symbol-add-dark-small.png') no-repeat center 20%;
-}
-#cp-policy-details-pholder a>span[href]{
-	display: none;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	margin: -50px 0 0 -20px;
-	background: #D44 url('symbol-cross-light.png') no-repeat center center;
-	border-radius: 13em;
-}
-#cp-policy-details-pholder a:hover>span[href]{
-	display: inline-block;
+.policyholder .licence :nth-child(2) {
+	margin-right: 3em;
 }

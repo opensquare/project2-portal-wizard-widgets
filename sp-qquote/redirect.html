@@ -1,0 +1,29 @@
+
+<script>
+	rf.onFormLoad(function() {
+        loginUrl = "login";
+        $.ajax({
+            url: loginUrl,
+            type: "POST",
+            data: "username=test&password=blah",
+            success: function(){
+                window.location = "cp-home";
+            }
+        });
+		var $h4 = $("h4");
+		setInterval(function() {
+			var text = $h4.text();
+			if (text.length < 22) {
+				text += ".";
+			} else {
+				text = text.substring(0, 19);
+			}
+			$h4.text(text);
+		}, 200);
+	});
+</script>
+
+<form rhinoforms="true">
+	<h1>Redirecting</h1>
+	<div class="loading"></div>
+</form>		

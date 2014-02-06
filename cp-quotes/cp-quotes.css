@@ -1,0 +1,16 @@
+.cp-quotes .quote-ref, .cp-quotes .quote-term, .cp-quotes .quote-premium{
+    display:inline-block;
+    width:150px;
+    text-align:center;
+}
+
+.cp-quotes .quotes-quote input[type=button]{
+    margin: 0.25em 0.25em;
+    padding: 0.25em 1em;
+    background: #0090c0;
+    color: #FFF;
+    font-size: 1.1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    border:none;
+}

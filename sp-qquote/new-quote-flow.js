@@ -73,27 +73,25 @@
 					}
 				]
 			},
-			{ id: "quote", url: "quote.html", actions: [ "back:cover", "finish", "sorry:sorry", "single:buy.singlePayment", "multiple:buy.multiplePayment" ] },
-			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
-		],
-		buy: [
-			{ id: "singlePayment", url:"../quote-forms-common/10-single-payment.html", actions:["next:payment", "back:main.quote"]},
-			{ id: "multiplePayment", url:"10-multiple-payment.html", actions:["next:payment", "back:main.quote"]},
-			{ id: "payment", docBase: "/quote/payment", url:"../quote-forms-common/11-payment.html", actions:["next"]},
-            { id: "saving", url:"../quote-forms-common/12-saving.html", actions: [
+			{ id: "quote", url: "quote.html", actions: [ "back:cover", "sorry:sorry", "save:registration"] },
+            { id: "registration", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next"]},
+            { id: "saving", url: "saving.html", 
+				actions: [
 					{
 						name: "next",
 						submission: {
-							url: "{{$esb-url}}/motor/quote/create",
+							url: "{{$esb-url}}/ccp/saveQuote",
 							data: {
-								scriptData: "[dataDocument]"
+                                data: "[dataDocument]"
 							},
 							method: "post",
-							resultInsertPoint: "/quote/pact"
+							resultInsertPoint: "/quote/saveQuoteResponse"
 						}
 					}
-				]},
-			{ id: "complete", url:"../quote-forms-common/complete.html"}
+				]
+			},
+            { id: "redirect", url: "redirect.html"},
+			{ id: "sorry", url: "sorry.html" , actions: [ "restart:vehicle" ]}
 		]
 	}
 }

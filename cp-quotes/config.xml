@@ -1,0 +1,14 @@
+<widget>
+	<type>httpRequest</type>
+	<parameters>
+		<xsl>quotes</xsl>
+        <method>GET</method>
+        <url>http://localhost:8081/ccp/retrieveQuotes</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>cp-quotes.css</css>
+		<js>cp-quotes.js</js>
+	</attributes>
+</widget>
+

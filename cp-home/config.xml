@@ -1,0 +1,10 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>cp-home.html</url>
+	</parameters>
+	<attributes>
+		<displayHeader>false</displayHeader>
+		<css>cp-home.css</css>
+	</attributes>
+</widget>

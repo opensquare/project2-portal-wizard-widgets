@@ -1,34 +1,11 @@
 <widget>
-	<type>pactResponse</type>
+	<type>httpRequest</type>
 	<parameters>
-		<xsl>policyholder</xsl>
-		<pactrequest>
-			<![CDATA[
-			<pactrequest>
-			    <target>
-			        <uid>{polUid}</uid>
-			    </target>
-			    <context>
-                    <actor><actorUid>123</actorUid></actor>
-                    <party><partyUid>123</partyUid></party>
-			    </context>
-			    <timepoint>
-			        <effectivetime>now</effectivetime>
-			        <physicaltime>now</physicaltime>
-			    </timepoint>
-			   <return>
-			        <name>asIdentifiedEntity</name>
-					<params>
-	          		 <descriptionPattern>[Party Role:policyholder.[assocdescription.{firstName} {surname}]|][Party Role:policyholder.[assocdescription.{uid}]]|[Party Role:policyholder.[assocdescription.[clientIndDetails.{gender}]]]|[Party Role:namedDriver.[assocdescription.{firstName} {surname}]]|[Party Role:namedDriver.[assocdescription.{uid}]]|[Party Role:namedDriver.[assocdescription.[clientIndDetails.{gender}]]]</descriptionPattern>
-	      			 </params>
-			    </return>
-			</pactrequest>
-			]]>
-		</pactrequest>
+        <method>GET</method>
+        <url>http://localhost:8081/ccp/getUserDetails</url>
+        <xsl>policyholder</xsl>
 	</parameters>
 	<attributes>
-		<js>policyholder.js</js>
 		<css>policyholder.css</css>
-		<delayLoad>true</delayLoad>
 	</attributes>
 </widget>
