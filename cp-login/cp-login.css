@@ -1,5 +1,6 @@
-#login-form {
+#login-form form {
 	clear: both;
+	margin-top: 6em;
 }
 #login-form h2 {
 	margin: 0 0 0.5em 0;
@@ -20,6 +21,7 @@
 #login-form input {
 	display: block;
 	width: 100%;
+	margin-top: 1em;
 	padding: 0.1em 0.25em;
 	font-size: 1.5em;
 	border: thin solid #888;

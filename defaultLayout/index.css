@@ -83,7 +83,7 @@ section {
 	font-weight: bold;
 	color: #66f;
 }
-#one h2>button {
+#one button {
 	float: left;
 	padding: 0.25em 1em;
 	color: inherit;
@@ -145,7 +145,7 @@ section {
 	line-height: 1.5em;
 }
 #three>div {
-	display: inline-block;
+	float: left;
 	width: 40vw;
 	height: 75vh;
 	vertical-align: top;
@@ -156,6 +156,7 @@ section {
 	background-size: cover;
 }
 #four {
+	min-height: 80vh;
 	background: #333;
 	color: #FFF;
 }
