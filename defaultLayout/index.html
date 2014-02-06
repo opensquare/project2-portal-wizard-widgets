@@ -12,8 +12,8 @@
 				<a href="#two">Read more...</a>
 			</div>
 			<div>
-				<h2><a href="#" class="button" onclick="$(this).hide();$('.widget[name=cp-login]').slideToggle();return false;">Account holder Login/Register &#9658;</a></h2>
-				<h2><a href="#" class="button" onclick="$(this).hide();$('.widget[name=sp-qquote]').slideToggle();return false;">Get a quote &#9658;</a></h2>
+				<h2><a href="#" class="button" onclick="$('.widget[name=sp-qquote]').slideUp();$('.widget[name=cp-login]').slideDown();return false;">Account holder Login/Register &#9658;</a></h2>
+				<h2><a href="#" class="button" onclick="$('.widget[name=cp-login]').slideUp();$('.widget[name=sp-qquote]').slideDown();return false;">Get a quote &#9658;</a></h2>
 				<div class="widget" name="cp-login" style="display:none"></div>
 				<div class="widget" name="sp-qquote" style="display:none"></div>
 			</div>

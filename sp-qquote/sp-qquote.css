@@ -438,6 +438,7 @@ div.widget[name='sp-qquote'] #crumbTrail li.welcome.on:before {
 }
 
 div.widget[name='sp-qquote'] .rf-debugbar {
+	display: inline-block;
 	opacity: 0.15;
 }
 

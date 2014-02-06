@@ -1,24 +1,5 @@
-#login-form {
-	width: 80%;
-	margin: auto;
-	text-align: center;
-}
-#login-form form {
-	width: 45%;
-	min-width: 275px;
-	min-height: 18em;
-	margin: 2%;
-	padding: 1%;
-	vertical-align: top;
-	background: rgba(255,255,255,0.8);
-	border-radius: 0.5em;
-	box-shadow: 0 0 0 0.5em rgba(0,0,0,0.2);
-	display: inline-block;
-	text-align: left;
-}
 #login-form h2 {
 	margin: 0 0 0.5em 0;
-	color: #0090D0;
 }
 #login-form h3 {
 	font-size: 1.1em;
