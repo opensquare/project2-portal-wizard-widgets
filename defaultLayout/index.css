@@ -32,6 +32,7 @@ nav {
 	background-color: rgba(0,0,0,0.25);
 	color: #FFF;
 	font-size: 1em;
+	font-weight: bold;
 	text-align: right;
 }
 nav a {
@@ -69,6 +70,7 @@ section {
 #one>div {
 	display: inline-block;
 	width: 50%;
+	min-height: 70vh;
 	margin-top: 2.5%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,0.5);
@@ -83,6 +85,9 @@ section {
 	float: right;
 	font-weight: bold;
 	color: #66f;
+}
+#one>h2>button:nth-child(2) {
+	float: right;
 }
 #two {
 	background-image: url('dark-stripe-tile.jpg');
@@ -128,10 +133,13 @@ section {
 #two .block>p {
 	line-height: 1.5em;
 }
-#three #map {
-	width: 50vw;
+#three>div {
+	width: 40vw;
 	height: 75vh;
+}
+#three #map {
 	background: url('google-map.png') no-repeat;
+	background-size: contain;
 }
 footer {
 	padding: 0.25em 1em 1em;
