@@ -2,7 +2,7 @@
 	<type>httpRequest</type>
 	<parameters>
         <method>GET</method>
-        <url>http://localhost:8081/ccp/getUserDetails</url>
+        <url>http://project2-esb-internal.osl-cloud.com:8081/ccp/getUserDetails</url>
         <xsl>policyholder</xsl>
 	</parameters>
 	<attributes>
