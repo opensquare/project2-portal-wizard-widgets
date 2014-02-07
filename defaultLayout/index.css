@@ -183,6 +183,8 @@ footer p:nth-child(1) {
 	position: absolute;
 	top: 15vh;
 	right: 25vw;
+	min-width: 30%;
+	min-height: 30%;
 	background-color: rgba(0,0,0,0.9);
 	color: #fff;
 	border: thick solid #FFF;
