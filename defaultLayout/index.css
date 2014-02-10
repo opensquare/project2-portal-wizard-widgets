@@ -14,8 +14,7 @@ body,h1 {
 	margin: 0;
 	font-family: sans-serif;
 }
-button {
-	float: left;
+button,.button {
 	padding: 0.25em 1em;
 	color: inherit;
 	background: #33F;
@@ -92,6 +91,9 @@ section {
 	float: right;
 	font-weight: bold;
 	color: #66f;
+}
+#one h2>button:nth-child(1) {
+	float: left;
 }
 #one h2>button:nth-child(2) {
 	float: right;
