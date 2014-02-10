@@ -1,32 +1,33 @@
 <script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
 
-<form rhinoforms="true">
+<form rhinoforms="true" class="cover">
+	<h2>Tell us about your driving</h2>
 
 	<div class="field">
-		<label for="input_current_mileage">Current Mileage:</label>
+		<label for="input_current_mileage">What is the current mileage of the vehicle?</label>
 		<input  id="input_current_mileage" type="text" name="currentMileage" rf.validation="required"/>
 	</div>
     
-    <div class="field">
-        <label for="input_planStart">Plan Start Date:</label>
-        <input id="input_planStart" type="date" name="startDateISO" rf.validation="required date({ format: 'YYYY-MM-DD' })" 
-               rf.initialValue="if('{{startDate}}' !== '') {new moment('{{startDate}}').format('YYYY-MM-DD')}"/>
-        <input type="hidden" name="startDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" rf.calculated="if (fields.startDateISO.value !=='') {new moment(fields.startDateISO.value).format('DD/MM/YYYY');}"/>
-    </div>
-    
-    <div class="field">
-		<label for="input_annual_mileage">Annual Mileage:</label>
+	<div class="field">
+		<label for="input_annual_mileage">How many miles are driven in this vehicle each year?</label>
 		<input  id="input_annual_mileage" type="text" name="annualMileage" rf.validation="required"/>
 	</div>
     
-    <div class="field">
-		<label for="input_start_mileage">Estimated Mileage at Start of Plan:</label>
+	<div class="field">
+		<label for="input_planStart">When would you like the Service Plan to start?</label>
+		<input id="input_planStart" type="date" name="startDateISO" rf.validation="required date({ format: 'YYYY-MM-DD' })" 
+		 rf.initialValue="if('{{startDate}}' !== '') {new moment('{{startDate}}').format('YYYY-MM-DD')}"/>
+		<input type="hidden" name="startDate" rf.validation="required date({ format: 'DD/MM/YYYY' })" rf.calculated="if (fields.startDateISO.value !=='') {new moment(fields.startDateISO.value).format('DD/MM/YYYY');}"/>
+	</div>
+    
+	<div class="field">
+		<label for="input_start_mileage">What will be the estimated mileage of the vehicle at this date?</label>
 		<input  id="input_start_mileage" type="text" name="startMileage" rf.validation="required"/>
 	</div>
 		
 	<div class="navigation" id="navigation">
 		<input class="button" type="submit" rf.action="next" value="Next"/>
-        <input class="button" type="submit" rf.action="back" value="Back"/>
+		<input class="button" type="submit" rf.action="back" value="Back"/>
 	</div>
     
     <script>

@@ -9,11 +9,12 @@ div.widget[name='sp-qquote'] a:hover {
 	text-decoration: underline;
 }
 div.widget[name='sp-qquote'] form {
+	width: 40em;
 	clear: both;
 }
 div.widget[name='sp-qquote'] h1 {
 	margin-top: 1.5em; margin-bottom: 0.75em;
-	color: #333;
+	zcolor: #333;
 	font-size: 230%; font-weight: normal;
 }
 
@@ -36,6 +37,7 @@ div.widget[name='sp-qquote'] input[type="button"] {
 }
 div.widget[name='sp-qquote'] input[type="button"]:hover {
 	zbackground-color: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] input[type="checkbox"] {
 	padding: 0.45em;
@@ -71,24 +73,26 @@ div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
     font-size: 1.3em;   
 }
 div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="password"] {
-	width: 19%;
+	width: 19%;min-width: 9em;
 	padding: 0.1em 0.25em 0 0.25em;
 	border: thin solid #0090C0;
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
 	padding: 0.2em 1em;
-	border: none; border-radius: 0.25em;
+	border: medium solid transparent; border-radius: 0.25em;
 	zcolor: #FFF; zbackground-color: #92CE56;
+	background-clip: padding-box;
 	font-size: 1.5em;	
 	cursor: pointer;
 }
 div.widget[name='sp-qquote'] input[type="submit"]:hover {
-	background-color: #82BE46;
+	zbackground-color: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] label {
 	padding: 0 1em 0 0;
-	width: 35%;
+	width: 45%;
 }
 div.widget[name='sp-qquote'] label.forRadio {
 	width: auto;
@@ -123,7 +127,6 @@ div.widget[name='sp-qquote'] select:disabled {
 
 div.widget[name='sp-qquote'] div.field {
 	min-height: 2.2em;
-	padding: 1em 0;
 }
 div.widget[name='sp-qquote'] div.field.on .hint {
 	display: inline-block;
@@ -670,4 +673,12 @@ div.widget[name='sp-qquote'] #input_sort_code {
 }
 div.widget[name='sp-qquote'] #input_code {
 	width: 10%;
+}
+
+div.widget[name='sp-qquote'] .confirmVehicle p:last-child {
+	padding-left: 40px;
+	background: url('transport-car-light-small.png') no-repeat top left;
+}
+div.widget[name='sp-qquote'] .cover .field input {
+	text-align: right;
 }
