@@ -24,6 +24,7 @@ button,.button {
 	cursor: pointer;
 }
 .button.small {
+	background-color: #AAB;
 	font-size: 120%!important;
 	border-radius: 0.4em!important;
 }

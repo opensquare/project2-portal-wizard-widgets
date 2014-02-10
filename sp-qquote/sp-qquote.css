@@ -202,7 +202,7 @@ div.widget[name='sp-qquote'] .navigation {
 	text-align: right;
 }
 div.widget[name='sp-qquote'] .navigation input[type="button"] {
-	margin: 1em 1em 1em 0;
+	margin: 1em 0.5em 0 0;
 	font-size: 2em;	
 }
 div.widget[name='sp-qquote'] .navigation input[type="button"]:first-child {
@@ -471,8 +471,7 @@ div.widget[name='sp-qquote'] .findAddress div.labelWrapper, div.widget[name='sp-
 	display: inline-block;
 }
 div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
-	padding: 0 1em;
-	width: 30.5%;
+	width: 45%;
 }
 div.widget[name='sp-qquote'] .findAddress div.tableWrapper {
 	width: 44%;
