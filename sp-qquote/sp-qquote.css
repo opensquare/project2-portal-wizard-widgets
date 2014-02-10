@@ -75,7 +75,7 @@ div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
 div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
-	border: thin solid #0090C0;
+	border: thin solid;
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
@@ -92,7 +92,7 @@ div.widget[name='sp-qquote'] input[type="submit"]:hover {
 }
 div.widget[name='sp-qquote'] label {
 	padding: 0 1em 0 0;
-	width: 50%;
+	width: 45%;
 	vertical-align: top;
 }
 div.widget[name='sp-qquote'] label.forRadio {
@@ -114,7 +114,7 @@ div.widget[name='sp-qquote'] p {
 div.widget[name='sp-qquote'] select {
 	width: 20%;
 	margin-left: 0;
-	border: thin solid #0090C0;
+	border: thin solid;
 	font-size: 1.3em;
 	color: #AAA;
 }
@@ -133,12 +133,12 @@ div.widget[name='sp-qquote'] div.field.on .hint {
 	display: inline-block;
 }
 div.widget[name='sp-qquote'] div.field a {
-	margin-left: 2em;
-	color: #92CE56;
+	color: #66F;
 	font-weight: bold;
 }
 div.widget[name='sp-qquote'] div.field a:hover {
-	color: #82BE46;
+	zcolor: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] option:first-child {
 	color: #999;
@@ -692,4 +692,9 @@ div.widget[name='sp-qquote'] #landingPage #selectedTerm {
 	color: inherit;
 	border: none;
 	text-align: right;
+}
+div.widget[name='sp-qquote'] #landingPage .navigation {
+	margin-top: 4em;
+	clear: initial;
+	text-align: left;
 }

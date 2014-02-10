@@ -15,15 +15,15 @@
 	<div id="singlePayment" class="pane">
 		<h2>Single Payment</h2>
 		<p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/quotes/singlePaymentQuotes/quote/premium}}</span></p>
-		<input type="button" rf.action="save" value="Buy"/>
+		<input class="button" type="button" rf.action="save" value="Buy"/>
 		<p class="smallprint">This amount includes VAT at the prevailing rate, and is for payment online using a debit or credit card.</p>
 	</div>
 	<div id="multiplePayment" class="pane">
 		<h2>Monthly Instalments</h2>
 		<p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/quotes/monthlyPaymentQuotes/quote/deposit}}</span></p>
 		<p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/quotes/monthlyPaymentQuotes/quote/premium}}</span>.</p>
-		<input type="button" rf.action="save" value="Buy"/>
-		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
+		<input class="button" type="button" rf.action="save" value="Buy"/>
+		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate.</p>
 	</div>
 
 	<p>Thank you for considering us for your Service Plan.</p>
@@ -44,8 +44,8 @@
  	<p>Please check that all details are correct before proceeding.</p>
 
 	<div class="navigation">
-		<input type="button" rf.action="back" value="Back"/>
-		<input type="button" rf.action="save" value="Save"/>
+		<input class="button" type="button small" rf.action="back" value="Back"/>
+		<input class="button" type="button" rf.action="save" value="Save"/>
 		<input type="button" rf.action="sorry" style="display:none"/>
 	</div>
     <script type="text/javascript">
