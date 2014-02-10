@@ -23,6 +23,10 @@ button,.button {
 	font-size: inherit;
 	cursor: pointer;
 }
+.button.small {
+	font-size: 120%!important;
+	border-radius: 0.4em!important;
+}
 h1 {
 	font-size: 1.75em;
 }

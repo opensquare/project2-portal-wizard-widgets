@@ -1,15 +1,15 @@
 <script type='text/javascript' src='widgets/sp-quote/js/vehicle-lookup.js' ></script>
 <script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
 
-<form rhinoforms="true">
+<form rhinoforms="true" class="confirmVehicleForm">
 
-	<div class="field confirmVehicle">
+	<div class="field">
 		<h2>Is this your vehicle?</h2>
         <p>{{//vehicleLookup/vehicle/description}}</p>
 	</div>
 		
 	<div class="navigation" id="navigation">
-        <input class="button" type="submit" rf.action="next" value="Yes"/>
-        <input class="button" type="submit" rf.action="back" value="No"/>
+		<input class="button small" type="submit" rf.action="back" value="No"/>
+		<input class="button" type="submit" rf.action="next" value="Yes"/>
 	</div>
 </form>
