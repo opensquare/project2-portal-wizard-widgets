@@ -35,7 +35,7 @@ div.widget[name='sp-qquote'] input[type="button"] {
 	cursor: pointer;
 }
 div.widget[name='sp-qquote'] input[type="button"]:hover {
-	background-color: #82BE46;
+	zbackground-color: #82BE46;
 }
 div.widget[name='sp-qquote'] input[type="checkbox"] {
 	padding: 0.45em;
@@ -79,7 +79,7 @@ div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="
 div.widget[name='sp-qquote'] input[type="submit"] {
 	padding: 0.2em 1em;
 	border: none; border-radius: 0.25em;
-	color: #FFF; background-color: #92CE56;
+	zcolor: #FFF; zbackground-color: #92CE56;
 	font-size: 1.5em;	
 	cursor: pointer;
 }

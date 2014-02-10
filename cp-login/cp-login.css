@@ -3,6 +3,7 @@
 }
 #login-form h2 {
 	margin: 0 0 0.5em 0;
+	font-size: 150%;
 }
 #login-form h3 {
 	font-size: 1.1em;
@@ -51,6 +52,15 @@
 }
 #login-form-reset-text {
 	padding: 0.6em 0;
+}
+#login-form-register {
+	margin-top: 5em;
+}
+#login-form-register>* {
+	margin: 0;
+}
+#login-form-register h2 {
+	font-size: 100%;
 }
 #login-form-register p {
 	float: left;
