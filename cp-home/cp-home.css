@@ -72,7 +72,7 @@ header h2 span{
 	background-color: rgba(255,255,255,0.85);
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
-	text-align: right;
+	text-align: center;
 }
 @media screen and (max-width: 1000px) {
 	#cp-policy{
@@ -110,13 +110,12 @@ div.widget>.widget-messages>div.error{
 }
 
 #cp-policy-menu{
-	position: fixed;
-	width: 15%;
+	width: 100%;
 	padding-right: 1px; /* fixes scroll bug */
-	text-align: left;
+	text-align: center;
 }
 #cp-policy-menu a{
-	display: block;
+	display: inline-block;
 	margin: 0.25em 0;
 	padding: 0.75em 1em;
 	background: #0090c0;
@@ -124,30 +123,19 @@ div.widget>.widget-messages>div.error{
 	font-size: 1.1em;
 	border-radius: 0.25em;
 	cursor: pointer;
+	width:150px;
 }
 #cp-policy-menu a.on{
 	background-color: #92CE56;
 }
-#cp-policy-menu a.on:after{
-	position: absolute;
-	right: 10px;
-	content: '►';
-	background-color: #92CE56;
-}
-#cp-policy details{
-	display: inline-block;
-	width: 78%;
-	margin-bottom: 2em;
-	text-align: left;
-}
-#cp-policy details summary{
-	margin: 1em 0;
-	border-bottom: thin solid;
-	font-size: 1.5em;
-	font-weight: bold;
-	cursor: pointer;
+
+#cp-policy .section{
+	display:none;
 }
 
+#cp-policy .section.on{
+	display:block;
+}
 
 #cp-policy .pane.warn{
 	border-color: #FD0;

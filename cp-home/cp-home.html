@@ -7,32 +7,32 @@
 
 	<section id="cp-policy">
 		<div class="widget" name="common-help"></div>
-		<aside id="cp-policy-menu">
-			<a id="menu-plans" class="on" href="#cp-plans">Plans</a>
-            <a id="menu-quotes" href="#cp-quotes">Quotes</a>
+		<div id="cp-policy-menu">
+			<a id="menu-plans" href="#cp-plans">Plans</a>
+            <a id="menu-quotes" class="on" href="#cp-quotes">Quotes</a>
 			<a id="menu-details" href="#cp-personal-details">Personal Details</a>
-			<a id="menu-docs" href="#cp-policy-docs">Documents</a>
-		</aside>
+		</div>
 
-        <details id="cp-plans" open>
-			<summary>Plans</summary>
+        <div id="cp-plans" class="section">
+			<h3>Plans</h3>
 			<p>You do not have any Service Plans yet</p>
-		</details>
+		</div>
         
-        <details id="cp-quotes" open>
-			<summary>Quotes</summary>
+        <div id="cp-quotes" class="section on">
+			<h3>Quotes</h3>
 			<div class="widget" name="cp-quotes"></div>
-		</details>
+		</div>
         
-		<details id="cp-personal-details" open>
-			<summary>Personal Details</summary>
+		<div id="cp-personal-details" class="section">
+			<h3>Personal Details</h3>
 			<div class="widget" name="policyholder"></div>
-		</details>
-		<details id="cp-policy-docs">
+		</div>
+        
+		<!--details id="cp-policy-docs">
 			<a name="cp-policy-docs"></a>
 			<summary>Documents</summary>
 			<div class="widget" name="cp-policy-docs"></div>
-		</details>
+		</details-->
 
 	</section>
 
@@ -42,31 +42,14 @@
 	</footer>
 
 	<script type="text/javascript">
-		$(window).scroll(function(){
-   			$('#cp-policy-menu').css('top',Math.max(0,350-$(this).scrollTop()));
-   			// open <details> as the user scrolls down
-   			var scrollPosition = $(window).scrollTop() + $(window).height();
-   			$('#cp-policy details[open!="open"]').each(function(){
-				if($(this).position().top < scrollPosition){$(this).attr('open','')};
-   			});
-   			// Highlight relevant menu items as the user scrolls down
-   			scrollPosition = $(window).scrollTop();
-   			var menu = $('#cp-policy-menu a');
-   			var href = "";
-   			$('#cp-policy details').each(function(){
-				if(href == "" && $(this).position().top > scrollPosition-30){
-					href = $(this).attr('id');
-					menu.removeClass('on');
-					menu.filter('[href="#'+href+'"]').addClass('on');
-				};
-   			});
-		});
 
 		// Enhance menu click behaviour
 		$('#cp-policy-menu a').click(function(){
 			$('#cp-policy-menu a').removeClass('on');
+            $('.section').removeClass('on');
 			var place = $(this).addClass('on').attr('href');
-			$(place).attr('open','');
+			$(place).addClass("on");
+            return false;
 		});
 
 
