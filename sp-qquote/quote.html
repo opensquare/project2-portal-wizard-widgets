@@ -2,27 +2,28 @@
 	<h1>Your quote</h1>
     
     <div style="display:none">
-    <rf.forEach select="//getQuoteResponse/quotes/singlePaymentQuotes/quote" as="quote">
-            <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.premium}}"/>
-    </rf.forEach>
-    
-    <rf.forEach select="//getQuoteResponse/quotes/monthlyPaymentQuotes/quote" as="quote">
-            <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.premium}}"/>
-            <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.deposit}}"/>
-    </rf.forEach>
+        <rf.forEach select="//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan" as="quote">
+                <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.PlanCost}}"/>
+        </rf.forEach>
+        
+        <rf.forEach select="//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan" as="quote">
+                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.PlanCost}}"/>
+                <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.Deposit}}"/>
+        </rf.forEach>
+        <input type="text" name="payment.paymentType" id="paymentType"/>
     </div>
     
 	<div id="singlePayment" class="pane">
 		<h2>Single Payment</h2>
-		<p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/quotes/singlePaymentQuotes/quote/premium}}</span></p>
-		<input type="button" rf.action="save" value="Buy"/>
+		<p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/PlanCost}}</span></p>
+		<input type="button" rf.action="save" value="Buy" onclick="$('#paymentType').val('single')"/>
 		<p class="smallprint">This amount includes Insurance Premium Tax. We can accept payment online using a debit or credit card.</p>
 	</div>
 	<div id="multiplePayment" class="pane">
 		<h2>Monthly Instalments</h2>
-		<p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/quotes/monthlyPaymentQuotes/quote/deposit}}</span></p>
-		<p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/quotes/monthlyPaymentQuotes/quote/premium}}</span>.</p>
-		<input type="button" rf.action="save" value="Buy"/>
+		<p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/Deposit}}</span></p>
+		<p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/PlanCost}}</span>.</p>
+		<input type="button" rf.action="save" value="Buy" onclick="$('#paymentType').val('multiple')"/>
 		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
 	</div>
 
@@ -32,6 +33,7 @@
     
     <p><span class="range-min">1</span><input type="range" name="term" min="1" max="5" value="1" onchange="changeTerm(this.value)"/><span class="range-max">5</span><input type="text" class="range-value" id="selectedTerm" value="1"/></p>
 
+    <div rf.includeIf="'{{//phase}}' === 'quote'">
 	<h2 id="details">Your details</h2>
 	<p>We have based this quotation on the details that you have provided, a summary of which is shown below.  If any of details are incorrect, you must go back and correct them before proceeding.</p>
 
@@ -46,6 +48,7 @@
 		<input type="button" rf.action="save" value="Save"/>
 		<input type="button" rf.action="sorry" style="display:none"/>
 	</div>
+    </div>
     <script type="text/javascript">
         rf.onFormLoad(function(){
             if("{{//calcResult/ref}}"=="na"){

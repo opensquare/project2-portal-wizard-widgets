@@ -3,20 +3,16 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="xml" encoding="UTF-8" />
     <xsl:template match="/">
-        <quotes>
-            <singlePaymentQuotes>
+        <QuotesPlanList>
+            <SinglePaymentQuotes>
                 <xsl:apply-templates select="//QuotesPlanList/QuotesPlan[QuoteType='singlePayment']"/>
-            </singlePaymentQuotes>
-            <monthlyPaymentQuotes>
+            </SinglePaymentQuotes>
+            <MonthlyPaymentQuotes>
                 <xsl:apply-templates select="//QuotesPlanList/QuotesPlan[QuoteType='monthlyPayment']"/>
-            </monthlyPaymentQuotes>
-        </quotes>
+            </MonthlyPaymentQuotes>
+        </QuotesPlanList>
     </xsl:template>
     <xsl:template match="QuotesPlan">
-        <quote>
-            <reference><xsl:value-of select="QuoteReference"/></reference>
-            <deposit><xsl:value-of select="Deposit"/></deposit>
-            <premium><xsl:value-of select="PlanCost"/></premium>
-        </quote>
+        <xsl:copy-of select="."/>
     </xsl:template>
 </xsl:stylesheet>

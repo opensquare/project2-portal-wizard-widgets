@@ -15,7 +15,7 @@
             <span class="quote-ref"><xsl:value-of select="QuoteReference"/></span>
             <span class="quote-term"><xsl:value-of select="PlanTermMonths"/></span>
             <span class="quote-premium"><xsl:value-of select="PlanCost"/></span>
-            <span class="quote-buttons"><input type="button" value="View"/><input type="button" value="Buy"/></span>
+            <span class="quote-buttons"><a target="_new"><xsl:attribute name="href">sp-buy-quote?ref=<xsl:value-of select="QuoteReference"/></xsl:attribute>Buy</a></span>
         </div>
 	</xsl:template>
 </xsl:stylesheet>

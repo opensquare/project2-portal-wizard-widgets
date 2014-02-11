@@ -1,0 +1,6 @@
+<quote>
+    <phase>payment</phase>
+    <payment>
+        <paymentType>single</paymentType>
+    </payment>
+</quote>

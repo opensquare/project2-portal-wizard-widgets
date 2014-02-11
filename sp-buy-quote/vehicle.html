@@ -1,0 +1,26 @@
+<script type='text/javascript' src='widgets/sp-quote/js/vehicle-lookup.js' ></script>
+<script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
+
+<script>
+
+	$('form select').change( function(){
+		$(this).addClass('changed');
+	});
+
+</script>
+
+<form rhinoforms="true">
+
+	<div class="field findCar">
+		<label for="input_reg">Enter your vehicle registration number:</label>
+		<input id="abiLookupProxy" type="hidden" style="display:none" rf.source="{{$vehicle-model-lookup}}" />
+		<div id="uk_reg_plate">
+			<div id="flag"></div>
+			<input  id="input_reg" type="text" name="reg" rf.validation="required" rf.source="{{$vehicle-lookup}}"/>
+		</div>
+	</div>
+		
+	<div class="navigation" id="navigation">
+		<input class="button" type="submit" rf.action="next" value="Next"/>
+	</div>
+</form>

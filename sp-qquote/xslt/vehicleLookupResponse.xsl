@@ -4,8 +4,8 @@
 	<xsl:output method="xml" encoding="UTF-8" />
 	<xsl:template match="/">
 		<vehicle>
-            <key><xsl:value-of select="//SearchVehicleResult/VehicleInstanceKey"/></key>
-            <description><xsl:value-of select="//SearchVehicleResult/ShortDescription"/></description>
+            <key><xsl:value-of select="//*[name()='VehicleInstanceKey']"/></key>
+            <description><xsl:value-of select="//*[name()='ShortDescription']"/></description>
         </vehicle>
 	</xsl:template>
 </xsl:stylesheet>
