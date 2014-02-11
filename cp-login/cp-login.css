@@ -1,0 +1,71 @@
+#login-form form {
+	width: 30em;
+	clear: both;
+}
+#login-form h2 {
+	margin: 0 0 0.5em 0;
+	font-size: 150%;
+}
+#login-form h3 {
+	font-size: 1.1em;
+	margin: 0;
+}
+#login-form p {
+	margin: 0.5em 0;
+	font-size: 0.8em;
+}
+#login-form label {
+	display: inline-block;
+	width: 100%;
+	margin-top: 1em;
+}
+#login-form input {
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	padding: 0.1em 0.25em;
+	font-size: 1.5em;
+	border: thin solid #888;
+	border-radius: 0.25em;
+}
+#login-form button {
+	float: right;
+	margin-top: 1em;
+	padding: 0.2em 2em;
+	color: inherit;
+	border: none;
+	border-radius: 0.25em;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+#login-form-enter {
+	margin-bottom: 2em;
+}
+#login-form a {
+	float: left;
+	margin-top: 1.5em;
+	font-size: 0.75em;
+	color: inherit;
+	text-decoration: none;
+}
+#login-form a:hover {
+	text-decoration: underline;
+}
+#login-form-reset-text {
+	padding: 0.6em 0;
+}
+#login-form-register {
+	margin-top: 5em;
+}
+#login-form-register>* {
+	margin: 0;
+}
+#login-form-register h2 {
+	font-size: 100%;
+}
+#login-form-register p {
+	float: left;
+}
+#login-form-register button {
+	font-size: 1em;
+}

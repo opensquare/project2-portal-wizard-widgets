@@ -1,0 +1,11 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>cp-login.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>cp-login.css</css>
+		<js>login.js</js>
+	</attributes>
+</widget>

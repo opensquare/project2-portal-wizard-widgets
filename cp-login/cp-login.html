@@ -1,0 +1,24 @@
+		<div id="login-form">
+			<form id="login-form-enter" action="#" nextWidget="cp-home">
+				<h2>Registered customers</h2>
+				<ul class="messages"/>
+				<input type="text" name="username" id="username" autofocus required placeholder="username"/>
+				<input type="password" name="password" id="password" required placeholder="password"/>
+				<button id="login-button" type="submit">Login</button>
+				<a href="#" onclick="$('#login-form form').toggle();return false;">Forgotten your details?</a>
+			</form>
+			<form id="login-form-register" action="#" onsubmit="return false;">
+				<h2>Not registered yet?</h2>
+				<ul class="messages"/>
+				<p>It's quick and simple to register...</p>
+				<button id="login-register" type="submit">Register</button>
+			</form>
+			<form id="login-form-reset" action="#" onsubmit="login_loginReset();return false;" style="display:none;">
+				<h2>Forgotten your details?</h2>
+				<ul class="messages"/>
+				<input type="email" name="email" id="email" autofocus required placeholder="email"/>
+				<label id="login-form-reset-text">Click button to receive a reset password email</label>
+				<a href="#" onclick="$('#login-form form').toggle();return false;">Remembered your details?</a>
+				<button id="login-reset" type="submit">Send</button>
+			</form>
+		</div>

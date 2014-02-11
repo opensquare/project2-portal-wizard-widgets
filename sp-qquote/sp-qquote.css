@@ -9,11 +9,12 @@ div.widget[name='sp-qquote'] a:hover {
 	text-decoration: underline;
 }
 div.widget[name='sp-qquote'] form {
+	width: 40em;
 	clear: both;
 }
 div.widget[name='sp-qquote'] h1 {
 	margin-top: 1.5em; margin-bottom: 0.75em;
-	color: #333;
+	zcolor: #333;
 	font-size: 230%; font-weight: normal;
 }
 
@@ -29,13 +30,14 @@ div.widget[name='sp-qquote'] input[type='date'] {
 }
 div.widget[name='sp-qquote'] input[type="button"] {
 	padding: 0.2em 1em;
-	color: #FFF; background-color: #92CE56;
+	color: inherit;
 	border: none; border-radius: 0.25em;
 	font-size: 1.2em;	
 	cursor: pointer;
 }
 div.widget[name='sp-qquote'] input[type="button"]:hover {
-	background-color: #82BE46;
+	zbackground-color: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] input[type="checkbox"] {
 	padding: 0.45em;
@@ -73,22 +75,25 @@ div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
 div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
-	border: thin solid #0090C0;
+	border: thin solid;
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
 	padding: 0.2em 1em;
-	border: none; border-radius: 0.25em;
-	color: #FFF; background-color: #92CE56;
+	border: medium solid transparent; border-radius: 0.25em;
+	zcolor: #FFF; zbackground-color: #92CE56;
+	background-clip: padding-box;
 	font-size: 1.5em;	
 	cursor: pointer;
 }
 div.widget[name='sp-qquote'] input[type="submit"]:hover {
-	background-color: #82BE46;
+	zbackground-color: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] label {
 	padding: 0 1em 0 0;
-	width: 35%;
+	width: 45%;
+	vertical-align: top;
 }
 div.widget[name='sp-qquote'] label.forRadio {
 	width: auto;
@@ -109,7 +114,7 @@ div.widget[name='sp-qquote'] p {
 div.widget[name='sp-qquote'] select {
 	width: 20%;
 	margin-left: 0;
-	border: thin solid #0090C0;
+	border: thin solid;
 	font-size: 1.3em;
 	color: #AAA;
 }
@@ -123,18 +128,17 @@ div.widget[name='sp-qquote'] select:disabled {
 
 div.widget[name='sp-qquote'] div.field {
 	min-height: 2.2em;
-	padding: 1em 0;
 }
 div.widget[name='sp-qquote'] div.field.on .hint {
 	display: inline-block;
 }
 div.widget[name='sp-qquote'] div.field a {
-	margin-left: 2em;
-	color: #92CE56;
+	color: #66F;
 	font-weight: bold;
 }
 div.widget[name='sp-qquote'] div.field a:hover {
-	color: #82BE46;
+	zcolor: #82BE46;
+	opacity: 0.9;
 }
 div.widget[name='sp-qquote'] option:first-child {
 	color: #999;
@@ -198,7 +202,7 @@ div.widget[name='sp-qquote'] .navigation {
 	text-align: right;
 }
 div.widget[name='sp-qquote'] .navigation input[type="button"] {
-	margin: 1em 1em 1em 0;
+	margin: 1em 0.5em 0 0;
 	font-size: 2em;	
 }
 div.widget[name='sp-qquote'] .navigation input[type="button"]:first-child {
@@ -438,6 +442,7 @@ div.widget[name='sp-qquote'] #crumbTrail li.welcome.on:before {
 }
 
 div.widget[name='sp-qquote'] .rf-debugbar {
+	display: inline-block;
 	opacity: 0.15;
 }
 
@@ -466,8 +471,7 @@ div.widget[name='sp-qquote'] .findAddress div.labelWrapper, div.widget[name='sp-
 	display: inline-block;
 }
 div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
-	padding: 0 1em;
-	width: 30.5%;
+	width: 45%;
 }
 div.widget[name='sp-qquote'] .findAddress div.tableWrapper {
 	width: 44%;
@@ -536,22 +540,6 @@ div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall .pcaIte
 }
 
 /* Landing Page styling */
-div.widget[name='sp-qquote'] #landingPage h1 {
-	margin-bottom: 0;
-}
-div.widget[name='sp-qquote'] #landingPage .pane {
-	float: right;
-	clear: both;
-	width: 40%;
-	margin: 0 2em 2em 2em;
-	vertical-align: top;
-	border: thick solid #0DB4F2; border-radius: 1em;
-}
-div.widget[name='sp-qquote'] #landingPage .pane h2 {
-	margin: 0;
-	padding: 0.2em 0.5em;
-	color: #FFF; background: #0DB4F2;
-}
 div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
 	float: right;
 	margin: 0.5em;
@@ -598,12 +586,6 @@ div.widget[name='sp-qquote'] #landingPage h3 {
 div.widget[name='sp-qquote'] #landingPage .details {
 	min-height: 50px;
 	padding-left: 60px;
-}
-div.widget[name='sp-qquote'] #landingPage .duration {
-	background: url('calendar-year-dark.png') no-repeat; 
-}
-div.widget[name='sp-qquote'] #landingPage .vehicle {
-	background: url('transport-car-dark.png') no-repeat; 
 }
 div.widget[name='sp-qquote'] #landingPage .drivers {
 	background: url('person-user-dark.png') no-repeat; 
@@ -669,4 +651,49 @@ div.widget[name='sp-qquote'] #input_sort_code {
 }
 div.widget[name='sp-qquote'] #input_code {
 	width: 10%;
+}
+
+div.widget[name='sp-qquote'] .confirmVehicleForm p:last-child {
+	padding-left: 40px;
+	background: url('transport-car-light-small.png') no-repeat top left;
+}
+div.widget[name='sp-qquote'] .coverForm .field input {
+	min-width: 9em;
+	text-align: right;
+}
+div.widget[name='sp-qquote'] #landingPage p {
+	font-size: inherit;
+}
+div.widget[name='sp-qquote'] #landingPage .duration {
+	background: url('calendar-year-light.png') no-repeat; 
+}
+div.widget[name='sp-qquote'] #landingPage .vehicle {
+	background: url('transport-car-light.png') no-repeat; 
+}
+div.widget[name='sp-qquote'] #landingPage h1 {
+	margin: 0;
+}
+div.widget[name='sp-qquote'] #landingPage .pane {
+	float: right;
+	clear: both;
+	width: 40%;
+	margin: 0 2em 2em 2em;
+	vertical-align: top;
+	border: thick solid #82BE46; border-radius: 1em;
+}
+div.widget[name='sp-qquote'] #landingPage .pane h2 {
+	margin: 0;
+	padding: 0.2em 0.5em;
+	color: #FFF; background: #82BE46;
+}
+div.widget[name='sp-qquote'] #landingPage #selectedTerm {
+	background: none;
+	color: inherit;
+	border: none;
+	text-align: right;
+}
+div.widget[name='sp-qquote'] #landingPage .navigation {
+	margin-top: 4em;
+	clear: initial;
+	text-align: left;
 }
