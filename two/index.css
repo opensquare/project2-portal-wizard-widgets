@@ -32,14 +32,22 @@ h1 {
 h2 {
 	font-size: 1.25em;
 }
-nav {
+header {
 	position: fixed;
 	width: 100%;
-	background-color: rgba(0,0,0,0.25);
-	color: #FFF;
+	background: url('dark-stripe-tile.jpg');
+	color: #EEE;
 	font-size: 1em;
 	font-weight: bold;
 	text-align: right;
+}
+header .twitter {
+	background: url('icon-mini-twitter.png') 0px 10px no-repeat;
+	padding-left: 18px;
+}
+header .facebook {
+	background: url('icon-mini-facebook.png') 0px 10px no-repeat;
+	padding-left: 18px;
 }
 nav a {
 	display: inline-block;
@@ -62,21 +70,11 @@ section {
 	padding-left: 1.75em;
 	background: url('quindell-large-white.png') no-repeat;
 	background-size: contain;
-	font-family: 'Audiowide';
 	font-size: 3em;
-	text-shadow: 0 0 10px #000;
-	text-align: left;
 }
 #one>div {
-	display: inline-block;
-	width: 50%;
-	max-height: 75vh;
 	margin-top: 2.5%;
 	padding: 1em 2em;
-	background-color: rgba(0,0,0,0.5);
-	border: medium solid rgba(255,255,255,0.25);
-	border-radius: 1em;
-	text-align: left;
 }
 #one #summary {
 	margin-bottom: 3em;
