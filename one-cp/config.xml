@@ -1,0 +1,10 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>one-cp.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>one-cp.css</css>
+	</attributes>
+</widget>
