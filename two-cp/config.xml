@@ -1,0 +1,10 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>two-cp.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>two-cp.css</css>
+	</attributes>
+</widget>
