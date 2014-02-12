@@ -35,19 +35,21 @@ h2 {
 header {
 	position: fixed;
 	width: 100%;
-	background: url('dark-stripe-tile.jpg');
-	color: #EEE;
-	font-size: 1em;
-	font-weight: bold;
+	padding: 1em;
+	background: #333;
+	color: #BBB;
+	font-size: 0.8em;
 	text-align: right;
 }
+header>a {
+	float: left;
+	padding: 0 2em 0 18px;
+}
 header .twitter {
-	background: url('icon-mini-twitter.png') 0px 10px no-repeat;
-	padding-left: 18px;
+	background: url('icon-mini-twitter.png') top left no-repeat;
 }
 header .facebook {
-	background: url('icon-mini-facebook.png') 0px 10px no-repeat;
-	padding-left: 18px;
+	background: url('icon-mini-facebook.png') top left no-repeat;
 }
 nav a {
 	display: inline-block;
@@ -67,9 +69,11 @@ section {
 #one {
 }
 #one>h1 {
+	margin-top: 1em;
 	padding-left: 1.75em;
-	background: url('quindell-large-white.png') no-repeat;
+	background: url('quindell-large-orange.png') no-repeat;
 	background-size: contain;
+	color: #0a69de;
 	font-size: 3em;
 }
 #one>div {
@@ -158,11 +162,9 @@ section {
 	color: #FFF;
 }
 footer {
-	padding: 0.25em 1em 1em;
-	background-color: #333;
-	color: #FFF;
+	padding: 0.25em 6% 1em;
 	font-size: 0.75em;
-	border-top: thin dashed rgba(255,255,255,0.5);
+	border-top: thin dashed #333;
 }
 footer p:nth-child(1) {
 	font-weight: bold;
