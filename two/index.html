@@ -2,10 +2,10 @@
 		<a class="twitter" href="https://twitter.com/something" title="Follow Nationwide Repairs on Twitter for the latest updates">Follow us on Twitter</a>
 		<a class="facebook" href="http://www.facebook.com/something" title="Like us on Facebook">Join us on Facebook</a>
 		<nav>
-			<a href="/two">Home</a>
-			<a href="/two-rq">How it Works</a>
-			<a href="/two">Our Garage Network</a>
-			<a href="/two-cp">Customer Login</a>
+			<a href="#one">Home</a>
+			<a href="#two">Get a Quote</a>
+			<a href="#three">Customer Login</a>
+			<a href="#four">About Us</a>
 		</nav>
 		</nav>
 	</header>
@@ -18,12 +18,18 @@
 				<a href="#two">Read more...</a>
 			</div>
 			<h2>
-				<button onclick="popWidget('cp-login')">Account holder Login/Register &#9658;</button>
-				<button onclick="popWidget('sp-qquote')">Get a quote &#9658;</button>
+				<a class="button" href="#three">Get a quote &#9658;</a>
+				<a class="button" href="#two">Account holder Login/Register &#9658;</a>
 			</h2>
-			<!--div class="widget" name="cp-login" style="display:none"></div>
-			<div class="widget" name="sp-qquote" style="display:none"></div-->
 		</div>
+	</section>
+	<section id="two">
+		<h1>Get a Quote</h1>
+		<iframe src="/sp-qquote" />
+	</section>
+	<section id="three">
+		<h1>Customer Portal</h1>
+		<iframe src="/cp" />
 	</section>
 	<footer>
 		<div class="widget" name="common-footer"></div>
