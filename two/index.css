@@ -64,12 +64,15 @@ nav a.on:hover {
 }
 #sectionHolder {
 	width: 400vw;
+	overflow: hidden;
 }
 section {
 	display: inline-block;
 	width: 100vw;
-	min-height: 100vh;
-	padding: 4%;
+	height: 100vh;
+	overflow: hidden;
+	padding: 4em;
+	vertical-align: top;
 }
 iframe {
 	width: 100%;
