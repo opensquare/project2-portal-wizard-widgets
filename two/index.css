@@ -62,9 +62,19 @@ nav a.on {
 nav a.on:hover {
 	text-decoration: none;
 }
+#sectionHolder {
+	width: 400vw;
+}
 section {
+	display: inline-block;
+	width: 100vw;
 	min-height: 100vh;
 	padding: 4%;
+}
+iframe {
+	width: 100%;
+	height: 70vh;
+	border: none;
 }
 #one {
 }
@@ -97,71 +107,15 @@ section {
 #one h2>button:nth-child(2) {
 	float: right;
 }
-#one .widget {
-	clear: both;
-	margin-top: 5em;
-}
 #two {
-	background-image: url('dark-stripe-tile.jpg');
-	color: #FFF;
 }
-#two>div {
-	margin: 2em;
-	text-align: right;
-}
-#two .block {
-	display: inline-block;
-	width: 17em;
-	vertical-align: top;
-	margin: 0 1.75em 5.5em 1.75em;
-	text-align: left;
-}
-#two .block h3{
-	min-height: 35px;
-	margin: 0;
-	font-weight: bold;
-	padding-left: 42px;
-	background: no-repeat;
-	background-size: contain;
-}
-#two .block:nth-child(1) h3 {
-	background-image: url('umbrella-light.png');
-}
-#two .block:nth-child(2) h3 {
-	background-image: url('piggybank-light.png');
-}
-#two .block:nth-child(3) h3 {
-	background-image: url('lightbulb-light.png');
-}
-#two .block:nth-child(4) h3 {
-	background-image: url('key-light.png');
-}
-#two .block:nth-child(5) h3 {
-	background-image: url('coffee-light.png');
-}
-#two .block:nth-child(6) h3 {
-	background-image: url('certificate-light.png');
-}
-#two .block>p {
-	line-height: 1.5em;
-}
-#three>div {
-	float: left;
-	width: 40vw;
-	height: 75vh;
-	vertical-align: top;
-}
-#three #map {
-	float: right;
-	background: url('google-map.png') no-repeat;
-	background-size: cover;
+#three {
 }
 #four {
-	min-height: 85vh;
-	background: #333;
-	color: #FFF;
 }
 footer {
+	position: fixed;
+	bottom: 0;
 	padding: 0.25em 6% 1em;
 	font-size: 0.75em;
 	border-top: thin dashed #333;
