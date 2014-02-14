@@ -107,6 +107,8 @@ iframe {
 }
 #one h2 {
 	float: right;
+	clear: both;
+	margin-right: 5em;
 }
 #two {
 }
