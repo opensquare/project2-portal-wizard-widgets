@@ -1,4 +1,4 @@
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.getHeader('Referer')}/rq.css">
+		<link rel="stylesheet" type="text/css" href="<%=request.getHeader('Referer')%>/rq.css">
 
 		<div class="rhinoforms rhinoforms-quote-formContainer"/>
 
