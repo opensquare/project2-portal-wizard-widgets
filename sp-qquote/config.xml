@@ -1,7 +1,7 @@
 <widget>
 	<type>layout</type>
 	<parameters>
-		<url>sp-qquote.html</url>
+		<url>sp-qquote.jsp</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
