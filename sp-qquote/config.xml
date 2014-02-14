@@ -1,5 +1,5 @@
 <widget>
-	<type>layout</type>
+	<type>internalPage</type>
 	<parameters>
 		<url>sp-qquote.jsp</url>
 		<secure>false</secure>
