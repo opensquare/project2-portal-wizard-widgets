@@ -1,0 +1,166 @@
+*,*:before,*:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+body,h1 {
+	margin: 0;
+	font-family: sans-serif;
+}
+button,.button {
+	padding: 0.25em 1em;
+	color: inherit;
+	border: medium solid;
+	border-radius: 0.25em;
+	font-size: inherit;
+	cursor: pointer;
+}
+.button.small {
+	background-color: #AAB;
+	font-size: 120%!important;
+	border-radius: 0.4em!important;
+}
+h1 {
+	font-size: 1.75em;
+}
+h2 {
+	font-size: 1.25em;
+}
+header {
+	position: fixed;
+	width: 100%;
+	padding: 1em;
+	background: #333;
+	color: #BBB;
+	font-size: 0.8em;
+	text-align: right;
+}
+header>a {
+	float: left;
+	padding: 0 2em 0 18px;
+}
+header .twitter {
+	background: url('icon-mini-twitter.png') left 3px no-repeat;
+}
+header .facebook {
+	background: url('icon-mini-facebook.png') left 3px no-repeat;
+}
+nav a {
+	display: inline-block;
+	padding: 0.5em 2em 0.25em;
+}
+nav a.on {
+	background-color: rgba(255,255,255,0.9);
+	color: #333;
+}
+nav a.on:hover {
+	text-decoration: none;
+}
+#sectionHolder {
+	width: 400vw;
+	overflow: hidden;
+}
+section {
+	display: inline-block;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	padding: 4em;
+	vertical-align: top;
+}
+iframe {
+	width: 100%;
+	height: 70vh;
+	border: none;
+}
+#one {
+	background: url('hill-town-2.jpg') bottom no-repeat;
+	background-size: 100vw;
+}
+#one>h1 {
+	margin-top: 1em;
+	padding-left: 1.75em;
+	background: url('quindell-large-orange.png') no-repeat;
+	background-size: contain;
+	color: #720;
+	font-size: 3em;
+}
+#one>div {
+	margin-top: 2.5%;
+	padding: 1em 2em;
+}
+#one #summary {
+	width: 40vw;
+}
+#one #summary p {
+	margin-bottom: 0;
+}
+#one #summary a {
+	float: right;
+	font-weight: bold;
+	color: #720;
+}
+#one h2 {
+	float: right;
+	clear: both;
+	margin-right: 5em;
+}
+#two {
+}
+#three {
+}
+#four {
+}
+#four p:nth-child(1) {
+	font-weight: bold;
+}
+#popupBackground, #modalPopupBackground {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.7);
+	z-index:998;
+}
+#popup, #modalPopup {
+	position: absolute;
+	top: 15vh;
+	right: 25vw;
+	min-width: 30%;
+	min-height: 30%;
+	background-color: rgba(0,0,0,0.9);
+	color: #fff;
+	border: thick solid #FFF;
+	border-radius: 0.5em;
+	background-clip: padding-box;
+	z-index: 999;
+}
+#popupClose {
+	position: absolute;
+	top: -0.5em;
+	right: -0.5em;
+	width: 1em;
+	height: 1em;
+	cursor: pointer;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 0.9em;
+	background: #FFF;
+	color: #333;
+	border-radius: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+#popupClose:hover {
+	text-decoration: none;
+}
+#popupContent {
+	display: inline-block;
+	padding: 1.5em;
+}
