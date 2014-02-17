@@ -3,13 +3,30 @@
 
 <form rhinoforms="true" class="confirmVehicleForm">
 
-	<div class="field">
-		<h2>Is this your vehicle?</h2>
-        <p>{{//vehicleLookup/vehicle/description}}</p>
-	</div>
-		
-	<div class="navigation" id="navigation">
-		<input class="button small" type="submit" rf.action="back" value="No"/>
-		<input class="button" type="submit" rf.action="next" value="Yes"/>
-	</div>
+    <div rf.includeIf="'{{//vehicleLookup/vehicle/question/name}}' != ''">
+        <div class="field">
+            <label for="input_vehicle_question">{{//vehicleLookup/vehicle/question/label}}</label>
+            <select  id="input_vehicle_question" name="queryAnswer" rf.validation="required">
+                <rf.forEach select="//vehicleLookup/vehicle/question/options/option" as="option">
+                    <option name="{{option.text()}}">{{option.text()}}</option>
+                </rf.forEach>
+            </select>
+        </div>
+        <div class="navigation" id="navigation">
+            <input class="button small" type="submit" rf.action="back" value="Back"/>
+            <input class="button" type="submit" rf.action="search" value="Next"/>
+        </div>
+    </div>
+
+    <div rf.includeIf="'{{//vehicleLookup/vehicle/question/name}}' == ''">
+        <div class="field">
+            <h2>Is this your vehicle?</h2>
+            <p>{{//vehicleLookup/vehicle/description}}</p>
+        </div>
+            
+        <div class="navigation" id="navigation">
+            <input class="button small" type="submit" rf.action="back" value="No"/>
+            <input class="button" type="submit" rf.action="next" value="Yes"/>
+        </div>
+    </div>
 </form>

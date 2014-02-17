@@ -1,10 +1,31 @@
-.cp-quotes .quote-ref, .cp-quotes .quote-term, .cp-quotes .quote-premium{
-    display:inline-block;
-    width:150px;
-    text-align:center;
+
+
+.cp-quotes #quote-list{
+    display:table;
+    border:5px solid silver;
+    border-radius:10px;
+    margin:0 auto;
 }
 
-.cp-quotes .quotes-quote input[type=button]{
+#quote-list .quotes-header, #quote-list .quotes-quote{
+  display:table-row;
+}
+
+#quote-list .quotes-header span, #quote-list .quotes-quote span{
+  padding:0.5em 0.5em 0.5em 0.5em;
+  text-align:center;
+  display:table-cell;
+}
+
+#quote-list .quotes-header span{
+  zborder-top-left-radius:10px;
+  border-bottom:5px solid silver;
+  background-color:#0090c0;
+  color:white;
+  font-weight:bold;
+}
+
+.cp-quotes .quotes-quote a{
     margin: 0.25em 0.25em;
     padding: 0.25em 1em;
     background: #0090c0;
@@ -13,4 +34,50 @@
     border-radius: 0.25em;
     cursor: pointer;
     border:none;
+}
+
+#popupBackground, #modalPopupBackground {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.7);
+	z-index:998;
+}
+#popup, #modalPopup {
+	position: absolute;
+	top: 15vh;
+	right: 25vw;
+	min-width: 30%;
+	min-height: 30%;
+	background-color: rgba(0,0,0,0.9);
+	color: #fff;
+	border: thick solid #FFF;
+	border-radius: 0.5em;
+	background-clip: padding-box;
+	z-index: 999;
+}
+#popupClose {
+	position: absolute;
+	top: -0.5em;
+	right: -0.5em;
+	width: 1em;
+	height: 1em;
+	cursor: pointer;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 0.9em;
+	background: #FFF;
+	color: #333;
+	border-radius: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+#popupClose:hover {
+	text-decoration: none;
+}
+#popupContent {
+	display: inline-block;
+	padding: 1.5em;
 }

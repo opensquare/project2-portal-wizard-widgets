@@ -3,29 +3,34 @@
     
     <div style="display:none">
         <rf.forEach select="//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan" as="quote">
-                <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.PlanCost}}"/>
+                <input type="text" id="isQuoteAvailable_{{quote.index}}" value="{{quote.IsAvailable}}"/>
+                <input type="text" id="reasonForBeingUnavailable_{{quote.index}}" value="{{quote.Comment}}"/>
+                <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.TotalPayable}}"/>
         </rf.forEach>
         
         <rf.forEach select="//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan" as="quote">
-                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.PlanCost}}"/>
+                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.TotalPayable}}"/>
                 <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.Deposit}}"/>
         </rf.forEach>
         <input type="text" name="payment.paymentType" id="paymentType"/>
     </div>
-    
-	<div id="singlePayment" class="pane">
-		<h2>Single Payment</h2>
-		<p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/PlanCost}}</span></p>
-		<input type="button" rf.action="save" value="Buy" onclick="$('#paymentType').val('single')"/>
-		<p class="smallprint">This amount includes VAT at the prevailing rate, and is for payment online using a debit or credit card.</p>
-	</div>
-	<div id="multiplePayment" class="pane">
-		<h2>Monthly Instalments</h2>
-		<p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/Deposit}}</span></p>
-		<p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/PlanCost}}</span>.</p>
-		<input type="button" rf.action="save" value="Buy" onclick="$('#paymentType').val('multiple')"/>
-		<p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate.</p>
-	</div>
+    <div id="singlePayment" class="pane">
+        <h2>Single Payment</h2>
+        <p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/TotalPayable}}</span></p>
+        <input type="button" rf.action="buy" value="Buy" onclick="$('#paymentType').val('single')"/>
+        <p class="smallprint">This amount includes VAT at the prevailing rate, and is for payment online using a debit or credit card.</p>
+    </div>
+    <div id="multiplePayment" class="pane">
+        <h2>Monthly Instalments</h2>
+        <p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/Deposit}}</span></p>
+        <p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/TotalPayable}}</span>.</p>
+        <input type="button" rf.action="buy" value="Buy" onclick="$('#paymentType').val('multiple')"/>
+        <p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate.</p>
+    </div>
+    <div id="quoteUnavailable" class="pane">
+        <h2>Quote Unavailable</h2>
+        <p id="reasonForBeingUnavailable">{{getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/Comment}}</p>
+    </div>
 
 	<p>Thank you for considering us for your Service Plan.</p>
 	<p>Please select the number of years you would like your plan to run for</p>
@@ -33,25 +38,26 @@
 	<p><span class="range-min">1</span><input type="range" name="term" min="1" max="5" value="1" onchange="changeTerm(this.value)"/><span class="range-max">5</span><input type="text" class="range-value" id="selectedTerm" value="1" readonly /></p>
 
 	<hr/>
-<div rf.includeIf="'{{//phase}}' === 'quote'">
-	<p>This quotation is based on:</p>
+    <div rf.includeIf="'{{//phase}}' === 'quote'">
+        <p>This quotation is based on:</p>
 
-	<h3>Start Date</h3>
-	<p class="details duration">A start date of <span>{{//cover/startDate}}</span></p>
+        <h3>Start Date</h3>
+        <p class="details duration">A start date of <span>{{//cover/startDate}}</span></p>
 
-	<h3>Your vehicle</h3>
-	<p class="details vehicle">The vehicle - {{//vehicleLookup/vehicle/description}}</p>
+        <h3>Your vehicle</h3>
+        <p class="details vehicle">The vehicle - {{//vehicleLookup/vehicle/description}}</p>
 
- 	<p>Please check that all details are correct before proceeding.</p>
+        <p>Please check that all details are correct before proceeding.</p>
 
-	<div class="navigation">
-		<input class="button small" type="button" rf.action="back" value="Back"/>
-		<input class="button" type="button" rf.action="save" value="Save"/>
-		<input type="button" rf.action="sorry" style="display:none"/>
-	</div>
+        <div class="navigation">
+            <input class="button small" type="button" rf.action="back" value="Back"/>
+            <input class="button" type="button" rf.action="save" value="Save" id="saveButton"/>
+            <input type="button" rf.action="sorry" style="display:none"/>
+        </div>
     </div>
     <script type="text/javascript">
         rf.onFormLoad(function(){
+            changeTerm("1");
             if("{{//calcResult/ref}}"=="na"){
                 $("[rf\\.action=sorry]").click();
             }
@@ -59,9 +65,22 @@
         
         function changeTerm(term){
             $("#selectedTerm").val(term);
-            $("#singlePaymentPremium").html($("#singlePaymentPremium_" + term).val());
-            $("#monthlyPaymentPremium").html($("#monthlyPaymentPremium_" + term).val());
-            $("#monthlyPaymentDeposit").html($("#monthlyPaymentDeposit_" + term).val());
+            var isAvailable = $("#isQuoteAvailable_"+ term).val();
+            if(isAvailable == "true"){
+                $("#singlePaymentPremium").html($("#singlePaymentPremium_" + term).val());
+                $("#monthlyPaymentPremium").html($("#monthlyPaymentPremium_" + term).val());
+                $("#monthlyPaymentDeposit").html($("#monthlyPaymentDeposit_" + term).val());
+                $("#singlePayment").show();
+                $("#multiplePayment").show();
+                $("#quoteUnavailable").hide();
+                $("#saveButton").show();
+            }else{
+                $("#reasonForBeingUnavailable").html($("#reasonForBeingUnavailable_" + term).val());
+                $("#singlePayment").hide();
+                $("#multiplePayment").hide();
+                $("#quoteUnavailable").show();
+                $("#saveButton").hide();
+            }
         }
     </script>
 </form>

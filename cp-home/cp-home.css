@@ -67,12 +67,11 @@ header h2 span{
 #cp-policy{
 	width: 78%;
 	min-height: 400px;
-	margin: -6em auto 0 auto;
-	padding: 0.25% 1%;
+	margin: 1em auto 1em auto;
+	padding: 1% 1%;
 	background-color: rgba(255,255,255,0.85);
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	border-radius: 0.25em;
-	text-align: center;
 }
 @media screen and (max-width: 1000px) {
 	#cp-policy{
@@ -114,6 +113,11 @@ div.widget>.widget-messages>div.error{
 	padding-right: 1px; /* fixes scroll bug */
 	text-align: center;
 }
+
+#cp-plans{
+	text-align:center;
+}
+
 #cp-policy-menu a{
 	display: inline-block;
 	margin: 0.25em 0;
@@ -202,24 +206,30 @@ div.widget>.widget-messages>div.error{
 	color: inherit;
 }
 
-footer{
-	width: 80%;
-	margin: 3em auto 1em auto;
-	background-color: #777;
-	color: #FFF;
-	font-size: small;
-	border-radius: 0.25em;
+footer {
+	margin-top:1em;
+	padding: 1em 10%;
+	background: rgba(60,60,60,0.7);
+	color: #DDD;
+	font-size: 0.65em;
 }
-footer p{
-	padding: 0 1em 1em 1em;
+footer p {
+	display: inline-block;
+	width: 80%;
 	margin: 0;
+	vertical-align: top;
 }
 footer p:first-child{
-	padding-top: 1em;
+	width: 19.5%;
 	font-weight: bold;
 }
-@media screen and (max-width: 1000px) {
-	footer{
-		width:98%;
+@media screen and (max-width: 800px) {
+	footer {
+		padding: 1em;
+	}
+}
+@media screen and (max-height: 500px) {
+	footer {
+		position: static;
 	}
 }

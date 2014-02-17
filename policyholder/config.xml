@@ -2,7 +2,7 @@
 	<type>httpRequest</type>
 	<parameters>
         <method>GET</method>
-        <url>http://ice-bus-esb:8081/ccp/getUserDetails</url>
+        <url>http://ice-bus-esb:8081/ccp/getUserDetails?accessToken={accessToken}</url>
         <xsl>policyholder</xsl>
 	</parameters>
 	<attributes>

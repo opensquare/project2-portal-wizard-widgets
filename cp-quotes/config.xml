@@ -3,7 +3,7 @@
 	<parameters>
 		<xsl>quotes</xsl>
         <method>GET</method>
-        <url>http://ice-bus-esb:8081/ccp/retrieveQuotes</url>
+        <url>http://ice-bus-esb:8081/ccp/retrieveQuotes?accessToken={accessToken}</url>
 	</parameters>
 	<attributes>
 		<displayHeader>false</displayHeader>

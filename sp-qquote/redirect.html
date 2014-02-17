@@ -1,11 +1,13 @@
 
 <script>
 	rf.onFormLoad(function() {
-        loginUrl = "login";
+        var loginUrl = "login";
+        var username = $("#email").val();
+        var password = $("#password").val();
         $.ajax({
             url: loginUrl,
             type: "POST",
-            data: "username=test&password=blah",
+            data: "username=" + username + "&password=" + password,
             success: function(){
                 window.location = "cp-home";
             }
@@ -25,5 +27,7 @@
 
 <form rhinoforms="true">
 	<h1>Redirecting</h1>
+    <input type="text" name="customer.email" id="email" style="display:none"/>
+    <input type="text" name="customer.password" id="password" style="display:none"/>
 	<div class="loading"></div>
 </form>		

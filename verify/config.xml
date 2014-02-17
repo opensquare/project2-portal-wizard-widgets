@@ -1,0 +1,9 @@
+<widget>
+	<type>httpRequest</type>
+	<parameters>
+        <method>GET</method>
+        <url>http://ice-bus-esb:8081/ccp/verifyUser?emailAddress={emailAddress}&amp;verificationCode={verificationCode}</url>
+        <xsl>verify</xsl>
+        <secure>false</secure>
+	</parameters>
+</widget>

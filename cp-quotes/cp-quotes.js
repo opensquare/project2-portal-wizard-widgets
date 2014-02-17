@@ -12,3 +12,10 @@ function Widget_cp_policy_agreements() {
 	};
 
 }
+
+function popWidget(widgetName, params){
+	$("#popupContent").html("<div class='widget' name='" + widgetName + "' params='" + params + "'></div>");
+	pw.mount($("#popupContent .widget:first"));
+	$("#popupContainer").show();
+	return false;
+};
