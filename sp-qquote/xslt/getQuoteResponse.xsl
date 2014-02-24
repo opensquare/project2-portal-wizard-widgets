@@ -13,6 +13,10 @@
         </QuotesPlanList>
     </xsl:template>
     
+    <xsl:template match="*[name()='TotalPayable' or name()='Deposit' or name()='PayTermMonths']">
+        <xsl:element name="{local-name()}"><xsl:value-of select="format-number(., '0.00')"/></xsl:element>
+    </xsl:template>
+    
     <xsl:template match="*">
         <xsl:element name="{local-name()}">
             <xsl:apply-templates select="@* | node()"/>

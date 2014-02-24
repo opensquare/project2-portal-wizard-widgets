@@ -9,7 +9,7 @@
         </rf.forEach>
         
         <rf.forEach select="//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan" as="quote">
-                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.TotalPayable}}"/>
+                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.PayTermMonths}}"/>
                 <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.Deposit}}"/>
         </rf.forEach>
         <input type="text" name="payment.paymentType" id="paymentType"/>
@@ -23,7 +23,7 @@
     <div id="multiplePayment" class="pane">
         <h2>Monthly Instalments</h2>
         <p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/Deposit}}</span></p>
-        <p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/TotalPayable}}</span>.</p>
+        <p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/PayTermMonths}}</span>.</p>
         <input type="button" rf.action="buy" value="Buy" onclick="$('#paymentType').val('multiple')"/>
         <p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate.</p>
     </div>

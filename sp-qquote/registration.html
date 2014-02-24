@@ -28,8 +28,9 @@
 	</script>
 <form rhinoforms="true" class="registrationForm">
 	<h2>Please tell us about yourself</h2>
-	<!-- div id="customerDetails" -->
 
+        <input class="button" type="submit" rf.action="alreadyRegistered" value="Already Registered"/>
+    
 		<div class="field">
 			<label for="input_title">Name</label>
 			<select id="input_title" name="title" rf.source="resources/titles.txt" rf.preselectFirstOption="true">
@@ -72,14 +73,13 @@
 		</div>
 
 		<div class="field findAddress">
-		<!--input id="findAddressProxy" type="proxy" style="display:none" rf.source="http://integration.osldev.net/itb-quotes/postcodeLookup" /-->
 		<div class="labelWrapper">
 			<label for="input_address">Address</label>
 			</div>
 		<div class="tableWrapper">
 			<input class="addressLookup" id="input_address" type="text" placeholder="Start typing your address or postcode"/>
 		</div>
-	<!-- /div -->
+        </div>
 	<div class="field addressFound" style="display:none">
 			<label>Your address</label>
 		<span id="addressLabel">
@@ -97,7 +97,6 @@
 
 			<a href="" onclick="return false" value="Change address" class="changeAddressButton">Change address</a>
 		</div>
-	</div>
     
     <div id="contactDetails">
         <div class="field">

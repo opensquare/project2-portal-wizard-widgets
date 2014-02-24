@@ -77,6 +77,26 @@
 					}
 				]
 			},
+            { id: "confirm-service-plan", url: "confirm-service-plan.html", docBase: "/quote/cover", actions: ["back", "next:calculating3", "search:searching3"]},
+            {
+				id : "searching3",
+				url : "searching.html",
+				actions : [{
+						name : "next",
+                        target: "confirm-service-plan",
+						submission : {
+							url : "{{$esb-url}}/ccp/setServicePlanProperty",
+							data : {
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+								propertyName : "xpath://getServicePlanResponse//*[name()='CurrentQuestion']/*[name()='Name']",
+                                propertyValue : "xpath://cover/queryAnswer",
+                                setBy: "DriverOrOwner"
+							},
+                            resultInsertPoint: "/quote/getServicePlanResponse"
+						}
+					}
+				]
+			},
             { id: "calculating3", url: "calculating.html", 
 				actions: [
 					{
@@ -94,13 +114,13 @@
 				]
 			},
 			{ id: "quote", url: "quote.html", actions: [ "back:cover", "sorry:sorry", "save:registerAndSave", "buy:registerAndBuy"] },
-            { id: "registerAndSave", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next"]},
+            { id: "registerAndSave", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered1"}]},
             { id: "save", url: "saving.html", 
 				actions: [
 					{
 						name: "next",
 						submission: {
-							url: "{{$esb-url}}/ccp/saveQuote",
+							url: "{{$esb-url}}/ccp/registerAndSave",
 							data: {
                                 data: "[dataDocument]"
 							},
@@ -111,13 +131,26 @@
 				]
 			},
             { id: "saveComplete", url:"complete.html"},
-            { id: "registerAndBuy", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next"]},
+            { id: "alreadyRegistered1", docBase: "/quote/customer", url:"already-registered.html", actions:["back:registerAndSave", {
+                name: "next",
+                target: "saveComplete",
+                submission: {
+                    url: "{{$esb-url}}/ccp/loginAndSave",
+                    data: {
+                        data: "[dataDocument]"
+                    },
+                    method: "post",
+                    resultInsertPoint: "/quote/saveQuoteResponse"
+                }
+            }]},
+            { id: "registerAndBuy", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered2"}]},
             { id: "saveAndBuy", url: "saving.html", 
 				actions: [
 					{
 						name: "next",
+                        target: "payment",
 						submission: {
-							url: "{{$esb-url}}/ccp/saveQuote",
+							url: "{{$esb-url}}/ccp/registerAndSave",
 							data: {
                                 data: "[dataDocument]"
 							},
@@ -127,6 +160,18 @@
 					}
 				]
 			},
+            { id: "alreadyRegistered2", docBase: "/quote/customer", url:"already-registered.html", actions:["back:registerAndBuy", {
+                name: "next",
+                target: "payment",
+                submission: {
+                    url: "{{$esb-url}}/ccp/loginAndSave",
+                    data: {
+                        data: "[dataDocument]"
+                    },
+                    method: "post",
+                    resultInsertPoint: "/quote/saveQuoteResponse"
+                }
+            }]},
             { id: "payment", docBase: "/quote/payment", url:"../sp-buy-quote/payment.html", actions:["next"]},
             { id: "purchasing", url:"../sp-buy-quote/purchasing.html", actions: [{
                 name:"next",

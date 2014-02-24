@@ -5,6 +5,7 @@
     <div id="quote-list">
         <div class="quotes-header">
             <span class="quote-created">Created</span>
+            <span class="vehicle">Vehicle</span>
             <span class="quote-ref">Quote Reference</span>
             <span class="start-mileage">Start Mileage</span>
             <span class="end-mileage">End Mileage</span>
@@ -28,6 +29,7 @@
 	<xsl:template match="*[name()='QuotesPlan']">
 		<div class="quotes-quote">
             <span class="quote-created"><xsl:value-of select="substring-before(*[name()='CreationDate'], 'T')"/></span>
+            <span class="vehicle"><xsl:value-of select="*[name()='VehicleReg']"/></span>
             <span class="quote-ref"><xsl:value-of select="*[name()='QuoteReference']"/></span>
             <span class="start-mileage"><xsl:value-of select="*[name()='StartMileage']"/></span>
             <span class="end-mileage"><xsl:value-of select="*[name()='EndMileage']"/></span>

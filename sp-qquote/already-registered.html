@@ -1,0 +1,20 @@
+<script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
+
+<form rhinoforms="true" class="loginForm">
+	<h2>Please login</h2>
+
+	<div class="field">
+        <label for="input_email">Email Address</label>
+        <input type="email" name="email" rf.validation="required" id="input_email"/>
+    </div>
+    
+	<div class="field">
+		<label for="input_password">Password</label>
+        <input type="password" name="password" id="input_password" rf.validation="required"/>
+	</div>
+		
+	<div class="navigation" id="navigation">
+		<input class="button small" type="submit" rf.action="back" value="Back"/>
+		<input class="button" type="submit" rf.action="next" value="Next"/>
+	</div>
+</form>

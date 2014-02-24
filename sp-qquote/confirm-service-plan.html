@@ -1,0 +1,28 @@
+<script type='text/javascript' src='widgets/sp-quote/js/vehicle-lookup.js' ></script>
+<script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
+
+<form rhinoforms="true" class="confirmServicePlanForm">
+
+    <div rf.includeIf="'{{//getServicePlanResponse//*[name()='CurrentQuestion']/*[name()='Name']}}' != ''">
+        <div class="field">
+            <label for="input_service_plan_question">{{//getServicePlanResponse//*[name()='CurrentQuestion']/*[name()='Question']}}</label>
+            <select  id="input_service_plan_question" name="queryAnswer" rf.validation="required">
+                <rf.forEach select="//getServicePlanResponse//*[name()='CurrentQuestion']/*[name()='PossibleValues']/*[name()='string']" as="option">
+                    <option name="{{option.text()}}">{{option.text()}}</option>
+                </rf.forEach>
+            </select>
+        </div>
+        <div class="navigation" id="navigation">
+            <input class="button small" type="submit" rf.action="back" value="Back"/>
+            <input class="button" type="submit" rf.action="search" value="Next"/>
+        </div>
+        <input class="button" type="submit" rf.action="next" value="Next" style="display:none"/>
+    </div>
+    <script type="text/javascript">
+        rf.onFormLoad(function(){
+            if("{{//getServicePlanResponse//*[name()='CurrentQuestion']/*[name()='Name']}}" == ""){
+                $("[rf\\.action=next]").click();
+            }
+        })
+    </script>
+</form>
