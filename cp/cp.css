@@ -111,7 +111,6 @@ div.widget>.widget-messages>div.error {
 
 footer {
 	padding: 1em 10%;
-	background: rgba(60,60,60,0.7);
 	color: #DDD;
 	font-size: 0.65em;
 }
@@ -124,14 +123,4 @@ footer p {
 footer p:first-child{
 	width: 19.5%;
 	font-weight: bold;
-}
-@media screen and (max-width: 800px) {
-	footer {
-		padding: 1em;
-	}
-}
-@media screen and (max-height: 500px) {
-	footer {
-		position: static;
-	}
 }

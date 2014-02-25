@@ -101,7 +101,8 @@ iframe {
 	margin-bottom: 0;
 }
 #one #summary a {
-	float: right;
+	display: block;
+	margin-top: 1em;
 	font-weight: bold;
 	color: #720;
 }
