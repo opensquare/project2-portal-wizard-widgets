@@ -4,6 +4,7 @@
     <xsl:output method="xml" encoding="UTF-8" />
     <xsl:template match="/">
         <QuotesPlanList>
+            <QuoteReferenceCSV><xsl:value-of select="string-join(//*[name() = 'QuoteReference'], ',')"/></QuoteReferenceCSV>
             <SinglePaymentQuotes>
                 <xsl:apply-templates select="//*[name()='QuotesPlan'][*[name()='QuoteType' and text()='Single']]"/>
             </SinglePaymentQuotes>

@@ -12,7 +12,8 @@
 						submission : {
 							url : "{{$esb-url}}/ccp/retrieveQuote",
 							data : {
-								bundleID : "xpath://bundleId"
+                                accessToken: "xpath://accessToken",
+								bundleID : "xpath://quoteRef"
 							},
                             postTransform: "../sp-qquote/xslt/getQuoteResponse.xsl",
                             resultInsertPoint: "/quote/getQuoteResponse"

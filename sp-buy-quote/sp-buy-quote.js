@@ -1,14 +1,16 @@
 function Widget_sp_buy_quote() {
 	
 	this.onReadyExtend = function() {
-		var calcref = this.$widgetDiv.attr('calcref');
+		var quoteRef = this.$widgetDiv.attr('quoteRef');
 		var params = this.$widgetDiv.attr('params');
 		
-		var cr;
+        var accessToken = $("#accessToken", this.$widgetDiv).val();
+        
+		var qr;
 		
 		// SCP
-		if (typeof calcref != 'undefined') {
-			cr = calcref;
+		if (typeof quoteRef != 'undefined') {
+			qr = quoteRef;
 		}
 		
 		// CP
@@ -18,13 +20,13 @@ function Widget_sp_buy_quote() {
 				paramsObj[key] = value;
 			});
 			if (typeof paramsObj.ref != 'undefined' && paramsObj.ref != null && paramsObj.ref.indexOf("{") == -1) {
-				cr = paramsObj.ref;
+				qr = paramsObj.ref;
 			}
 		}
 		
 		var initialData;
-		if (typeof cr != 'undefined') {
-			initialData = '<quote><calcref>' + cr + '</calcref></quote>';
+		if (typeof qr != 'undefined') {
+			initialData = '<quote><accessToken>' + accessToken + '</accessToken><quoteRef>' + qr + '</quoteRef></quote>';
 		}
 		rf.loadFlow('widgets/sp-buy-quote/buy-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
 

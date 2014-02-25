@@ -1,7 +1,7 @@
 <widget>
-	<type>layout</type>
+	<type>internalPage</type>
 	<parameters>
-		<url>sp-buy-quote.html</url>
+		<url>sp-buy-quote.jsp</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
