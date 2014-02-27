@@ -1,0 +1,37 @@
+
+
+.cp-service-plans #quote-list{
+    display:table;
+    border:5px solid silver;
+    border-radius:10px;
+    margin:0 auto;
+}
+
+#quote-list .quotes-header, #quote-list .quotes-quote{
+  display:table-row;
+}
+
+#quote-list .quotes-header span, #quote-list .quotes-quote span{
+  padding:0.5em 0.5em 0.5em 0.5em;
+  text-align:center;
+  display:table-cell;
+}
+
+#quote-list .quotes-header span{
+  zborder-top-left-radius:10px;
+  border-bottom:5px solid silver;
+  background-color:#0090c0;
+  color:white;
+  font-weight:bold;
+}
+
+.cp-service-plans .quotes-quote a{
+    margin: 0.25em 0.25em;
+    padding: 0.25em 1em;
+    background: #0090c0;
+    color: #FFF;
+    font-size: 1.1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    border:none;
+}

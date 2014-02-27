@@ -178,9 +178,9 @@
                 submission: {
                     url: "{{$esb-url}}/ccp/purchaseQuote",
                     data: {
-                        vehicleKey: "xpath//vehicleKey",
-                        quoteRef: "xpath//selectedQuoteRef"
+                        data: "[dataDocument]"
                     },
+                    method: "post",
                     resultInsertPoint: "/quote/purchaseQuoteResponse"
                 }
             }]},
