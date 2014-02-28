@@ -4,6 +4,7 @@
 	libraries: ["js/utils.js"],
 	formLists: {
 		main: [
+            { id: "user-check", docBase: "/quote/customer", url: "user-check.html", actions: ["next"]},
 	       	{ id: "vehicle", docBase: "/quote/vehicle", url: "vehicle.html", actions: ["next"] },
             {
 				id : "searching",
@@ -114,13 +115,13 @@
 				]
 			},
 			{ id: "quote", url: "quote.html", actions: [ "back:cover", "sorry:sorry", "save:registerAndSave", "buy:registerAndBuy"] },
-            { id: "registerAndSave", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered1"}]},
+            { id: "registerAndSave", docBase: "/quote/customer", url: "registration-quick.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered1"}]},
             { id: "save", url: "saving.html", 
 				actions: [
 					{
 						name: "next",
 						submission: {
-							url: "{{$esb-url}}/ccp/registerAndSave",
+							url: "{{$esb-url}}/ccp/quickRegisterAndSave",
 							data: {
                                 data: "[dataDocument]"
 							},

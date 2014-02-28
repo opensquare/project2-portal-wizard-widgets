@@ -1,0 +1,23 @@
+<form rhinoforms="true" class="registrationForm">
+	<h2>Please tell us about yourself</h2>
+
+        <input class="button" type="submit" rf.action="alreadyRegistered" value="Already Registered?"/>
+    
+    <div id="loginDetails">
+        <div class="field">
+            <label for="input_password">Password</label>
+            <input type="password" name="password" id="input_password"
+                   rf.validation="required pattern({regex: '^.{8,}?$', errorMessage:'Invalid Password'}) pattern({regex: '^.*[0-9]+.*$', errorMessage:'Invalid Password'})"/>
+            <div class="hint">Password must be at least 8 characters long and contain at least 1 number</div>
+        </div>
+        <div class="field">
+            <label for="input_password_confirm">Confirm Password</label>
+            <input type="password" name="passwordConfirm" id="input_password_confirm" 
+                   rf.validationFunction="if (fields.password.value !== field.value && field.value !== '') {error = {name: field.name, message: 'This password must match the one entered above'} } else { this.validate('required')}"/>
+        </div>
+    </div>
+    <div class="navigation" id="navigation">
+		<input class="button small" type="submit" rf.action="back" value="Back"/>
+		<input class="button" type="submit" rf.action="next" value="Next"/>
+	</div>
+</form>
