@@ -1,11 +1,10 @@
 <widget>
-	<type>layout</type>
+	<type>internalPage</type>
 	<parameters>
 		<url>index.html</url>
 		<secure>false</secure>
 	</parameters>
 	<attributes>
 		<css>index.css</css>
-		<js>index.js</js>
 	</attributes>
 </widget>
