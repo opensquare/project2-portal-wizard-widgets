@@ -8,26 +8,28 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-body,h1 {
+body {
 	margin: 0;
 	font-family: sans-serif;
+}
+details {
+	margin-bottom: 2em;
 }
 h1 {
 	font-size: 1.75em;
 }
 h2 {
+	display: inline-block;
 	font-size: 1.25em;
+	cursor: pointer;
 }
 .widget-content>* {
-	padding: 1%;
+	padding: 0 1%;
 }
 footer {
 	padding: 0.25em 1em 1em;
-	background-color: #333;
-	color: #FFF;
+	border-top: thin dashed;
+	color: #777;
 	font-size: 0.75em;
-	border-top: thin dashed rgba(255,255,255,0.5);
-}
-footer p:nth-child(1) {
 	font-weight: bold;
 }
