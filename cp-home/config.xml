@@ -4,7 +4,7 @@
 		<url>cp-home.html</url>
 	</parameters>
 	<attributes>
-		<displayHeader>false</displayHeader>
 		<css>cp-home.css</css>
+		<js>cp-home.js</js>
 	</attributes>
 </widget>
