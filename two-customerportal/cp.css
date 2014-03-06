@@ -1,9 +1,32 @@
 button {
-	background-color: #b60 !important;   
+	background-color: #B60 !important;   
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	color: inherit;	
+	z-index: -1;
 }
 form {
-	box-shadow: 0 0 0 0.5em #ea0 !important;
+	box-shadow: 0 0 0 0.5em #EA0 !important;
 }
 h2 {
 	color: #960!important;
+}
+#cp-policy-menu a {
+	background-color: #ea0;
+	width: 100%;
+	text-align: center;
+}
+#cp-policy-menu a.on {
+	background-color: #a60;
+}
+#cp-policy-menu {
+	width: 15%;
+	text-align: left;
+	float: left;
+}
+#quote-list .quotes-header span {
+	background-color: #fff;
+	color: #620;
 }

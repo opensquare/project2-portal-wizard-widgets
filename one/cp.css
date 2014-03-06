@@ -1,5 +1,8 @@
 footer {
+	position: fixed;
+	bottom: 0;
 	color: inherit;
+	z-index: -1;
 }
 form {
 	background: none !important;
