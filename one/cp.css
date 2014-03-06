@@ -11,8 +11,8 @@ form {
 	overflow: hidden;
 }
 #quote-list .quotes-header > span {
-	background-color: transparent!important;
-	color: #000;
+	background-color: transparent !important;
+	color: #000 !important;
 }
 .widget.policyholder {
 	background-color: #FFF;
