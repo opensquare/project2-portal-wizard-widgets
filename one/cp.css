@@ -3,5 +3,29 @@ footer {
 }
 form {
 	background: none !important;
-	color: #fff;
+	color: #FFF;
+}
+#quote-list {
+	border-color: #fff!important;
+	background: #fff;
+	overflow: hidden;
+}
+#quote-list .quotes-header > span {
+	background-color: transparent!important;
+	color: #000;
+}
+.widget.policyholder {
+	background-color: #FFF;
+	border-radius: 1em;
+	width: 80%;
+	margin: auto;
+}
+.policyholder .property-group .long {
+	width: 70%;
+}
+.widget.sp-qquote form {
+	margin: auto;
+	padding: 1em;
+	border: medium solid;
+	border-radius: 1em;
 }

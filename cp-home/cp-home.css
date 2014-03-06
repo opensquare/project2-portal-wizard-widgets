@@ -49,6 +49,7 @@ div.widget>.widget-messages>div.error{
 
 #cp-policy-menu{
 	width: 100%;
+	margin-bottom: 2em;
 	padding-right: 1px; /* fixes scroll bug */
 	text-align: center;
 }

@@ -97,7 +97,7 @@
 	float: right;
 	-webkit-filter: grayscale(100%) brightness(60%) contrast(200%);
 }
-.policyholder .contact-details:hover .map {
+.policyholder .side2:hover .map {
 	-webkit-filter: none;
 }
 .policyholder .map img {
@@ -133,7 +133,7 @@
 	border-radius: 0.25em;
 	vertical-align: top;
 }
-.policyholder details:hover .action {
+.policyholder .side2:hover .action {
 	background-color: #0DB4F2;
 }
 .policyholder .property-group.email .send {
