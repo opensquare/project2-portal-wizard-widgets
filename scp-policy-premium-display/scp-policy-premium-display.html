@@ -1,7 +1,0 @@
-<div class="side2">
-    <rf.forEach select="/pactresponse/entity/TimeSpanEntity/TimeSpanEntityVersion/Parts/*[identifier/idType='com.osl.pact.finserv.agreement.PartyAccount']" as="account">
-        <span class="account">
-            <a class="popup" href="#account/show/{{account.identifier/uid}}">{{account.description}}</a>
-        </span>
-    </rf.forEach>
-</div>
