@@ -85,6 +85,7 @@ section {
 	border: medium solid rgba(255,255,255,0.25);
 	border-radius: 1em;
 	text-align: left;
+	overflow: auto;
 }
 #one #summary {
 	margin-bottom: 3em;

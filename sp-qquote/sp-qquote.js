@@ -1,6 +1,11 @@
 function Widget_sp_qquote() {
 	
 	this.onReadyExtend = function() {
+		// Add a css file from host
+		var host = window.top.location.host;
+		$('head').append('<link rel="stylesheet" href="'+host+'/rq.css">');
+
+		// Look for calc ref to load
 		var calcref = this.$widgetDiv.attr('calcref');
 		var params = this.$widgetDiv.attr('params');
 		
