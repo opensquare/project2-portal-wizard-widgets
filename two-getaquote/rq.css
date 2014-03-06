@@ -1,3 +1,19 @@
 form {
 	margin: auto;
 }
+h1 {
+	color: #960;	
+}
+input, select {
+	border-color: #960 !important;
+}
+.button {
+	background-color: #b60;
+	color: #fff !important;
+}
+#landingPage .pane {
+	border-color: #ea0 !important;
+}
+#landingPage .pane h2 {
+	background-color: #ea0 !important;
+}

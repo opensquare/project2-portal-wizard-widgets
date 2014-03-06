@@ -491,6 +491,7 @@ div.widget[name='sp-qquote'] .accountDetails label {
 div.widget[name='sp-qquote'] #addressLabel,
 div.widget[name='sp-qquote'] .bankDetails {
 	display: inline-block;
+	max-width: 50%;
 }
 div.widget[name='sp-qquote'] #addressLabel span,
 div.widget[name='sp-qquote'] .bankDetails>span {
@@ -501,41 +502,41 @@ div.widget[name='sp-qquote'] .pcaCapturePlusTable td {
 	position: static !important;
 	z-index: 1;
 }
-div.widget[name='sp-qquote'] table .pcaAutoCompleteSmall>div {
+z.div.widget[name='sp-qquote'] table .pcaAutoCompleteSmall>div {
 	width: 100% !important; max-height:10em;
 	overflow-x: hidden;
 	padding-right: 0.6em !important;
 	background-color: #FFF;
 	border: thin solid #0090C0;
 }
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item,
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item,
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
 	display: inline-block;
 	width: 100%;
 }
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item {
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item {
 	border-width: 0 !important;
 }
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover,
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover {
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover,
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover {
 	background-color: #0090C0;
 }
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover span,
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover span {
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .item:hover span,
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem:hover span {
 	color: #FFF !important;
 }
-div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
+z.div.widget[name='sp-qquote'] .pcaAutoCompleteSmall .selectedItem {
 	background-color: #EEE;
 }
-div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall {
+z.div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall {
 	background-color: #FFF;
 }
-div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall a {
+z.div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall a {
 	margin: 0;
 	color: #000;
 	font-weight: normal;
 }
-div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
+z.div.widget[name='sp-qquote'] .pcaCapturePlusTable .recentFavouritesSmall .pcaItemHolder:hover {
 	background-color: rgba(0,0,0,0.2);
 }
 
@@ -696,4 +697,30 @@ div.widget[name='sp-qquote'] #landingPage .navigation {
 	margin-top: 4em;
 	clear: initial;
 	text-align: left;
+}
+div.widget[name='sp-qquote'] .registrationForm>h2 {
+	display: inline-block;
+}
+div.widget[name='sp-qquote'] .registrationForm>input.button {
+	float: right;
+	margin-top: 1em;
+	font-size: 1em;
+}
+div.widget[name='sp-qquote'] .registrationForm>div.field {
+	margin: 0;
+}
+div.widget[name='sp-qquote'] .registrationForm .changeAddressButton {
+	float: right;
+}
+div.widget[name='sp-qquote'] .registrationForm #contactDetails {
+	margin-top: 2em;
+}
+div.widget[name='sp-qquote'] .registrationForm #loginDetails {
+	margin-top: 1em;
+}
+div.widget[name='sp-qquote'] #contactDetails input, div.widget[name='sp-qquote'] #loginDetails input {
+	width: 30%;
+}
+div.widget[name='sp-qquote'] .registrationForm #navigation {
+	margin-top: 1em;
 }
