@@ -451,6 +451,21 @@ div.widget[name='sp-qquote'] .loading {
 	background: url('loading.gif') no-repeat center center;
 }
 
+div.widget[name='sp-qquote'] input.button.small {
+	font-size: 1em;
+	vertical-align: bottom;
+}
+
+div.widget[name='sp-qquote'] form.usercheck #input_email {
+	width: auto;
+}
+div.widget[name='sp-qquote'] form.confirmVehicleForm select {
+	width: auto;
+}
+div.widget[name='sp-qquote'] form.confirmServicePlanForm select {
+	width: auto;
+}
+
 /* Customer Details page specific styling */
 div.widget[name='sp-qquote'] #customerDetails label, div.widget[name='sp-qquote'] #paymentPage label {
 	display: inline-block;

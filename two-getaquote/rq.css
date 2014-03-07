@@ -7,7 +7,7 @@ h1 {
 input, select {
 	border-color: #960 !important;
 }
-.button {
+.button, input[type='button'] {
 	background-color: #b60;
 	color: #fff !important;
 }
@@ -16,4 +16,10 @@ input, select {
 }
 #landingPage .pane h2 {
 	background-color: #ea0 !important;
+}
+#landingPage .duration {
+	background: url('calendar-year-dark.png') no-repeat !important;
+}
+#landingPage .vehicle {
+	background: url('transport-car-dark.png') no-repeat !important;
 }
