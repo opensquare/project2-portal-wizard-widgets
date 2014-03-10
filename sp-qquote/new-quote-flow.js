@@ -173,7 +173,13 @@
                     resultInsertPoint: "/quote/saveQuoteResponse"
                 }
             }]},
-            { id: "payment", docBase: "/quote/payment", url:"../sp-buy-quote/payment.html", actions:["next"]},
+            { id: "payment", url:"loading.html", actions:[
+                {
+						name: "next",
+						dataDocTransform: "xslt/purchase.xsl"
+                }
+            ]},
+            { id: "payment-details", docBase: "/quote/payment", url:"../sp-buy-quote/payment.html", actions:["next"]},
             { id: "purchasing", url:"../sp-buy-quote/purchasing.html", actions: [{
                 name:"next",
                 submission: {

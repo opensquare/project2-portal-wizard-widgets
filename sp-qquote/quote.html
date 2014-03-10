@@ -5,25 +5,26 @@
         <rf.forEach select="//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan" as="quote">
                 <input type="text" id="isQuoteAvailable_{{quote.index}}" value="{{quote.IsAvailable}}"/>
                 <input type="text" id="reasonForBeingUnavailable_{{quote.index}}" value="{{quote.Comment}}"/>
-                <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.TotalPayable}}"/>
+                <input type="text" id="singlePaymentPremium_{{quote.index}}" value="{{quote.AdditionalCosts/QuoteSplits[SplitName='TotalPayable']/SplitTotal}}"/>
         </rf.forEach>
         
         <rf.forEach select="//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan" as="quote">
-                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.PayTermMonths}}"/>
-                <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.Deposit}}"/>
+                <input type="text" id="monthlyPaymentInstalments_{{quote.index}}" value="{{quote.NumberOfMonthlyPayments}}"/>
+                <input type="text" id="monthlyPaymentPremium_{{quote.index}}" value="{{quote.AdditionalCosts/QuoteSplits[SplitName='TotalPayable']/SplitMonthlyValueIncVAT}}"/>
+                <input type="text" id="monthlyPaymentDeposit_{{quote.index}}" value="{{quote.AdditionalCosts/QuoteSplits[SplitName='TotalPayable']/SplitDepositIncVAT}}"/>
         </rf.forEach>
         <input type="text" name="payment.paymentType" id="paymentType"/>
     </div>
     <div id="singlePayment" class="pane">
         <h2>Single Payment</h2>
-        <p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/TotalPayable}}</span></p>
+        <p>Total premium: <span class="amount" id="singlePaymentPremium">{{//getQuoteResponse/QuotesPlanList/SinglePaymentQuotes/QuotesPlan/AdditionalCosts/QuoteSplits[SplitName='TotalPayable']/SplitTotal}}</span></p>
         <input type="button" rf.action="buy" value="Buy" onclick="$('#paymentType').val('single')"/>
         <p class="smallprint">This amount includes VAT at the prevailing rate, and is for payment online using a debit or credit card.</p>
     </div>
     <div id="multiplePayment" class="pane">
         <h2>Monthly Instalments</h2>
         <p>Initial deposit: <span class="amount" id="monthlyPaymentDeposit">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/Deposit}}</span></p>
-        <p>Then equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/PayTermMonths}}</span>.</p>
+        <p>Then <span class="numberOfInstalments" id="monthlyPaymentInstalments"> </span> equal payments of <span class="instalmentPremium" id="monthlyPaymentPremium">{{//getQuoteResponse/QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan/PayTermMonths}}</span>.</p>
         <input type="button" rf.action="buy" value="Buy" onclick="$('#paymentType').val('multiple')"/>
         <p class="smallprint">Deposit is payable online using a debit or credit card.  Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate.</p>
     </div>
@@ -68,6 +69,7 @@
             var isAvailable = $("#isQuoteAvailable_"+ term).val();
             if(isAvailable == "true"){
                 $("#singlePaymentPremium").html($("#singlePaymentPremium_" + term).val());
+                $("#monthlyPaymentInstalments").html($("#monthlyPaymentInstalments_" + term).val());
                 $("#monthlyPaymentPremium").html($("#monthlyPaymentPremium_" + term).val());
                 $("#monthlyPaymentDeposit").html($("#monthlyPaymentDeposit_" + term).val());
                 $("#singlePayment").show();

@@ -9,8 +9,8 @@
 	<div rf.includeIf="'{{//paymentType}}' === 'multiple'">
         <h2>Direct Debit Details</h2>
         <h3>You are paying by monthly instalments</h3>
-        <p>We will collect an initial deposit of <span class="amount">{{//QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan[position() = /quote/term]/Deposit}}</span> by debit or credit card.</p>
-        <p>Then monthly instalments of <span class="instalmentPremium">{{//QuotesPlanList/MonthlyPaymentQuotes/QuotesPlan[position() = /quote/term]/PayTermMonths}}</span>.</p>
+        <p>We will collect an initial deposit of <span class="amount">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitDepositIncVAT}}</span> by debit or credit card.</p>
+        <p>Then <span class="numberOfInstalments">{{//QuotesPlan/NumberOfMonthlyPayments}}</span> monthly instalments of <span class="instalmentPremium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitMonthlyValueIncVAT}}</span>.</p>
         <p class="smallprint">Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
         <h3>Direct Debit Instruction to your Bank or Building Society</h3>
         <div class="field">
@@ -63,7 +63,7 @@
     </div>
     <div rf.includeIf="'{{//paymentType}}' === 'single'" class="field">
         <label>Total premium</label>
-            <div class="amount premium">{{//QuotesPlanList/SinglePaymentQuotes/QuotesPlan[position() = /quote/term]/TotalPayable}}<br/></div>
+            <div class="amount premium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitTotal}}<br/></div>
     </div>
 	<h1>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h1>
 	<div class="field">
