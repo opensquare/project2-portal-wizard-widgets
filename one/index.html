@@ -75,6 +75,6 @@
 		<div id="popupContainer" onclick="$('#popupContainer').hide()" style="display:none">
 			<div id="popup">
 				<a id="popupClose" onclick="$('#popupContainer').hide()">x</a>
-				<div id="popupContent" onclick="return false"> </div>
+				<div id="popupContent" onclick="event.stopPropagation()"> </div>
 			</div>
 		</div>
