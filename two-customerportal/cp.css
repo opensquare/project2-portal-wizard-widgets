@@ -51,8 +51,8 @@ h2 {
 	background-color: #a60 !important;
 }
 div.widget[name='sp-qquote'] form {
-	width: auto;
-	clear: initial;
+	width: auto !important;
+	clear: initial !important;
 }
 footer {
 	position: initial;
