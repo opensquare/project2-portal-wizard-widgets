@@ -32,7 +32,6 @@
 				</return>
 			</pactrequest>
 		]]></pactrequest>
-		<privilegeFiltered>true</privilegeFiltered>
 	</parameters>
 	<attributes>
 		<page.title>Service Plan Display</page.title>
