@@ -1,12 +1,18 @@
-footer {
-	position: fixed;
-	bottom: 0;
-	color: inherit;
-	z-index: -1;
-}
 form {
 	background: none !important;
 	color: #FFF;
+}
+#scp-serviceplan-show-1 {
+	width: 95%;
+	margin: auto;
+	border-radius: 1em;
+	background: #fff;
+}
+.widget[name='scp-serviceplan-show'] .property-label {
+	color: #0090c0;
+}
+.widget[name='scp-serviceplan-show'] .service {
+	border-color: #0090c0;
 }
 #quote-list {
 	border-color: #fff!important;
@@ -31,4 +37,10 @@ form {
 	padding: 1em;
 	border: medium solid;
 	border-radius: 1em;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	color: inherit;
+	z-index: -1;
 }
