@@ -1,0 +1,25 @@
+<form id="request" rhinoforms="true">
+	<div class="field choice">
+		<label for="choice1_garage">1st choice:</label>
+		<select id="choice1_garage" name="garage1" rf.validation="required">
+            <option value="Test Garage 1">Test Garage 1</option>
+            <option value="Test Garage 2">Test Garage 2</option>
+            <option value="Test Garage 3">Test Garage 3</option>
+        </select>
+		<input id="choice1_date" name="preferredDate1" type="date" rf.validation="required" />
+	</div>
+	<div class="field choice">
+		<label for="choice2_garage">2nd choice:</label>
+		<select id="choice2_garage" name="garage2" rf.validation="required">
+            <option value="Test Garage 1">Test Garage 1</option>
+            <option value="Test Garage 2">Test Garage 2</option>
+            <option value="Test Garage 3">Test Garage 3</option>
+        </select>
+		<input id="choice2_date" name="preferredDate2" type="date" rf.validation="required" />
+	</div>
+
+	<nav class="navigation">
+		<input class="button" type="button" id="input_next" value="Next" rf.action="next" />
+		<input class="button" type="button" id="input_canx" value="Cancel" onclick="$('#popupClose').click();" />
+	</nav>
+</form>

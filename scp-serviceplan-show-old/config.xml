@@ -4,7 +4,10 @@
 		<xsl>serviceplan-show</xsl>
 		<pactrequest><![CDATA[
 			<pactrequest>
-				<target><uid>{agreementUid}</uid></target>
+				<target><SelectTimeSpanEntity>
+        <entityType>plan</entityType>
+        <quoteRef index="A1">{quoteRef}</quoteRef>
+    </SelectTimeSpanEntity></target>
 				<context>
 					<locale>
 						<language>en</language>

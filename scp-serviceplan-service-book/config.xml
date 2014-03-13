@@ -1,0 +1,9 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>scp-serviceplan-service-book.html</url>
+	</parameters>
+	<attributes>
+		<js>scp-serviceplan-service-book.js</js>
+	</attributes>
+</widget>
