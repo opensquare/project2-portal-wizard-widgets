@@ -34,6 +34,12 @@ h2 {
 	width: 75%;
 	margin-left: 20%;
 }
+.widget[name='scp-serviceplan-show'] .property-label {
+	color: #a60 !important;
+}
+.widget[name='scp-serviceplan-show'] .service {
+	border-color: #a60 !important;
+}
 #quote-list {
 	border-color: #a60 !important;
 }
@@ -53,6 +59,26 @@ h2 {
 div.widget[name='sp-qquote'] form {
 	width: auto !important;
 	clear: initial !important;
+	box-shadow: none !important;
+	padding-top: 2em !important;
+}
+div.widget[name='sp-qquote'] .navigation {
+	clear: initial !important;
+}
+div.widget[name='sp-qquote'] #landingPage {
+	width: 100% !important;
+	clear: none !important;
+}
+div.widget[name='sp-qquote'] #landingPage .pane {
+	border-color: #ea0 !important;
+}
+div.widget[name='sp-qquote'] #landingPage .pane h2 {
+	background-color: #ea0 !important;
+	color: #fff !important;
+}
+div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
+	background-color: #a60 !important;
+	color: #fff !important;
 }
 footer {
 	position: initial;
