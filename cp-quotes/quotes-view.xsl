@@ -30,7 +30,7 @@
             <span class="quote-ref"><xsl:value-of select="*[name()='BundleID']"/></span>
             <span class="valid-from"><xsl:value-of select="substring-before(*[name()='ValidFrom'], 'T')"/></span>
             <span class="valid-to"><xsl:value-of select="substring-before(*[name()='ValidTo'], 'T')"/></span>
-            <span class="quote-premium">From <xsl:value-of select="*[name()='PlanCost']"/></span>
+            <span class="quote-premium">From <xsl:value-of select=".//*[name()='QuoteSplits'][*[name()='SplitName']='TotalPayable']/*[name()='SplitTotal']"/></span>
             <span class="quote-buttons"><a href="#"><xsl:attribute name="onclick">popWidget('sp-buy-quote', 'ref=<xsl:value-of select="*[name()='BundleID']"/>');</xsl:attribute>Buy</a></span>
         </div>
         </xsl:if>

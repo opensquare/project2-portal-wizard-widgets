@@ -1,0 +1,291 @@
+.widget[name='scp-serviceplan-show'] .property-group:hover button {
+	opacity: 1;
+}
+.widget[name='scp-serviceplan-show'] .side1 {
+	display: inline-block;
+	width: 15%;
+	margin-top: 1em;
+	vertical-align: top;
+}
+.widget[name='scp-serviceplan-show'] .side2 {
+	display: inline-block;
+	width: 84%;
+	margin-top: 1em;
+}
+.widget[name='scp-serviceplan-show'] details {
+	margin-top: 3em;
+	padding: 0 0 0 60px;
+	background: no-repeat left 2.5em;
+}
+.widget[name='scp-serviceplan-show'] summary {
+	margin: 0 0 1em -60px;
+	font-size: 1.25em;
+	font-weight: normal;
+	color: #777;
+	border-bottom: thin solid;
+	cursor: pointer;
+}
+.widget[name='scp-serviceplan-show'] .plan {
+	opacity: 0.75;
+}
+.widget[name='scp-serviceplan-show'] .plan.Active {
+	opacity: 1;
+}
+
+/* Side1 formatting */
+.widget[name='scp-serviceplan-show'] .picture {
+	min-height: 100px;
+	background: url('document-dark.png') no-repeat center;
+	background-size: contain;
+}
+.widget[name='scp-serviceplan-show'] .status {
+	text-align: center;
+	font-size: small;
+	font-weight: bold;
+}
+
+/* Side2 formatting */
+.widget[name='scp-serviceplan-show'] .property-group {
+	margin: 0 0 2em 0;
+	clear: left;
+}
+.widget[name='scp-serviceplan-show'] .property-group > .property-group {
+	display: inline-block;
+	margin: 0 2em 0 0;
+}
+.widget[name='scp-serviceplan-show'] .property-label {
+	display: inline-block;
+	width: 15%;
+	min-width: 6em;
+	padding: 0.1em 0 0.1em 0;
+	color: #C0504D;
+}
+.widget[name='scp-serviceplan-show'] .property-value {
+	display: inline-block;
+	margin-right: 2em;
+	padding: 0.1em 1em 0.1em 0.25em;
+	color: #000;
+	border-bottom: thin dashed #CCC;
+}
+.widget[name='scp-serviceplan-show'] .property-value:empty:before {
+	content: '\00a0'; /* fix missing content height problem */
+}
+.widget[name='scp-serviceplan-show'] .property-group > .property-group .property-value {
+	float: left;
+}
+.widget[name='scp-serviceplan-show'] .property-group .auto {
+	min-width: auto;
+	padding-right: 1em;
+}
+.widget[name='scp-serviceplan-show'] .property-group .short {
+	width: 10%;
+	min-width: 6em;
+}
+.widget[name='scp-serviceplan-show'] .property-group .medium {
+	width: 25%;
+	min-width: 15em;
+}
+.widget[name='scp-serviceplan-show'] .property-group .long {
+	width: 75%;
+	min-width: 24em;
+}
+.widget[name='scp-serviceplan-show'] .action {
+	display: inline-block;
+	width: 1.35em;
+	height: 1.35em;
+	margin-left: 0.5em;
+	background: #555 no-repeat center center;
+	background-size: 1em;
+	border-radius: 0.25em;
+	vertical-align: top;
+}
+.widget[name='scp-serviceplan-show'] details:hover .action {
+	background-color: #0DB4F2;
+}
+
+.widget[name='scp-serviceplan-show'] .side2>h2 {
+	margin: 0 0 1.5em 0;
+}
+.widget[name='scp-serviceplan-show'] .summary {
+	font-size: 1.25em;
+}
+.widget[name='scp-serviceplan-show'] .summary .property-value {
+	margin-bottom: 0.75em;
+}
+.widget[name='scp-serviceplan-show'] .summary .totalCost:before {
+	content: '£';
+}
+.widget[name='scp-serviceplan-show'] .dates1, .widget[name='scp-serviceplan-show'] .dates2 {
+	margin-bottom: 0.5em;
+}
+.widget[name='scp-serviceplan-show'] .dates1 {
+	font-weight: bold;
+}
+.widget[name='scp-serviceplan-show'] .canx>button {
+	display: none;
+	float: right;
+}
+.widget[name='scp-serviceplan-show'] .plan.Active .canx>button {
+	display: inline-block;
+}
+
+.widget[name='scp-serviceplan-show'] .owners {
+	background-image: url('person-dark.png');
+}
+.widget[name='scp-serviceplan-show'] .owners>button {
+	float: right;
+}
+.widget[name='scp-serviceplan-show'] .owner>p {
+	display: inline-block;
+}
+.widget[name='scp-serviceplan-show'] .owner>button {
+	float: right;
+	margin-top: 1em;
+}
+.widget[name='scp-serviceplan-show'] .vehicles {
+	background: url('car-dark.png') no-repeat left 28px;
+}
+.widget[name='scp-serviceplan-show'] .services {
+	background-image: url('spanner-dark.png');
+}
+.widget[name='scp-serviceplan-show'] .service {
+	display: inline-block;
+	width: 12em;
+	zheight: 10em;
+	margin: 0 1em 1em 0;
+	padding: 1%;
+	border: thin solid #C0504D;
+	border-radius: 0.25em;
+	text-align: center;
+	vertical-align: top;
+	overflow: hidden;
+}
+.widget[name='scp-serviceplan-show'] .service>p:first-of-type {
+	font-weight: bold;
+}
+.widget[name='scp-serviceplan-show'] .service button {
+	display: none;
+}
+.widget[name='scp-serviceplan-show'] .service.agreed {
+	background: #C0504D;
+	color: #FFF;
+	box-shadow: 0 0 0px 2px #FFF inset;
+}
+.widget[name='scp-serviceplan-show'] .service.booked button.button-service-complete {
+	display: inline-block;
+	background-color: #FFF !important;
+	color: #333;
+}
+.widget[name='scp-serviceplan-show'] .service.completed button.button-service-authorise{
+	display: inline-block;
+	background-color: #FFF !important;
+	color: #333;
+}
+z.widget[name='scp-serviceplan-show'] .service.scheduled {
+	opacity: 0.75;
+}
+z.widget[name='scp-serviceplan-show'] .service.scheduled:first-of-type {
+	opacity: 1;
+}
+.widget[name='scp-serviceplan-show'] .service.scheduled button.button-service-book, .widget[name='scp-serviceplan-show'] .service.scheduled button.button-service-confirm {
+	display: inline-block;
+}
+z.widget[name='scp-serviceplan-show'] .name {
+	padding-bottom: 0.5em;
+	border-bottom: thick solid #777;
+}
+z.widget[name='scp-serviceplan-show'] .name .property-value {
+	padding: 0 0.25em 0 0!important;
+	font-size: 1.6em;
+	border-bottom: none;
+}
+z.widget[name='scp-serviceplan-show'] .genderage :nth-child(2) {
+	margin-right: 3em;
+}
+z.widget[name='scp-serviceplan-show'] .occupation :nth-child(2) {
+	margin-right: 3em;
+}
+z.widget[name='scp-serviceplan-show'] .address {
+	margin: 0 0 2em 0;
+}
+z.widget[name='scp-serviceplan-show'] .address .property-label {
+	float: left;
+	margin-right: 0.3em; /* compensation for white space in markup */
+}
+z.widget[name='scp-serviceplan-show'] .map {
+	float: right;
+	-webkit-filter: grayscale(100%) brightness(60%) contrast(200%);
+}
+z.widget[name='scp-serviceplan-show'] .contact-details:hover .map {
+	-webkit-filter: none;
+}
+z.widget[name='scp-serviceplan-show'] .map img {
+	border-radius: 0.35em;
+}
+z.widget[name='scp-serviceplan-show'] .address .property-group {
+	display: block;
+	margin: 0
+}
+z.widget[name='scp-serviceplan-show'] .property-group.email .send {
+	background-image: url('email-light-small.png');
+}
+z.widget[name='scp-serviceplan-show'] .property-group.phone .call {
+	background-image: url('phone-light-small.png');
+}
+z.widget[name='scp-serviceplan-show'] .licence :nth-child(2) {
+	margin-right: 3em;
+}
+
+/* Popup styling */
+#popupContent .widget[title='serviceplan'] {
+	min-width: 30em;
+	border: medium solid #FFF;
+	border-radius: 0.5em;
+}
+#popupContent .widget[title='serviceplan'] header {
+	padding: 1em;
+	background-color: #C0504D;
+	color: #FFF;
+	border-radius: 0.5em 0.5em 0 0;
+}
+#popupContent .widget[title='serviceplan'] header h2 {
+	margin: 0;
+}
+#popupContent .widget[title='serviceplan'] form {
+	padding: 1em;
+}
+#popupContent .widget[title='serviceplan'] form .field {
+	margin-bottom: 0.75em;
+}
+#popupContent .widget[title='serviceplan'] form .field label {
+	display: inline-block;
+	width: 10em;
+	vertical-align: top;
+}
+#popupContent .widget[title='serviceplan'] form .field input[type='radio'].yesno {
+	margin-right: 4em;
+}
+#popupContent .widget[title='serviceplan'] form .field input[type='radio'].yesno:before {
+	content: attr(value);
+	display: inline-block;
+	margin-left: 1.5em;
+	text-transform: capitalize;
+}
+#popupContent .widget[title='serviceplan'] form .field textarea {
+	width: 20em;
+	height: 4em;
+}
+#popupContent .widget[title='serviceplan'] nav {
+	margin-top: 1em;
+	padding: 0.5em 0 1em;
+	border-top: thin dotted #BBB;
+}
+#popupContent .widget[title='serviceplan'] .button {
+	float: right;
+	background-color: #C0504D;
+	color: #FFF;
+	font-size: inherit;
+}
+.widget[name='scp-serviceplan-show'] button{
+    display:none!important;
+}
