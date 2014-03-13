@@ -223,4 +223,5 @@ footer p:nth-child(1) {
 #popupContent {
 	display: inline-block;
 	padding: 1.5em;
+	text-align: left;
 }

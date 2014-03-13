@@ -443,7 +443,7 @@ div.widget[name='sp-qquote'] #crumbTrail li.welcome.on:before {
 
 div.widget[name='sp-qquote'] .rf-debugbar {
 	display: inline-block;
-	opacity: 0.15;
+	opacity: 0.075;
 }
 
 div.widget[name='sp-qquote'] .loading {
@@ -663,12 +663,20 @@ div.widget[name='sp-qquote'] #paymentPage label.forRadio {
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] #input_sort_code {
-	width: 10%;
+	zwidth: 10%;
 }
 div.widget[name='sp-qquote'] #input_code {
 	width: 10%;
 }
-
+div.widget[name='sp-qquote'] #validate_account {
+	background-color: #0090C0;
+}
+div.widget[name='sp-qquote'] .invalidAccount .reattemptvalidation {
+	cursor: pointer;
+}
+div.widget[name='sp-qquote'] #input_card_number {
+	width: inherit;
+}
 div.widget[name='sp-qquote'] .confirmVehicleForm p:last-child {
 	padding-left: 40px;
 	background: url('transport-car-light-small.png') no-repeat top left;

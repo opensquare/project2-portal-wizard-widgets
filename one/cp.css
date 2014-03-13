@@ -9,10 +9,13 @@ form {
 	background: #fff;
 }
 .widget[name='scp-serviceplan-show'] .property-label {
-	color: #0090c0;
+	color: #0090c0 !important;
 }
 .widget[name='scp-serviceplan-show'] .service {
-	border-color: #0090c0;
+	border-color: #0090c0 !important;
+}
+div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
+	background-color: #82BE46 !important;
 }
 #quote-list {
 	border-color: #fff!important;

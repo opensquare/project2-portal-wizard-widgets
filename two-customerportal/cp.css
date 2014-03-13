@@ -1,5 +1,10 @@
 button {
-	background-color: #B60 !important;   
+	padding: 0.5em 1em;
+	background-color: #B60 !important;
+	color: #fff;
+	border: none;
+	border-radius: 0.5em;
+	cursor: pointer;
 }
 .button {
 	background-color: #a60;
