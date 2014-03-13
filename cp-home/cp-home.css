@@ -55,6 +55,7 @@ div.widget>.widget-messages>div.error{
 }
 #cp-policy-menu a{
 	display: inline-block;
+	min-width: 18%;
 	margin: 0.25em 0;
 	padding: 0.75em 1em;
 	background: #0090c0;
@@ -62,7 +63,6 @@ div.widget>.widget-messages>div.error{
 	font-size: 1.1em;
 	border-radius: 0.25em;
 	cursor: pointer;
-	min-width: 20%;
 }
 #cp-policy-menu a.on{
 	background-color: #92CE56;

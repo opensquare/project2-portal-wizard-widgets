@@ -1,6 +1,10 @@
 button {
 	background-color: #B60 !important;   
 }
+.button {
+	background-color: #a60;
+	color: #fff;
+}
 footer {
 	position: fixed;
 	bottom: 0;
@@ -26,7 +30,30 @@ h2 {
 	text-align: left;
 	float: left;
 }
+.section {
+	width: 75%;
+	margin-left: 20%;
+}
+#quote-list {
+	border-color: #a60 !important;
+}
 #quote-list .quotes-header span {
-	background-color: #fff;
-	color: #620;
+	background-color: #a60 !important;
+	border-bottom: none !important;
+}
+.cp-quotes .quotes-quote a {
+	background-color: #ea0 !important;
+}
+.policyholder .property-label {
+	color: #a60 !important;
+}
+.policyholder .side2:hover .action {
+	background-color: #a60 !important;
+}
+div.widget[name='sp-qquote'] form {
+	width: auto;
+	clear: initial;
+}
+footer {
+	position: initial;
 }
