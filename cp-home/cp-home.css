@@ -53,11 +53,6 @@ div.widget>.widget-messages>div.error{
 	padding-right: 1px; /* fixes scroll bug */
 	text-align: center;
 }
-
-#cp-plans{
-	text-align:center;
-}
-
 #cp-policy-menu a{
 	display: inline-block;
 	margin: 0.25em 0;
