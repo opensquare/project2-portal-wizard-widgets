@@ -286,3 +286,6 @@ z.widget[name='scp-serviceplan-show'] .licence :nth-child(2) {
 	color: #FFF;
 	font-size: inherit;
 }
+.widget[name='scp-serviceplan-show'] button{
+    display:none!important;
+}
