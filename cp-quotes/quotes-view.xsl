@@ -14,13 +14,6 @@
         </div>
        <xsl:apply-templates select="//*[name()='QuotesPlan']"/>
     </div>
-    <div id="popupContainer" style="display:none">
-			<div id="popupBackground" onclick="$('#popupContainer').hide()"> </div>
-			<div id="popup">
-				<a id="popupClose" onclick="$('#popupContainer').hide()">x</a>
-				<div id="popupContent"> </div>
-			</div>
-		</div>
    </xsl:template>
 	<xsl:template match="*[name()='QuotesPlan']">
         <xsl:if test="not(*[name() = 'BundleID'] = preceding-sibling::*/*[name()='BundleID'])">

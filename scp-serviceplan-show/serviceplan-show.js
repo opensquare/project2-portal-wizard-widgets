@@ -25,9 +25,12 @@ function Widget_scp_serviceplan_show() {
 	};
 
 	function popHandler(event) {
+        console.log(event);
         var params = $(event.currentTarget).attr("params");
+        console.log($("#popupContent"));
 		$("#popupContent").html("<div class='widget' name='"+event.data.widgetName+"' params='" + params + "' title='serviceplan'></div>");
 		pw.mount($("#popupContent .widget:first"));
+        console.log($("#popupContainer"));
 		$("#popupContainer").show();
 	};
 }
