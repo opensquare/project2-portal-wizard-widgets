@@ -10,32 +10,15 @@ function Widget_sp_qquote() {
 			$('head').append('<link rel="stylesheet" href="'+protocol+'//'+host+pwpath+pathname+'/rq.css">');
 		};
 
-		// Look for calc ref to load
-		var calcref = this.$widgetDiv.attr('calcref');
 		var params = this.$widgetDiv.attr('params');
-		
-		var cr;
-		
-		// SCP
-		if (typeof calcref != 'undefined') {
-			cr = calcref;
-		}
-		
-		// CP
-		if (typeof params != 'undefined') {
-			var paramsObj = {};
+        var initialData = "<quote><phase>quote</phase>";
+        if (typeof params != 'undefined') {
 			params.replace(/([^=&]+)=([^&]*)/g, function(m, key, value) {
-				paramsObj[key] = value;
+                initialData = initialData + "<" + key + ">" + value + "</" + key + ">";
 			});
-			if (typeof paramsObj.ref != 'undefined' && paramsObj.ref != null && paramsObj.ref.indexOf("{") == -1) {
-				cr = paramsObj.ref;
-			}
 		}
-		
-		var initialData;
-		if (typeof cr != 'undefined') {
-			initialData = '<quote><calcref>' + cr + '</calcref></quote>';
-		}
+        initialData = initialData + "</quote>";
+        console.log(initialData);
 		rf.loadFlow('widgets/sp-qquote/new-quote-flow.js', $('.rhinoforms-quote-formContainer', this.$widgetDiv), initialData);
 
 	}	

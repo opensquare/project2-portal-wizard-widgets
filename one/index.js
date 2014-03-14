@@ -40,8 +40,8 @@ function Widget_one() {
 	};
 }
 
-function popWidget(widgetName){
-	$("#popupContent").html("<div class='widget' name='" + widgetName + "'></div>");
+function popWidget(widgetName, params){
+	$("#popupContent").html("<div class='widget' name='" + widgetName + "' params='" + params + "'></div>");
 	pw.mount($("#popupContent .widget:first"));
 	$("#popupContainer").show();
 	return false;
