@@ -8,9 +8,10 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-body,h1 {
+body {
 	margin: 0;
 	font-family: sans-serif;
+	background: url('car.png') 4.5em 80vh no-repeat;
 }
 button,.button {
 	padding: 0.25em 1em;
@@ -26,6 +27,7 @@ button,.button {
 	border-radius: 0.4em!important;
 }
 h1 {
+	margin: 0;
 	font-size: 1.75em;
 }
 h2 {

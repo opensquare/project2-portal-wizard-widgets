@@ -72,6 +72,9 @@ div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
 	color: #FFF; background-color: #0090C0; /*blue*/
     font-size: 1.3em;   
 }
+div.widget[name='sp-qquote'] input[type="range"] {
+	cursor: pointer;
+}
 div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="password"] {
 	width: 19%;
 	padding: 0.1em 0.25em 0 0.25em;
