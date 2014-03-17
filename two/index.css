@@ -6,7 +6,8 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	text-decoration: underline;
+	background-color: #333;
+	color: #FFF;
 }
 body,h1 {
 	margin: 0;
@@ -79,7 +80,7 @@ iframe {
 	border: none;
 }
 #one {
-	background: url('footer.jpg') left bottom no-repeat;
+	background: url('footer.jpg') right bottom no-repeat;
 	zbackground-size: 100vw;
 }
 #one>h1 {
@@ -107,9 +108,7 @@ iframe {
 	color: #720;
 }
 #one h2 {
-	float: right;
-	clear: both;
-	margin-right: 5em;
+	margin-bottom: 2em;
 }
 #two {
 }
