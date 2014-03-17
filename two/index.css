@@ -6,8 +6,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	background-color: #333;
-	color: #FFF;
+	text-decoration: underline;
 }
 body,h1 {
 	margin: 0;
@@ -81,7 +80,7 @@ iframe {
 }
 #one {
 	background: url('footer.jpg') right bottom no-repeat;
-	zbackground-size: 100vw;
+	background-size: 30%;
 }
 #one>h1 {
 	margin-top: 1em;
@@ -93,7 +92,7 @@ iframe {
 }
 #one>div {
 	margin-top: 2.5%;
-	padding: 1em 2em;
+	padding: 0em 5.5em;
 }
 #one #summary {
 	width: 40vw;
@@ -108,7 +107,12 @@ iframe {
 	color: #720;
 }
 #one h2 {
-	margin-bottom: 2em;
+	margin-top: 2em;
+}
+#one h2 a:hover {
+	background-color: #333;
+	color: #FFF;
+	text-decoration: none;
 }
 #two {
 }
