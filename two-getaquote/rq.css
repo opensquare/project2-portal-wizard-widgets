@@ -1,6 +1,3 @@
-form {
-	margin: auto;
-}
 h1 {
 	color: #960;	
 }
@@ -22,4 +19,43 @@ input, select {
 }
 #landingPage .vehicle {
 	background: url('transport-car-dark.png') no-repeat !important;
+}
+
+div.widget[name='sp-qquote'] label {
+	width: auto;
+	min-width: 30em;
+	vertical-align: initial;
+}
+div.widget[name='sp-qquote'] .navigation {
+	margin-top: 3em;
+	text-align: left;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type='date'], select {
+	border-radius: 0.25em;
+	color: inherit;
+}
+div.widget[name='sp-qquote'] input[type="submit"] {
+	margin: 0;
+}
+div.widget[name='sp-qquote'] h2 {
+	font-weight: normal;
+}
+div.widget[name='sp-qquote'] input.button.small {
+	background-color: #960;
+}
+div.widget[name='sp-qquote'] .confirmVehicleForm p:last-child {
+	background-image: url('transport-car-dark-small.png');
+}
+div.widget[name='sp-qquote'] form {
+	width: auto;
+	background-color: rgba(255,255,255,0.5);
+}
+div.widget[name='sp-qquote'] .coverForm .field input {
+	width: 10em;
+}
+div.widget[name='sp-qquote'] .coverForm .field input[type='date'] {
+	text-align: left!important;
+}
+div.widget[name='sp-qquote'] h1 {
+	font-size: 1.75em;
 }
