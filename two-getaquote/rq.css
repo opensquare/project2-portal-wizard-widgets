@@ -2,15 +2,22 @@ body {
 	margin: 0;
 }
 h1 {
-	font-size: 1.75em;
+	font-size: 1.75em !important;
 	color: #960;	
 }
 input, select {
 	border-color: #960 !important;
 }
-.button, input[type='button'] {
+.button, input[type='button'], input[type='submit'] {
 	background-color: #b60;
 	color: #fff !important;
+}
+.hint {
+	background-color: #fc0;
+	color: #940;
+}
+.hint::before {
+	color: #fc0;
 }
 #landingPage .pane {
 	border-color: #ea0 !important;
@@ -27,7 +34,7 @@ input, select {
 
 div.widget[name='sp-qquote'] label {
 	width: auto;
-	min-width: 30em;
+	min-width: 20em;
 	vertical-align: initial;
 }
 div.widget[name='sp-qquote'] .navigation {
@@ -54,6 +61,9 @@ div.widget[name='sp-qquote'] form {
 	width: auto;
 	background-color: rgba(255,255,255,0.5);
 }
+div.widget[name='sp-qquote'] .coverForm label {
+	min-width: 30em;
+}
 div.widget[name='sp-qquote'] .coverForm .field input {
 	width: 10em;
 }
@@ -62,4 +72,39 @@ div.widget[name='sp-qquote'] .coverForm .field input[type='date'] {
 }
 .vehicleForm h2 {
 	display: none;
+}
+div.widget[name='sp-qquote'] .rf-debugbar {
+	float: right;
+}
+.usercheck label {
+	min-width: 10em!important;
+}
+div.widget[name='sp-qquote'] label.forRadio {
+	min-width: 6em;
+}
+div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
+	width: auto;
+}
+div.widget[name='sp-qquote'] .registrationForm>input.button {
+	margin-right: 2em;
+}
+div.widget[name='sp-qquote'] input[type="radio"]:checked {
+	background-color: #b60;
+	border-radius: 0.25em;
+}
+div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
+	background-color: #b60;
+}
+.registrationForm > div.field:nth-child(6) {
+	margin: 1em 0!important;
+}
+.pcaAutoComplete .pnlAutoComplete .selectedItem, .pcaAutoCompleteSmall .pnlAutoCompleteSmall .selectedItem, .pcaAutoComplete .pnlResults .selectedItem, .pcaAutoCompleteSmall .pnlResultsSmall .selectedItem {
+	background: #fd0 none !important;
+}
+div.widget[name='sp-qquote'] .registrationForm .changeAddressButton {
+	margin-right: 3em;
+	color: #b60;
+}
+#loginDetails .field {
+	margin: 0;
 }
