@@ -108,3 +108,20 @@ div.widget[name='sp-qquote'] .registrationForm .changeAddressButton {
 #loginDetails .field {
 	margin: 0;
 }
+div.widget[name='sp-qquote'] #landingPage .navigation {
+	font-size: 0.75em;
+}
+#paymentPage > h1:nth-child(2) {
+	display: none;
+}
+#paymentPage > div:nth-child(3) > p {
+	display: inline-block;
+	margin: 0 0 1em 0;
+}
+#paymentPage > div:nth-child(3) > p.smallprint {
+	font-size: 1em;
+}
+div.widget[name='sp-qquote'] #validate_account {
+	background-color: #b60;
+	vertical-align: top;
+}
