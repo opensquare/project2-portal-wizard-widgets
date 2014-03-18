@@ -1,4 +1,8 @@
+body {
+	margin: 0;
+}
 h1 {
+	font-size: 1.75em;
 	color: #960;	
 }
 input, select {
@@ -32,7 +36,7 @@ div.widget[name='sp-qquote'] .navigation {
 }
 input[type="text"], input[type="email"], input[type="password"], input[type='date'], select {
 	border-radius: 0.25em;
-	color: inherit;
+	color: inherit !important;
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
 	margin: 0;
@@ -56,6 +60,6 @@ div.widget[name='sp-qquote'] .coverForm .field input {
 div.widget[name='sp-qquote'] .coverForm .field input[type='date'] {
 	text-align: left!important;
 }
-div.widget[name='sp-qquote'] h1 {
-	font-size: 1.75em;
+.vehicleForm h2 {
+	display: none;
 }
