@@ -1,0 +1,48 @@
+C001 Theft
+C002 Attempted Theft
+C003 Theft Personal Effects
+F001 Fire Partial Damage
+F002 Fire Total Loss
+L001 Theft
+L002 Theft Vehicle not Recovered
+L003 Theft Vehicle Recovered
+L004 Theft of Vehicle Total Loss
+M001 Driver Hit Third Party
+M002 Driver Hit Third Party in Rear
+M003 Driver Cut into Third Partys Lane
+M004 Driver Hit Third Party when Third Party Braked
+M005 Driver Hit Parked Vehicle
+M006 Driver Lost Control
+M007 Driver Ignored Stop Sign
+M008 Driver Ignored Red Light
+M051 Third Party Hit Driver
+M052 Third Party Hit Driver in Rear
+M053 Third Party Cut into Drivers Lane
+M054 Third Party Swerved and Hit Driver
+M055 Third Party Ignored Stop Sign
+M056 Third Party Ignored Red Light
+M060 Object Hit Vehicle
+M100 Both Cars Reversed - Carpark
+M101 Both Cars Reversed - Street
+M102 Multi Vehicle Collision
+M103 Fatal Accident
+O001 Effect of Weather (Storm)
+O002 Flood Damage
+S001 Driver Skidded
+S002 Driver Hit Pedestrian
+S003 Driver Hit Animal
+S004 Driver Hit Cyclist
+S005 Driver Hit Stationary Car
+S006 Driver Hit Immobile Object
+S007 Driver Reversed into Car
+S008 Unknown Third Party Hit Stopped Insd.
+S060 Object Hit Vehicle
+T001 Theft
+T002 Attempted Theft
+T003 Theft Vehicle not Recovered
+T004 Theft Vehicle Recovered
+T005 Theft Vehicle Repairable
+V001 Vandalism Repairable
+V002 Vandalism Total Loss
+W001 Windscreen Smashed
+W002 Windscreen Crack
