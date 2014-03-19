@@ -1,6 +1,6 @@
 {
 	docBase: "/request",
-    defaultInitalData: "scp-serviceplan-canxrequest-initial-data.xml",
+    defaultInitalData: "scp-serviceplan-user-update-initial-data.xml",
 	formLists: {
 		main: [
             { id: "request", url: "request.html", actions: ["next"]},

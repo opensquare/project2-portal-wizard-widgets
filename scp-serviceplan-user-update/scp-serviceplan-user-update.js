@@ -14,7 +14,7 @@ function Widget_scp_serviceplan_user_update(thisWidget) {
 		}
         initialData = initialData + "</request>";
         console.log(initialData);
-        rf.loadFlow('widgets/scp-serviceplan-canx-request/scp-serviceplan-user-update-flow.js', $('.rhinoforms-formContainer'), initialData);
+        rf.loadFlow('widgets/scp-serviceplan-user-update/scp-serviceplan-user-update-flow.js', $('.rhinoforms-formContainer'), initialData);
     }
 	
 }
