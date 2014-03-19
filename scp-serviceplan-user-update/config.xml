@@ -1,0 +1,9 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>scp-serviceplan-user-update.html</url>
+	</parameters>
+	<attributes>
+		<js>scp-serviceplan-user-update.js</js>
+	</attributes>
+</widget>
