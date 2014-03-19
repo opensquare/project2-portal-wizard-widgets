@@ -47,3 +47,10 @@ footer {
 	color: inherit;
 	z-index: -1;
 }
+#popupContent .widget[title='serviceplan'] header {
+	background: #0090c0 !important;
+}
+#popupContent .widget[title='serviceplan'] .button {
+	border: none;
+	border-radius: 0.25em;
+}
