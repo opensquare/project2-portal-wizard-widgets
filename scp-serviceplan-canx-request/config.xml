@@ -1,0 +1,9 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>scp-serviceplan-canxrequest.html</url>
+	</parameters>
+	<attributes>
+		<js>scp-serviceplan-canxrequest.js</js>
+	</attributes>
+</widget>
