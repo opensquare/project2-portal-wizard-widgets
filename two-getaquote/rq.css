@@ -74,7 +74,7 @@ div.widget[name='sp-qquote'] .coverForm .field input[type='date'] {
 	display: none;
 }
 div.widget[name='sp-qquote'] .rf-debugbar {
-	float: right;
+	display: none;
 }
 .usercheck label {
 	min-width: 10em!important;
