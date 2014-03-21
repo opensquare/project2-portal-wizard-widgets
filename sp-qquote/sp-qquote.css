@@ -96,7 +96,7 @@ div.widget[name='sp-qquote'] input[type="submit"]:hover {
 div.widget[name='sp-qquote'] label {
 	padding: 0 1em 0 0;
 	width: 45%;
-	vertical-align: top;
+	zvertical-align: top;
 }
 div.widget[name='sp-qquote'] label.forRadio {
 	width: auto;
