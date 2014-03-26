@@ -53,7 +53,7 @@ function Widget_cp() {
 		var widget = this;
 		var $form = $('#login-form-reset');
 		var $messages = $($form, '.messages');
-		$form.submit(function() {
+		/*$form.submit(function() {
 			pw.disableForm($form);
 			var jqxhr = $.ajax({
 				url: 'forgottenPassword',
@@ -74,7 +74,7 @@ function Widget_cp() {
 				}
 			});
 			return false;
-		});
+		}); */
 	}
 	
 }

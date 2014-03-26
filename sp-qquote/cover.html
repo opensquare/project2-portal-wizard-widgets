@@ -5,12 +5,12 @@
 
 	<div class="field">
 		<label for="input_current_mileage">What is the current mileage of the vehicle?</label>
-		<input  id="input_current_mileage" type="text" name="currentMileage" rf.validation="required"/>
+		<input  id="input_current_mileage" type="text" name="currentMileage" rf.validation="required pattern({regex:'^[1-9][0-9]*$', errorMessage:'Invalid mileage'})"/>
 	</div>
     
 	<div class="field">
 		<label for="input_annual_mileage">How many miles are driven in this vehicle each year?</label>
-		<input  id="input_annual_mileage" type="text" name="annualMileage" rf.validation="required"/>
+		<input  id="input_annual_mileage" type="text" name="annualMileage" rf.validation="required pattern({regex:'^[1-9][0-9]*$', errorMessage:'Invalid mileage'})"/>
 	</div>
     
 	<div class="field">
@@ -22,7 +22,7 @@
     
 	<div class="field">
 		<label for="input_start_mileage">What will be the estimated mileage of the vehicle at this date?</label>
-		<input  id="input_start_mileage" type="text" name="startMileage" rf.validation="required"/>
+		<input  id="input_start_mileage" type="text" name="startMileage" rf.validation="required pattern({regex:'^[1-9][0-9]*$', errorMessage:'Invalid mileage'})"/>
 	</div>
 		
 	<div class="navigation" id="navigation">

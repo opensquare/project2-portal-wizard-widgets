@@ -1,0 +1,10 @@
+<form id="request" rhinoforms="true">
+	<div class="field">
+		<label for="input_from">Cancel from:</label>
+		<input id="input_from" name="cancellationTime" type="date" rf.validation="required" />
+	</div>
+	<nav class="navigation">
+		<input class="button" type="button" id="input_next" value="Next" rf.action="next" />
+		<input class="button" type="button" id="input_canx" value="Cancel" onclick="$('#popupClose').click();" />
+	</nav>
+</form>

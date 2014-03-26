@@ -1,15 +1,23 @@
-form {
-	margin: auto;
+body {
+	margin: 0;
 }
 h1 {
+	font-size: 1.75em !important;
 	color: #960;	
 }
 input, select {
 	border-color: #960 !important;
 }
-.button, input[type='button'] {
+.button, input[type='button'], input[type='submit'] {
 	background-color: #b60;
 	color: #fff !important;
+}
+.hint {
+	background-color: #fc0;
+	color: #940;
+}
+.hint::before {
+	color: #fc0;
 }
 #landingPage .pane {
 	border-color: #ea0 !important;
@@ -22,4 +30,98 @@ input, select {
 }
 #landingPage .vehicle {
 	background: url('transport-car-dark.png') no-repeat !important;
+}
+
+div.widget[name='sp-qquote'] label {
+	width: auto;
+	min-width: 20em;
+	vertical-align: initial;
+}
+div.widget[name='sp-qquote'] .navigation {
+	margin-top: 3em;
+	text-align: left;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type='date'], select {
+	border-radius: 0.25em;
+	color: inherit !important;
+}
+div.widget[name='sp-qquote'] input[type="submit"] {
+	margin: 0;
+}
+div.widget[name='sp-qquote'] h2 {
+	font-weight: normal;
+}
+div.widget[name='sp-qquote'] input.button.small {
+	background-color: #960;
+}
+div.widget[name='sp-qquote'] .confirmVehicleForm p:last-child {
+	background-image: url('transport-car-dark-small.png');
+}
+div.widget[name='sp-qquote'] form {
+	width: auto;
+	background-color: rgba(255,255,255,0.5);
+}
+div.widget[name='sp-qquote'] .coverForm label {
+	min-width: 30em;
+}
+div.widget[name='sp-qquote'] .coverForm .field input {
+	width: 10em;
+}
+div.widget[name='sp-qquote'] .coverForm .field input[type='date'] {
+	text-align: left!important;
+}
+.vehicleForm h2 {
+	display: none;
+}
+div.widget[name='sp-qquote'] .rf-debugbar {
+	display: none;
+}
+.usercheck label {
+	min-width: 10em!important;
+}
+div.widget[name='sp-qquote'] label.forRadio {
+	min-width: 6em;
+}
+div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
+	width: auto;
+}
+div.widget[name='sp-qquote'] .registrationForm>input.button {
+	margin-right: 2em;
+}
+div.widget[name='sp-qquote'] input[type="radio"]:checked {
+	background-color: #b60;
+	border-radius: 0.25em;
+}
+div.widget[name='sp-qquote'] input[type="radio"]:checked:after {
+	background-color: #b60;
+}
+.registrationForm > div.field:nth-child(6) {
+	margin: 1em 0!important;
+}
+.pcaAutoComplete .pnlAutoComplete .selectedItem, .pcaAutoCompleteSmall .pnlAutoCompleteSmall .selectedItem, .pcaAutoComplete .pnlResults .selectedItem, .pcaAutoCompleteSmall .pnlResultsSmall .selectedItem {
+	background: #fd0 none !important;
+}
+div.widget[name='sp-qquote'] .registrationForm .changeAddressButton {
+	margin-right: 3em;
+	color: #b60;
+}
+#loginDetails .field {
+	margin: 0;
+}
+div.widget[name='sp-qquote'] #landingPage .navigation {
+	font-size: 0.75em;
+}
+#paymentPage > h1:nth-child(2) {
+	display: none;
+}
+#paymentPage > div:nth-child(3) > p {
+	display: inline-block;
+	margin: 0 0 1em 0;
+}
+#paymentPage > div:nth-child(3) > p.smallprint {
+	font-size: 1em;
+}
+div.widget[name='sp-qquote'] #validate_account {
+	background-color: #b60;
+	vertical-align: top;
 }

@@ -16,7 +16,7 @@ function Widget_scp_serviceplan_show() {
         });
 		$('.button-canx-request', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-canx-request"},popHandler);
 		$('.button-canx-complete', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-canx-confirm"},popHandler);
-		$('.button-owner-update', this.$widgetDiv).on("click", {widgetName: "common-nothing"},popHandler);
+		$('.button-owner-update', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-user-update"},popHandler);
 		$('.button-owner-transfer', this.$widgetDiv).on("click", {widgetName: "common-nothing"},popHandler);
 		$('.button-service-book', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-service-book"},popHandler);
 		$('.button-service-confirm', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-service-confirm"},popHandler);
