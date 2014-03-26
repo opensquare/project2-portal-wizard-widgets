@@ -4,7 +4,7 @@
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()[not(name() = 'setVehicleUserParametersResponse') and not(name() = 'getServicePlanResponse') and not(name()='getQuoteResponse') and not(name() = 'saveQuoteResponse')]"/>
-            <xsl:apply-templates select=".//*[(//paymentType='single' and name()='SinglePaymentQuotes') or (//paymentType='monthly' and name()='MonthlyPaymentQuotes')]/QuotesPlan[position()=/quote/term]"/>
+            <xsl:apply-templates select=".//*[(//paymentType='single' and name()='SinglePaymentQuotes') or (//paymentType='multiple' and name()='MonthlyPaymentQuotes')]/QuotesPlan[position()=/quote/term]"/>
             <xsl:apply-templates select=".//accessToken"/>
         </xsl:copy>
     </xsl:template>
