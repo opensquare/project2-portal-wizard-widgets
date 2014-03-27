@@ -1,0 +1,9 @@
+<widget>
+	<type>internalPage</type>
+	<parameters>
+		<url>one-rq.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+	</attributes>
+</widget>
