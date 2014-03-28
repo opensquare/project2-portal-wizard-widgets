@@ -1,3 +1,19 @@
-div.widget[name='sp-qquote'] .rf-debugbar {
+body {
+	color: #FFF;
+}
+button, .button {
+	background-color: #33F;
+	color: #FFF;
+}
+form {
+	width: auto;
+}
+form>h2 {
+	margin: 0 0 1em 0;
+	padding: 0.5em 1em;
+	background-color: #FFF;
+	color: #333;
+}
+.rf-debugbar {
 	display: none;
 }
