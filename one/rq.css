@@ -8,6 +8,9 @@ button, .button, input[type=button] {
 form {
 	width: auto !important;
 }
+form>h1 {
+	text-align: center;
+}
 form>h2 {
 	margin: 0 0 1em 0;
 	padding: 0.5em 1em;
@@ -27,7 +30,7 @@ form .navigation {
 	margin: 0;
 }
 .rf-debugbar {
-	display: none;
+	display: none !important;
 }
 
 /* Specific form overrides */
@@ -48,8 +51,18 @@ form.registrationForm #loginDetails .field {
 form.registrationForm #input_title, form.registrationForm #input_dateOfBirthDay {
 	width: 3.5em;
 }
+form#paymentPage .paymentTotal {
+	position: absolute;
+	top: 0;
+	right: 1em;
+	color: #333;
+	font-weight: bold;
+}
+form#paymentPage .paymentTotal label {
+	display: none;
+}
 form#paymentPage label {
-	width: 50%;
+	width: 50% !important;
 }
 form.buyComplete p{
 	padding: 0 1em;
