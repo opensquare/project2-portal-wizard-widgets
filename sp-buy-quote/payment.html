@@ -5,10 +5,10 @@
 <script type="text/javascript" src="//services.postcodeanywhere.co.uk/js/captureplus-1.34.min.js?key=ut99-ca31-nt36-bt86&app=6352"></script>
 <div id="ut99ca31nt36bt866352"></div>
 <form rhinoforms="true" id="paymentPage">
-	<h1>Pay</h1>
+	<h2>Payment</h2>
 	<div rf.includeIf="'{{//paymentType}}' === 'multiple'">
-        <h2>Direct Debit Details</h2>
-        <h3>You are paying by monthly instalments</h3>
+        <h3>Direct Debit Details</h3>
+        <p>You are paying by monthly instalments</p>
         <p>We will collect an initial deposit of <span class="amount">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitDepositIncVAT}}</span> by debit or credit card.</p>
         <p>Then <span class="numberOfInstalments">{{//QuotesPlan/NumberOfMonthlyPayments}}</span> monthly instalments of <span class="instalmentPremium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitMonthlyValueIncVAT}}</span>.</p>
         <p class="smallprint">Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
@@ -61,11 +61,11 @@
             <input type="radio" name="ownAccount" id="input_own_account_n" value="false" rf.validation="required"/><label for="input_own_account_n" class="forRadio">No</label>
         </div>
     </div>
-    <div rf.includeIf="'{{//paymentType}}' === 'single'" class="field">
+    <div rf.includeIf="'{{//paymentType}}' === 'single'" class="field paymentTotal">
         <label>Total premium</label>
             <div class="amount premium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitTotal}}<br/></div>
     </div>
-	<h1>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h1>
+	<h3>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h3>
 	<div class="field">
 		<label>Is this card registered to you?</label>
 		<input type="radio" name="phCard" value="true" checked id="ph_card_y" rf.validation="required"/><label for="ph_card_y" class="forRadio">Yes</label>
@@ -161,7 +161,7 @@
 	</div>
 	
 	<div class="navigation">
-		<input type="submit" value="Next" rf.action="next"/>
+		<input type="submit" class="button" value="Next" rf.action="next"/>
 	</div>
 	
 	<script type="text/javascript">

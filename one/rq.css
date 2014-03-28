@@ -1,12 +1,12 @@
 body {
 	color: #FFF;
 }
-button, .button {
+button, .button, input[type=button] {
 	background-color: #33F;
 	color: #FFF;
 }
 form {
-	width: auto;
+	width: auto !important;
 }
 form>h2 {
 	margin: 0 0 1em 0;
@@ -14,6 +14,43 @@ form>h2 {
 	background-color: #FFF;
 	color: #333;
 }
+form .field {
+	padding: 0 1em;
+}
+form select {
+	color: #333 !important;
+}
+form .navigation {
+	margin-top: 2em;
+}
+/* Chrome fix */ input, textarea, keygen, select, button, isindex {
+	margin: 0;
+}
 .rf-debugbar {
 	display: none;
+}
+
+/* Specific form overrides */
+form.coverForm .field>label {
+	width: 70%;
+}
+form.registrationForm>h2 {
+	display: block !important;
+}
+form.registrationForm>input.button {
+	position: absolute;
+	top: 0.25em;
+	right: 1em;
+}
+form.registrationForm #loginDetails .field {
+	margin: 0;
+}
+form.registrationForm #input_title, form.registrationForm #input_dateOfBirthDay {
+	width: 3.5em;
+}
+form#paymentPage label {
+	width: 50%;
+}
+form.buyComplete p{
+	padding: 0 1em;
 }

@@ -83,7 +83,7 @@ div.widget[name='sp-qquote'] input[type="text"],input[type="email"],input[type="
 }
 div.widget[name='sp-qquote'] input[type="submit"] {
 	padding: 0.2em 1em;
-	border: medium solid transparent; border-radius: 0.25em;
+	border: medium solid transparent; border-radius: 8px;
 	zcolor: #FFF; zbackground-color: #92CE56;
 	background-clip: padding-box;
 	font-size: 1.5em;	
@@ -493,7 +493,7 @@ div.widget[name='sp-qquote'] .findAddress div.labelWrapper {
 	width: 45%;
 }
 div.widget[name='sp-qquote'] .findAddress div.tableWrapper {
-	width: 44%;
+	width: 50%;
 }
 div.widget[name='sp-qquote'] #customerDetails .findAddress label,
 div.widget[name='sp-qquote'] #paymentPage .findAddress label {
@@ -724,6 +724,7 @@ div.widget[name='sp-qquote'] #landingPage .navigation {
 	margin-top: 4em;
 	clear: initial;
 	text-align: left;
+	font-size: 75%;
 }
 div.widget[name='sp-qquote'] .registrationForm>h2 {
 	display: inline-block;

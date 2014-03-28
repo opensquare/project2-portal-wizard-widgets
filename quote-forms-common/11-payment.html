@@ -10,11 +10,11 @@
 	<li class="welcome">Welcome</li>
 </ul>
 <form rhinoforms="true" id="paymentPage">
-	<h1>Pay</h1>
+	<h2>Payment</h2>
 	<div>
 		<rf.include src="payment-type-details.html"/>
 	</div>
-	<h1>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h1>
+	<h3>Card Details <span rf.calculated="if('{{//paymentType}}' === 'multiple'){'(for deposit)'}else{''}"></span></h3>
 	<div class="field">
 		<label>Is this card registered to you?</label>
 		<input type="radio" name="phCard" value="true" checked id="ph_card_y" rf.validation="required"/><label for="ph_card_y" class="forRadio">Yes</label>

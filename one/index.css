@@ -37,11 +37,13 @@ h2 {
 iframe {
 	width: 80vw;
 	height: 70vh;
-	border: none;	
+	padding: 1.5em;
+	border: none;
 }
 iframe#rq {
 	width: 50vw;
 	min-width: 42em;
+	padding: 0;
 }
 nav {
 	position: fixed;
@@ -231,6 +233,5 @@ footer p:nth-child(1) {
 }
 #popupContent {
 	display: inline-block;
-	padding: 1.5em;
 	text-align: left;
 }
