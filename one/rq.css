@@ -20,8 +20,11 @@ form>h2 {
 form .field {
 	padding: 0 1em;
 }
-form select {
+form select option {
 	color: #333 !important;
+}
+form select.empty, form select option:first-child {
+	color: #AAA !important;
 }
 form .navigation {
 	margin-top: 2em;
@@ -41,6 +44,9 @@ form.coverForm .field>label {
 form.registrationForm>h2 {
 	display: block !important;
 }
+form.registrationForm label {
+	width: 30% !important;
+}
 form.registrationForm>input.button {
 	position: absolute;
 	top: 0.25em;
@@ -54,6 +60,9 @@ form.registrationForm #input_title, form.registrationForm #input_dateOfBirthDay 
 }
 form.registrationForm #input_firstName, form.registrationForm #input_surname {
 	width: 9em !important;
+}
+form.registrationForm .findAddress>label {
+	vertical-align: top;
 }
 form#paymentPage .paymentTotal {
 	position: absolute;
