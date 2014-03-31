@@ -5,7 +5,8 @@
 			$(".rhinoforms").on("change","select", function () {
 				if($(this).prop("selectedIndex") == "0") $(this).addClass("empty");
 					else $(this).removeClass("empty")
-			}).on("focusin","form", function () {
+			});
+			$(".rhinoforms").on("focusin","form", function () {
 				$(this).filter("select").change();
 			});
 		</script>
