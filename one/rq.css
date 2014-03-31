@@ -25,6 +25,7 @@ form select {
 }
 form .navigation {
 	margin-top: 2em;
+	padding: 0 1em;
 }
 /* Chrome fix */ input, textarea, keygen, select, button, isindex {
 	margin: 0;
@@ -49,7 +50,10 @@ form.registrationForm #loginDetails .field {
 	margin: 0;
 }
 form.registrationForm #input_title, form.registrationForm #input_dateOfBirthDay {
-	width: 3.5em;
+	width: 3.5em !important;
+}
+form.registrationForm #input_firstName, form.registrationForm #input_surname {
+	width: 9em !important;
 }
 form#paymentPage .paymentTotal {
 	position: absolute;
