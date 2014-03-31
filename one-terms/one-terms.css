@@ -1,13 +1,35 @@
+.one-terms {
+	height: 70vh;
+	max-width: 75em;
+	padding: 1em;
+	overflow: auto;
+}
 .one-terms h1 {
 
 }
 .one-terms h2 {
-	
+	margin-top: 2em;
 }
 .one-terms h3 {
 	
 }
 .one-terms .box {
-	border: thin solid;
 	padding: 1em;
+	border: thin solid;
+	border-radius: 1em;
+}
+.one-terms dl {
+	clear: both;
+	float: left;
+}
+.one-terms dt {
+	float: left;
+	clear: left;
+	width: 15%;
+}
+.one-terms dd {
+	float: left;
+	clear: right;
+	width: 75%;
+	margin-bottom: 1em;
 }
