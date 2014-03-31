@@ -119,7 +119,7 @@ div.widget[name='sp-qquote'] select {
 	margin-left: 0;
 	border: thin solid;
 	font-size: 1.3em;
-	color: #AAA;
+	zcolor: #AAA;
 }
 div.widget[name='sp-qquote'] select.changed {
 	color: inherit;
