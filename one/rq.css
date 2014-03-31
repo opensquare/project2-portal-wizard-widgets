@@ -13,9 +13,10 @@ form>h1 {
 }
 form>h2 {
 	margin: 0 0 1em 0;
-	padding: 0.5em 1em;
-	background-color: #FFF;
-	color: #333;
+	padding: 0.5em 0;
+	zbackground-color: #FFF;
+	zcolor: #333;
+	border-bottom: medium solid;
 }
 form .field {
 	padding: 0 1em;
