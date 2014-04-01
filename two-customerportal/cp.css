@@ -1,3 +1,6 @@
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+	color: #333;
+}
 button {
 	padding: 0.5em 1em;
 	background-color: #B60 !important;
@@ -69,29 +72,64 @@ h2 {
 .policyholder .side2:hover .action {
 	background-color: #a60 !important;
 }
-div.widget[name='sp-qquote'] form {
+.cp-home .sp-qquote form {
 	width: auto !important;
 	clear: initial !important;
 	box-shadow: none !important;
 	padding-top: 2em !important;
 }
-div.widget[name='sp-qquote'] .navigation {
+.cp-home .sp-qquote form>h2 {
+	margin-top: 0;
+	font-size: 2em;
+	border-bottom: medium solid;
+}
+.cp-home .sp-qquote .navigation {
 	clear: initial !important;
 }
-div.widget[name='sp-qquote'] #landingPage {
+.cp-home .sp-qquote .confirmVehicleForm p:last-child {
+	background-image: url('transport-car-dark-small.png');
+}
+.cp-home .sp-qquote #landingPage {
 	width: 100% !important;
 	clear: none !important;
 }
-div.widget[name='sp-qquote'] #landingPage .pane {
+.cp-home .sp-qquote #landingPage>p {
+	clear: both;
+	font-weight: bold;
+}
+.cp-home .sp-qquote #landingPage .pane {
+	float: right;
+	margin: 0 0 3em 0;
 	border-color: #ea0 !important;
 }
-div.widget[name='sp-qquote'] #landingPage .pane h2 {
+.cp-home .sp-qquote #landingPage #multiplePayment {
+	float: left;
+	width: 50%;
+}
+.cp-home .sp-qquote #singlePaymentPremium {
+	height: 2.25em;
+}
+.cp-home .sp-qquote #landingPage .pane h2 {
 	background-color: #ea0 !important;
 	color: #fff !important;
 }
-div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
+.cp-home .sp-qquote #landingPage .pane input[type="button"] {
 	background-color: #a60 !important;
 	color: #fff !important;
+}
+.cp-home .sp-qquote #landingPage #yearsSlider {
+	float: right;
+	margin-top: -3em;
+	text-align: right;
+}
+.cp-home .sp-qquote #landingPage .duration {
+	background-image: url('calendar-year-dark.png');
+}
+.cp-home .sp-qquote #landingPage .vehicle {
+	background-image: url('transport-car-dark.png');
+}
+.cp-home .sp-qquote #landingPage .navigation {
+	color: #FFF;
 }
 footer {
 	position: initial;

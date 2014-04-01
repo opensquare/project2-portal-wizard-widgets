@@ -25,7 +25,7 @@ div.widget[name='sp-qquote'] {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 div.widget[name='sp-qquote'] input[type='date'] {
-	border: thin solid #0090C0; width: 18%; min-width: 9em; 
+	border: thin solid; width: 18%; min-width: 9em; 
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.3em; 
 }
 div.widget[name='sp-qquote'] input[type="button"] {
