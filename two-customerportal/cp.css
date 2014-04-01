@@ -22,6 +22,10 @@ form {
 h2 {
 	color: #960!important;
 }
+#cp-policy-menu {
+	float: left;
+	width: 15%;
+}
 #cp-policy-menu a {
 	background-color: #ea0;
 	width: 100%;
@@ -30,20 +34,24 @@ h2 {
 #cp-policy-menu a.on {
 	background-color: #a60;
 }
-#cp-policy-menu {
-	width: 15%;
-	text-align: left;
-	float: left;
+#menu-logout {
+	margin-top: 2em!important;
 }
 .section {
 	width: 75%;
 	margin-left: 20%;
 }
-.widget[name='scp-serviceplan-show'] .property-label {
+.cp-home .scp-serviceplan-show .property-label {
 	color: #a60 !important;
 }
-.widget[name='scp-serviceplan-show'] .service {
+.cp-home .scp-serviceplan-show .service {
 	border-color: #a60 !important;
+}
+.cp-home .scp-serviceplan-show .dates2 {
+	display: none;
+}
+.cp-home .scp-serviceplan-show .canx span {
+	display: none;
 }
 #quote-list {
 	border-color: #a60 !important;
