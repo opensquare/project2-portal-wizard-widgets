@@ -9,10 +9,8 @@ a:hover {
 	text-decoration: underline;
 }
 body {
-	height: 70vh;
-	max-width: 75em;
-	padding: 1em;
-	overflow: auto;
+	margin: 0;
+	font-family: sans-serif;
 }
 h2 {
 	margin-top: 2em;
@@ -36,6 +34,36 @@ dd {
 	clear: right;
 	width: 75%;
 	margin-bottom: 1em;
+}
+header {
+	position: fixed;
+	width: 100%;
+	padding: 1em;
+	background: #333;
+	color: #BBB;
+	font-size: 0.8em;
+	text-align: right;
+}
+header>a {
+	float: left;
+	padding: 0 2em 0 18px;
+}
+header .twitter {
+	background: url('icon-mini-twitter.png') left 3px no-repeat;
+}
+header .facebook {
+	background: url('icon-mini-facebook.png') left 3px no-repeat;
+}
+nav a {
+	display: inline-block;
+	padding: 0.5em 2em 0.25em;
+}
+nav a.on {
+	background-color: rgba(255,255,255,0.9);
+	color: #333;
+}
+nav a.on:hover {
+	text-decoration: none;
 }
 footer {
 	height: 200px;
