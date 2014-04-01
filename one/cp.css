@@ -2,6 +2,10 @@
 	background: none !important;
 	color: #FFF;
 }
+.cp-home #menu-logout {
+	min-width: 6em !important;
+	margin-left: 2em !important;
+}
 .cp-home #scp-serviceplan-show-1 {
 	width: 95%;
 	margin: auto;
@@ -50,7 +54,8 @@
 }
 .cp-home .sp-qquote form {
 	float: left;
-	margin: auto;
+	width: 75% !important;
+	margin-left: 12.5%;
 	padding: 1em;
 	background-color: #FFF;
 	color: #333;
