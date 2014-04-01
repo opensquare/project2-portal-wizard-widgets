@@ -217,7 +217,8 @@ div.widget[name='sp-qquote'] .invalid-message {
 	padding: 0.5em;
 	color: #FFF; background: #D44; /*red*/
 	border-radius: 0.25em;
-	font-weight: bold;
+	white-space: nowrap;
+	font-size: 0.8em;
 }
 
 div.widget[name='sp-qquote'] .vehicle_search {
@@ -663,7 +664,7 @@ div.widget[name='sp-qquote'] .Female {
 div.widget[name='sp-qquote'] #paymentPage label.forRadio {
 	position: relative;
 	right: 0.8em;
-	width: 3em;
+	width: 3em !important;
 	font-size: 1.3em;
 }
 div.widget[name='sp-qquote'] #input_sort_code {
@@ -673,6 +674,8 @@ div.widget[name='sp-qquote'] #input_code {
 	width: 10%;
 }
 div.widget[name='sp-qquote'] #validate_account {
+	margin-left: 1em;
+	font-size: 1em;
 	background-color: #0090C0;
 }
 div.widget[name='sp-qquote'] .invalidAccount .reattemptvalidation {

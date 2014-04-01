@@ -34,6 +34,9 @@ form .navigation {
 /* Chrome fix */ input, textarea, keygen, select, button, isindex {
 	margin: 0;
 }
+.rhinoforms .invalid {
+	color: #333 !important;
+}
 .rf-debugbar {
 	display: none !important;
 }
@@ -76,7 +79,11 @@ form#paymentPage .paymentTotal label {
 	display: none;
 }
 form#paymentPage label {
-	width: 50% !important;
+	width: 45% !important;
+}
+form#paymentPage a.changeAccount {
+	float: right;
+	cursor: pointer;
 }
 form.buyComplete p{
 	padding: 0 1em;

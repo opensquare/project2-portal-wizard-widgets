@@ -8,9 +8,7 @@
 	<h2>Payment</h2>
 	<div rf.includeIf="'{{//paymentType}}' === 'multiple'">
         <h3>Direct Debit Details</h3>
-        <p>You are paying by monthly instalments</p>
-        <p>We will collect an initial deposit of <span class="amount">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitDepositIncVAT}}</span> by debit or credit card.</p>
-        <p>Then <span class="numberOfInstalments">{{//QuotesPlan/NumberOfMonthlyPayments}}</span> monthly instalments of <span class="instalmentPremium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitMonthlyValueIncVAT}}</span>.</p>
+        <p>You are paying by monthly instalments. We will collect an initial deposit of <span class="amount">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitDepositIncVAT}}</span> by debit or credit card.  Then <span class="numberOfInstalments">{{//QuotesPlan/NumberOfMonthlyPayments}}</span> monthly instalments of <span class="instalmentPremium">{{//QuotesPlan//QuoteSplits[SplitName='TotalPayable']/SplitMonthlyValueIncVAT}}</span>.</p>
         <p class="smallprint">Monthly instalments are taken by direct debit and will require the completion of bank details and a Direct Debit Mandate. Premium credit is provided by Model Insurer Credit Ltd.</p>
         <h3>Direct Debit Instruction to your Bank or Building Society</h3>
         <div class="field">
