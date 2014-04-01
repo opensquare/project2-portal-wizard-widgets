@@ -32,24 +32,29 @@
 	background-color: transparent !important;
 	color: #000 !important;
 }
-.cp-home .widget.policyholder {
+.cp-home .policyholder {
 	background-color: #FFF;
 	border-radius: 1em;
 	width: 80%;
 	margin: auto;
 }
+.cp-home .policyholder .map, .cp-home .policyholder .action {
+	display: none;
+}
 .cp-home .policyholder .property-group .long {
 	width: 70%;
 }
-.cp-home .widget.sp-qquote form {
+.cp-home .sp-qquote {
+	max-width: 50em;
+	margin: auto !important;
+}
+.cp-home .sp-qquote form {
 	margin: auto;
 	padding: 1em;
 	border: medium solid;
 	border-radius: 1em;
 }
 .cp-home footer {
-	position: fixed;
-	bottom: 0;
 	color: inherit;
 	z-index: -1;
 }
