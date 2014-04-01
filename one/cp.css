@@ -1,47 +1,53 @@
-form {
+.cp-home form {
 	background: none !important;
 	color: #FFF;
 }
-#scp-serviceplan-show-1 {
+.cp-home #scp-serviceplan-show-1 {
 	width: 95%;
 	margin: auto;
 	border-radius: 1em;
 	background: #fff;
 }
-.widget[name='scp-serviceplan-show'] .property-label {
+.cp-home .widget[name='scp-serviceplan-show'] .property-label {
 	color: #0090c0 !important;
 }
-.widget[name='scp-serviceplan-show'] .service {
+.cp-home .widget[name='scp-serviceplan-show'] .service {
 	border-color: #0090c0 !important;
 }
-div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
+.cp-home .scp-serviceplan-show .dates2 {
+    display: none;
+}
+.cp-home .scp-serviceplan-show .canx span {
+    display: none;
+}
+.cp-home div.widget[name='sp-qquote'] #landingPage .pane input[type="button"] {
 	background-color: #82BE46 !important;
 }
-#quote-list {
+.cp-home #quote-list {
 	border-color: #fff!important;
 	background: #fff;
 	overflow: hidden;
 }
-#quote-list .quotes-header > span {
+.cp-home #quote-list .quotes-header > span {
 	background-color: transparent !important;
 	color: #000 !important;
 }
-.widget.policyholder {
+.cp-home .widget.policyholder {
 	background-color: #FFF;
 	border-radius: 1em;
 	width: 80%;
 	margin: auto;
 }
-.policyholder .property-group .long {
+.cp-home .policyholder .property-group .long {
 	width: 70%;
 }
-.widget.sp-qquote form {
+.cp-home .widget.sp-qquote form {
 	margin: auto;
 	padding: 1em;
 	border: medium solid;
 	border-radius: 1em;
 }
-footer {
+.cp-home footer {
 	position: fixed;
 	bottom: 0;
 	color: inherit;

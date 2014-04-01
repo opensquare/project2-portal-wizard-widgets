@@ -1,90 +1,90 @@
-body {
+.sp-qquote body {
 	color: #FFF;
 }
-button, .button, input[type=button] {
+.sp-qquote button, .sp-qquote .button, .sp-qquote input[type=button] {
 	background-color: #33F;
 	color: #FFF;
 }
-form {
+.sp-qquote form {
 	width: auto !important;
 }
-form>h1 {
+.sp-qquote form>h1 {
 	text-align: center;
 }
-form>h2 {
+.sp-qquote form>h2 {
 	margin: 0 0 1em 0;
 	padding: 0.5em 0;
 	zbackground-color: #FFF;
 	zcolor: #333;
 	border-bottom: medium solid;
 }
-form .field {
+.sp-qquote form .field {
 	padding: 0 1em;
 }
-form select option {
+.sp-qquote form select option {
 	color: #333 !important;
 }
-form select.empty, form select option:first-child {
+.sp-qquote form select.empty, .sp-qquote form select option:first-child {
 	color: #AAA !important;
 }
-form .navigation {
+.sp-qquote form .navigation {
 	margin-top: 2em;
 	padding: 0 1em;
 }
-/* Chrome fix */ input, textarea, keygen, select, button, isindex {
+/* Chrome fix */ .sp-qquote input, .sp-qquote textarea, .sp-qquote keygen, .sp-qquote select, .sp-qquote button, .sp-qquote isindex {
 	margin: 0;
 }
-.rhinoforms .invalid {
+.sp-qquote .rhinoforms .invalid {
 	color: #333 !important;
 }
-.rf-debugbar {
+.sp-qquote .rf-debugbar {
 	display: none !important;
 }
 
 /* Specific form overrides */
-form.coverForm .field>label {
+.sp-qquote form.coverForm .field>label {
 	width: 70%;
 }
-form.registrationForm>h2 {
+.sp-qquote form.registrationForm>h2 {
 	display: block !important;
 }
-form.registrationForm label {
+.sp-qquote form.registrationForm label {
 	width: 30% !important;
 }
-form.registrationForm>input.button {
+.sp-qquote form.registrationForm>input.button {
 	position: absolute;
 	top: 0.25em;
 	right: 1em;
 }
-form.registrationForm #loginDetails .field {
+.sp-qquote form.registrationForm #loginDetails .field {
 	margin: 0;
 }
-form.registrationForm #input_title, form.registrationForm #input_dateOfBirthDay {
+.sp-qquote form.registrationForm #input_title, .sp-qquote form.registrationForm #input_dateOfBirthDay {
 	width: 3.5em !important;
 }
-form.registrationForm #input_firstName, form.registrationForm #input_surname {
+.sp-qquote form.registrationForm #input_firstName, .sp-qquote form.registrationForm #input_surname {
 	width: 9em !important;
 }
-form.registrationForm .findAddress>label {
+.sp-qquote form.registrationForm .findAddress>label {
 	vertical-align: top;
 }
-form#paymentPage .paymentTotal {
+.sp-qquote form#paymentPage .paymentTotal {
 	position: absolute;
 	top: 0;
 	right: 1em;
 	color: #333;
 	font-weight: bold;
 }
-form#paymentPage .paymentTotal label {
+.sp-qquote form#paymentPage .paymentTotal label {
 	display: none;
 }
-form#paymentPage label {
+.sp-qquote form#paymentPage label {
 	width: 45% !important;
 }
-form#paymentPage a.changeAccount {
+.sp-qquote form#paymentPage a.changeAccount {
 	float: right;
 	cursor: pointer;
 }
-form.buyComplete p{
+.sp-qquote form.buyComplete p{
 	padding: 0 1em;
 }
