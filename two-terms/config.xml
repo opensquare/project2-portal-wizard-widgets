@@ -1,0 +1,10 @@
+<widget>
+	<type>layout</type>
+	<parameters>
+		<url>index.html</url>
+		<secure>false</secure>
+	</parameters>
+	<attributes>
+		<css>index.css</css>
+	</attributes>
+</widget>
