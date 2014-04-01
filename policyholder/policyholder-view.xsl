@@ -78,6 +78,13 @@
                 </span>
                 <a class="action call" href="callto:{{//*[name()='ContactNumberHome']}}" title="Call this number"/>
             </div>
+            <div class="property-group phone">
+                <span class="property-label">Mobile phone</span>
+                <span class="property-value medium">
+                    <xsl:value-of select="//*[name()='ContactNumberMobile']"/>
+                </span>
+                <a class="action call" href="callto:{{//*[name()='ContactNumberMobile']}}" title="Call this number"/>
+            </div>
         </div>
     </xsl:template>
 </xsl:stylesheet>
