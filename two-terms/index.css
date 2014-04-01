@@ -65,6 +65,9 @@ nav a.on {
 nav a.on:hover {
 	text-decoration: none;
 }
+section {
+	padding: 3em;
+}
 footer {
 	height: 200px;
 	background: url('road.png') no-repeat;
