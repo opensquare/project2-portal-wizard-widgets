@@ -1,4 +1,4 @@
-.cp form {
+﻿.cp form {
 	background: none !important;
 	color: #FFF;
 }
@@ -55,6 +55,13 @@
 	color: #333;
 	border: medium solid;
 	border-radius: 1em;
+}
+.cp-home .sp-qquote .hint{
+	margin-top: 0em!important;
+}
+.cp-home .sp-qquote .hint::before{
+	content:'◄'!important;
+	margin: -0.3em 0 0 -1em!important;
 }
 .cp-home .sp-qquote .confirmVehicleForm p:last-child {
 	background-image: url('transport-car-dark-small.png');
