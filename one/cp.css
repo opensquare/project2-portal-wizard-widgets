@@ -48,8 +48,8 @@
 }
 .cp-home .sp-qquote form {
 	float: left;
-	width: 75% !important;
-	margin-left: 12.5%;
+	width: 100% !important;
+	margin-left: 0%;
 	padding: 1em;
 	background-color: #FFF;
 	color: #333;
