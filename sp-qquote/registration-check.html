@@ -1,0 +1,22 @@
+<script type='text/javascript' src='widgets/sp-quote/js/vehicle-lookup.js' ></script>
+<script type='text/javascript' src='widgets/sp-quote/js/form-hints.js' ></script>
+
+<form rhinoforms="true" class="confirmServicePlanForm">
+    <div rf.includeIf="'{{//registrationResponse//*[name()='StatusCode']}}' != 'Success'">
+        <div>
+            <p>{{//registrationResponse//*[name()='ExceptionMessage']}}</p>
+        </div>
+        <div class="navigation" id="navigation">
+            <input class="button small" type="submit" rf.action="back" value="Back"/>
+            <input class="button" type="submit" rf.action="login" value="Login"/>
+        </div>
+        <input class="button" type="submit" rf.action="next" value="Next" style="display:none"/>
+    </div>
+    <script type="text/javascript">
+        rf.onFormLoad(function(){
+            if("{{//registrationResponse//*[name()='StatusCode']}}" == "Success"){
+                $("[rf\\.action=next]").click();
+            }
+        })
+    </script>
+</form>

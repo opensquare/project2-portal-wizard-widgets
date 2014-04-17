@@ -116,15 +116,34 @@
 			},
 			{ id: "quote", url: "quote.html", actions: [ "back:cover", "sorry:sorry", "save:registerAndSave", "buy:registerAndBuy"] },
             { id: "registerAndSave", docBase: "/quote/customer", url: "registration-quick.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered1"}]},
+            { id: "registering", url: "saving.html", 
+				actions: [
+					{
+						name: "next",
+						submission: {
+							url: "{{$esb-url}}/ccp/quickRegister",
+							data: {
+                                data: "[dataDocument]"
+							},
+							method: "post",
+							resultInsertPoint: "/quote/registrationResponse"
+						}
+					}
+				]
+			},
+            { id: "registrationCheck", url: "registration-check.html", actions: ["next", "login:alreadyRegistered1"] },
             { id: "save", url: "saving.html", 
 				actions: [
 					{
 						name: "next",
 						submission: {
-							url: "{{$esb-url}}/ccp/quickRegisterAndSave",
+							url: "{{$esb-url}}/ccp/loginAndSave",
 							data: {
-                                data: "[dataDocument]"
-							},
+                                emailAddress: "xpath://customer/email",
+                                password: "xpath://customer/password",
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+                                quoteRef: "xpath://QuoteReferenceCSV"
+                            },
 							method: "post",
 							resultInsertPoint: "/quote/saveQuoteResponse"
 						}
@@ -138,23 +157,45 @@
                 submission: {
                     url: "{{$esb-url}}/ccp/loginAndSave",
                     data: {
-                        data: "[dataDocument]"
+                        emailAddress: "xpath://customer/email",
+                        password: "xpath://customer/password",
+                        vehicleKey: "xpath://vehicleLookup/vehicle/key",
+                        quoteRef: "xpath://QuoteReferenceCSV"
                     },
                     method: "post",
                     resultInsertPoint: "/quote/saveQuoteResponse"
                 }
             }]},
             { id: "registerAndBuy", docBase: "/quote/customer", url: "registration.html", actions: ["back", "next", {name: "alreadyRegistered", type: "cancel", target: "alreadyRegistered2"}]},
+            { id: "registering2", url: "saving.html", 
+				actions: [
+					{
+						name: "next",
+						submission: {
+							url: "{{$esb-url}}/ccp/register",
+							data: {
+                                data: "[dataDocument]"
+							},
+							method: "post",
+							resultInsertPoint: "/quote/registrationResponse"
+						}
+					}
+				]
+			},
+            { id: "registrationCheck2", url: "registration-check.html", actions: ["next", "login:alreadyRegistered2"] },
             { id: "saveAndBuy", url: "saving.html", 
 				actions: [
 					{
 						name: "next",
                         target: "payment",
 						submission: {
-							url: "{{$esb-url}}/ccp/registerAndSave",
+							url: "{{$esb-url}}/ccp/loginAndSave",
 							data: {
-                                data: "[dataDocument]"
-							},
+                                emailAddress: "xpath://customer/email",
+                                password: "xpath://customer/password",
+                                vehicleKey: "xpath://vehicleLookup/vehicle/key",
+                                quoteRef: "xpath://QuoteReferenceCSV"
+                            },
 							method: "post",
 							resultInsertPoint: "/quote/saveQuoteResponse"
 						}
@@ -167,7 +208,10 @@
                 submission: {
                     url: "{{$esb-url}}/ccp/loginAndSave",
                     data: {
-                        data: "[dataDocument]"
+                        emailAddress: "xpath://customer/email",
+                        password: "xpath://customer/password",
+                        vehicleKey: "xpath://vehicleLookup/vehicle/key",
+                        quoteRef: "xpath://QuoteReferenceCSV"
                     },
                     method: "post",
                     resultInsertPoint: "/quote/saveQuoteResponse"
