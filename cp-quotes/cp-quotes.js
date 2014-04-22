@@ -1,15 +1,15 @@
-function Widget_cp_policy_agreements() {
+function Widget_cp_quotes() {
 	
 
 	this.onReadyExtend = function() {
 
-		var clientAgreements = $(".widget-content", this.$widgetDiv).children('article').length
-
-		if(clientAgreements == 1){
-			$(".widget-content article", this.$widgetDiv).click();
-		}
+		pw.addListenerToChannel(this, "quotes-updated");
 
 	};
+    
+    this.handleEvent = function(event){
+        this.loadHTML();
+    }
 
 }
 

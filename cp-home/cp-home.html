@@ -3,7 +3,7 @@
 			<a id="menu-plans" class="on" href="#cp-plans">Your Plans</a>
 			<a id="menu-quotes" href="#cp-quotes">Your Quotes</a>
 			<a id="menu-details" href="#cp-personal-details">Personal Details</a>
-			<a id="menu-newquote" href="#cp-new-quote">New Quote</a>
+			<a id="menu-newquote" href="#cp-new-quote" onclick="pw.notifyChannelOfEvent('new-quote-requested')">New Quote</a>
 			<a id="menu-logout" href="/logout">Logout</a>
 		</div>
 
@@ -20,7 +20,7 @@
 		</div>
 
 		<div id="cp-new-quote" class="section">
-			<div class="widget" name="sp-qquote"/>
+			<div class="widget" name="cp-new-quote"/>
 		</div>
 
 		<!--details id="cp-policy-docs">

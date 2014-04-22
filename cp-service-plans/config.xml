@@ -6,6 +6,7 @@
         <url>http://ice-bus-esb:8081/ccp/retrievePurchasedQuotes?accessToken={accessToken}</url>
 	</parameters>
 	<attributes>
+        <js>service-plans.js</js>
 	</attributes>
 </widget>
 

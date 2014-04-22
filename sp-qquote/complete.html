@@ -3,4 +3,9 @@
 		<h1>Quote Saved</h1>
 		<p>Your quote has been saved into a Customer Portal prepared for you.  We have sent you an email with login details.</p>
 	</div>
+    <script type="text/javascript">
+        if(pw){
+            pw.notifyChannelOfEvent("quotes-updated");
+        }
+    </script>
 </form>
