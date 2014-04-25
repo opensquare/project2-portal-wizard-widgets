@@ -4,6 +4,7 @@
     <xsl:template match="/">
         <xsl:choose>
             <xsl:when test="//*[name()='QuotesPlan']/*[name()='QuoteReference']">
+                <xsl:if test="count(//*[name()='QuotesPlan']/*[name()='QuoteReference']) &gt; 1">
                 <div id="plan-list">
                     <div class="plans-header">
                         <span class="quote-created">Created</span>
@@ -15,6 +16,7 @@
                     </div>
                     <xsl:apply-templates select="//*[name()='QuotesPlan']"/>
                 </div>
+                </xsl:if>
                 <div class="widget" name="scp-serviceplan-show" css="serviceplan-show.css" js="serviceplan-show.js">
                     <xsl:attribute name="params">quoteRef=<xsl:value-of select="//*[name()='QuotesPlan']/*[name()='QuoteReference'][1]"/>
                     </xsl:attribute>..</div>
