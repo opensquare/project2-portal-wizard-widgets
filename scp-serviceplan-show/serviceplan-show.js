@@ -6,6 +6,7 @@ function Widget_scp_serviceplan_show() {
 		var uid = url.substring(url.lastIndexOf("/") + 1);
 		//this.loadHTMLWithParams("uid=" + uid);
 		this.parameterMap.agreementUid = uid;
+        pw.addListenerToChannel(this, "service-plan-selected");
 	};
 
 	this.onReadyExtend = function() {
@@ -23,6 +24,10 @@ function Widget_scp_serviceplan_show() {
 		$('.button-service-complete', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-service-complete"},popHandler);
         $('.button-service-authorise', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-service-authorise"},popHandler);
 	};
+    
+    this.handleEvent = function(event){
+        this.loadHTML("quoteRef=" + event.quoteRef);
+    }
 
 	function popHandler(event) {
         console.log(event);

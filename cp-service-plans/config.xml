@@ -7,6 +7,7 @@
 	</parameters>
 	<attributes>
         <js>service-plans.js</js>
+        <css>service-plans.css</css>
 	</attributes>
 </widget>
 

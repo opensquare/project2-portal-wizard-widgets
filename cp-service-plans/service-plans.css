@@ -1,0 +1,32 @@
+.cp-service-plans #plan-list {
+	display: table;
+	margin: 0 auto;
+	border: 5px solid silver;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#plan-list .plans-header, #plan-list .plans-plan {
+	display: table-row;
+}
+#plan-list .plans-header span, #plan-list .plans-plan span {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	text-align: center;
+	display: table-cell;
+}
+#plan-list .plans-header span {
+	zborder-top-left-radius: 10px;
+	border-bottom: 5px solid silver;
+	background-color: #0090c0;
+	color: #fff;
+	font-weight: bold;
+}
+.cp-service-plans .plans-plan a {
+	margin: 0.25em 0.25em;
+	padding: 0.25em 1em;
+	background: #0090c0;
+	color: #FFF;
+	font-size: 1.1em;
+	border-radius: 0.25em;
+	cursor: pointer;
+	border:none;
+}
