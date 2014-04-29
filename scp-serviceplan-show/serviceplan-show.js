@@ -12,7 +12,7 @@ function Widget_scp_serviceplan_show() {
 	this.onReadyExtend = function() {
 		// Setup button handlers
         $this = this;
-        $("#popupBackground, #popupClose").click(function(){
+        $("#popupBackground, #popupClose").unbind('click').click(function(){
             $this.loadHTML();
         });
 		$('.button-canx-request', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-canx-request"},popHandler);
@@ -25,8 +25,8 @@ function Widget_scp_serviceplan_show() {
         $('.button-service-authorise', this.$widgetDiv).on("click", {widgetName: "scp-serviceplan-service-authorise"},popHandler);
 	};
     
-    this.handleEvent = function(event){
-        this.loadHTML("quoteRef=" + event.quoteRef);
+    this.handleEvent = function(channel, event){
+        this.loadHTMLWithParams("quoteRef=" + event.quoteRef);
     }
 
 	function popHandler(event) {

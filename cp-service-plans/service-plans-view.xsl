@@ -18,7 +18,7 @@
                 </div>
                 </xsl:if>
                 <div class="widget" name="scp-serviceplan-show" css="serviceplan-show.css" js="serviceplan-show.js">
-                    <xsl:attribute name="params">quoteRef=<xsl:value-of select="//*[name()='QuotesPlan']/*[name()='QuoteReference'][1]"/>
+                    <xsl:attribute name="params">quoteRef=<xsl:value-of select="//*[name()='Quote'][1]//*[name()='QuotesPlan']/*[name()='QuoteReference']"/>
                     </xsl:attribute>..</div>
             </xsl:when>
             <xsl:otherwise>
